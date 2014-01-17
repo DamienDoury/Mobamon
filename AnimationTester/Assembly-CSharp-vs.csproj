@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\Attackdex.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\HashIDs.cs" />
+     <Compile Include="Assets\Scripts\ManageCursor.cs" />
      <Compile Include="Assets\Scripts\ManageFullscreen.cs" />
      <Compile Include="Assets\Scripts\Marker.cs" />
      <Compile Include="Assets\Scripts\ModelParameters.cs" />

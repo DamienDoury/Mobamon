@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class PokemonController : MonoBehaviour
 {
-	/*private Animator anim;
+	private Animator anim;
 	private NavMeshAgent nav;
 	private HashIDs hash;
 	public Transform laserSource;
@@ -16,23 +16,15 @@ public class PokemonController : MonoBehaviour
 	public string laserSourcePath = "";
 	
 	public float turnSmoothing = 20f;
-	
-	private Texture2D hand;
-	private Vector2 handPos;
-	private Texture2D single;
-	private Vector2 singlePos;
-	private Texture2D singleAlly;
-	private Vector2 singleAllyPos;
-	private Texture2D singleEnemy;
-	private Vector2 singleEnemyPos;
-	private GameObject hoverEntity;
+
+	public GameObject hoverEntity;
 	private RaycastHit hit;
 	
 	private List<string> moveSet = new List<string>(4);
-	private SelectedMove selectedMove;
-	public Dictionary<AttackCategory, float> attackAnimHalfDuration = new Dictionary<AttackCategory, float>();*/
+	public SelectedMove selectedMove;
+	public Dictionary<AttackCategory, float> attackAnimHalfDuration = new Dictionary<AttackCategory, float>();
 
-	public Animator anim;
+	/*public Animator anim;
 	public NavMeshAgent nav;
 	public HashIDs hash;
 	public Transform laserSource;
@@ -58,7 +50,7 @@ public class PokemonController : MonoBehaviour
 	
 	public List<string> moveSet = new List<string>(4);
 	public SelectedMove selectedMove;
-	public Dictionary<AttackCategory, float> attackAnimHalfDuration = new Dictionary<AttackCategory, float>();
+	public Dictionary<AttackCategory, float> attackAnimHalfDuration = new Dictionary<AttackCategory, float>();*/
 	
 	// Use this for initialization
 	void Start ()
@@ -75,15 +67,6 @@ public class PokemonController : MonoBehaviour
 
 		laserSource = transform.Find("Armature/" + laserSourcePath);
 
-		hand = (Texture2D)Resources.Load("GUI/Cursor/Hand", typeof(Texture2D));
-		single = (Texture2D)Resources.Load("GUI/Cursor/SingleTarget", typeof(Texture2D));
-		singleAlly = (Texture2D)Resources.Load("GUI/Cursor/SingleTarget_Ally", typeof(Texture2D));
-		singleEnemy = (Texture2D)Resources.Load("GUI/Cursor/SingleTarget_Enemy", typeof(Texture2D));
-
-		handPos = new Vector2(9f, 12f);
-		singlePos = new Vector2(24f, 24f);
-		singleAllyPos = new Vector2(24f, 24f);
-		singleEnemyPos = new Vector2(24f, 24f);
 		hoverEntity = null;
 
 		moveSet.Add("Waterfall");
@@ -325,45 +308,6 @@ public class PokemonController : MonoBehaviour
 		if(selectedMove.info.targetType == TargetType.Self)
 		{
 			SetAttackState(new Target(gameObject, transform.position));
-		}
-	}
-
-	void OnGUI()
-	{
-		if(!(selectedMove != null && !selectedMove.IsLaunched()))
-		{
-			Cursor.SetCursor(hand, handPos, CursorMode.ForceSoftware);
-		}
-		else if(selectedMove != null && !selectedMove.IsLaunched())
-		{
-			TargetType targetType = selectedMove.info.targetType;
-			
-			if(targetType == TargetType.Area)
-			{
-				Cursor.SetCursor(singleEnemy, singleEnemyPos, CursorMode.ForceSoftware);
-			}
-			else
-			{
-				if(hoverEntity)
-				{
-					if(targetType == TargetType.Self && hoverEntity.Equals(gameObject))
-					{
-						Cursor.SetCursor(singleAlly, singleAllyPos, CursorMode.ForceSoftware);
-					}
-					else if(targetType == TargetType.Enemy && !hoverEntity.Equals(gameObject))
-					{
-						Cursor.SetCursor(singleEnemy, singleEnemyPos, CursorMode.ForceSoftware);
-					}
-					else
-					{
-						Cursor.SetCursor(single, singlePos, CursorMode.ForceSoftware);
-					}
-				}
-				else
-				{
-					Cursor.SetCursor(single, singlePos, CursorMode.ForceSoftware);
-				}
-			}
 		}
 	}
 }
