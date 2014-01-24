@@ -12,8 +12,8 @@ public class CameraMovement : MonoBehaviour
 	
 	void Awake()
 	{
+		getHUD();
 		getCameraTarget();
-		myTexture = (Texture)Resources.Load("GUI/gui_moves");
 	}
 	
 	void Update()
@@ -24,17 +24,18 @@ public class CameraMovement : MonoBehaviour
 			return;
 		}
 
+		float zoomFactor = 200f;
 		if(Input.GetAxis("Mouse ScrollWheel") < 0) // Back
 		{
-			cameraHeight++;
+			cameraHeight += Time.deltaTime * zoomFactor;
 		}
 		else if(Input.GetAxis("Mouse ScrollWheel") > 0) // Forward
 		{
-			cameraHeight--;
+			cameraHeight -= Time.deltaTime * zoomFactor;
 		}
 
-		cameraHeight = Mathf.Max(Mathf.Min(cameraHeight, 25), 3);
-		cameraAngle = -(coeff / cameraHeight - 10);
+		cameraHeight = Mathf.Max(Mathf.Min(cameraHeight, 25f), 3f);
+		cameraAngle = -(coeff / cameraHeight - 10f);
 
 		Vector3 targetPos = transform.position + new Vector3(0, -cameraHeight, cameraAngle);
 
@@ -51,35 +52,50 @@ public class CameraMovement : MonoBehaviour
 				transform.position = new Vector3(cameraTarget.position.x, transform.position.y, cameraTarget.position.z - cameraAngle);
 			}
 		}
-
-		//if(Screen.fullScreen)
+		
+		if(!cameraLocked)
 		{
-			if(!cameraLocked)
-			{
-				float speedFactor = 0.8f;
-				if(Input.mousePosition.x <= 0)
-					transform.position += Vector3.left * speedFactor;
+			Vector3 movementVector = new Vector3(0, 0, 0);
+			float speedFactor = 50f;
 
-				if(Input.mousePosition.x >= Screen.width - 1)
-					transform.position += Vector3.right * speedFactor;
-
-				if(Input.mousePosition.y <= 0)
-					transform.position += Vector3.back * speedFactor;
-
-				if(Input.mousePosition.y >= Screen.height - 1)
-					transform.position += Vector3.forward * speedFactor;
-			}
+			if(Input.mousePosition.x <= 0 || Input.GetKey(KeyCode.LeftArrow))
+				movementVector += Vector3.left;
+			
+			if(Input.mousePosition.x >= Screen.width - 1 || Input.GetKey(KeyCode.RightArrow))
+				movementVector += Vector3.right;
+			
+			if(Input.mousePosition.y <= 0 || Input.GetKey(KeyCode.DownArrow))
+				movementVector += Vector3.back;
+			
+			if(Input.mousePosition.y >= Screen.height - 1 || Input.GetKey(KeyCode.UpArrow))
+				movementVector += Vector3.forward;
+			
+			movementVector.Normalize();
+			transform.position += movementVector * speedFactor * Time.deltaTime;
 		}
 	}
 
 	void getCameraTarget()
 	{
 		GameObject obj = GameObject.FindGameObjectWithTag("CameraTarget");
-		if(obj)
+		//GameObject obj = GameObject.Find("Pokemon").GetComponentInChildren(typeof(PokemonController)).gameObject;
+		if(obj != null)
 		{
 			cameraTarget = obj.transform;
 			MoveCameraStatic();
+			//CenterCamera();
 		}
+	}
+
+	void getHUD()
+	{
+		myTexture = (Texture)Resources.Load("GUI/gui_moves");
+	}
+
+	void CenterCamera()
+	{
+		/*transform.position = cameraTarget.transform.position + Vector3.up * 5 - Vector3.back * 5;
+		transform.LookAt(cameraTarget.position);*/
 	}
 
 	void MoveCameraStatic()
@@ -96,12 +112,12 @@ public class CameraMovement : MonoBehaviour
 		transform.LookAt(cameraTarget.position);
 	}
 
-
 	void OnGUI()
 	{
-		if(!myTexture)
+		if(myTexture == null)
 		{
 			Debug.LogError("Assign a Texture in the inspector.");
+			getHUD();
 			return;
 		}
 

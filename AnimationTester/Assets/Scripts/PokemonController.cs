@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 public class PokemonController : MonoBehaviour
 {
+	private Camera myCam = null;
 	private Animator anim;
 	private NavMeshAgent nav;
-	private HashIDs hash;
 	public Transform laserSource;
 	
 	private GameObject marker;
@@ -26,7 +26,6 @@ public class PokemonController : MonoBehaviour
 
 	/*public Animator anim;
 	public NavMeshAgent nav;
-	public HashIDs hash;
 	public Transform laserSource;
 	
 	public GameObject marker;
@@ -55,7 +54,6 @@ public class PokemonController : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		hash = GameObject.FindGameObjectWithTag(Tags.GameController).GetComponent<HashIDs>();
 		anim = GetComponent<Animator>();
 		nav = GetComponent<NavMeshAgent>();
 
@@ -75,9 +73,52 @@ public class PokemonController : MonoBehaviour
 		moveSet.Add(null);
 
 		selectedMove = null;
+
+		if (networkView.isMine)
+		{
+			// Player controller list network management.
+			GameObject[] pokemonList = GameObject.FindGameObjectsWithTag("CameraTarget");
+			foreach(GameObject pokemon in pokemonList)
+				if(pokemon != gameObject)
+					pokemon.tag = "Untagged";
+			/*Component[] controllerList = GameObject.Find("Pokemon").GetComponentsInChildren(typeof(PokemonController));
+			foreach(Component comp in controllerList)
+				if(comp.gameObject != gameObject)
+					Destroy(comp);*/
+
+			// Camera list network management.
+			GameObject[] cameraList = GameObject.FindGameObjectsWithTag ("Camera");
+			foreach(GameObject cam in cameraList)
+				Destroy (cam);
+			GameObject camera = (GameObject)Instantiate(Resources.Load("Camera/playerCamera"), new Vector3(5, 5, -20), Quaternion.identity);
+			camera.tag = "Camera";
+			myCam = (Camera)camera.GetComponent(typeof(Camera));
+		}
 	}
 	
 	void Update ()
+	{
+		if (networkView.isMine)
+		{
+			Controls ();
+		}
+
+		// If the attack animation is done.
+		if(selectedMove != null && selectedMove.isDone && anim.IsInTransition(0))
+		{
+			EndAttackState();
+		}
+
+		if(canRotate)
+			Rotating();
+		
+		if(nav.remainingDistance > 0f)
+			Movement();
+
+		anim.SetFloat("Speed", nav.velocity.magnitude);
+	}
+
+	void Controls()
 	{
 		if(!(selectedMove != null && selectedMove.IsLaunched()))
 		{
@@ -98,24 +139,42 @@ public class PokemonController : MonoBehaviour
 				SelectMove(3);
 			}
 		}
-
+		
 		if(selectedMove != null && !selectedMove.IsLaunched())
 		{
-			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			Ray ray = myCam.ScreenPointToRay(Input.mousePosition);
 			
 			if(Physics.Raycast(ray, out hit) && hit.transform.parent.name == "Pokemon")
 				hoverEntity = hit.transform.gameObject;
 			else
 				hoverEntity = null;
+			
+			hit.transform.position.Set(hit.transform.position.x, 0, hit.transform.position.z);
 		}
-
+		
 		if(Input.GetMouseButtonDown(0))
 		{
 			if(selectedMove == null)
 			{
-				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-				if(Physics.Raycast(ray, out hit) && (hit.transform.parent.name == "Terrain" || hit.transform.parent.name == "Pokemon"))
+				Ray ray = myCam.ScreenPointToRay(Input.mousePosition);
+				RaycastHit[] hits;
+				hits = Physics.RaycastAll(ray, 100.0f);
+				
+				RaycastHit theChosenHit = new RaycastHit();
+				foreach(RaycastHit singleHit in hits)
+				{
+					//if(singleHit.collider.transform.name == "Ground")
+					if(singleHit.collider.transform.parent.name == "Terrain")
+					{
+						if(theChosenHit.Equals(new RaycastHit()) || singleHit.distance < theChosenHit.distance)
+						{
+							theChosenHit = singleHit;
+						}
+					}
+				}
+				
+				if(!theChosenHit.Equals(new RaycastHit()))
+					//if(Physics.Raycast(ray, out hit) && (hit.transform.parent.name == "Terrain" || hit.transform.parent.name == "Pokemon"))
 				{
 					// The character has to move at least half of its width. 
 					// NOTE: We divide by five because the model scale is 1/5.
@@ -124,12 +183,9 @@ public class PokemonController : MonoBehaviour
 						//NavMeshHit sampleHit;
 						//if(NavMesh.SamplePosition(hit.point, out sampleHit, 1f, 1 << NavMesh.GetNavMeshLayerFromName("Default"))) // I was trying to prevent the character from touching the walls, using its NavMeshRadius.
 						{
-							nav.destination = hit.point;
+							theChosenHit.point.Set(theChosenHit.point.x, 0, theChosenHit.point.z);
 
-							if(marker != null)
-								Destroy(marker);
-
-							marker = (GameObject)Instantiate(Resources.Load("Miscellaneous/Marker"), hit.point - new Vector3(0, hit.point.y, 0) + Vector3.up/10, new Quaternion());
+							SetDestination(theChosenHit.point);
 						}
 					}
 				}
@@ -140,17 +196,17 @@ public class PokemonController : MonoBehaviour
 				if(!selectedMove.IsLaunched())
 				{
 					TargetType targetType = selectedMove.info.targetType;
-
+					
 					if(targetType == TargetType.Area)
 					{
-						SetAttackState(new Target(null, hit.point));
+						SetAttackState(-1, hit.point);
 					}
 					else if(hoverEntity != null) // If the target type is not an area, then it's a single target spell. Therefore he needs a target.
 					{
 						if(targetType == TargetType.Enemy && !hoverEntity.Equals(gameObject))
 						{
-							SetAttackState(new Target(hoverEntity, hit.point));
-							hoverEntity = null;
+							SetAttackState(hoverEntity.GetInstanceID(), hit.point);
+							//hoverEntity = null;
 						}
 					}
 					else
@@ -158,34 +214,49 @@ public class PokemonController : MonoBehaviour
 						// If the player failed to click a right target for his attack, then we unselect it.
 						selectedMove = null;
 					}
+					
+					hoverEntity = null;
 				}
 			}
 		}
 		else if(Input.GetMouseButtonDown(1))
 		{
-			selectedMove = null;
+			if(selectedMove != null && !selectedMove.IsLaunched())
+			{
+				CancelTargetting();
+			}
 		}
-
-		if(canRotate)
-			Rotating();
-		
-		if(nav.remainingDistance > 0f)
-			Movement();
-
-		anim.SetFloat(hash.speed, nav.velocity.magnitude);
 	}
 
-	void FixedUpdate()
+	[RPC]
+	void SetDestination(Vector3 pos)
 	{
-		// If the attack animation is done.
-		if(selectedMove != null && selectedMove.isDone && anim.IsInTransition(0))
+		if(networkView.isMine)
 		{
-			EndAttackState();
+			networkView.RPC("SetDestination", RPCMode.Others, pos);
+
+			if(marker != null)
+				Destroy(marker);
+			
+			marker = (GameObject)Instantiate(Resources.Load("Miscellaneous/Marker"), pos + Vector3.up / 10, new Quaternion());
 		}
+
+		nav.destination = pos;
 	}
 
+	[RPC]
+	void CancelTargetting()
+	{
+		if(networkView.isMine)
+			networkView.RPC("CancelTargetting", RPCMode.Others, null);
+
+		EndAttackState();
+		selectedMove = null;
+	}
+	
 	void Movement()
 	{
+		
 		if(nav.remainingDistance < 0.3f)
 		{
 			nav.destination = gameObject.transform.position; // This makes a smooth braking.
@@ -194,7 +265,7 @@ public class PokemonController : MonoBehaviour
 		else
 		{
 			// We prevent the character from moving if its angle is too much different from the direction he should face.
-			// This avoids the fast characters from sliding if the floor.
+			// This avoids the fast characters from sliding on the floor.
 			if(Vector3.Angle(gameObject.transform.forward, nav.steeringTarget - gameObject.transform.position) > 60 || !canMove)
 			{
 				nav.updatePosition = false;
@@ -205,60 +276,89 @@ public class PokemonController : MonoBehaviour
 					nav.updatePosition = true;
 			}
 		}
+
+		gameObject.transform.position.Set(gameObject.transform.position.x, 0, gameObject.transform.position.z);
 	}
 
 	void Rotating()
 	{
+		if(!canRotate)
+			return;
+
 		Vector3 target = new Vector3();
 		if(selectedMove != null && selectedMove.target != null && !selectedMove.isDone)
 		{
 			if(selectedMove.target.obj != null && selectedMove.info.isFollowing)
-				target = selectedMove.target.obj.transform.position - gameObject.transform.position;
+				target = selectedMove.target.obj.transform.position;
 			else
-				target = selectedMove.target.pos - gameObject.transform.position;
+				target = selectedMove.target.pos;
 
+			target -= gameObject.transform.position;
+			target.Set(target.x, 0, target.z);
 			target.Normalize();
-			if(Vector3.Angle(gameObject.transform.forward, target) < 10 && canRotate)
+
+			float angle = Vector3.Angle(gameObject.transform.forward, target);
+			if(angle < 1.0f)
+			{
 				LaunchAttackAnim();
+			}
 		}
 		else if(nav.remainingDistance > 0.3f)
 		{
-			target = nav.steeringTarget - gameObject.transform.position;
+			target = nav.steeringTarget;
+			target -= gameObject.transform.position;
+			target.Set(target.x, 0, target.z);
+			target.Normalize();
 		}
 		else
 		{
 			return;
 		}
 
-		target.Normalize();
 		Quaternion forwardRotation = Quaternion.LookRotation(gameObject.transform.forward, Vector3.up);
 		Quaternion targetRotation = Quaternion.LookRotation(target, Vector3.up);
-		Quaternion newRotation = Quaternion.Lerp(forwardRotation, targetRotation, turnSmoothing * Time.deltaTime);
+
+		Quaternion newRotation = new Quaternion();
+		float angleBis = Vector3.Angle(gameObject.transform.forward, target);
+		if(angleBis < 2.0f)
+			newRotation = targetRotation;
+		else
+			newRotation = Quaternion.Lerp(forwardRotation, targetRotation, turnSmoothing * Time.deltaTime);
 
 		gameObject.transform.rotation = newRotation;
 	}
-	
-	void SetAttackState(Target p_target)
+
+	[RPC]
+	void SetAttackState(int instanceID, Vector3 pos)
 	{
-		selectedMove.SetTarget(p_target);
+		if(networkView.isMine)
+			networkView.RPC("SetAttackState", RPCMode.Others, instanceID, pos);
 
+		GameObject targetPokemon = null;
+
+		if(instanceID != -1 && PokemonList.instance.ContainsKey(instanceID))
+			targetPokemon = PokemonList.instance[instanceID];
+
+		selectedMove.SetTarget(new Target(targetPokemon, pos));
 		canMove = nav.updatePosition = false;
-		//LaunchAttackAnim();
 	}
-
+	
 	void LaunchAttackAnim()
 	{
+		/*if(networkView.isMine)
+			networkView.RPC("LaunchAttackAnim", RPCMode.Others, null);*/
+
 		canRotate = nav.updateRotation = false;
 		
 		if(selectedMove.info.attackCategory == AttackCategory.Physical)
-			anim.SetBool(hash.physicalAttack, true);
+			anim.SetBool("PhysicalAttack", true);
 		else
-			anim.SetBool(hash.specialAttack, true);
+			anim.SetBool("SpecialAttack", true);
 	}
 
 	void LaunchAttack(float holdDuration)
 	{
-		if(selectedMove != null && selectedMove.target != null)
+		if(selectedMove != null && selectedMove.target != null) //networkView.isMine && 
 		{
 			GameObject move = (GameObject)Instantiate(Resources.Load("Moves/" + selectedMove.name));
 			move.transform.parent = GameObject.Find("Moves").transform;
@@ -284,30 +384,35 @@ public class PokemonController : MonoBehaviour
 		}
 	}
 
-	public void Unfreeze()
+
+	void Unfreeze()
 	{
 		selectedMove.isDone = true;
 		anim.speed = 1.0f;
 	}
 
-	public void EndAttackState()
+	void EndAttackState()
 	{
 		canMove = nav.updatePosition = true;
 		canRotate = nav.updateRotation = true;
 
-		anim.SetBool(hash.physicalAttack, false);
-		anim.SetBool(hash.specialAttack, false);
+		anim.SetBool("PhysicalAttack", false);
+		anim.SetBool("SpecialAttack", false);
 		
 		selectedMove = null;
 	}
 
+	[RPC]
 	void SelectMove(int index)
 	{
+		if(networkView.isMine)
+			networkView.RPC("SelectMove", RPCMode.Others, index);
+
 		selectedMove = new SelectedMove(moveSet[index]);
 
 		if(selectedMove.info.targetType == TargetType.Self)
 		{
-			SetAttackState(new Target(gameObject, transform.position));
+			SetAttackState(gameObject.GetInstanceID(), transform.position);
 		}
 	}
 }

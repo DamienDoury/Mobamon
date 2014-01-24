@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ManageCursor : MonoBehaviour
 {
+	private PokemonController controller = null;
 	private SelectedMove selectedMove;
 	private GameObject hoverEntity;
 
@@ -16,12 +17,8 @@ public class ManageCursor : MonoBehaviour
 	private Vector2 singleEnemyPos;
 
 	// Use this for initialization
-	void Start ()
+	void Start()
 	{
-		PokemonController controller = GameObject.FindGameObjectWithTag("CameraTarget").GetComponent<PokemonController>();
-		selectedMove = controller.selectedMove;
-		hoverEntity = controller.hoverEntity;
-
 		hand = (Texture2D)Resources.Load("GUI/Cursor/Hand", typeof(Texture2D));
 		single = (Texture2D)Resources.Load("GUI/Cursor/SingleTarget", typeof(Texture2D));
 		singleAlly = (Texture2D)Resources.Load("GUI/Cursor/SingleTarget_Ally", typeof(Texture2D));
@@ -31,10 +28,18 @@ public class ManageCursor : MonoBehaviour
 		singlePos = new Vector2(24f, 24f);
 		singleAllyPos = new Vector2(24f, 24f);
 		singleEnemyPos = new Vector2(24f, 24f);
+
+		GetController();
+		GetControllerInfos();
 	}
 	
 	void Update()
 	{
+		GetControllerInfos();
+
+		if(!controller)
+			return;
+
 		if(!(selectedMove != null && !selectedMove.IsLaunched()))
 		{
 			Cursor.SetCursor(hand, handPos, CursorMode.ForceSoftware);
@@ -70,5 +75,24 @@ public class ManageCursor : MonoBehaviour
 				}
 			}
 		}
+	}
+
+	void GetController()
+	{
+		GameObject pokemon = GameObject.Find("Pokemon").GetComponentInChildren(typeof(PokemonController)).gameObject;
+		PokemonController temp = pokemon.GetComponent<PokemonController>();
+		controller = temp;
+	}
+
+	void GetControllerInfos()
+	{
+		if(controller == null)
+		{
+			GetController();
+			return;
+		}
+
+		selectedMove = controller.selectedMove;
+		hoverEntity = controller.hoverEntity;
 	}
 }

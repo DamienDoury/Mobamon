@@ -1,13 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ManageCursor.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\NetworkManager.cs">
     <Files>
+      <File FileName="Assets\Scripts\CameraMovement.cs" Line="113" Column="3" />
+      <File FileName="Assets\Scripts\NetworkManager.cs" Line="27" Column="45" />
+      <File FileName="Assets\Scripts\PokemonController.cs" Line="402" Column="23" />
       <File FileName="Assets\Scripts\ManageCursor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PokemonController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ManageFullscreen.cs" Line="22" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\Damien\Documents\GitHub\Mobamon\AnimationTester\Assets\Scripts\PokemonController.cs" line="334" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

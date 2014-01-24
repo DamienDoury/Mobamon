@@ -49,16 +49,16 @@
      <Compile Include="Assets\Scripts\Attack.cs" />
      <Compile Include="Assets\Scripts\Attackdex.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
-     <Compile Include="Assets\Scripts\HashIDs.cs" />
      <Compile Include="Assets\Scripts\ManageCursor.cs" />
      <Compile Include="Assets\Scripts\ManageFullscreen.cs" />
      <Compile Include="Assets\Scripts\Marker.cs" />
      <Compile Include="Assets\Scripts\ModelParameters.cs" />
+     <Compile Include="Assets\Scripts\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\PokemonController.cs" />
-     <Compile Include="Assets\Scripts\PokemonMovement.cs" />
+     <Compile Include="Assets\Scripts\PokemonList.cs" />
+     <Compile Include="Assets\Scripts\PokemonManager.cs" />
      <Compile Include="Assets\Scripts\SelectedMove.cs" />
      <Compile Include="Assets\Scripts\Struct.cs" />
-     <Compile Include="Assets\Scripts\Tags.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
