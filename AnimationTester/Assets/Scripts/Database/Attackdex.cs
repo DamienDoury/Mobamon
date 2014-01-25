@@ -2,41 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public enum AttackCategory
-{
-	ERROR,
-	Physical,
-	Special,
-	Status
-}
-
-public enum TargetType
-{
-	ERROR,
-	Enemy,
-	Area,
-	Self,
-	Ally
-}
-
-public enum AttackSource
-{
-	ERROR,
-	Laser,
-	Body
-}
-
-public struct MoveInfo
-{
-	public AttackCategory attackCategory;
-	public TargetType targetType;
-	public AttackSource attackSource;
-
-	public bool isImmobilizing;
-	public bool isFollowing;
-	public bool isProjectile;
-}
-
 public static class Attackdex
 {
 	public static readonly Dictionary<string, MoveInfo> move = new Dictionary<string, MoveInfo>

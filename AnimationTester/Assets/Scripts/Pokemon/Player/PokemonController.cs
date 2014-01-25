@@ -120,6 +120,8 @@ public class PokemonController : MonoBehaviour
 
 	void Controls()
 	{
+		// Uses : selectedMove, hit and hoverEntity
+
 		if(!(selectedMove != null && selectedMove.IsLaunched()))
 		{
 			if((Input.GetKeyDown("q") || Input.GetKeyDown("a")) && moveSet[0] != null)
