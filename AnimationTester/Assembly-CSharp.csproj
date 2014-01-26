@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Database\PokemonList.cs" />
      <Compile Include="Assets\Scripts\Moves\Attack.cs" />
      <Compile Include="Assets\Scripts\Network\NetworkManager.cs" />
+     <Compile Include="Assets\Scripts\Network\ServerManager.cs" />
      <Compile Include="Assets\Scripts\Pokemon\Classes\SelectedMove.cs" />
      <Compile Include="Assets\Scripts\Pokemon\Player\PokemonController.cs" />
      <Compile Include="Assets\Scripts\Pokemon\Player\PokemonManager.cs" />

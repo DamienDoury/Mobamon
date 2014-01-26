@@ -7,6 +7,17 @@ public class NetworkManager : MonoBehaviour
 	private const string gameName = "RoomName";
 	private HostData[] hostList;
 
+	void Start()
+	{
+		Component[] NPCList = GameObject.Find("Pokemon").GetComponentsInChildren(typeof(Collider));
+
+		foreach(Component NPC in NPCList)
+		{
+			GameObject obj = NPC.gameObject;
+			PokemonList.instance.Add(obj.GetInstanceID(), obj); // This won't store the new coming players.
+		}
+	}
+
 	void StartServer()
 	{
 		string roomName = "";
@@ -90,12 +101,25 @@ public class NetworkManager : MonoBehaviour
 
 	private void SpawnPlayer()
 	{
-		GameObject player;
-		if(Network.connections.Length == 1)
-			player = (GameObject)Network.Instantiate(Resources.Load ("Pokemon/Drakkarmin"), new Vector3(5f, 0f, -10f), Quaternion.identity, 0);
-		else
-			player = (GameObject)Network.Instantiate(Resources.Load ("Pokemon/Caninos"), new Vector3(10f, 0f, -10f), Quaternion.identity, 0);
+		string pokemonName;
 
+		GameObject player;
+		switch(Network.connections.Length % 3)
+		{
+			case 0:
+				pokemonName = "Dimoret";
+				break;
+
+			case 1:
+				pokemonName = "Caninos";
+				break;
+
+			default:
+				pokemonName = "Drakkarmin";
+				break;
+		}
+
+		player = (GameObject)Network.Instantiate(Resources.Load ("Pokemon/" + pokemonName), new Vector3(5f, 0f, -10f), Quaternion.identity, 0);
 		player.transform.parent = GameObject.Find("Pokemon").transform;
 		player.tag = "CameraTarget";
 

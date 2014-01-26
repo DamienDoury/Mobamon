@@ -41,6 +41,18 @@ public static class Attackdex
 				isFollowing = true,
 				isProjectile = false
 			}
+		},
+		{
+			"Thunder Shock",
+			new MoveInfo()
+			{
+				attackCategory = AttackCategory.Special,
+				targetType = TargetType.Enemy,
+				attackSource = AttackSource.Body,
+				isImmobilizing = false,
+				isFollowing = true,
+				isProjectile = false
+			}
 		}
 	};
 }

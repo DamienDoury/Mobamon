@@ -70,7 +70,7 @@ public class PokemonController : MonoBehaviour
 		moveSet.Add("Waterfall");
 		moveSet.Add("Flamethrower");
 		moveSet.Add("Growl");
-		moveSet.Add(null);
+		moveSet.Add("Thunder Shock");
 
 		selectedMove = null;
 
