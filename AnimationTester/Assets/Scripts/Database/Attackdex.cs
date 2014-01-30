@@ -10,6 +10,7 @@ public static class Attackdex
 			"Waterfall",
 			new MoveInfo()
 			{
+				damage = 60f,
 				attackCategory = AttackCategory.Special,
 				targetType = TargetType.Enemy,
 				attackSource = AttackSource.Body,
@@ -22,6 +23,7 @@ public static class Attackdex
 			"Flamethrower",
 			new MoveInfo()
 			{
+				damage = 90f,
 				attackCategory = AttackCategory.Special,
 				targetType = TargetType.Area,
 				attackSource = AttackSource.Laser,
@@ -34,6 +36,7 @@ public static class Attackdex
 			"Growl",
 			new MoveInfo()
 			{
+				damage = 0f,
 				attackCategory = AttackCategory.Special,
 				targetType = TargetType.Enemy,
 				attackSource = AttackSource.Laser,
@@ -46,6 +49,7 @@ public static class Attackdex
 			"Thunder Shock",
 			new MoveInfo()
 			{
+				damage = 120f,
 				attackCategory = AttackCategory.Special,
 				targetType = TargetType.Enemy,
 				attackSource = AttackSource.Body,

@@ -24,35 +24,11 @@ public class PokemonController : MonoBehaviour
 	public SelectedMove selectedMove;
 	public Dictionary<AttackCategory, float> attackAnimHalfDuration = new Dictionary<AttackCategory, float>();
 
-	/*public Animator anim;
-	public NavMeshAgent nav;
-	public Transform laserSource;
+	public float maxHP = 300f;
+	public float currentHP;
+	private float regenRate = 0.05f; // in % of max health/sec.
 	
-	public GameObject marker;
-	
-	public bool canMove = true;
-	public bool canRotate = true;
-	public string laserSourcePath = "";
-	
-	public float turnSmoothing = 20f;
-	
-	public Texture2D hand;
-	public Vector2 handPos;
-	public Texture2D single;
-	public Vector2 singlePos;
-	public Texture2D singleAlly;
-	public Vector2 singleAllyPos;
-	public Texture2D singleEnemy;
-	public Vector2 singleEnemyPos;
-	public GameObject hoverEntity;
-	public RaycastHit hit;
-	
-	public List<string> moveSet = new List<string>(4);
-	public SelectedMove selectedMove;
-	public Dictionary<AttackCategory, float> attackAnimHalfDuration = new Dictionary<AttackCategory, float>();*/
-	
-	// Use this for initialization
-	void Start ()
+	void Start()
 	{
 		anim = GetComponent<Animator>();
 		nav = GetComponent<NavMeshAgent>();
@@ -73,6 +49,8 @@ public class PokemonController : MonoBehaviour
 		moveSet.Add("Thunder Shock");
 
 		selectedMove = null;
+
+		currentHP = maxHP * 0.5f;
 
 		if (networkView.isMine)
 		{
@@ -96,8 +74,10 @@ public class PokemonController : MonoBehaviour
 		}
 	}
 	
-	void Update ()
+	void Update()
 	{
+		RegenHP();
+
 		if (networkView.isMine)
 		{
 			Controls ();
@@ -120,112 +100,184 @@ public class PokemonController : MonoBehaviour
 
 	void Controls()
 	{
-		// Uses : selectedMove, hit and hoverEntity
+		if (networkView.isMine)
+		{
+			// Uses : selectedMove, hit and hoverEntity
 
-		if(!(selectedMove != null && selectedMove.IsLaunched()))
-		{
-			if((Input.GetKeyDown("q") || Input.GetKeyDown("a")) && moveSet[0] != null)
+			if(!(selectedMove != null && selectedMove.IsLaunched()))
 			{
-				SelectMove(0);
+				if((Input.GetKeyDown("q") || Input.GetKeyDown("a")) && moveSet[0] != null)
+				{
+					networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.Q, Input.mousePosition, NetworkViewID.unassigned);
+				}
+				else if((Input.GetKeyDown("w") || Input.GetKeyDown("z")) && moveSet[1] != null)
+				{
+					networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.W, Input.mousePosition, NetworkViewID.unassigned);
+				}
+				else if(Input.GetKeyDown("e") && moveSet[2] != null)
+				{
+					networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.E, Input.mousePosition, NetworkViewID.unassigned);
+				}
+				else if(Input.GetKeyDown("r") && moveSet[3] != null)
+				{
+					networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.R, Input.mousePosition, NetworkViewID.unassigned);
+				}
 			}
-			else if((Input.GetKeyDown("w") || Input.GetKeyDown("z")) && moveSet[1] != null)
-			{
-				SelectMove(1);
-			}
-			else if(Input.GetKeyDown("e") && moveSet[2] != null)
-			{
-				SelectMove(2);
-			}
-			else if(Input.GetKeyDown("r") && moveSet[3] != null)
-			{
-				SelectMove(3);
-			}
-		}
-		
-		if(selectedMove != null && !selectedMove.IsLaunched())
-		{
-			Ray ray = myCam.ScreenPointToRay(Input.mousePosition);
 			
-			if(Physics.Raycast(ray, out hit) && hit.transform.parent.name == "Pokemon")
-				hoverEntity = hit.transform.gameObject;
-			else
-				hoverEntity = null;
-			
-			hit.transform.position.Set(hit.transform.position.x, 0, hit.transform.position.z);
-		}
-		
-		if(Input.GetMouseButtonDown(0))
-		{
-			if(selectedMove == null)
-			{
-				Ray ray = myCam.ScreenPointToRay(Input.mousePosition);
-				RaycastHit[] hits;
-				hits = Physics.RaycastAll(ray, 100.0f);
-				
-				RaycastHit theChosenHit = new RaycastHit();
-				foreach(RaycastHit singleHit in hits)
-				{
-					//if(singleHit.collider.transform.name == "Ground")
-					if(singleHit.collider.transform.parent.name == "Terrain")
-					{
-						if(theChosenHit.Equals(new RaycastHit()) || singleHit.distance < theChosenHit.distance)
-						{
-							theChosenHit = singleHit;
-						}
-					}
-				}
-				
-				if(!theChosenHit.Equals(new RaycastHit()))
-					//if(Physics.Raycast(ray, out hit) && (hit.transform.parent.name == "Terrain" || hit.transform.parent.name == "Pokemon"))
-				{
-					// The character has to move at least half of its width. 
-					// NOTE: We divide by five because the model scale is 1/5.
-					//if((hit.point - nav.transform.position).magnitude > nav.radius / 5) 
-					{
-						//NavMeshHit sampleHit;
-						//if(NavMesh.SamplePosition(hit.point, out sampleHit, 1f, 1 << NavMesh.GetNavMeshLayerFromName("Default"))) // I was trying to prevent the character from touching the walls, using its NavMeshRadius.
-						{
-							theChosenHit.point.Set(theChosenHit.point.x, 0, theChosenHit.point.z);
-
-							SetDestination(theChosenHit.point);
-						}
-					}
-				}
-			}
-			else
-			{
-				// If a move is selected, but not launched :
-				if(!selectedMove.IsLaunched())
-				{
-					TargetType targetType = selectedMove.info.targetType;
-					
-					if(targetType == TargetType.Area)
-					{
-						SetAttackState(-1, hit.point);
-					}
-					else if(hoverEntity != null) // If the target type is not an area, then it's a single target spell. Therefore he needs a target.
-					{
-						if(targetType == TargetType.Enemy && !hoverEntity.Equals(gameObject))
-						{
-							SetAttackState(hoverEntity.GetInstanceID(), hit.point);
-							//hoverEntity = null;
-						}
-					}
-					else
-					{
-						// If the player failed to click a right target for his attack, then we unselect it.
-						selectedMove = null;
-					}
-					
-					hoverEntity = null;
-				}
-			}
-		}
-		else if(Input.GetMouseButtonDown(1))
-		{
 			if(selectedMove != null && !selectedMove.IsLaunched())
 			{
-				CancelTargetting();
+				Ray ray = myCam.ScreenPointToRay(Input.mousePosition);
+				
+				if(Physics.Raycast(ray, out hit) && hit.transform.parent.name == "Pokemon")
+					hoverEntity = hit.transform.gameObject;
+				else
+					hoverEntity = null;
+				
+				//hit.transform.position.Set(hit.transform.position.x, 0, hit.transform.position.z);
+			}
+			
+			if(Input.GetMouseButtonDown(0))
+			{
+				if(selectedMove == null)
+				{
+					Ray ray = myCam.ScreenPointToRay(Input.mousePosition);
+					RaycastHit[] hits;
+					hits = Physics.RaycastAll(ray, 100.0f);
+					
+					RaycastHit theChosenHit = new RaycastHit();
+					foreach(RaycastHit singleHit in hits)
+					{
+						//if(singleHit.collider.transform.name == "Ground")
+						if(singleHit.collider.transform.parent.name == "Terrain")
+						{
+							if(theChosenHit.Equals(new RaycastHit()) || singleHit.distance < theChosenHit.distance)
+							{
+								theChosenHit = singleHit;
+							}
+						}
+					}
+					
+					if(!theChosenHit.Equals(new RaycastHit()))
+						//if(Physics.Raycast(ray, out hit) && (hit.transform.parent.name == "Terrain" || hit.transform.parent.name == "Pokemon"))
+					{
+						// The character has to move at least half of its width. 
+						// NOTE: We divide by five because the model scale is 1/5.
+						//if((hit.point - nav.transform.position).magnitude > nav.radius / 5) 
+						{
+							//NavMeshHit sampleHit;
+							//if(NavMesh.SamplePosition(hit.point, out sampleHit, 1f, 1 << NavMesh.GetNavMeshLayerFromName("Default"))) // I was trying to prevent the character from touching the walls, using its NavMeshRadius.
+							{
+								theChosenHit.point.Set(theChosenHit.point.x, 0, theChosenHit.point.z);
+
+								networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, theChosenHit.point, NetworkViewID.unassigned);
+							}
+						}
+					}
+				}
+				else
+				{
+					// If a move is selected, but not launched :
+					if(!selectedMove.IsLaunched())
+					{
+						TargetType targetType = selectedMove.info.targetType;
+						
+						if(targetType == TargetType.Area)
+						{
+							networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, hit.point, NetworkViewID.unassigned);
+						}
+						else if(hoverEntity != null) // If the target type is not an area, then it's a single target spell. Therefore he needs a target.
+						{
+							if(targetType == TargetType.Enemy && !hoverEntity.Equals(gameObject))
+							{
+								networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, hit.point, hoverEntity.networkView.viewID);
+								//hoverEntity = null;
+							}
+						}
+						else
+						{
+							// If the player failed to click a right target for his attack, then we unselect it.
+							selectedMove = null;
+						}
+						
+						hoverEntity = null;
+					}
+				}
+			}
+			else if(Input.GetMouseButtonDown(1))
+			{
+				if(selectedMove != null && !selectedMove.IsLaunched())
+				{
+					networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.RightClick, Input.mousePosition, NetworkViewID.unassigned);
+				}
+			}
+		}
+	}
+
+	[RPC]
+	void ValidateControl(int input, Vector3 pos, NetworkViewID viewID)
+	{
+		if(Network.isServer)
+		{
+			// Uses : selectedMove, hit and hoverEntity
+
+			if(!(selectedMove != null && selectedMove.IsLaunched()))
+			{
+				if(input == (int)InputType.Q && moveSet[0] != null)
+				{
+					SelectMove(0);
+				}
+				else if(input == (int)InputType.W && moveSet[1] != null)
+				{
+					SelectMove(1);
+				}
+				else if(input == (int)InputType.E && moveSet[2] != null)
+				{
+					SelectMove(2);
+				}
+				else if(input == (int)InputType.R && moveSet[3] != null)
+				{
+					SelectMove(3);
+				}
+			}
+			
+			if(input == (int)InputType.LeftClick)
+			{
+				if(selectedMove == null)
+				{
+					SetDestination(pos);
+				}
+				else
+				{
+					// If a move is selected, but not launched :
+					if(!selectedMove.IsLaunched())
+					{
+						TargetType targetType = selectedMove.info.targetType;
+						
+						if(targetType == TargetType.Area)
+						{
+							SetAttackState(NetworkViewID.unassigned, pos);
+						}
+						else if(viewID != NetworkViewID.unassigned) // If the target type is not an area, then it's a single target spell. Therefore he needs a target.
+						{
+							if(targetType == TargetType.Enemy) // As we don't check if the player is targetting himself with an offensive spell, the player might cheat and kill himself.
+							{
+								SetAttackState(viewID, pos);
+							}
+						}
+						else
+						{
+							// If the player failed to click a right target for his attack, then we unselect it.
+							selectedMove = null;
+						}
+					}
+				}
+			}
+			else if(input == (int)InputType.RightClick)
+			{
+				if(selectedMove != null && !selectedMove.IsLaunched())
+				{
+					CancelTargetting();
+				}
 			}
 		}
 	}
@@ -233,10 +285,13 @@ public class PokemonController : MonoBehaviour
 	[RPC]
 	void SetDestination(Vector3 pos)
 	{
-		if(networkView.isMine)
+		if(Network.isServer)
 		{
 			networkView.RPC("SetDestination", RPCMode.Others, pos);
+		}
 
+		if(networkView.isMine)
+		{
 			if(marker != null)
 				Destroy(marker);
 			
@@ -247,9 +302,44 @@ public class PokemonController : MonoBehaviour
 	}
 
 	[RPC]
+	void SetAttackState(NetworkViewID viewID, Vector3 pos)
+	{
+		if(Network.isServer)
+			networkView.RPC("SetAttackState", RPCMode.Others, viewID, pos);
+		
+		GameObject targetPokemon = null;
+		
+		if(!viewID.Equals(NetworkViewID.unassigned)) // && PokemonList.instance.ContainsKey(instanceID))
+		{
+			targetPokemon = NetworkView.Find(viewID).gameObject;
+			//targetPokemon = PokemonList.instance[instanceID];
+		}
+
+		
+		selectedMove.SetTarget(new Target(targetPokemon, pos));
+		canMove = nav.updatePosition = false;
+
+		// Then, the LaunchAttackAnim is called from the Rotating() method.
+	}
+	
+	[RPC]
+	void SelectMove(int index)
+	{
+		if(Network.isServer)
+			networkView.RPC("SelectMove", RPCMode.Others, index);
+		
+		selectedMove = new SelectedMove(moveSet[index]);
+		
+		if(selectedMove.info.targetType == TargetType.Self)
+		{
+			SetAttackState(gameObject.networkView.viewID, transform.position);
+		}
+	}
+
+	[RPC]
 	void CancelTargetting()
 	{
-		if(networkView.isMine)
+		if(Network.isServer)
 			networkView.RPC("CancelTargetting", RPCMode.Others, null);
 
 		EndAttackState();
@@ -258,7 +348,6 @@ public class PokemonController : MonoBehaviour
 	
 	void Movement()
 	{
-		
 		if(nav.remainingDistance < 0.3f)
 		{
 			nav.destination = gameObject.transform.position; // This makes a smooth braking.
@@ -330,21 +419,6 @@ public class PokemonController : MonoBehaviour
 		gameObject.transform.rotation = newRotation;
 	}
 
-	[RPC]
-	void SetAttackState(int instanceID, Vector3 pos)
-	{
-		if(networkView.isMine)
-			networkView.RPC("SetAttackState", RPCMode.Others, instanceID, pos);
-
-		GameObject targetPokemon = null;
-
-		if(instanceID != -1 && PokemonList.instance.ContainsKey(instanceID))
-			targetPokemon = PokemonList.instance[instanceID];
-
-		selectedMove.SetTarget(new Target(targetPokemon, pos));
-		canMove = nav.updatePosition = false;
-	}
-	
 	void LaunchAttackAnim()
 	{
 		/*if(networkView.isMine)
@@ -356,6 +430,8 @@ public class PokemonController : MonoBehaviour
 			anim.SetBool("PhysicalAttack", true);
 		else
 			anim.SetBool("SpecialAttack", true);
+
+		// Then, LaunchAttack is called by the attack animation event.
 	}
 
 	void LaunchAttack(float holdDuration)
@@ -386,7 +462,6 @@ public class PokemonController : MonoBehaviour
 		}
 	}
 
-
 	void Unfreeze()
 	{
 		selectedMove.isDone = true;
@@ -404,17 +479,14 @@ public class PokemonController : MonoBehaviour
 		selectedMove = null;
 	}
 
-	[RPC]
-	void SelectMove(int index)
+	private void RegenHP()
 	{
-		if(networkView.isMine)
-			networkView.RPC("SelectMove", RPCMode.Others, index);
+		currentHP = Mathf.Min(maxHP, currentHP + maxHP * regenRate * Time.deltaTime);
+	}
 
-		selectedMove = new SelectedMove(moveSet[index]);
-
-		if(selectedMove.info.targetType == TargetType.Self)
-		{
-			SetAttackState(gameObject.GetInstanceID(), transform.position);
-		}
+	[RPC]
+	public void SetDamage(float dmg)
+	{
+		currentHP = Mathf.Max(0, currentHP - dmg);
 	}
 }

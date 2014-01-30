@@ -3,20 +3,29 @@ using System.Collections;
 
 public class NetworkManager : MonoBehaviour
 {
+	NetworkConnectionError connectionError = new NetworkConnectionError();
 	private const string typeName = "MobamonDev";
 	private const string gameName = "RoomName";
 	private HostData[] hostList;
 
+	private string serverIp = "127.0.0.1";
+
 	void Start()
+	{
+		connectionError = Network.Connect(serverIp, 25000);
+
+		//StartServer();
+	}
+
+	/*void InstantiateNPCs()
 	{
 		Component[] NPCList = GameObject.Find("Pokemon").GetComponentsInChildren(typeof(Collider));
 
 		foreach(Component NPC in NPCList)
 		{
-			GameObject obj = NPC.gameObject;
-			PokemonList.instance.Add(obj.GetInstanceID(), obj); // This won't store the new coming players.
+			PokemonList.instance.Add(NPC.GetInstanceID(), NPC.gameObject);
 		}
-	}
+	}*/
 
 	void StartServer()
 	{
@@ -37,18 +46,24 @@ public class NetworkManager : MonoBehaviour
 		}
 
 		Network.InitializeServer(4, 25000, true);//!Network.HavePublicAddress());
-		MasterServer.RegisterHost(typeName, roomName);
+		//MasterServer.RegisterHost(typeName, roomName);
+		//InstantiateNPCs();
 	}
 
 	void OnServerInitialized()
 	{
 		Debug.Log("Server Initializied");
-		SpawnPlayer();
+		//SpawnPlayer();
 	}
 
 	void OnGUI()
 	{
-		if(!Network.isClient && !Network.isServer)
+		string message = "You are the server. \nYour IP is " + serverIp + ".";
+
+		if(Network.isServer)
+			GUI.Label(new Rect(100, 100, 250, 100), message);
+
+		/*if(!Network.isClient && !Network.isServer)
 		{
 			if(GUI.Button(new Rect(100, 100, 250, 100), "Start Server"))
 				StartServer();
@@ -64,7 +79,7 @@ public class NetworkManager : MonoBehaviour
 						JoinServer(hostList[i]);
 				}
 			}
-		}
+		}*/
 	}
 
 	void OnPlayerDisconnected(NetworkPlayer player)
@@ -79,13 +94,13 @@ public class NetworkManager : MonoBehaviour
 	
 	private void RefreshHostList()
 	{
-		MasterServer.RequestHostList(typeName);
+		//MasterServer.RequestHostList(typeName);
 	}
 	
 	void OnMasterServerEvent(MasterServerEvent msEvent)
 	{
-		if(msEvent == MasterServerEvent.HostListReceived)
-			hostList = MasterServer.PollHostList();
+		/*if(msEvent == MasterServerEvent.HostListReceived)
+			hostList = MasterServer.PollHostList();*/
 	}
 
 	private void JoinServer(HostData hostData)
@@ -99,6 +114,7 @@ public class NetworkManager : MonoBehaviour
 		SpawnPlayer();
 	}
 
+	// The following method is called from the client.
 	private void SpawnPlayer()
 	{
 		string pokemonName;
@@ -123,6 +139,30 @@ public class NetworkManager : MonoBehaviour
 		player.transform.parent = GameObject.Find("Pokemon").transform;
 		player.tag = "CameraTarget";
 
-		PokemonList.instance.Add(player.GetInstanceID(), player);
+		//StoreEntities();
+		networkView.RPC("StoreNewEntity", RPCMode.OthersBuffered, player.networkView.viewID);
+	}
+
+	private void StoreEntities()
+	{
+		Transform pokemonObj = GameObject.Find("Pokemon").transform;
+		NetworkView[] entityList = (NetworkView[])GameObject.FindObjectsOfType(typeof(NetworkView));
+
+		foreach(NetworkView entity in entityList)
+		{
+			if(entity.gameObject.name != "NetworkController")
+				entity.gameObject.transform.parent = pokemonObj;
+		}
+	}
+
+	[RPC]
+	private void StoreNewEntity(NetworkViewID viewID)
+	{
+		NetworkView newEntityView = NetworkView.Find(viewID);
+
+		if(newEntityView != null)
+		{
+			newEntityView.gameObject.transform.parent = GameObject.Find("Pokemon").transform;
+		}
 	}
 }

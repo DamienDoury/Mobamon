@@ -13,16 +13,18 @@ public class Attack : MonoBehaviour
 	private bool isFollowing;
 	private bool isProjectile;
 
+	public bool hasAlreadyDamaged = false;
+	public float duration = 0f;
+	public float totalDuration;
+
 	private bool isFinished = false;
 	private List<Component> particleSystemList;
 	
-	// Use this for initialization
 	void Start()
 	{
-	
+
 	}
 
-	// Update is called once per frame
 	void Update()
 	{
 		// We destroy the particles when they are one.
@@ -54,6 +56,17 @@ public class Attack : MonoBehaviour
 
 		DisplaceFX(false);
 
+		if(Network.isServer)
+		{
+			duration += Time.deltaTime;
+
+			if(info.isFollowing && duration > totalDuration * 0.3f && !hasAlreadyDamaged)
+			{
+				target.obj.networkView.RPC("SetDamage", RPCMode.AllBuffered, info.damage);
+				hasAlreadyDamaged = true;
+			}
+		}
+
 		// If there is no more child particle the attack is done.
 		if(transform.childCount == 0)
 		{
@@ -77,17 +90,36 @@ public class Attack : MonoBehaviour
 		LaunchAttack();
 		
 		// If the move should not stop the attack animation, then we don't want to freeze it and we return 0.
-		float longestDuration = 0f;
+		totalDuration = 0f;
 		if(isImmobilizing)
 		{
-			foreach(ParticleSystem particleSystem in particleSystemList)
+			Transform mainParticleTransform = transform.Find("MainParticle");
+
+			if(mainParticleTransform == null)
+				Debug.LogError("The move " + moveName + " has no MainParticle child.");
+			else
 			{
-				if(particleSystem.duration > longestDuration)
-					longestDuration = particleSystem.duration;	
+				ParticleSystem mainParticle = (ParticleSystem)mainParticleTransform.gameObject.GetComponent(typeof(ParticleSystem));
+
+				if(mainParticle == null)
+					Debug.LogError("The MainParticle of the move " + moveName + " contains no ParticleSystem component.");
+				else
+				{
+					totalDuration = mainParticle.duration;
+
+					if(totalDuration > 2)
+						Debug.LogError("The MainParticle of " + moveName + " lasts way too long and may cause animation issues.");
+				}
 			}
+
+			/*foreach(ParticleSystem particleSystem in particleSystemList)
+			{
+				if(particleSystem.duration > totalDuration)
+					totalDuration = particleSystem.duration;	
+			}*/
 		}
 
-		return longestDuration;
+		return totalDuration;
 	}
 
 	void LaunchAttack()

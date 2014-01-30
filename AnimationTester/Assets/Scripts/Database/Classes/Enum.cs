@@ -24,3 +24,14 @@ public enum AttackSource
 	Laser,
 	Body
 }
+
+public enum InputType
+{
+	ERROR,
+	LeftClick,
+	RightClick,
+	Q,
+	W,
+	E,
+	R
+}

@@ -5,14 +5,13 @@ public class CameraMovement : MonoBehaviour
 {	
 	private Transform cameraTarget;
 	private float cameraAngle;
-	private Texture myTexture;
 
 	public float cameraHeight = 10f;
 	public float coeff = 20f;
+	public float maxShifting = 25f;
 	
 	void Awake()
 	{
-		getHUD();
 		getCameraTarget();
 	}
 	
@@ -39,7 +38,7 @@ public class CameraMovement : MonoBehaviour
 
 		Vector3 targetPos = transform.position + new Vector3(0, -cameraHeight, cameraAngle);
 
-		transform.position = new Vector3(transform.position.x, cameraHeight, transform.position.z);
+		transform.position = new Vector3(Mathf.Clamp(transform.position.x, -maxShifting, maxShifting), cameraHeight, Mathf.Clamp(transform.position.z, -maxShifting, maxShifting * 0.75f));
 		transform.LookAt(targetPos);
 
 		bool cameraLocked = false;
@@ -87,11 +86,6 @@ public class CameraMovement : MonoBehaviour
 		}
 	}
 
-	void getHUD()
-	{
-		myTexture = (Texture)Resources.Load("GUI/gui_moves");
-	}
-
 	void CenterCamera()
 	{
 		/*transform.position = cameraTarget.transform.position + Vector3.up * 5 - Vector3.back * 5;
@@ -110,18 +104,5 @@ public class CameraMovement : MonoBehaviour
 		
 		transform.position = newPos;
 		transform.LookAt(cameraTarget.position);
-	}
-
-	void OnGUI()
-	{
-		if(myTexture == null)
-		{
-			Debug.LogError("Assign a Texture in the inspector.");
-			getHUD();
-			return;
-		}
-
-		Rect myRect = new Rect(Screen.width / 2 - myTexture.width / 2, Screen.height - myTexture.height, myTexture.width, myTexture.height);
-		GUI.DrawTexture(myRect, myTexture);
 	}
 }

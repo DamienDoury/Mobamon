@@ -14,6 +14,7 @@ public class Target
 
 public struct MoveInfo
 {
+	public float damage;
 	public AttackCategory attackCategory;
 	public TargetType targetType;
 	public AttackSource attackSource;
