@@ -1,23 +1,28 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Mobamon.Database.Classes;
+using Mobamon.Pokemon.Player;
 
-public static class PokemonList
+namespace Mobamon.Database
 {
-	public static Dictionary<NetworkViewID, GameObject> instance = new Dictionary<NetworkViewID, GameObject>();
-
-	[RPC]
-	public static void AddPokemonInstance(NetworkViewID viewID, GameObject obj)
+	public static class PokemonList
 	{
-		if(obj.GetComponent(typeof(PokemonController)) != null)
-			obj.transform.parent = GameObject.Find("Pokemon").transform;
+		public static Dictionary<NetworkViewID, GameObject> instance = new Dictionary<NetworkViewID, GameObject>();
 
-		instance.Add(viewID, obj);
-	}
+		[RPC]
+		public static void AddPokemonInstance(NetworkViewID viewID, GameObject obj)
+		{
+			if(obj.GetComponent(typeof(PokemonController)) != null)
+				obj.transform.parent = GameObject.Find("Pokemon").transform;
 
-	[RPC]
-	public static void RemovePokemonInstance(NetworkViewID viewID)
-	{
-		instance.Remove(viewID);
+			instance.Add(viewID, obj);
+		}
+
+		[RPC]
+		public static void RemovePokemonInstance(NetworkViewID viewID)
+		{
+			instance.Remove(viewID);
+		}
 	}
-}
+} 

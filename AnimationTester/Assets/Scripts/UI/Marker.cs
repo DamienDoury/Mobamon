@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Marker : MonoBehaviour
+namespace Mobamon.UI
 {
-	void KillIt()
+	public class Marker : MonoBehaviour
 	{
-		Destroy(gameObject);
+		void KillIt()
+		{
+			Destroy(gameObject);
+		}
 	}
 }

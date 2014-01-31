@@ -47,12 +47,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Database\Attackdex.cs" />
-     <Compile Include="Assets\Scripts\Database\Classes\Enum.cs" />
-     <Compile Include="Assets\Scripts\Database\Classes\Struct.cs" />
+     <Compile Include="Assets\Scripts\Database\Classes\MoveInfo.cs" />
+     <Compile Include="Assets\Scripts\Database\Classes\Target.cs" />
+     <Compile Include="Assets\Scripts\Database\Enums\AttackCategory.cs" />
+     <Compile Include="Assets\Scripts\Database\Enums\AttackSource.cs" />
+     <Compile Include="Assets\Scripts\Database\Enums\InputType.cs" />
+     <Compile Include="Assets\Scripts\Database\Enums\TargetType.cs" />
      <Compile Include="Assets\Scripts\Database\PokemonList.cs" />
      <Compile Include="Assets\Scripts\Moves\Attack.cs" />
-     <Compile Include="Assets\Scripts\Network\NetworkManager.cs" />
-     <Compile Include="Assets\Scripts\Network\ServerManager.cs" />
+     <Compile Include="Assets\Scripts\Networking\NetworkManager.cs" />
+     <Compile Include="Assets\Scripts\Networking\ServerManager.cs" />
      <Compile Include="Assets\Scripts\Pokemon\Classes\SelectedMove.cs" />
      <Compile Include="Assets\Scripts\Pokemon\Player\PokemonController.cs" />
      <Compile Include="Assets\Scripts\Pokemon\Player\PokemonManager.cs" />
@@ -60,7 +64,7 @@
      <Compile Include="Assets\Scripts\UI\ManageCursor.cs" />
      <Compile Include="Assets\Scripts\UI\ManageFullscreen.cs" />
      <Compile Include="Assets\Scripts\UI\Marker.cs" />
-     <Compile Include="Assets\Scripts\UI\UI.cs" />
+     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

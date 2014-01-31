@@ -1,27 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ManageFullscreen : MonoBehaviour
+namespace Mobamon.UI
 {
-	void Start()
+	public class ManageFullscreen : MonoBehaviour
 	{
-		if(!Screen.fullScreen)
-			Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, true);
-	}
-
-	void Update()
-	{
-		if(Input.GetKeyDown(KeyCode.F11))
+		void Start()
 		{
 			if(!Screen.fullScreen)
 				Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, true);
-			else
-				Screen.fullScreen = !Screen.fullScreen;
 		}
 
-		if(Input.GetKeyDown(KeyCode.Escape))
+		void Update()
 		{
-			Screen.fullScreen = false;
+			if(Input.GetKeyDown(KeyCode.F11))
+			{
+				if(!Screen.fullScreen)
+					Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, true);
+				else
+					Screen.fullScreen = !Screen.fullScreen;
+			}
+
+			if(Input.GetKeyDown(KeyCode.Escape))
+			{
+				Screen.fullScreen = false;
+			}
 		}
 	}
 }

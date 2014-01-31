@@ -1,98 +1,104 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Mobamon.Pokemon.Player;
+using Mobamon.Pokemon.Classes;
+using Mobamon.Database.Enums;
 
-public class ManageCursor : MonoBehaviour
+namespace Mobamon.UI
 {
-	private PokemonController controller = null;
-	private SelectedMove selectedMove;
-	private GameObject hoverEntity;
-
-	private Texture2D hand;
-	private Vector2 handPos;
-	private Texture2D single;
-	private Vector2 singlePos;
-	private Texture2D singleAlly;
-	private Vector2 singleAllyPos;
-	private Texture2D singleEnemy;
-	private Vector2 singleEnemyPos;
-
-	// Use this for initialization
-	void Start()
+	public class ManageCursor : MonoBehaviour
 	{
-		hand = (Texture2D)Resources.Load("GUI/Cursor/Hand", typeof(Texture2D));
-		single = (Texture2D)Resources.Load("GUI/Cursor/SingleTarget", typeof(Texture2D));
-		singleAlly = (Texture2D)Resources.Load("GUI/Cursor/SingleTarget_Ally", typeof(Texture2D));
-		singleEnemy = (Texture2D)Resources.Load("GUI/Cursor/SingleTarget_Enemy", typeof(Texture2D));
-		
-		handPos = new Vector2(9f, 12f);
-		singlePos = new Vector2(24f, 24f);
-		singleAllyPos = new Vector2(24f, 24f);
-		singleEnemyPos = new Vector2(24f, 24f);
+		private PokemonController controller = null;
+		private SelectedMove selectedMove;
+		private GameObject hoverEntity;
 
-		GetController();
-		GetControllerInfos();
-	}
-	
-	void Update()
-	{
-		GetControllerInfos();
+		private Texture2D hand;
+		private Vector2 handPos;
+		private Texture2D single;
+		private Vector2 singlePos;
+		private Texture2D singleAlly;
+		private Vector2 singleAllyPos;
+		private Texture2D singleEnemy;
+		private Vector2 singleEnemyPos;
 
-		if(!controller)
-			return;
-
-		if(!(selectedMove != null && !selectedMove.IsLaunched()))
+		// Use this for initialization
+		void Start()
 		{
-			Cursor.SetCursor(hand, handPos, CursorMode.ForceSoftware);
-		}
-		else if(selectedMove != null && !selectedMove.IsLaunched())
-		{
-			TargetType targetType = selectedMove.info.targetType;
+			hand = (Texture2D)Resources.Load("GUI/Cursor/Hand", typeof(Texture2D));
+			single = (Texture2D)Resources.Load("GUI/Cursor/SingleTarget", typeof(Texture2D));
+			singleAlly = (Texture2D)Resources.Load("GUI/Cursor/SingleTarget_Ally", typeof(Texture2D));
+			singleEnemy = (Texture2D)Resources.Load("GUI/Cursor/SingleTarget_Enemy", typeof(Texture2D));
 			
-			if(targetType == TargetType.Area)
+			handPos = new Vector2(9f, 12f);
+			singlePos = new Vector2(24f, 24f);
+			singleAllyPos = new Vector2(24f, 24f);
+			singleEnemyPos = new Vector2(24f, 24f);
+
+			GetController();
+			GetControllerInfos();
+		}
+		
+		void Update()
+		{
+			GetControllerInfos();
+
+			if(!controller)
+				return;
+
+			if(!(selectedMove != null && !selectedMove.IsLaunched()))
 			{
-				Cursor.SetCursor(singleEnemy, singleEnemyPos, CursorMode.ForceSoftware);
+				Cursor.SetCursor(hand, handPos, CursorMode.ForceSoftware);
 			}
-			else
+			else if(selectedMove != null && !selectedMove.IsLaunched())
 			{
-				if(hoverEntity)
+				TargetType targetType = selectedMove.info.targetType;
+				
+				if(targetType == TargetType.Area)
 				{
-					if(targetType == TargetType.Self && hoverEntity.Equals(gameObject))
+					Cursor.SetCursor(singleEnemy, singleEnemyPos, CursorMode.ForceSoftware);
+				}
+				else
+				{
+					if(hoverEntity)
 					{
-						Cursor.SetCursor(singleAlly, singleAllyPos, CursorMode.ForceSoftware);
-					}
-					else if(targetType == TargetType.Enemy && !hoverEntity.Equals(gameObject))
-					{
-						Cursor.SetCursor(singleEnemy, singleEnemyPos, CursorMode.ForceSoftware);
+						if(targetType == TargetType.Self && hoverEntity.Equals(gameObject))
+						{
+							Cursor.SetCursor(singleAlly, singleAllyPos, CursorMode.ForceSoftware);
+						}
+						else if(targetType == TargetType.Enemy && !hoverEntity.Equals(gameObject))
+						{
+							Cursor.SetCursor(singleEnemy, singleEnemyPos, CursorMode.ForceSoftware);
+						}
+						else
+						{
+							Cursor.SetCursor(single, singlePos, CursorMode.ForceSoftware);
+						}
 					}
 					else
 					{
 						Cursor.SetCursor(single, singlePos, CursorMode.ForceSoftware);
 					}
 				}
-				else
-				{
-					Cursor.SetCursor(single, singlePos, CursorMode.ForceSoftware);
-				}
 			}
 		}
-	}
 
-	void GetController()
-	{
-		GameObject pokemon = GameObject.Find("Pokemon").GetComponentInChildren(typeof(PokemonController)).gameObject;
-		PokemonController temp = pokemon.GetComponent<PokemonController>();
-		controller = temp;
-	}
-
-	void GetControllerInfos()
-	{
-		if(controller == null)
+		void GetController()
 		{
-			GetController();
-			return;
+			GameObject pokemon = GameObject.Find("Pokemon").GetComponentInChildren(typeof(PokemonController)).gameObject;
+			PokemonController temp = pokemon.GetComponent<PokemonController>();
+			controller = temp;
 		}
 
-		selectedMove = controller.selectedMove;
-		hoverEntity = controller.hoverEntity;
+		void GetControllerInfos()
+		{
+			if(controller == null)
+			{
+				GetController();
+				return;
+			}
+
+			selectedMove = controller.selectedMove;
+			hoverEntity = controller.hoverEntity;
+		}
 	}
 }
