@@ -1,60 +1,84 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 
 public class InvokePokemon : MonoBehaviour
 {
-	private GameObject entity;
-	//private ModelParameters parameters;
-	private Vector3 spawnPosition = new Vector3(4.460348f, 0.2047846f, -9.289039f);
+	private static GameObject entity;
+	private static Vector3 spawnPosition = new Vector3(4.460348f, 0.2047846f, -9.289039f);
 	
-	private Dictionary<string, AnimationClip> foundAnimList = new Dictionary<string, AnimationClip>();
-	private string laserSourcePath = "";
-	private bool isFBX = false;
-	private string laserBoneName = "Laser";
-	private Dictionary<AttackCategory, float> attackAnimHalfDuration = new Dictionary<AttackCategory, float>();
-	
-	public string pokemonToInvoke = "Drakkarmin";
+	private static Dictionary<string, AnimationClip> foundAnimList;
+	private static string laserSourcePath;
+	private static bool isFBX;
+	private static string laserBoneName = "Laser";
+	private static Dictionary<AttackCategory, float> attackAnimHalfDuration;	
+	private static string pokemonToInvoke = "";
+	private static string modelsFolder = "Assets/Models/";
+
+	private static bool generateAll = false;
+	private static string pokemonToGenerate = "";
 	
 	// Use this for initialization
-	void Start ()
+	/*void Start ()
 	{
-		/* 1) Get the pokemon resource
-		 * 2) Create its animator controller from the template
-		 * 3) add it its other parameters from his config script (NavMeshAgent, etc)
-		 * 4) add his PokemonController script
-		 * 5) invoke it
-		 */
-		
-		//entity = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Models/" + pokemonToInvoke + ".blend", typeof(Object));
-		entity = (GameObject)Resources.Load("Pokemon/" + pokemonToInvoke);
-		if(!entity)
-		{
-			Debug.LogError("The prefab " + pokemonToInvoke + " of doesn't exist in the Assets/Resources/Pokemon folder.");
-			return;
-		}
-
-		//parameters = (ModelParameters)entity.GetComponent<ModelParameters>();
-
-		Invoke();
-		GetData();
-		AddAnimator();
-		AddControllerScript();
-		AddNavMeshAgent();
-	}
-	
-	/*void OnPostprocessModel(GameObject g)
-	{
-		// Only operate on Drakkarmin
-		if(assetPath.IndexOf("Drakkarmin") == -1)
-			return; 
-
-		entity = g;
-		AddNavMeshAgent();
+		if(generateAll)
+			GottaGenerateThemAll();
+		else if(pokemonToGenerate != "")
+			GeneratePlayablePokemon(pokemonToGenerate);
 	}*/
 
-	void GetData()
+	[MenuItem ("CustomFeatures/Generate All Pokemon Models")]
+	static void GottaGenerateThemAll()
+	{
+		string[] assetList = AssetDatabase.GetAllAssetPaths();
+		foreach(string asset in assetList)
+		{
+			if(asset.StartsWith(modelsFolder)
+			   && (asset.EndsWith(".blend") || asset.EndsWith(".fbx")))
+			{
+				string pokemonName = asset.Replace(modelsFolder, "").Replace(".blend", "").Replace(".fbx", "");
+				GeneratePlayablePokemon(pokemonName);
+			}
+		}
+	}
+
+	static void GeneratePlayablePokemon(string pokemonName)
+	{
+		pokemonToInvoke = pokemonName;
+
+		if(pokemonToInvoke == "")
+			return;
+		
+		entity = (GameObject)Resources.Load("Pokemon/" + pokemonToInvoke);
+
+		InitializeAttributes();
+		if(GetData())
+		{
+			if(entity == null)
+				CreatePrefab();
+			Invoke();
+			
+			AddAnimator();
+			AddControllerScript();
+			AddNavMeshAgent();
+			AddNetworkView();
+			AddCollider();
+			
+			SavePrefab();
+			DestroyEntity();
+		}
+	}
+
+	static void InitializeAttributes()
+	{
+		laserSourcePath = "";
+		isFBX = false;
+		attackAnimHalfDuration = new Dictionary<AttackCategory, float>();
+		foundAnimList = new Dictionary<string, AnimationClip>();
+	}
+	
+	static bool GetData() // Returns TRUE if the model is OK and we should generate it.
 	{
 		Object[] assetList = AssetDatabase.LoadAllAssetsAtPath("Assets/Models/" + pokemonToInvoke + ".blend");
 		if(assetList.Length <= 0)
@@ -135,16 +159,26 @@ public class InvokePokemon : MonoBehaviour
 		if(animList.Count > 0)
 		{
 			foreach(string animName in animList)
-				Debug.LogWarning("Missing " + animName + " animation for " + pokemonToInvoke + ".");
+				Debug.LogError("Missing " + animName + " animation for " + pokemonToInvoke + ".");
+		}
+		else
+		{
+			if(!foundAnimList["Idle"].isLooping)
+				Debug.LogError("The Idle animation of " + pokemonToInvoke + " is not looping. Please make it loop.");
+
+			if(!foundAnimList["Run"].isLooping)
+				Debug.LogError("The Run animation of " + pokemonToInvoke + " is not looping. Please make it loop.");
 		}
 		
 		if(laserSourcePath == "")
-			Debug.LogWarning("Missing " + laserBoneName + " bone for " + pokemonToInvoke + ".");
-		
-		// Here we auto-configure the animation clips.
+			Debug.LogError("Missing " + laserBoneName + " bone for " + pokemonToInvoke + ".");
+
+		// !! DOESN'T WORK !! Here we auto-configure the animation clips.
 		/*{
 			if(foundAnimList["Idle"])
 			{
+
+				Motion truc = (Motion)Motion.Instantiate(foundAnimList["Idle"]);
 				foundAnimList["Idle"].wrapMode = WrapMode.Loop;
 			}
 
@@ -158,47 +192,90 @@ public class InvokePokemon : MonoBehaviour
 				AnimationClip anim = foundAnimList["SpecialAttack"];
 				AnimationEvent ev = new AnimationEvent();
 
-				// Add the first event.
 				ev.functionName = "LaunchAttack";
 				ev.time = anim.length * 0.5f;
 				anim.AddEvent(ev);
-
-				// Add the second event.
-				ev.functionName = "EndOfAttack";
-				ev.time = anim.length * 0.9f;
-				anim.AddEvent(ev);
 			}
 		}*/
-	}
-	
-	void AddAnimator()
-	{
-		UnityEditorInternal.AnimatorController animatorController = (UnityEditorInternal.AnimatorController)Resources.Load("Animator/Template");
-		UnityEditorInternal.StateMachine sm = animatorController.GetLayer(0).stateMachine;
-		
-		UnityEditorInternal.State state;
-		int i = 0;
-		while(i < foundAnimList.Count && (state = sm.GetState(i)))
+
+		if(animList.Count == 0 && laserSourcePath != "")
 		{
-			state.SetAnimationClip(foundAnimList[state.name]);
-			i++;
+			if(foundAnimList.ContainsKey("Idle") && foundAnimList["Idle"].isLooping == true
+			   && foundAnimList.ContainsKey("Run") && foundAnimList["Run"].isLooping == true)
+				// We gotta check if the event "LaunchAttack" exists.
+				return true;
+			else
+				return false;
+		}
+		else
+			return false;
+	}
+
+	static void CreatePrefab()
+	{
+		PrefabUtility.CreatePrefab("Assets/Resources/Pokemon/" + pokemonToInvoke + ".prefab", (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Models/" + pokemonToInvoke + (isFBX ? ".fbx" : ".blend"), typeof(Object)));
+		entity = (GameObject)Resources.Load("Pokemon/" + pokemonToInvoke);
+
+		if(entity == null)
+		{
+			Debug.LogError("The prefab " + pokemonToInvoke + " of doesn't exist in the Assets/Resources/Pokemon folder.");
+			return; // Unfortunately, this won't stop the program.
 		}
 		
-		Animator animator = (Animator)entity.GetComponent("Animator");
-		if(!animator)
-			animator = (Animator)entity.AddComponent<Animator>();
-		
-		animator.runtimeAnimatorController = animatorController;
+		if(isFBX)
+			entity.transform.localScale = new Vector3(20f, 20f, 20f);
+		else
+			entity.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
 	}
 	
-	void AddNavMeshAgent()
+	static void Invoke()
+	{
+		entity = (GameObject)Instantiate((Object)entity, spawnPosition, new Quaternion());
+		entity.transform.parent = GameObject.Find("Pokemon").transform;
+	}
+	
+	static void AddAnimator()
+	{
+		if(AssetDatabase.LoadAssetAtPath("Assets/Resources/Animator/" + pokemonToInvoke + ".controller", typeof(UnityEditorInternal.AnimatorController)) == null)
+		{
+			//AssetDatabase.CopyAsset("Assets/Resources/Animator/Template.controller", "Assets/Resources/Animator/" + pokemonToInvoke + ".controller");
+			AssetDatabase.CreateAsset(Instantiate(Resources.Load("Animator/Template")), "Assets/Resources/Animator/" + pokemonToInvoke + ".controller");
+
+			UnityEditorInternal.AnimatorController animatorController = (UnityEditorInternal.AnimatorController)Resources.Load("Animator/" + pokemonToInvoke);
+			UnityEditorInternal.StateMachine sm = animatorController.GetLayer(0).stateMachine;
+			
+			UnityEditorInternal.State state;
+			int i = 0;
+			while(i < foundAnimList.Count && (state = sm.GetState(i)))
+			{
+				state.SetAnimationClip(foundAnimList[state.name]);
+				i++;
+			}
+			
+			Animator animator = (Animator)entity.GetComponent("Animator");
+			if(!animator)
+				animator = (Animator)entity.AddComponent<Animator>();
+			
+			animator.runtimeAnimatorController = animatorController;
+		}
+	}
+	
+	static void AddNavMeshAgent()
 	{
 		NavMeshAgent nav = entity.GetComponent<NavMeshAgent>();
 		if(!nav)
 			nav = (NavMeshAgent)entity.AddComponent("NavMeshAgent");
-		
-		nav.radius = 5f;
-		nav.height = 20f;
+
+		if(isFBX)
+		{
+			nav.radius = 0.05f;
+			nav.height = 0.2f;
+		}
+		else
+		{
+			nav.radius = 5f;
+			nav.height = 20f;
+		}
 		
 		nav.stoppingDistance = 0f;
 		
@@ -214,7 +291,7 @@ public class InvokePokemon : MonoBehaviour
 		nav.autoBraking = false;
 	}
 	
-	void AddControllerScript()
+	static void AddControllerScript()
 	{
 		PokemonController script = (PokemonController)entity.GetComponent("PokemonController");
 		if(!script)
@@ -223,20 +300,47 @@ public class InvokePokemon : MonoBehaviour
 		script.laserSourcePath = laserSourcePath;
 		script.attackAnimHalfDuration = attackAnimHalfDuration;
 	}
-	
-	void Invoke()
+
+	static void AddNetworkView()
 	{
-		/*if(isFBX)
-			entity.transform.localScale = new Vector3(20f, 20f, 20f);
+		NetworkView view = (NetworkView)entity.GetComponent(typeof(NetworkView));
+		if(!view)
+			view = (NetworkView)entity.AddComponent<NetworkView>();
+
+		view.stateSynchronization = NetworkStateSynchronization.Off;
+	}
+
+	static void AddCollider()
+	{
+		if((Collider)entity.GetComponent(typeof(Collider)) != null)
+			return;
+
+		SphereCollider sphereCollider = (SphereCollider)entity.AddComponent<SphereCollider>();
+
+		if(isFBX)
+		{
+			sphereCollider.radius = 0.05f;
+			sphereCollider.center = new Vector3(0f, 0.05f, 0f);
+		}
 		else
-			entity.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);*/
-		entity = (GameObject)Instantiate((Object)entity, spawnPosition, new Quaternion());
-		entity.tag = "CameraTarget";
-		entity.transform.parent = GameObject.Find("Pokemon").transform;
+		{
+			sphereCollider.radius = 5f;
+			sphereCollider.center = new Vector3(0f, 5f, 0f);
+		}
+	}
+
+	static void SavePrefab()
+	{
 		PrefabUtility.ReplacePrefab(entity, Resources.Load("Pokemon/" + pokemonToInvoke));
 	}
 
-	AttackCategory attackCategoryStringToEnum(string str)
+	static void DestroyEntity()
+	{
+		entity.name = "_" + entity.name;
+		Destroy(entity); // Doesn't succeed because no Update() is called.
+	}
+
+	static AttackCategory attackCategoryStringToEnum(string str)
 	{
 		switch(str)
 		{
