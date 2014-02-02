@@ -10,54 +10,59 @@ namespace Mobamon.Pokemon.Player
 {
 	public class PokemonController : MonoBehaviour
 	{
-		private Camera myCam = null;
-		private Animator anim;
-		private NavMeshAgent nav;
+		#region Public fields
+		
 		public Transform laserSource;
-		
-		private GameObject marker;
-		
-		private bool canMove = true;
-		private bool canRotate = true;
 		public string laserSourcePath = "";
-		
-		public float turnSmoothing = 20f;
-
 		public GameObject hoverEntity;
-		private RaycastHit hit;
-		
-		private List<string> moveSet = new List<string>(4);
 		public SelectedMove selectedMove;
-		public Dictionary<AttackCategory, float> attackAnimHalfDuration = new Dictionary<AttackCategory, float>();
-
 		public float maxHP = 300f;
 		public float currentHP;
+		
+		#endregion
+		
+		#region Private fields
+		
+		private Camera myCam = null;
+		private Animator anim;
+		private NavMeshAgent nav;		
+		private GameObject marker;		
+		private bool canMove = true;
+		private bool canRotate = true;		
+		public float turnSmoothing = 20f;
+		private RaycastHit hit;		
+		private List<string> moveSet = new List<string>(4);
+		public Dictionary<MoveCategory, float> attackAnimHalfDuration = new Dictionary<MoveCategory, float>();		
 		private float regenRate = 0.05f; // in % of max health/sec.
 		
-		void Start()
+		#endregion
+		
+		#region Public methods
+		
+		public void Start()
 		{
 			anim = GetComponent<Animator>();
 			nav = GetComponent<NavMeshAgent>();
-
+			
 			marker = null;
-
+			
 			nav.autoRepath = true;
 			nav.updateRotation = false; // We manage the rotation ourselves.
 			nav.autoBraking = false; // This is less fancy, but more "accurate" for the player.
-
+			
 			laserSource = transform.Find("Armature/" + laserSourcePath);
-
+			
 			hoverEntity = null;
-
+			
 			moveSet.Add("Waterfall");
 			moveSet.Add("Flamethrower");
 			moveSet.Add("Growl");
 			moveSet.Add("Thunder Shock");
-
+			
 			selectedMove = null;
-
+			
 			currentHP = maxHP * 0.5f;
-
+			
 			if (networkView.isMine)
 			{
 				// Player controller list network management.
@@ -69,7 +74,7 @@ namespace Mobamon.Pokemon.Player
 				foreach(Component comp in controllerList)
 					if(comp.gameObject != gameObject)
 						Destroy(comp);*/
-
+				
 				// Camera list network management.
 				GameObject[] cameraList = GameObject.FindGameObjectsWithTag ("Camera");
 				foreach(GameObject cam in cameraList)
@@ -80,36 +85,36 @@ namespace Mobamon.Pokemon.Player
 			}
 		}
 		
-		void Update()
+		public void Update()
 		{
 			RegenHP();
-
+			
 			if (networkView.isMine)
 			{
 				Controls ();
 			}
-
+			
 			// If the attack animation is done.
 			if(selectedMove != null && selectedMove.isDone && anim.IsInTransition(0))
 			{
 				EndAttackState();
 			}
-
+			
 			if(canRotate)
 				Rotating();
 			
 			if(nav.remainingDistance > 0f)
 				Movement();
-
+			
 			anim.SetFloat("Speed", nav.velocity.magnitude);
 		}
-
-		void Controls()
+		
+		public void Controls()
 		{
 			if (networkView.isMine)
 			{
 				// Uses : selectedMove, hit and hoverEntity
-
+				
 				if(!(selectedMove != null && selectedMove.IsLaunched()))
 				{
 					if((Input.GetKeyDown("q") || Input.GetKeyDown("a")) && moveSet[0] != null)
@@ -174,7 +179,7 @@ namespace Mobamon.Pokemon.Player
 								//if(NavMesh.SamplePosition(hit.point, out sampleHit, 1f, 1 << NavMesh.GetNavMeshLayerFromName("Default"))) // I was trying to prevent the character from touching the walls, using its NavMeshRadius.
 								{
 									theChosenHit.point.Set(theChosenHit.point.x, 0, theChosenHit.point.z);
-
+									
 									networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, theChosenHit.point, NetworkViewID.unassigned);
 								}
 							}
@@ -185,15 +190,16 @@ namespace Mobamon.Pokemon.Player
 						// If a move is selected, but not launched :
 						if(!selectedMove.IsLaunched())
 						{
-							TargetType targetType = selectedMove.info.targetType;
+							MoveTargetKind targetKind = selectedMove.info.TargetKind;
+							PokemonRelation relation = PokemonRelation.Enemy; //this.GetRelation(selectedMove.target.Controller);
 							
-							if(targetType == TargetType.Area)
+							if(targetKind == MoveTargetKind.Area)
 							{
 								networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, hit.point, NetworkViewID.unassigned);
 							}
 							else if(hoverEntity != null) // If the target type is not an area, then it's a single target spell. Therefore he needs a target.
 							{
-								if(targetType == TargetType.Enemy && !hoverEntity.Equals(gameObject))
+								if(relation == PokemonRelation.Enemy && !hoverEntity.Equals(gameObject))
 								{
 									networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, hit.point, hoverEntity.networkView.viewID);
 									//hoverEntity = null;
@@ -218,14 +224,36 @@ namespace Mobamon.Pokemon.Player
 				}
 			}
 		}
-
+		
+		public void SetDamage(float dmg)
+		{
+			float newLife = Mathf.Max(0, currentHP - dmg);
+			this.gameObject.networkView.RPC ("SetLife", RPCMode.AllBuffered, newLife);
+		}
+		
+		public PokemonRelation GetRelation(PokemonController controller)
+		{
+			if (this == controller)
+			{
+				return PokemonRelation.Self;
+			}
+			else
+			{
+				return PokemonRelation.Enemy;
+			}
+		}
+		
+		#endregion
+		
+		#region Private methods
+		
 		[RPC]
-		void ValidateControl(int input, Vector3 pos, NetworkViewID viewID)
+		private void ValidateControl(int input, Vector3 pos, NetworkViewID viewID)
 		{
 			if(Network.isServer)
 			{
 				// Uses : selectedMove, hit and hoverEntity
-
+				
 				if(!(selectedMove != null && selectedMove.IsLaunched()))
 				{
 					if(input == (int)InputType.Q && moveSet[0] != null)
@@ -257,15 +285,16 @@ namespace Mobamon.Pokemon.Player
 						// If a move is selected, but not launched :
 						if(!selectedMove.IsLaunched())
 						{
-							TargetType targetType = selectedMove.info.targetType;
+							MoveTargetKind targetKind = selectedMove.info.TargetKind;
+							PokemonRelation relation = PokemonRelation.Enemy;  //this.GetRelation(selectedMove.target.Controller);
 							
-							if(targetType == TargetType.Area)
+							if(targetKind == MoveTargetKind.Area)
 							{
 								SetAttackState(NetworkViewID.unassigned, pos);
 							}
 							else if(viewID != NetworkViewID.unassigned) // If the target type is not an area, then it's a single target spell. Therefore he needs a target.
 							{
-								if(targetType == TargetType.Enemy) // As we don't check if the player is targetting himself with an offensive spell, the player might cheat and kill himself.
+								if(relation == PokemonRelation.Enemy) // As we don't check if the player is targetting himself with an offensive spell, the player might cheat and kill himself.
 								{
 									SetAttackState(viewID, pos);
 								}
@@ -287,15 +316,15 @@ namespace Mobamon.Pokemon.Player
 				}
 			}
 		}
-
+		
 		[RPC]
-		void SetDestination(Vector3 pos)
+		private void SetDestination(Vector3 pos)
 		{
 			if(Network.isServer)
 			{
 				networkView.RPC("SetDestination", RPCMode.Others, pos);
 			}
-
+			
 			if(networkView.isMine)
 			{
 				if(marker != null)
@@ -303,12 +332,12 @@ namespace Mobamon.Pokemon.Player
 				
 				marker = (GameObject)Instantiate(Resources.Load("Miscellaneous/Marker"), pos + Vector3.up / 10, new Quaternion());
 			}
-
+			
 			nav.destination = pos;
 		}
-
+		
 		[RPC]
-		void SetAttackState(NetworkViewID viewID, Vector3 pos)
+		private void SetAttackState(NetworkViewID viewID, Vector3 pos)
 		{
 			if(Network.isServer)
 				networkView.RPC("SetAttackState", RPCMode.Others, viewID, pos);
@@ -320,39 +349,43 @@ namespace Mobamon.Pokemon.Player
 				targetPokemon = NetworkView.Find(viewID).gameObject;
 				//targetPokemon = PokemonList.instance[instanceID];
 			}
-
 			
-			selectedMove.SetTarget(new Target(targetPokemon, pos));
+			
+			selectedMove.SetTarget(new MoveTarget(targetPokemon, pos));
 			canMove = nav.updatePosition = false;
-
+			
 			// Then, the LaunchAttackAnim is called from the Rotating() method.
 		}
 		
 		[RPC]
-		void SelectMove(int index)
+		private void SelectMove(int index)
 		{
 			if(Network.isServer)
 				networkView.RPC("SelectMove", RPCMode.Others, index);
 			
 			selectedMove = new SelectedMove(moveSet[index]);
-			
-			if(selectedMove.info.targetType == TargetType.Self)
+
+			bool isSelfOnly = (PokemonRelation.Self & selectedMove.info.AllowedTargets) == PokemonRelation.Self
+								&& (PokemonRelation.Ally & selectedMove.info.AllowedTargets) == 0
+								&& (PokemonRelation.Enemy & selectedMove.info.AllowedTargets) == 0;
+
+			if(isSelfOnly)
 			{
 				SetAttackState(gameObject.networkView.viewID, transform.position);
 			}
 		}
-
+		
 		[RPC]
-		void CancelTargetting()
+		private void CancelTargetting()
 		{
 			if(UnityEngine.Network.isServer)
 				networkView.RPC("CancelTargetting", RPCMode.Others, null);
-
+			
 			EndAttackState();
 			selectedMove = null;
 		}
 		
-		void Movement()
+		private void Movement()
 		{
 			if(nav.remainingDistance < 0.3f)
 			{
@@ -370,30 +403,30 @@ namespace Mobamon.Pokemon.Player
 				else
 				{
 					//if(canMove)
-						nav.updatePosition = true;
+					nav.updatePosition = true;
 				}
 			}
-
+			
 			gameObject.transform.position.Set(gameObject.transform.position.x, 0, gameObject.transform.position.z);
 		}
-
-		void Rotating()
+		
+		private void Rotating()
 		{
 			if(!canRotate)
 				return;
-
+			
 			Vector3 target = new Vector3();
 			if(selectedMove != null && selectedMove.target != null && !selectedMove.isDone)
 			{
-				if(selectedMove.target.obj != null && selectedMove.info.isFollowing)
-					target = selectedMove.target.obj.transform.position;
+				if(selectedMove.target.GameObject != null && selectedMove.info.IsFollowingTarget)
+					target = selectedMove.target.CurrentPosition;
 				else
-					target = selectedMove.target.pos;
-
+					target = selectedMove.target.StartPosition;
+				
 				target -= gameObject.transform.position;
 				target.Set(target.x, 0, target.z);
 				target.Normalize();
-
+				
 				float angle = Vector3.Angle(gameObject.transform.forward, target);
 				if(angle < 1.0f)
 				{
@@ -411,47 +444,47 @@ namespace Mobamon.Pokemon.Player
 			{
 				return;
 			}
-
+			
 			Quaternion forwardRotation = Quaternion.LookRotation(gameObject.transform.forward, Vector3.up);
 			Quaternion targetRotation = Quaternion.LookRotation(target, Vector3.up);
-
+			
 			Quaternion newRotation = new Quaternion();
 			float angleBis = Vector3.Angle(gameObject.transform.forward, target);
 			if(angleBis < 2.0f)
 				newRotation = targetRotation;
 			else
 				newRotation = Quaternion.Lerp(forwardRotation, targetRotation, turnSmoothing * Time.deltaTime);
-
+			
 			gameObject.transform.rotation = newRotation;
 		}
-
-		void LaunchAttackAnim()
+		
+		private void LaunchAttackAnim()
 		{
 			/*if(networkView.isMine)
 				networkView.RPC("LaunchAttackAnim", RPCMode.Others, null);*/
-
+			
 			canRotate = nav.updateRotation = false;
 			
-			if(selectedMove.info.attackCategory == AttackCategory.Physical)
+			if(selectedMove.info.Category == MoveCategory.Physical)
 				anim.SetBool("PhysicalAttack", true);
 			else
 				anim.SetBool("SpecialAttack", true);
-
+			
 			// Then, LaunchAttack is called by the attack animation event.
 		}
-
-		void LaunchAttack(float holdDuration)
+		
+		private void LaunchAttack(float holdDuration)
 		{
 			if(selectedMove != null && selectedMove.target != null) //networkView.isMine && 
 			{
 				GameObject move = (GameObject)Instantiate(Resources.Load("Moves/" + selectedMove.name));
 				move.transform.parent = GameObject.Find("Moves").transform;
 				
-				Attack script = (Attack)move.AddComponent(typeof(Attack));
-				Target source = new Target(gameObject, transform.position);
-				float freezeDuration = script.SetAttackParams(selectedMove.name, source, selectedMove.target);
+				Move script = (Move)move.AddComponent(typeof(Move));
+				MoveTarget source = new MoveTarget(gameObject, transform.position);
+				float freezeDuration = script.SetMoveParameters(selectedMove.name, source, selectedMove.target);
 				Invoke("Unfreeze", freezeDuration); // Even the non-immobilizing moves need to "unfreeze" the animation.
-
+				
 				if(freezeDuration > 0)
 				{	
 					float maxAttackAnimSpeed = 0.2f;
@@ -467,33 +500,35 @@ namespace Mobamon.Pokemon.Player
 				}
 			}
 		}
-
-		void Unfreeze()
+		
+		private void Unfreeze()
 		{
 			selectedMove.isDone = true;
 			anim.speed = 1.0f;
 		}
-
-		void EndAttackState()
+		
+		private void EndAttackState()
 		{
 			canMove = nav.updatePosition = true;
 			canRotate = nav.updateRotation = true;
-
+			
 			anim.SetBool("PhysicalAttack", false);
 			anim.SetBool("SpecialAttack", false);
 			
 			selectedMove = null;
 		}
-
+		
 		private void RegenHP()
 		{
 			currentHP = Mathf.Min(maxHP, currentHP + maxHP * regenRate * Time.deltaTime);
 		}
-
+		
 		[RPC]
-		public void SetDamage(float dmg)
+		private void SetLife(float life)
 		{
-			currentHP = Mathf.Max(0, currentHP - dmg);
+			currentHP = life;
 		}
+		
+		#endregion
 	}
 }

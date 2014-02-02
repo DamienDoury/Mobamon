@@ -9,7 +9,7 @@ namespace Mobamon.Pokemon.Classes
 	{
 		public string name;
 		public MoveInfo info;
-		public Target target;
+		public MoveTarget target;
 		public bool isDone;
 
 		public SelectedMove(string _name)
@@ -21,7 +21,7 @@ namespace Mobamon.Pokemon.Classes
 			isDone = false;
 		}
 
-		public void SetTarget(Target _target)
+		public void SetTarget(MoveTarget _target)
 		{
 			target = _target;
 		}

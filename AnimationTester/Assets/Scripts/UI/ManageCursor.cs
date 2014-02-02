@@ -51,9 +51,9 @@ namespace Mobamon.UI
 			}
 			else if(selectedMove != null && !selectedMove.IsLaunched())
 			{
-				TargetType targetType = selectedMove.info.targetType;
+				MoveTargetKind targetType = selectedMove.info.TargetKind;
 				
-				if(targetType == TargetType.Area)
+				if(targetType == MoveTargetKind.Area)
 				{
 					Cursor.SetCursor(singleEnemy, singleEnemyPos, CursorMode.ForceSoftware);
 				}
@@ -61,11 +61,11 @@ namespace Mobamon.UI
 				{
 					if(hoverEntity)
 					{
-						if(targetType == TargetType.Self && hoverEntity.Equals(gameObject))
+						if(targetType == MoveTargetKind.Single && hoverEntity.Equals(gameObject))
 						{
 							Cursor.SetCursor(singleAlly, singleAllyPos, CursorMode.ForceSoftware);
 						}
-						else if(targetType == TargetType.Enemy && !hoverEntity.Equals(gameObject))
+						else if(targetType == MoveTargetKind.Single && !hoverEntity.Equals(gameObject))
 						{
 							Cursor.SetCursor(singleEnemy, singleEnemyPos, CursorMode.ForceSoftware);
 						}

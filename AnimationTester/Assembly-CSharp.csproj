@@ -48,16 +48,20 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Database\Attackdex.cs" />
      <Compile Include="Assets\Scripts\Database\Classes\MoveInfo.cs" />
-     <Compile Include="Assets\Scripts\Database\Classes\Target.cs" />
+     <Compile Include="Assets\Scripts\Database\Classes\MoveTarget.cs" />
      <Compile Include="Assets\Scripts\Database\Classes\Vector3Extensions.cs" />
-     <Compile Include="Assets\Scripts\Database\Enums\AttackCategory.cs" />
-     <Compile Include="Assets\Scripts\Database\Enums\AttackShape.cs" />
-     <Compile Include="Assets\Scripts\Database\Enums\AttackSource.cs" />
      <Compile Include="Assets\Scripts\Database\Enums\InputType.cs" />
-     <Compile Include="Assets\Scripts\Database\Enums\TargetType.cs" />
+     <Compile Include="Assets\Scripts\Database\Enums\MoveCategory.cs" />
+     <Compile Include="Assets\Scripts\Database\Enums\MoveEffectType.cs" />
+     <Compile Include="Assets\Scripts\Database\Enums\MoveShape.cs" />
+     <Compile Include="Assets\Scripts\Database\Enums\MoveSource.cs" />
+     <Compile Include="Assets\Scripts\Database\Enums\MoveTargetKind.cs" />
+     <Compile Include="Assets\Scripts\Database\Enums\MoveTargetNumber.cs" />
+     <Compile Include="Assets\Scripts\Database\Enums\PokemonRelation.cs" />
      <Compile Include="Assets\Scripts\Database\PokemonList.cs" />
-     <Compile Include="Assets\Scripts\Moves\Attack.cs" />
-     <Compile Include="Assets\Scripts\Moves\AttackCollider.cs" />
+     <Compile Include="Assets\Scripts\Moves\Classes\Duration.cs" />
+     <Compile Include="Assets\Scripts\Moves\Move.cs" />
+     <Compile Include="Assets\Scripts\Moves\MoveTrigger.cs" />
      <Compile Include="Assets\Scripts\Networking\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\Networking\ServerManager.cs" />
      <Compile Include="Assets\Scripts\Pokemon\Classes\SelectedMove.cs" />
