@@ -210,7 +210,6 @@ namespace Mobamon.Moves
 			// If the move is not immobilizing the caster, move the FX object to the new source position
 			if (!this.Info.IsImmobilizingCaster)
 			{
-				// = this.GetPosition();
 				Vector3 newPosition = this.GetPosition();
 				this.ColliderObject.transform.position = newPosition;
 
@@ -286,7 +285,7 @@ namespace Mobamon.Moves
 				if (collider is BoxCollider)
 				{
 					BoxCollider boxCollider = ((BoxCollider) collider);
-					boxCollider.center = Vector3.Normalize(boxCollider.center) * centerScale;
+					boxCollider.center = this.MainParticleSystem.transform.forward * centerScale;
 					boxCollider.size = new Vector3(boxCollider.size.x, boxCollider.size.y, scaleZ);
 				}
 			}
@@ -352,7 +351,12 @@ namespace Mobamon.Moves
 				foreach (ParticleSystem particleSystem in this.ParticleSystems)
 				{
 					particleSystem.transform.position = startPosition;
-					particleSystem.transform.forward = forward;
+
+					if (this.Info.Shape != MoveShape.Point)
+					{						
+						particleSystem.transform.forward = forward;
+					}
+
 					particleSystem.Play();
 				}
 			}
