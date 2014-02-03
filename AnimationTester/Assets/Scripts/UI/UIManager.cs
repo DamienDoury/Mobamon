@@ -71,8 +71,12 @@ namespace Mobamon.UI
 
 			foreach(Component comp in transformList) // We display the health bar at the feet position of the character.
 			{
+
 				Transform tr = comp.transform;
 				PokemonController controller = (PokemonController)tr.gameObject.GetComponent(typeof(PokemonController));
+
+				if(controller == null)
+					continue;
 
 				if(tr.parent != GameObject.Find("Pokemon").transform)
 					continue;
@@ -99,7 +103,10 @@ namespace Mobamon.UI
 		{
 			if(!Network.isServer)
 			{
-				int ping = Network.GetAveragePing(Network.connections[0]);
+				string ping = "?";
+				if(Network.connections.Length > 0)
+					ping = Network.GetAveragePing(Network.connections[0]).ToString();
+
 				GUI.Label(new Rect(0, 0, 80, 30), "Ping: " + ping + "ms");
 			}
 		}

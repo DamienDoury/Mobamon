@@ -61,13 +61,13 @@ namespace Mobamon.Database
 					DurationPercentEffectsApply = 0.3f,
 					EffectType = MoveEffectType.OnHit,
 					HittableTargetsNumber = MoveTargetNumber.One,
-					IsFollowingTarget = true,
+					IsFollowingTarget = false,
 					IsImmobilizingCaster = false,
 					MovementSpeed = 0f,
 					Radius = 1f,
 					Shape = MoveShape.Point,
 					Source = MoveSource.Laser,
-					TargetKind = MoveTargetKind.Area
+					TargetKind = MoveTargetKind.Single
 				}
 			},
 			{

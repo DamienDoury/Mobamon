@@ -67,7 +67,7 @@ namespace Mobamon.Pokemon.Player
 			
 			selectedMove = null;
 			
-			currentHP = maxHP * 0.5f;
+			currentHP = maxHP;
 			
 			if (networkView.isMine)
 			{
@@ -85,7 +85,7 @@ namespace Mobamon.Pokemon.Player
 				GameObject[] cameraList = GameObject.FindGameObjectsWithTag ("Camera");
 				foreach(GameObject cam in cameraList)
 					Destroy (cam);
-				GameObject camera = (GameObject)Instantiate(Resources.Load("Camera/playerCamera"), new Vector3(5, 5, -20), Quaternion.identity);
+				GameObject camera = (GameObject)Instantiate(Resources.Load("Camera/playerCamera"), new Vector3(transform.position.x, 5f, transform.position.z), Quaternion.identity);
 				camera.tag = "Camera";
 				myCam = (Camera)camera.GetComponent(typeof(Camera));
 			}

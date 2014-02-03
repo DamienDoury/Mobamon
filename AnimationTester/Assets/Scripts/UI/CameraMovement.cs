@@ -10,7 +10,7 @@ namespace Mobamon.UI
 
 		public float cameraHeight = 10f;
 		public float coeff = 20f;
-		public float maxShifting = 25f;
+		public float maxShifting;
 		
 		void Awake()
 		{
@@ -40,7 +40,7 @@ namespace Mobamon.UI
 
 			Vector3 targetPos = transform.position + new Vector3(0, -cameraHeight, cameraAngle);
 
-			transform.position = new Vector3(Mathf.Clamp(transform.position.x, -maxShifting, maxShifting), cameraHeight, Mathf.Clamp(transform.position.z, -maxShifting, maxShifting * 0.75f));
+			transform.position = new Vector3(Mathf.Clamp(transform.position.x, 0, maxShifting), cameraHeight, Mathf.Clamp(transform.position.z, 0, maxShifting * 0.4f));
 			transform.LookAt(targetPos);
 
 			bool cameraLocked = false;

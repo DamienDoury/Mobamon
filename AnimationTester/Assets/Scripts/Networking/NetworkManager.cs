@@ -9,7 +9,7 @@ namespace Mobamon.Networking
 		private const string gameName = "RoomName";
 		private HostData[] hostList;
 
-		private string serverIp = "82.127.144.96"; //82.127.144.96
+		private string serverIp = "127.0.0.1"; //82.127.144.96
 
 		void Start()
 		{
@@ -142,7 +142,7 @@ namespace Mobamon.Networking
 					break;
 			}
 
-			player = (GameObject)Network.Instantiate(Resources.Load ("Pokemon/" + pokemonName), new Vector3(5f, 0f, -10f), Quaternion.identity, 0);
+			player = (GameObject)Network.Instantiate(Resources.Load ("Pokemon/" + pokemonName), new Vector3(25f, 0f, 40f), Quaternion.identity, 0);
 			player.transform.parent = GameObject.Find("Pokemon").transform;
 			player.tag = "CameraTarget";
 
