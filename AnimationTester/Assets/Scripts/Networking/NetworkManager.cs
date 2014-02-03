@@ -9,7 +9,7 @@ namespace Mobamon.Networking
 		private const string gameName = "RoomName";
 		private HostData[] hostList;
 
-		private string serverIp = "127.0.0.1";
+		private string serverIp = "82.127.144.96"; //82.127.144.96
 
 		void Start()
 		{

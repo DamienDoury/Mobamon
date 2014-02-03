@@ -34,6 +34,12 @@ namespace Mobamon.Pokemon.Player
 		private List<string> moveSet = new List<string>(4);
 		public Dictionary<MoveCategory, float> attackAnimHalfDuration = new Dictionary<MoveCategory, float>();		
 		private float regenRate = 0.05f; // in % of max health/sec.
+
+		private bool blinkAfterDamage = false;
+		private float blinkDuration = 0f;
+		private float blinkMaxDuration = 0.5f;
+		private int numberOfBlinks = 1;
+
 		
 		#endregion
 		
@@ -88,6 +94,7 @@ namespace Mobamon.Pokemon.Player
 		public void Update()
 		{
 			RegenHP();
+			BlinkAfterDamage();
 			
 			if (networkView.isMine)
 			{
@@ -527,6 +534,43 @@ namespace Mobamon.Pokemon.Player
 		private void SetLife(float life)
 		{
 			currentHP = life;
+			StartBlinking();
+		}
+
+		private void StartBlinking()
+		{
+			blinkAfterDamage = true;
+			blinkDuration = 0f;
+		}
+
+		private void BlinkAfterDamage()
+		{
+			if(!blinkAfterDamage)
+				return;
+			
+			Color originalColor = new Color(0.8f, 0.8f, 0.8f, 1f);
+			
+			if(blinkDuration <= 0f)
+				blinkDuration = blinkMaxDuration * numberOfBlinks * 2 - blinkMaxDuration; // Add " - blinkMaxDuration" to start from the red color.
+			
+			blinkDuration -= Time.deltaTime;
+			
+			Renderer rend = (Renderer)GetComponentInChildren(typeof(Renderer));
+			Material[] matList = rend.materials;
+			foreach(Material mat in matList)
+			{
+				float lerp = Mathf.PingPong(blinkDuration, blinkMaxDuration) / blinkMaxDuration;
+				mat.color = Color.Lerp(originalColor, Color.red, lerp);
+				// Alternate solution: Material.Lerp() with a plain red template material.
+			}
+			
+			if(blinkDuration < 0f)
+			{
+				blinkAfterDamage = false;
+				
+				foreach(Material mat in matList)
+					mat.color = originalColor;
+			}
 		}
 		
 		#endregion

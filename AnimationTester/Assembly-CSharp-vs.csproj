@@ -65,7 +65,6 @@
      <Compile Include="Assets\Scripts\Networking\ServerManager.cs" />
      <Compile Include="Assets\Scripts\Pokemon\Classes\SelectedMove.cs" />
      <Compile Include="Assets\Scripts\Pokemon\Player\PokemonController.cs" />
-     <Compile Include="Assets\Scripts\Pokemon\Player\PokemonManager.cs" />
      <Compile Include="Assets\Scripts\UI\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\UI\ManageCursor.cs" />
      <Compile Include="Assets\Scripts\UI\ManageFullscreen.cs" />

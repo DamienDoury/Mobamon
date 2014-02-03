@@ -40,6 +40,7 @@ namespace Mobamon.UI
 
 			DisplaySpellBar();
 			DisplayHealthBars();
+			DisplayPing();
 		}
 
 		private void getCamera()
@@ -91,6 +92,15 @@ namespace Mobamon.UI
 
 				/*rect.y += healthBarTexture.height;
 				GUI.Label(rect, tr.gameObject.networkView.viewID.ToString());*/
+			}
+		}
+
+		private void DisplayPing()
+		{
+			if(!Network.isServer)
+			{
+				int ping = Network.GetAveragePing(Network.connections[0]);
+				GUI.Label(new Rect(0, 0, 80, 30), "Ping: " + ping + "ms");
 			}
 		}
 	}
