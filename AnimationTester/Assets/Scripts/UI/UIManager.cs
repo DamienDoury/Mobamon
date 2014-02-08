@@ -104,10 +104,11 @@ namespace Mobamon.UI
 			if(!Network.isServer)
 			{
 				string ping = "?";
+
 				if(Network.connections.Length > 0)
 					ping = Network.GetAveragePing(Network.connections[0]).ToString();
 
-				GUI.Label(new Rect(0, 0, 80, 30), "Ping: " + ping + "ms");
+				GUI.Label(new Rect(0, 0, 80, 30), "Ping:" + ping + "ms");
 			}
 		}
 	}

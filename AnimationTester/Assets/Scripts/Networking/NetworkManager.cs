@@ -10,10 +10,11 @@ namespace Mobamon.Networking
 		private HostData[] hostList;
 
 		private string serverIp = "127.0.0.1"; //82.127.144.96
+		private int serverPort = 25000;
 
 		void Start()
 		{
-			Network.Connect(serverIp, 25000);
+			Network.Connect(serverIp, serverPort);
 		}
 
 		void OnFailedToConnect(NetworkConnectionError error) {
@@ -50,7 +51,7 @@ namespace Mobamon.Networking
 				roomName = "Unknown room";
 			}
 
-			Network.InitializeServer(4, 25000, true);//!Network.HavePublicAddress());
+			Network.InitializeServer(4, serverPort, true);//!Network.HavePublicAddress());
 			//MasterServer.RegisterHost(typeName, roomName);
 			//InstantiateNPCs();
 
@@ -65,7 +66,7 @@ namespace Mobamon.Networking
 
 		void OnGUI()
 		{
-			string message = "You are the server. \nYour IP is " + serverIp + ".";
+			string message = "You are the server. \nYour IP is " + serverIp + ". \n" + Network.connections.Length + " players connected.";
 
 			if(Network.isServer)
 				GUI.Label(new Rect(100, 100, 250, 100), message);
@@ -118,23 +119,32 @@ namespace Mobamon.Networking
 		void OnConnectedToServer()
 		{
 			Debug.Log("Server Joined");
-			SpawnPlayer();
+			//SpawnPlayer();
+		}
+
+		void OnPlayerConnected(NetworkPlayer player)
+		{
+			if(Network.isServer)
+			{
+				networkView.RPC("SpawnPlayer", player, Network.connections.Length % 2, Network.connections.Length);
+			}
 		}
 
 		// The following method is called from the client.
-		private void SpawnPlayer()
+		[RPC]
+		private void SpawnPlayer(int teamID, int pokemonID)
 		{
 			string pokemonName;
 
 			GameObject player;
-			switch(Network.connections.Length % 3)
+			switch(pokemonID % 3)
 			{
 				case 0:
-					pokemonName = "Dimoret";
+					pokemonName = "Caninos";
 					break;
 
 				case 1:
-					pokemonName = "Caninos";
+					pokemonName = "Dimoret";
 					break;
 
 				default:
@@ -142,7 +152,8 @@ namespace Mobamon.Networking
 					break;
 			}
 
-			player = (GameObject)Network.Instantiate(Resources.Load ("Pokemon/" + pokemonName), new Vector3(25f, 0f, 40f), Quaternion.identity, 0);
+			Vector3 spawnPos = teamID % 2 == 1 ? GameInfo.blueTeamSpawn : GameInfo.redTeamSpawn;
+			player = (GameObject)Network.Instantiate(Resources.Load ("Pokemon/" + pokemonName), spawnPos, Quaternion.identity, 0);
 			player.transform.parent = GameObject.Find("Pokemon").transform;
 			player.tag = "CameraTarget";
 

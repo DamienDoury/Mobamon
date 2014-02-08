@@ -40,6 +40,7 @@ namespace Mobamon.Pokemon.Player
 		private float blinkMaxDuration = 0.5f;
 		private int numberOfBlinks = 1;
 
+		private Vector3 spawnPosition;
 		
 		#endregion
 		
@@ -68,6 +69,7 @@ namespace Mobamon.Pokemon.Player
 			selectedMove = null;
 			
 			currentHP = maxHP;
+			spawnPosition = transform.position;
 			
 			if (networkView.isMine)
 			{
@@ -224,6 +226,8 @@ namespace Mobamon.Pokemon.Player
 				}
 				else if(Input.GetMouseButtonDown(1))
 				{
+					SetLife(currentHP - 200f);
+
 					if(selectedMove != null && !selectedMove.IsLaunched())
 					{
 						networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.RightClick, Input.mousePosition, NetworkViewID.unassigned);
@@ -235,7 +239,7 @@ namespace Mobamon.Pokemon.Player
 		public void SetDamage(float dmg)
 		{
 			float newLife = Mathf.Max(0, currentHP - dmg);
-			this.gameObject.networkView.RPC ("SetLife", RPCMode.AllBuffered, newLife);
+			this.gameObject.networkView.RPC("SetLife", RPCMode.All, newLife);
 		}
 		
 		public PokemonRelation GetRelation(PokemonController controller)
@@ -533,8 +537,34 @@ namespace Mobamon.Pokemon.Player
 		[RPC]
 		private void SetLife(float life)
 		{
-			currentHP = life;
-			StartBlinking();
+			currentHP = Mathf.Clamp(life, 0, maxHP);
+
+			if(currentHP <= 0)
+			{
+				Invoke("Respawn", 3f);
+				gameObject. SetActive(false);
+			}
+			else
+			{
+				StartBlinking();
+			}
+		}
+
+		private void Respawn()
+		{
+			// Visual setters
+			transform.position = spawnPosition;
+			transform.rotation = Quaternion.identity;
+			nav.destination = spawnPosition;
+			blinkAfterDamage = false;
+
+			// Logical setters
+			currentHP = maxHP;
+			selectedMove = null;
+			canMove = true;
+			canRotate = true;
+
+			gameObject.SetActive(true);
 		}
 
 		private void StartBlinking()
