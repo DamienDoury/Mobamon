@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 2f23fbceba109ce44879180cd516e0ad
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - Hand: {fileID: 2800000, guid: d4d4ea17ba3608f499b3217bc3bf9e0d, type: 3}
+  - SingleFriendly: {fileID: 2800000, guid: 727da2762c84b3a41a78b1eac26c06ee, type: 3}
+  - SingleEnnemy: {fileID: 2800000, guid: 41f9dcb2257a602429504c3ba8ff93ab, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
