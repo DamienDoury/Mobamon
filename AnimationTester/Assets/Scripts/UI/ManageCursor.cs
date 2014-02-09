@@ -84,9 +84,8 @@ namespace Mobamon.UI
 
 		void GetController()
 		{
-			GameObject pokemon = GameObject.Find("Pokemon").GetComponentInChildren(typeof(PokemonController)).gameObject;
-			PokemonController temp = pokemon.GetComponent<PokemonController>();
-			controller = temp;
+			GameObject pokemon = GameObject.FindGameObjectWithTag("CameraTarget");
+			controller = pokemon.GetComponent<PokemonController>();
 		}
 
 		void GetControllerInfos()

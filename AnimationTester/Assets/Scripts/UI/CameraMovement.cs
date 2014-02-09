@@ -8,9 +8,12 @@ namespace Mobamon.UI
 		private Transform cameraTarget;
 		private float cameraAngle;
 
-		public float cameraHeight = 10f;
-		public float coeff = 20f;
-		public float maxShifting;
+		private float cameraHeight = 10f;
+		private float coeff = 8f;
+		private float maxShifting = 100f;
+		private float zoomSpeed = 800f;
+
+		private Vector3 targetPos;
 		
 		void Awake()
 		{
@@ -25,40 +28,26 @@ namespace Mobamon.UI
 				return;
 			}
 
-			float zoomFactor = 200f;
-			if(Input.GetAxis("Mouse ScrollWheel") < 0) // Back
-			{
-				cameraHeight += Time.deltaTime * zoomFactor;
-			}
-			else if(Input.GetAxis("Mouse ScrollWheel") > 0) // Forward
-			{
-				cameraHeight -= Time.deltaTime * zoomFactor;
-			}
-
-			cameraHeight = Mathf.Max(Mathf.Min(cameraHeight, 25f), 3f);
+			// 1) We compute the zoom.
+			float zoomDirection = 0f;
+			if(Input.GetAxis("Mouse ScrollWheel") < 0f) // Backward scrolling
+				zoomDirection = Input.GetAxis("Mouse ScrollWheel");
+			else if(Input.GetAxis("Mouse ScrollWheel") > 0f) // Forward scrolling
+				zoomDirection = Input.GetAxis("Mouse ScrollWheel");
+			
+			cameraHeight = Mathf.Clamp(cameraHeight - zoomDirection * zoomSpeed * Time.deltaTime, 3f, 25f);
 			cameraAngle = -(coeff / cameraHeight - 10f);
 
-			Vector3 targetPos = transform.position + new Vector3(0, -cameraHeight, cameraAngle);
-
-			transform.position = new Vector3(Mathf.Clamp(transform.position.x, 0, maxShifting), cameraHeight, Mathf.Clamp(transform.position.z, 0, maxShifting * 0.4f));
-			transform.LookAt(targetPos);
-
-			bool cameraLocked = false;
-			
-			if(cameraTarget)
+			// 2) We find the camera's target.
+			if(Input.GetKey(KeyCode.Space))
 			{
-				if(Input.GetKey(KeyCode.Space))
-				{
-					cameraLocked = true;
-					transform.position = new Vector3(cameraTarget.position.x, transform.position.y, cameraTarget.position.z - cameraAngle);
-				}
+				targetPos = new Vector3(cameraTarget.position.x, 0, cameraTarget.position.z);
 			}
-			
-			if(!cameraLocked)
+			else
 			{
 				Vector3 movementVector = new Vector3(0, 0, 0);
 				float speedFactor = 50f;
-
+				
 				if(Input.mousePosition.x <= 0 || Input.GetKey(KeyCode.LeftArrow))
 					movementVector += Vector3.left;
 				
@@ -72,40 +61,25 @@ namespace Mobamon.UI
 					movementVector += Vector3.forward;
 				
 				movementVector.Normalize();
-				transform.position += movementVector * speedFactor * Time.deltaTime;
+				targetPos += movementVector * speedFactor * Time.deltaTime;
+
+				// We forbid the camera's target to move out of the map.
+				targetPos = new Vector3(Mathf.Clamp(targetPos.x, 0, maxShifting), 0, Mathf.Clamp(targetPos.z, 0, maxShifting * 0.5f));
 			}
+
+			// 3) We finally set the camera's position and we make it look at its target.
+			transform.position = new Vector3(targetPos.x, cameraHeight, targetPos.z - cameraAngle);
+			transform.LookAt(targetPos);
 		}
 
 		void getCameraTarget()
 		{
 			GameObject obj = GameObject.FindGameObjectWithTag("CameraTarget");
-			//GameObject obj = GameObject.Find("Pokemon").GetComponentInChildren(typeof(PokemonController)).gameObject;
 			if(obj != null)
 			{
 				cameraTarget = obj.transform;
-				MoveCameraStatic();
-				//CenterCamera();
+				targetPos = new Vector3(cameraTarget.position.x, 0, cameraTarget.position.z);
 			}
-		}
-
-		void CenterCamera()
-		{
-			/*transform.position = cameraTarget.transform.position + Vector3.up * 5 - Vector3.back * 5;
-			transform.LookAt(cameraTarget.position);*/
-		}
-
-		void MoveCameraStatic()
-		{
-			cameraHeight = Mathf.Max(Mathf.Min(cameraHeight, 25), 3);
-			
-			cameraAngle = -(coeff / cameraHeight - 10);
-			
-			Vector3 newPos = cameraTarget.position;
-			newPos.y = cameraHeight;
-			newPos.z = newPos.z - cameraAngle;
-			
-			transform.position = newPos;
-			transform.LookAt(cameraTarget.position);
 		}
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using Mobamon.Pokemon.Player;
 
 namespace Mobamon.UI
@@ -10,6 +11,10 @@ namespace Mobamon.UI
 		private Texture healthBarTexture;
 		private Texture healthPatternTexture;
 
+		private List<float> FPSList = new List<float>();
+		private float LastFPSUpdate = 0f;
+		private float FPSRefreshRate = 1f;
+		private float LastFPSValue = 0f;
 		private Camera cam = null;
 		public Vector3 pos;
 
@@ -18,9 +23,25 @@ namespace Mobamon.UI
 			getTextures();
 		}
 		
-		protected void Update()
+		protected void FixedUpdate()
 		{
-
+			LastFPSUpdate += Time.fixedDeltaTime;
+			
+			if(LastFPSUpdate < FPSRefreshRate)
+			{
+				FPSList.Add(Time.timeScale/Time.fixedDeltaTime);
+			}
+			else
+			{
+				float count = 0f;
+				foreach(float deltaFrame in FPSList)
+					count += deltaFrame;
+				
+				LastFPSValue = count / FPSList.Count;
+				
+				FPSList.Clear();
+				LastFPSUpdate = 0f;
+			}
 		}
 
 		protected void OnGUI()
@@ -41,6 +62,7 @@ namespace Mobamon.UI
 			DisplaySpellBar();
 			DisplayHealthBars();
 			DisplayPing();
+			//DisplayFPS();
 		}
 
 		private void getCamera()
@@ -110,6 +132,11 @@ namespace Mobamon.UI
 
 				GUI.Label(new Rect(0, 0, 80, 30), "Ping:" + ping + "ms");
 			}
+		}
+
+		private void DisplayFPS()
+		{
+			GUI.Label(new Rect(0, 20, 80, 30), "FPS:" + LastFPSValue);
 		}
 	}
 }

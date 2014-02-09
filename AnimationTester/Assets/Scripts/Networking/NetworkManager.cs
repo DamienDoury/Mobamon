@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Mobamon.Pokemon.Player;
 
 namespace Mobamon.Networking
 {
@@ -9,59 +10,31 @@ namespace Mobamon.Networking
 		private const string gameName = "RoomName";
 		private HostData[] hostList;
 
-		private string serverIp = "127.0.0.1"; //82.127.144.96
-		private int serverPort = 25000;
+		private string serverIp = "82.127.144.96"; //82.127.144.96
+		private int serverPort = 25001;
 
 		void Start()
 		{
 			Network.Connect(serverIp, serverPort);
 		}
 
-		void OnFailedToConnect(NetworkConnectionError error) {
-			if (error != NetworkConnectionError.NoError && !Network.isServer) {
+		void OnFailedToConnect(NetworkConnectionError error)
+		{
+			if(error != NetworkConnectionError.NoError && !Network.isServer)
+			{
 				StartServer();
 			}
 		}
 
-		/*void InstantiateNPCs()
-		{
-			Component[] NPCList = GameObject.Find("Pokemon").GetComponentsInChildren(typeof(Collider));
-
-			foreach(Component NPC in NPCList)
-			{
-				PokemonList.instance.Add(NPC.GetInstanceID(), NPC.gameObject);
-			}
-		}*/
-
 		void StartServer()
 		{
-			string roomName = "";
-			//string roomName = "Someone";
-			//string roomName = System.Environment.MachineName;
-			string machineName = SystemInfo.deviceName;
-			if(machineName != "")
-			{
-				if(roomName == "")
-					roomName = "Unnamed room";
-				else
-					roomName += "'s room";
-			}
-			else
-			{
-				roomName = "Unknown room";
-			}
-
 			Network.InitializeServer(4, serverPort, true);//!Network.HavePublicAddress());
-			//MasterServer.RegisterHost(typeName, roomName);
-			//InstantiateNPCs();
-
-			GameObject.Instantiate (Resources.Load ("Camera/ServerCamera"));
+			GameObject.Instantiate(Resources.Load ("Camera/ServerCamera"));
 		}
 
 		void OnServerInitialized()
 		{
 			Debug.Log("Server Initializied");
-			//SpawnPlayer();
 		}
 
 		void OnGUI()
@@ -70,24 +43,6 @@ namespace Mobamon.Networking
 
 			if(Network.isServer)
 				GUI.Label(new Rect(100, 100, 250, 100), message);
-
-			/*if(!Network.isClient && !Network.isServer)
-			{
-				if(GUI.Button(new Rect(100, 100, 250, 100), "Start Server"))
-					StartServer();
-
-				if (GUI.Button(new Rect(100, 250, 250, 100), "Refresh Hosts"))
-					RefreshHostList();
-				
-				if (hostList != null)
-				{
-					for (int i = 0; i < hostList.Length; i++)
-					{
-						if (GUI.Button(new Rect(400, 100 + (110 * i), 300, 100), hostList[i].gameName + "\n" + hostList[i].connectedPlayers + " player" + (hostList[i].connectedPlayers > 1 ? "s" : "") + "\n" + hostList[i].ip[0]))
-							JoinServer(hostList[i]);
-					}
-				}
-			}*/
 		}
 
 		void OnPlayerDisconnected(NetworkPlayer player)
@@ -100,26 +55,9 @@ namespace Mobamon.Networking
 			}
 		}
 		
-		private void RefreshHostList()
-		{
-			//MasterServer.RequestHostList(typeName);
-		}
-		
-		void OnMasterServerEvent(MasterServerEvent msEvent)
-		{
-			/*if(msEvent == MasterServerEvent.HostListReceived)
-				hostList = MasterServer.PollHostList();*/
-		}
-
-		private void JoinServer(HostData hostData)
-		{
-			Network.Connect(hostData);
-		}
-		
 		void OnConnectedToServer()
 		{
 			Debug.Log("Server Joined");
-			//SpawnPlayer();
 		}
 
 		void OnPlayerConnected(NetworkPlayer player)
@@ -156,31 +94,22 @@ namespace Mobamon.Networking
 			player = (GameObject)Network.Instantiate(Resources.Load ("Pokemon/" + pokemonName), spawnPos, Quaternion.identity, 0);
 			player.transform.parent = GameObject.Find("Pokemon").transform;
 			player.tag = "CameraTarget";
+			PokemonController controller = (PokemonController)player.gameObject.GetComponent("PokemonController");
+			controller.team = teamID;
 
-			//StoreEntities();
-			networkView.RPC("StoreNewEntity", RPCMode.OthersBuffered, player.networkView.viewID);
-		}
-
-		private void StoreEntities()
-		{
-			Transform pokemonObj = GameObject.Find("Pokemon").transform;
-			NetworkView[] entityList = (NetworkView[])GameObject.FindObjectsOfType(typeof(NetworkView));
-
-			foreach(NetworkView entity in entityList)
-			{
-				if(entity.gameObject.name != "NetworkController")
-					entity.gameObject.transform.parent = pokemonObj;
-			}
+			networkView.RPC("StoreNewEntity", RPCMode.OthersBuffered, player.networkView.viewID, teamID);
 		}
 
 		[RPC]
-		private void StoreNewEntity(NetworkViewID viewID)
+		private void StoreNewEntity(NetworkViewID viewID, int teamID)
 		{
 			NetworkView newEntityView = NetworkView.Find(viewID);
 
 			if(newEntityView != null)
 			{
 				newEntityView.gameObject.transform.parent = GameObject.Find("Pokemon").transform;
+				PokemonController controller = (PokemonController)newEntityView.gameObject.gameObject.GetComponent("PokemonController");
+				controller.team = teamID;
 			}
 		}
 	}

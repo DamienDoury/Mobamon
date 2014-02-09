@@ -18,6 +18,7 @@ namespace Mobamon.Pokemon.Player
 		public SelectedMove selectedMove;
 		public float maxHP = 300f;
 		public float currentHP;
+		public int team;
 		
 		#endregion
 		
@@ -39,9 +40,9 @@ namespace Mobamon.Pokemon.Player
 		private float blinkDuration = 0f;
 		private float blinkMaxDuration = 0.5f;
 		private int numberOfBlinks = 1;
-
-		private Vector3 spawnPosition;
+		private Color originalColor = new Color(0.8f, 0.8f, 0.8f, 1f);
 		
+		private Vector3 savedDestination;
 		#endregion
 		
 		#region Public methods
@@ -69,8 +70,8 @@ namespace Mobamon.Pokemon.Player
 			selectedMove = null;
 			
 			currentHP = maxHP;
-			spawnPosition = transform.position;
-			
+			savedDestination = new Vector3();
+
 			if (networkView.isMine)
 			{
 				// Player controller list network management.
@@ -226,7 +227,7 @@ namespace Mobamon.Pokemon.Player
 				}
 				else if(Input.GetMouseButtonDown(1))
 				{
-					SetLife(currentHP - 200f);
+					//SetLife(currentHP - 2f);
 
 					if(selectedMove != null && !selectedMove.IsLaunched())
 					{
@@ -360,8 +361,7 @@ namespace Mobamon.Pokemon.Player
 				targetPokemon = NetworkView.Find(viewID).gameObject;
 				//targetPokemon = PokemonList.instance[instanceID];
 			}
-			
-			
+
 			selectedMove.SetTarget(new MoveTarget(targetPokemon, pos));
 			canMove = nav.updatePosition = false;
 			
@@ -407,15 +407,15 @@ namespace Mobamon.Pokemon.Player
 			{
 				// We prevent the character from moving if its angle is too much different from the direction he should face.
 				// This avoids the fast characters from sliding on the floor.
-				if(Vector3.Angle(gameObject.transform.forward, nav.steeringTarget - gameObject.transform.position) > 60 || !canMove)
+				/*if(Vector3.Angle(gameObject.transform.forward, nav.steeringTarget - gameObject.transform.position) > 60 || !canMove)
 				{
 					nav.updatePosition = false;
 				}
 				else
 				{
-					//if(canMove)
-					nav.updatePosition = true;
-				}
+					if(canMove)
+						nav.updatePosition = true;
+				}*/
 			}
 			
 			gameObject.transform.position.Set(gameObject.transform.position.x, 0, gameObject.transform.position.z);
@@ -475,6 +475,8 @@ namespace Mobamon.Pokemon.Player
 				networkView.RPC("LaunchAttackAnim", RPCMode.Others, null);*/
 			
 			canRotate = nav.updateRotation = false;
+			savedDestination = nav.destination;
+			nav.destination = transform.position;
 			
 			if(selectedMove.info.Category == MoveCategory.Physical)
 				anim.SetBool("PhysicalAttack", true);
@@ -522,6 +524,7 @@ namespace Mobamon.Pokemon.Player
 		{
 			canMove = nav.updatePosition = true;
 			canRotate = nav.updateRotation = true;
+			nav.destination = savedDestination;
 			
 			anim.SetBool("PhysicalAttack", false);
 			anim.SetBool("SpecialAttack", false);
@@ -541,8 +544,7 @@ namespace Mobamon.Pokemon.Player
 
 			if(currentHP <= 0)
 			{
-				Invoke("Respawn", 3f);
-				gameObject. SetActive(false);
+				networkView.RPC("Die", RPCMode.All);
 			}
 			else
 			{
@@ -550,13 +552,19 @@ namespace Mobamon.Pokemon.Player
 			}
 		}
 
+		[RPC]
+		private void Die()
+		{
+			Invoke("Respawn", 3f);
+			gameObject.SetActive(false);
+		}
+
 		private void Respawn()
 		{
 			// Visual setters
-			transform.position = spawnPosition;
+			transform.position = team % 2 == 1 ? GameInfo.blueTeamSpawn : GameInfo.redTeamSpawn;
 			transform.rotation = Quaternion.identity;
-			nav.destination = spawnPosition;
-			blinkAfterDamage = false;
+			nav.ResetPath();
 
 			// Logical setters
 			currentHP = maxHP;
@@ -565,6 +573,7 @@ namespace Mobamon.Pokemon.Player
 			canRotate = true;
 
 			gameObject.SetActive(true);
+			ResetBlinking();
 		}
 
 		private void StartBlinking()
@@ -574,11 +583,9 @@ namespace Mobamon.Pokemon.Player
 		}
 
 		private void BlinkAfterDamage()
-		{
+		{ 
 			if(!blinkAfterDamage)
 				return;
-			
-			Color originalColor = new Color(0.8f, 0.8f, 0.8f, 1f);
 			
 			if(blinkDuration <= 0f)
 				blinkDuration = blinkMaxDuration * numberOfBlinks * 2 - blinkMaxDuration; // Add " - blinkMaxDuration" to start from the red color.
@@ -591,16 +598,31 @@ namespace Mobamon.Pokemon.Player
 			{
 				float lerp = Mathf.PingPong(blinkDuration, blinkMaxDuration) / blinkMaxDuration;
 				mat.color = Color.Lerp(originalColor, Color.red, lerp);
+				//mat.Lerp(mat, dmgMat, lerp);
+				//mat = dmgMat;
 				// Alternate solution: Material.Lerp() with a plain red template material.
 			}
+
+			/*for(int i = 0; i < matList.Length; i++)
+				matList[i].SetTexture("_MainTex", dmgMat.GetTexture("_MainTex"));
+
+			for(int i = 0; i < matList.Length; i++)
+				matList[i].CopyPropertiesFromMaterial(dmgMat);*/
 			
-			if(blinkDuration < 0f)
+			if(blinkDuration <= 0f)
 			{
-				blinkAfterDamage = false;
-				
-				foreach(Material mat in matList)
-					mat.color = originalColor;
+				ResetBlinking();
 			}
+		}
+
+		private void ResetBlinking()
+		{
+			blinkAfterDamage = false;
+
+			Renderer rend = (Renderer)gameObject.GetComponentInChildren(typeof(Renderer));
+			Material[] matList = rend.materials;
+			foreach(Material mat in matList)
+				mat.color = originalColor;
 		}
 		
 		#endregion

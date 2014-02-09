@@ -75,6 +75,8 @@ namespace Mobamon.Moves
 
 		private GameObject ColliderObject { get; set; }
 
+		private float InitialColliderZScale { get; set; }
+
 		#endregion
 
 		#region Public methods
@@ -86,6 +88,12 @@ namespace Mobamon.Moves
 		{
 			this.EnemiesHit = new List<Collider>();
 			this.EnemiesToHit = new List<Collider>();
+
+			Collider collider = this.GetComponentInChildren<Collider>();
+			if (collider != null && collider is BoxCollider)
+			{
+				this.InitialColliderZScale = (collider as BoxCollider).size.z;
+			}
 		}
 
 		/// <summary>
@@ -279,13 +287,13 @@ namespace Mobamon.Moves
 				float basePercent = Mathf.Clamp(this.CurrentStopDuration / this.MainParticleSystem.duration, 0.0f, 1.0f);
 				float endPercent = Mathf.Clamp(this.CurrentDuration / this.MainParticleSystem.duration, 0.0f, 1.0f);
 
-				float centerScale = this.MainParticleSystem.startSpeed * ((endPercent + basePercent) / 2.0f);
+				float middlePercent = ((endPercent + basePercent) / 2.0f);
 				float scaleZ = this.MainParticleSystem.startSpeed * (endPercent - basePercent);
 
 				if (collider is BoxCollider)
 				{
 					BoxCollider boxCollider = ((BoxCollider) collider);
-					boxCollider.center = this.MainParticleSystem.transform.forward * centerScale;
+					boxCollider.center = new Vector3(0, boxCollider.size.y / 2f, middlePercent * this.InitialColliderZScale);
 					boxCollider.size = new Vector3(boxCollider.size.x, boxCollider.size.y, scaleZ);
 				}
 			}
@@ -352,7 +360,7 @@ namespace Mobamon.Moves
 				{
 					particleSystem.transform.position = startPosition;
 
-					if (this.Info.Shape != MoveShape.Point)
+					if (this.Info.Source == MoveSource.Laser)
 					{						
 						particleSystem.transform.forward = forward;
 					}
