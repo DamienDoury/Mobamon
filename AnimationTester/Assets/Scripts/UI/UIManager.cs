@@ -9,7 +9,13 @@ namespace Mobamon.UI
 	{
 		private Texture spellBarTexture;
 		private Texture healthBarTexture;
+		private Texture healthBar1Texture;
+		private Texture healthBar2Texture;
 		private Texture healthPatternTexture;
+		private Texture healthPatternLowTexture;
+		private Texture healthPatternMediumTexture;
+		private Texture healthPatternHighTexture;
+		private float healthPatternMaxWidth = 104f;
 
 		private List<float> FPSList = new List<float>();
 		private float LastFPSUpdate = 0f;
@@ -23,13 +29,13 @@ namespace Mobamon.UI
 			getTextures();
 		}
 		
-		protected void FixedUpdate()
+		protected void Update()
 		{
 			LastFPSUpdate += Time.fixedDeltaTime;
 			
 			if(LastFPSUpdate < FPSRefreshRate)
 			{
-				FPSList.Add(Time.timeScale/Time.fixedDeltaTime);
+				FPSList.Add(Time.timeScale / Time.deltaTime);
 			}
 			else
 			{
@@ -46,7 +52,12 @@ namespace Mobamon.UI
 
 		protected void OnGUI()
 		{
-			if(spellBarTexture == null || healthBarTexture == null || healthPatternTexture == null)
+			if(spellBarTexture == null || 
+			   healthBar1Texture == null || 
+			   healthBar2Texture == null || 
+			   healthPatternLowTexture == null ||
+			   healthPatternMediumTexture == null ||
+			   healthPatternHighTexture == null)
 			{
 				Debug.LogError("Assign a Texture in the inspector.");
 				getTextures();
@@ -62,7 +73,7 @@ namespace Mobamon.UI
 			DisplaySpellBar();
 			DisplayHealthBars();
 			DisplayPing();
-			//DisplayFPS();
+			DisplayFPS();
 		}
 
 		private void getCamera()
@@ -74,8 +85,13 @@ namespace Mobamon.UI
 
 		private void getTextures()
 		{
-			healthBarTexture = (Texture)Resources.Load("GUI/health_bar");
-			healthPatternTexture = (Texture)Resources.Load("GUI/health_pattern");
+			healthBar1Texture = (Texture)Resources.Load("GUI/health_bar_1");
+			healthBar2Texture = (Texture)Resources.Load("GUI/health_bar_2");
+
+			healthPatternLowTexture = (Texture)Resources.Load("GUI/low_health_pattern");
+			healthPatternMediumTexture = (Texture)Resources.Load("GUI/medium_health_pattern");
+			healthPatternHighTexture = (Texture)Resources.Load("GUI/high_health_pattern");
+
 			spellBarTexture = (Texture)Resources.Load("GUI/spell_bar");
 		}
 
@@ -87,37 +103,46 @@ namespace Mobamon.UI
 
 		private void DisplayHealthBars()
 		{
-			float healthPatternMaxWidth = 103f;
-
 			Component[] transformList = GameObject.Find("Pokemon").GetComponentsInChildren(typeof(Transform));
 
-			foreach(Component comp in transformList) // We display the health bar at the feet position of the character.
+			foreach(Component comp in transformList)
 			{
-
+				// Securities.
 				Transform tr = comp.transform;
-				PokemonController controller = (PokemonController)tr.gameObject.GetComponent(typeof(PokemonController));
+				if(tr.parent != GameObject.Find("Pokemon").transform)
+					continue;
 
+				PokemonController controller = (PokemonController)tr.gameObject.GetComponent(typeof(PokemonController));
 				if(controller == null)
 					continue;
 
-				if(tr.parent != GameObject.Find("Pokemon").transform)
-					continue;
+				// We get the right health bar texture.
+				if(controller.team == 1)
+					healthBarTexture = healthBar1Texture;
+				else if(controller.team == 2)
+					healthBarTexture = healthBar2Texture;
+
+				// We get the right health pattern texture.
+				float HPpercentage = controller.currentHP / controller.maxHP;
+				if(HPpercentage > 0.5)
+					healthPatternTexture = healthPatternHighTexture;
+				else if(HPpercentage > 0.2)
+					healthPatternTexture = healthPatternMediumTexture;
+				else
+					healthPatternTexture = healthPatternLowTexture;
+
+				// We display the health bar.
 				pos = cam.WorldToScreenPoint(tr.position + 3 * Vector3.up);
 				Rect rectHealthBar = new Rect(pos.x - healthBarTexture.width / 2, Screen.height - pos.y, healthBarTexture.width, healthBarTexture.height);
 				GUI.DrawTexture(rectHealthBar, healthBarTexture);
 
+				// We display the amount of HP.
 				Rect rectHealthPattern = new Rect();
 				rectHealthPattern.x = rectHealthBar.x + 3;
 				rectHealthPattern.y = rectHealthBar.y + 3;
-				if(controller != null)
-					rectHealthPattern.width = healthPatternMaxWidth * controller.currentHP / controller.maxHP;
-				else
-					rectHealthPattern.width = healthPatternMaxWidth;
+				rectHealthPattern.width = healthPatternMaxWidth * controller.currentHP / controller.maxHP;
 				rectHealthPattern.height = healthPatternTexture.height;
 				GUI.DrawTexture(rectHealthPattern, healthPatternTexture);
-
-				/*rect.y += healthBarTexture.height;
-				GUI.Label(rect, tr.gameObject.networkView.viewID.ToString());*/
 			}
 		}
 
@@ -136,7 +161,7 @@ namespace Mobamon.UI
 
 		private void DisplayFPS()
 		{
-			GUI.Label(new Rect(0, 20, 80, 30), "FPS:" + LastFPSValue);
+			GUI.Label(new Rect(0, 20, 80, 30), "FPS:" + (int)LastFPSValue);
 		}
 	}
 }

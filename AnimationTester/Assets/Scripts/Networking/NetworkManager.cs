@@ -10,25 +10,49 @@ namespace Mobamon.Networking
 		private const string gameName = "RoomName";
 		private HostData[] hostList;
 
-		private string serverIp = "82.127.144.96"; //82.127.144.96
-		private int serverPort = 25001;
+		private string serverIp = "127.0.0.1"; //82.127.144.96
+		private int serverPort = 25000;
+
+		private bool notConnected = false;
+		private string connectionErrorMessage = "";
 
 		void Start()
 		{
-			Network.Connect(serverIp, serverPort);
+			if(Application.platform == RuntimePlatform.LinuxPlayer) // If this is Lucas' server, then we launch the server. Otherwise, we launch a client.
+				StartServer();
+			else
+				Network.Connect(serverIp, serverPort);
 		}
 
 		void OnFailedToConnect(NetworkConnectionError error)
 		{
-			if(error != NetworkConnectionError.NoError && !Network.isServer)
+			if(Application.platform == RuntimePlatform.WindowsPlayer)
 			{
 				StartServer();
+			}
+			else
+			{
+				notConnected = true;
+
+				if(error != NetworkConnectionError.NoError && !Network.isServer)
+				{
+					if(error == NetworkConnectionError.TooManyConnectedPlayers)
+						connectionErrorMessage = "Too many players connected on our server. Please try again later.";
+					else if(error == NetworkConnectionError.ConnectionFailed)
+						connectionErrorMessage = "Connection failed. Please check your internet connection. Our server might also be down.";
+				}
+				else
+				{
+					connectionErrorMessage = "Unknown connection error...";
+				}
+
+				OnGUI();
 			}
 		}
 
 		void StartServer()
 		{
-			Network.InitializeServer(4, serverPort, true);//!Network.HavePublicAddress());
+			Network.InitializeServer(12, serverPort, true);//!Network.HavePublicAddress());
 			GameObject.Instantiate(Resources.Load ("Camera/ServerCamera"));
 		}
 
@@ -39,10 +63,18 @@ namespace Mobamon.Networking
 
 		void OnGUI()
 		{
-			string message = "You are the server. \nYour IP is " + serverIp + ". \n" + Network.connections.Length + " players connected.";
-
 			if(Network.isServer)
-				GUI.Label(new Rect(100, 100, 250, 100), message);
+			{
+				GUI.Label(new Rect(100, 100, 250, 100), "You are the server. \nYour IP is " + serverIp + ". \n" + Network.connections.Length + " players connected.");
+			}
+
+			if(notConnected)
+			{
+				int boxWidth = 250;
+				int boxHeight = 100;
+
+				GUI.Label(new Rect((Screen.width - boxWidth) / 2, (Screen.height - boxHeight) / 2, boxWidth, boxHeight), connectionErrorMessage);
+			}
 		}
 
 		void OnPlayerDisconnected(NetworkPlayer player)
@@ -64,7 +96,7 @@ namespace Mobamon.Networking
 		{
 			if(Network.isServer)
 			{
-				networkView.RPC("SpawnPlayer", player, Network.connections.Length % 2, Network.connections.Length);
+				networkView.RPC("SpawnPlayer", player, Network.connections.Length % 2 + 1, Network.connections.Length);
 			}
 		}
 

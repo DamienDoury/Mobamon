@@ -70,6 +70,7 @@
      <Compile Include="Assets\Scripts\UI\ManageCursor.cs" />
      <Compile Include="Assets\Scripts\UI\ManageFullscreen.cs" />
      <Compile Include="Assets\Scripts\UI\Marker.cs" />
+     <Compile Include="Assets\Scripts\UI\ScreenshotManager.cs" />
      <Compile Include="Assets\Scripts\UI\UIManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
