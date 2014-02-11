@@ -26,7 +26,7 @@ namespace Mobamon.Networking
 
 		void OnFailedToConnect(NetworkConnectionError error)
 		{
-			if(Application.platform == RuntimePlatform.WindowsPlayer)
+			if(Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
 			{
 				StartServer();
 			}
