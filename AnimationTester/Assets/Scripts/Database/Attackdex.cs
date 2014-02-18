@@ -23,11 +23,12 @@ namespace Mobamon.Database
 					HittableTargetsNumber = MoveTargetNumber.One,
 					IsFollowingTarget = true,
 					IsImmobilizingCaster = false,
-				    MovementSpeed = 0f,
-					Radius = 1f,
+					MovementSpeed = 0f,
 					Shape = MoveShape.Point,
-					Source = MoveSource.Body,
-					TargetKind = MoveTargetKind.Single
+					Range = 650f,
+					Source = MoveSource.TargetBody,
+					TargetKind = MoveTargetKind.Single,
+					AdditionalData = null
 				}
 			},
 			{
@@ -44,10 +45,14 @@ namespace Mobamon.Database
 					IsFollowingTarget = false,
 					IsImmobilizingCaster = true,
 					MovementSpeed = 0f,
-					Radius = 1f,
 					Shape = MoveShape.Cone,
+					Range = 780f,
 					Source = MoveSource.Laser,
-					TargetKind = MoveTargetKind.Area
+					TargetKind = MoveTargetKind.Area,
+					AdditionalData = new ConeData()
+					{
+						HalfAngle = 5f
+					}
 				}
 			},
 			{
@@ -64,10 +69,11 @@ namespace Mobamon.Database
 					IsFollowingTarget = false,
 					IsImmobilizingCaster = false,
 					MovementSpeed = 0f,
-					Radius = 1f,
 					Shape = MoveShape.Point,
+					Range = 1000f,
 					Source = MoveSource.Laser,
-					TargetKind = MoveTargetKind.Single
+					TargetKind = MoveTargetKind.Single,
+					AdditionalData = null
 				}
 			},
 			{
@@ -84,12 +90,80 @@ namespace Mobamon.Database
 					IsFollowingTarget = true,
 					IsImmobilizingCaster = false,
 					MovementSpeed = 0f,
-					Radius = 1f,
 					Shape = MoveShape.Point,
-					Source = MoveSource.Body,
-					TargetKind = MoveTargetKind.Single					
+					Range = 500f,
+					Source = MoveSource.TargetBody,
+					TargetKind = MoveTargetKind.Single,
+					AdditionalData = null
+				}
+			},
+			{
+				"Bubble",
+				new MoveInfo()
+				{
+					AllowedTargets = PokemonRelation.Enemy,
+					Category = MoveCategory.Special,
+					Damage = 40f,
+					Duration = 1f,
+					DurationPercentEffectsApply = 0.3f,
+					EffectType = MoveEffectType.PerSecond,
+					HittableTargetsNumber = MoveTargetNumber.Multiple,
+					IsFollowingTarget = false,
+					IsImmobilizingCaster = true,
+					MovementSpeed = 0f,
+					Shape = MoveShape.Cone,
+					Range = 950f,
+					Source = MoveSource.Laser,
+					TargetKind = MoveTargetKind.Area,
+					AdditionalData = new ConeData()
+					{
+						HalfAngle = 5f
+					}
+				}
+			},
+			{
+				"Surf",
+				new MoveInfo()
+				{
+					AllowedTargets = PokemonRelation.Self,
+					Category = MoveCategory.Special,
+					Damage = 90f,
+					Duration = 0.75f,
+					DurationPercentEffectsApply = 0.3f,
+					EffectType = MoveEffectType.OnHit,
+					HittableTargetsNumber = MoveTargetNumber.Multiple,
+					IsFollowingTarget = true,
+					IsImmobilizingCaster = true,
+					MovementSpeed = 0f,
+					Shape = MoveShape.Sphere,
+					Range = 1050f,
+					Source = MoveSource.CasterBody,
+					TargetKind = MoveTargetKind.Area,
+					AdditionalData = null
 				}
 			}
+			/*
+			 {
+				"Surf",
+				new MoveInfo()
+				{
+					AllowedTargets = PokemonRelation.Enemy,
+					Category = MoveCategory.Special,
+					Damage = 90f,
+					Duration = 1f,
+					DurationPercentEffectsApply = 0.3f,
+					EffectType = MoveEffectType.OnHit,
+					HittableTargetsNumber = MoveTargetNumber.One,
+					IsFollowingTarget = true,
+					IsImmobilizingCaster = false,
+					MovementSpeed = 0f,
+					Shape = MoveShape.Point,
+					Range = 650f,
+					Source = MoveSource.TargetBody,
+					TargetKind = MoveTargetKind.Single,
+					AdditionalData = null
+				}
+			}*/
 		};
 	}
 }

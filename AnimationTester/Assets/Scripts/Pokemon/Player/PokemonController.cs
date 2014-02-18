@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Mobamon.Pokemon.Classes;
+using Mobamon.Database;
 using Mobamon.Database.Enums;
 using Mobamon.Database.Classes;
 using Mobamon.Moves;
@@ -12,6 +13,7 @@ namespace Mobamon.Pokemon.Player
 	{
 		#region Public fields
 		
+		public NavMeshAgent nav;
 		public Transform laserSource;
 		public string laserSourcePath = "";
 		public GameObject hoverEntity;
@@ -19,14 +21,14 @@ namespace Mobamon.Pokemon.Player
 		public float maxHP = 300f;
 		public float currentHP;
 		public int team;
+		public float radius = 4f;
+		public Camera myCam = null;
 		
 		#endregion
 		
 		#region Private fields
-		
-		private Camera myCam = null;
+
 		private Animator anim;
-		private NavMeshAgent nav;		
 		private GameObject marker;		
 		private bool canMove = true;
 		private bool canRotate = true;		
@@ -35,7 +37,7 @@ namespace Mobamon.Pokemon.Player
 		private List<string> moveSet = new List<string>(4);
 		public Dictionary<MoveCategory, float> attackAnimHalfDuration = new Dictionary<MoveCategory, float>();		
 		private float regenRate = 0.05f; // in % of max health/sec.
-
+		
 		private bool blinkAfterDamage = false;
 		private float blinkDuration = 0f;
 		private float blinkMaxDuration = 0.5f;
@@ -62,16 +64,16 @@ namespace Mobamon.Pokemon.Player
 			
 			hoverEntity = null;
 			
-			moveSet.Add("Waterfall");
+			moveSet.Add("Surf");
 			moveSet.Add("Flamethrower");
-			moveSet.Add("Growl");
+			moveSet.Add("Bubble");
 			moveSet.Add("Thunder Shock");
 			
 			selectedMove = null;
 			
 			currentHP = maxHP;
 			savedDestination = new Vector3();
-
+			
 			if (networkView.isMine)
 			{
 				// Player controller list network management.
@@ -85,9 +87,9 @@ namespace Mobamon.Pokemon.Player
 						Destroy(comp);*/
 				
 				// Camera list network management.
-				GameObject[] cameraList = GameObject.FindGameObjectsWithTag ("Camera");
+				GameObject[] cameraList = GameObject.FindGameObjectsWithTag("Camera");
 				foreach(GameObject cam in cameraList)
-					Destroy (cam);
+					Destroy(cam);
 				GameObject camera = (GameObject)Instantiate(Resources.Load("Camera/playerCamera"), new Vector3(transform.position.x, 5f, transform.position.z), Quaternion.identity);
 				camera.tag = "Camera";
 				myCam = (Camera)camera.GetComponent(typeof(Camera));
@@ -101,7 +103,7 @@ namespace Mobamon.Pokemon.Player
 			
 			if (networkView.isMine)
 			{
-				Controls ();
+				Controls();
 			}
 			
 			// If the attack animation is done.
@@ -129,19 +131,23 @@ namespace Mobamon.Pokemon.Player
 				{
 					if((Input.GetKeyDown("q") || Input.GetKeyDown("a")) && moveSet[0] != null)
 					{
-						networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.Q, Input.mousePosition, NetworkViewID.unassigned);
+						SelectMove(0);
+						//networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.Q, Input.mousePosition, NetworkViewID.unassigned);
 					}
 					else if((Input.GetKeyDown("w") || Input.GetKeyDown("z")) && moveSet[1] != null)
 					{
-						networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.W, Input.mousePosition, NetworkViewID.unassigned);
+						SelectMove(1);
+						//networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.W, Input.mousePosition, NetworkViewID.unassigned);
 					}
 					else if(Input.GetKeyDown("e") && moveSet[2] != null)
 					{
-						networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.E, Input.mousePosition, NetworkViewID.unassigned);
+						SelectMove(2);
+						//networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.E, Input.mousePosition, NetworkViewID.unassigned);
 					}
 					else if(Input.GetKeyDown("r") && moveSet[3] != null)
 					{
-						networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.R, Input.mousePosition, NetworkViewID.unassigned);
+						SelectMove(3);
+						//networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.R, Input.mousePosition, NetworkViewID.unassigned);
 					}
 				}
 				
@@ -150,7 +156,16 @@ namespace Mobamon.Pokemon.Player
 					Ray ray = myCam.ScreenPointToRay(Input.mousePosition);
 					
 					if(Physics.Raycast(ray, out hit) && hit.transform.parent.name == "Pokemon")
+					{
 						hoverEntity = hit.transform.gameObject;
+
+						SphereCollider targetCollider = (SphereCollider)hoverEntity.collider;
+
+						if(selectedMove.info.TargetKind == MoveTargetKind.Single 
+						   && Vector3.Magnitude(hoverEntity.transform.position - transform.position) > selectedMove.info.Range / 100f + nav.radius + targetCollider.radius)
+							hoverEntity = null;
+						
+					}
 					else
 						hoverEntity = null;
 					
@@ -190,7 +205,7 @@ namespace Mobamon.Pokemon.Player
 								{
 									theChosenHit.point.Set(theChosenHit.point.x, 0, theChosenHit.point.z);
 									
-									networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, theChosenHit.point, NetworkViewID.unassigned);
+									networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, theChosenHit.point, NetworkViewID.unassigned, -1);
 								}
 							}
 						}
@@ -203,16 +218,23 @@ namespace Mobamon.Pokemon.Player
 							MoveTargetKind targetKind = selectedMove.info.TargetKind;
 							PokemonRelation relation = PokemonRelation.Enemy; //this.GetRelation(selectedMove.target.Controller);
 							
+							int moveIndex = -1;
+							for(int i = 0; i < moveSet.Count; i++)
+								if(selectedMove.name == moveSet[i])
+									moveIndex = i;
+							
 							if(targetKind == MoveTargetKind.Area)
 							{
-								networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, hit.point, NetworkViewID.unassigned);
+								networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, hit.point, NetworkViewID.unassigned, moveIndex);
 							}
-							else if(hoverEntity != null) // If the target type is not an area, then it's a single target spell. Therefore he needs a target.
+							else if(targetKind == MoveTargetKind.Single && hoverEntity != null) // If the target type is not an area, then it's a single target spell. Therefore he needs a target.
 							{
-								if(relation == PokemonRelation.Enemy && !hoverEntity.Equals(gameObject))
+								//if(relation == PokemonRelation.Enemy && !hoverEntity.Equals(gameObject))
 								{
-									networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, hit.point, hoverEntity.networkView.viewID);
-									//hoverEntity = null;
+									SphereCollider targetCollider = (SphereCollider)hoverEntity.collider;
+									
+									if(Vector3.Magnitude(hoverEntity.transform.position - transform.position) <= selectedMove.info.Range / 100f + nav.radius + targetCollider.radius)
+										networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, hit.point, hoverEntity.networkView.viewID, moveIndex);
 								}
 							}
 							else
@@ -228,10 +250,10 @@ namespace Mobamon.Pokemon.Player
 				else if(Input.GetMouseButtonDown(1))
 				{
 					//SetLife(currentHP - 2f);
-
+					
 					if(selectedMove != null && !selectedMove.IsLaunched())
 					{
-						networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.RightClick, Input.mousePosition, NetworkViewID.unassigned);
+						selectedMove = null;
 					}
 				}
 			}
@@ -260,13 +282,13 @@ namespace Mobamon.Pokemon.Player
 		#region Private methods
 		
 		[RPC]
-		private void ValidateControl(int input, Vector3 pos, NetworkViewID viewID)
+		private void ValidateControl(int input, Vector3 pos, NetworkViewID viewID, int moveIndex)
 		{
 			if(Network.isServer)
 			{
 				// Uses : selectedMove, hit and hoverEntity
 				
-				if(!(selectedMove != null && selectedMove.IsLaunched()))
+				/*if(!(selectedMove != null && selectedMove.IsLaunched()))
 				{
 					if(input == (int)InputType.Q && moveSet[0] != null)
 					{
@@ -284,19 +306,22 @@ namespace Mobamon.Pokemon.Player
 					{
 						SelectMove(3);
 					}
-				}
+				}*/
 				
 				if(input == (int)InputType.LeftClick)
 				{
-					if(selectedMove == null)
+					if(selectedMove == null && moveIndex == -1)
 					{
 						SetDestination(pos);
 					}
 					else
 					{
 						// If a move is selected, but not launched :
-						if(!selectedMove.IsLaunched())
+						//if(!selectedMove.IsLaunched())
+						if(selectedMove == null && moveIndex != -1)
 						{
+							SelectMove(moveIndex);
+							
 							MoveTargetKind targetKind = selectedMove.info.TargetKind;
 							PokemonRelation relation = PokemonRelation.Enemy;  //this.GetRelation(selectedMove.target.Controller);
 							
@@ -304,11 +329,26 @@ namespace Mobamon.Pokemon.Player
 							{
 								SetAttackState(NetworkViewID.unassigned, pos);
 							}
-							else if(viewID != NetworkViewID.unassigned) // If the target type is not an area, then it's a single target spell. Therefore he needs a target.
+							else if(targetKind == MoveTargetKind.Single && viewID != NetworkViewID.unassigned) // If the target type is not an area, then it's a single target spell. Therefore he needs a target.
 							{
-								if(relation == PokemonRelation.Enemy) // As we don't check if the player is targetting himself with an offensive spell, the player might cheat and kill himself.
-								{
+								bool isSelfOnly = (PokemonRelation.Self & selectedMove.info.AllowedTargets) == PokemonRelation.Self
+									&& (PokemonRelation.Ally & selectedMove.info.AllowedTargets) == 0
+										&& (PokemonRelation.Enemy & selectedMove.info.AllowedTargets) == 0;
+
+								if(isSelfOnly)
 									SetAttackState(viewID, pos);
+								else
+								{
+									//if(relation == PokemonRelation.Enemy) // As we don't check if the player is targetting himself with an offensive spell, the player might cheat and kill himself.
+									{
+										GameObject targetPokemon = NetworkView.Find(viewID).gameObject;
+										SphereCollider targetCollider = (SphereCollider)targetPokemon.collider;
+
+										if(Vector3.Magnitude(targetPokemon.transform.position - transform.position) <= selectedMove.info.Range / 100f + nav.radius + targetCollider.radius)
+											SetAttackState(viewID, pos);
+										else
+											selectedMove = null;
+									}
 								}
 							}
 							else
@@ -317,13 +357,6 @@ namespace Mobamon.Pokemon.Player
 								selectedMove = null;
 							}
 						}
-					}
-				}
-				else if(input == (int)InputType.RightClick)
-				{
-					if(selectedMove != null && !selectedMove.IsLaunched())
-					{
-						CancelTargetting();
 					}
 				}
 			}
@@ -345,7 +378,7 @@ namespace Mobamon.Pokemon.Player
 				marker = (GameObject)Instantiate(Resources.Load("Miscellaneous/Marker"), pos + Vector3.up / 10, new Quaternion());
 			}
 			
-			nav.destination = pos;
+			nav.SetDestination(pos);
 		}
 		
 		[RPC]
@@ -361,7 +394,7 @@ namespace Mobamon.Pokemon.Player
 				targetPokemon = NetworkView.Find(viewID).gameObject;
 				//targetPokemon = PokemonList.instance[instanceID];
 			}
-
+			
 			selectedMove.SetTarget(new MoveTarget(targetPokemon, pos));
 			canMove = nav.updatePosition = false;
 			
@@ -371,36 +404,26 @@ namespace Mobamon.Pokemon.Player
 		[RPC]
 		private void SelectMove(int index)
 		{
-			if(Network.isServer)
-				networkView.RPC("SelectMove", RPCMode.Others, index);
+			/*if(Network.isServer)
+				networkView.RPC("SelectMove", RPCMode.Others, index);*/
 			
 			selectedMove = new SelectedMove(moveSet[index]);
-
+			
 			bool isSelfOnly = (PokemonRelation.Self & selectedMove.info.AllowedTargets) == PokemonRelation.Self
-								&& (PokemonRelation.Ally & selectedMove.info.AllowedTargets) == 0
-								&& (PokemonRelation.Enemy & selectedMove.info.AllowedTargets) == 0;
-
+				&& (PokemonRelation.Ally & selectedMove.info.AllowedTargets) == 0
+					&& (PokemonRelation.Enemy & selectedMove.info.AllowedTargets) == 0;
+			
 			if(isSelfOnly)
 			{
-				SetAttackState(gameObject.networkView.viewID, transform.position);
+				networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, transform.position + transform.forward, gameObject.networkView.viewID, index);
 			}
-		}
-		
-		[RPC]
-		private void CancelTargetting()
-		{
-			if(UnityEngine.Network.isServer)
-				networkView.RPC("CancelTargetting", RPCMode.Others, null);
-			
-			EndAttackState();
-			selectedMove = null;
 		}
 		
 		private void Movement()
 		{
 			if(nav.remainingDistance < 0.3f)
 			{
-				nav.destination = gameObject.transform.position; // This makes a smooth braking.
+				nav.SetDestination(gameObject.transform.position); // This makes a smooth braking.
 				//nav.updatePosition = false;
 			}
 			else
@@ -476,7 +499,7 @@ namespace Mobamon.Pokemon.Player
 			
 			canRotate = nav.updateRotation = false;
 			savedDestination = nav.destination;
-			nav.destination = transform.position;
+			nav.SetDestination(transform.position);
 			
 			if(selectedMove.info.Category == MoveCategory.Physical)
 				anim.SetBool("PhysicalAttack", true);
@@ -522,9 +545,12 @@ namespace Mobamon.Pokemon.Player
 		
 		private void EndAttackState()
 		{
-			canMove = nav.updatePosition = true;
-			canRotate = nav.updateRotation = true;
-			nav.destination = savedDestination;
+			if(selectedMove != null)
+			{
+				canMove = nav.updatePosition = true;
+				canRotate = nav.updateRotation = true;
+				nav.SetDestination(savedDestination);
+			}
 			
 			anim.SetBool("PhysicalAttack", false);
 			anim.SetBool("SpecialAttack", false);
@@ -541,7 +567,7 @@ namespace Mobamon.Pokemon.Player
 		private void SetLife(float life)
 		{
 			currentHP = Mathf.Clamp(life, 0, maxHP);
-
+			
 			if(currentHP <= 0)
 			{
 				networkView.RPC("Die", RPCMode.All);
@@ -551,37 +577,37 @@ namespace Mobamon.Pokemon.Player
 				StartBlinking();
 			}
 		}
-
+		
 		[RPC]
 		private void Die()
 		{
 			Invoke("Respawn", 3f);
 			gameObject.SetActive(false);
 		}
-
+		
 		private void Respawn()
 		{
 			// Visual setters
-			transform.position = team % 2 == 1 ? GameInfo.blueTeamSpawn : GameInfo.redTeamSpawn;
+			transform.position = team % 2 == 0 ? GameInfo.blueTeamSpawn : GameInfo.redTeamSpawn;
 			transform.rotation = Quaternion.identity;
 			nav.ResetPath();
-
+			
 			// Logical setters
 			currentHP = maxHP;
 			selectedMove = null;
 			canMove = true;
 			canRotate = true;
-
+			
 			gameObject.SetActive(true);
 			ResetBlinking();
 		}
-
+		
 		private void StartBlinking()
 		{
 			blinkAfterDamage = true;
 			blinkDuration = 0f;
 		}
-
+		
 		private void BlinkAfterDamage()
 		{ 
 			if(!blinkAfterDamage)
@@ -602,7 +628,7 @@ namespace Mobamon.Pokemon.Player
 				//mat = dmgMat;
 				// Alternate solution: Material.Lerp() with a plain red template material.
 			}
-
+			
 			/*for(int i = 0; i < matList.Length; i++)
 				matList[i].SetTexture("_MainTex", dmgMat.GetTexture("_MainTex"));
 
@@ -614,15 +640,29 @@ namespace Mobamon.Pokemon.Player
 				ResetBlinking();
 			}
 		}
-
+		
 		private void ResetBlinking()
 		{
 			blinkAfterDamage = false;
-
+			
 			Renderer rend = (Renderer)gameObject.GetComponentInChildren(typeof(Renderer));
 			Material[] matList = rend.materials;
 			foreach(Material mat in matList)
 				mat.color = originalColor;
+		}
+		
+		[RPC]
+		private void WarpEntity(NetworkViewID viewID, Vector3 pos, float speed, Quaternion rotation, Vector3 destination)
+		{
+			Vector3 dist = transform.position - pos;
+			
+			if(dist.magnitude > 0.5f && nav != null)
+			{
+				nav.Warp(pos);
+				nav.SetDestination(destination);
+				nav.speed = speed;
+				transform.rotation = rotation;
+			}
 		}
 		
 		#endregion

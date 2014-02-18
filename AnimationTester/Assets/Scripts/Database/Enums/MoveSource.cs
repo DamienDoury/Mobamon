@@ -9,16 +9,26 @@ namespace Mobamon.Database.Enums
 		/// An invalid source of move
 		/// </summary>
 		ERROR,
-
+		
 		/// <summary>
 		/// The move comes from the laser bone
 		/// </summary>
 		Laser,
-
+		
 		/// <summary>
-		/// The move comes from the entire body
+		/// The move comes from the entire body of the caster
 		/// </summary>
-		Body
+		CasterBody,
+		
+		/// <summary>
+		/// The move comes from the entire body of the target
+		/// </summary>
+		TargetBody,
+		
+		/// <summary>
+		/// The move comes from the cast area
+		/// </summary>
+		Area
 	}
 }
 

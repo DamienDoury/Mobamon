@@ -12,90 +12,73 @@ namespace Mobamon.Moves
 	public class Move : MonoBehaviour
 	{
 		#region Properties
-
+		
 		/// <summary>
 		/// Gets or sets the current duration.
 		/// </summary>
 		/// <value>The current duration.</value>
 		private float CurrentDuration { get; set; }
-
+		
 		/// <summary>
 		/// Gets or sets the current duration since the animation has stopped.
 		/// </summary>
 		/// <value>The duration of the current stop.</value>
 		private float CurrentStopDuration { get; set; }
-
+		
 		/// <summary>
 		/// Gets or sets the enemies hit.
 		/// </summary>
 		/// <value>The enemies hit.</value>
-		private List<Collider> EnemiesHit { get; set; }
-
-		/// <summary>
-		/// Gets or sets the enemies to hit for the current frame.
-		/// </summary>
-		/// <value>The enemies to hit.</value>
-		private List<Collider> EnemiesToHit { get; set; }
-
+		private List<PokemonController> EnemiesHit { get; set; }
+		
 		/// <summary>
 		/// Gets the move info.
 		/// </summary>
 		/// <value>The move info.</value>
 		private MoveInfo Info { get; set; }
-
+		
 		/// <summary>
 		/// Gets the source.
 		/// </summary>
 		/// <value>The source.</value>
 		private MoveTarget Source { get; set;}
-
+		
 		/// <summary>
 		/// Gets the target.
 		/// </summary>
 		/// <value>The target.</value>
 		private MoveTarget Target { get; set; }
-
+		
 		/// <summary>
 		/// Gets or sets the particle systems.
 		/// </summary>
 		/// <value>The particle systems.</value>
 		private List<ParticleSystem> ParticleSystems { get; set; }
-
+		
 		/// <summary>
 		/// Gets or sets the main particle system.
 		/// </summary>
 		/// <value>The main particle system.</value>
 		private ParticleSystem MainParticleSystem { get; set; }
-
+		
 		/// <summary>
 		/// Gets or sets a value indicating whether this instance is running.
 		/// </summary>
 		/// <value><c>true</c> if this instance is running; otherwise, <c>false</c>.</value>
 		private bool IsRunning { get; set; }
-
-		private GameObject ColliderObject { get; set; }
-
-		private float InitialColliderZScale { get; set; }
-
+		
 		#endregion
-
+		
 		#region Public methods
-
+		
 		/// <summary>
 		/// Start this instance.
 		/// </summary>
 		public void Start()
 		{
-			this.EnemiesHit = new List<Collider>();
-			this.EnemiesToHit = new List<Collider>();
-
-			Collider collider = this.GetComponentInChildren<Collider>();
-			if (collider != null && collider is BoxCollider)
-			{
-				this.InitialColliderZScale = (collider as BoxCollider).size.z;
-			}
+			this.EnemiesHit = new List<PokemonController>();
 		}
-
+		
 		/// <summary>
 		/// Update this instance.
 		/// </summary>
@@ -104,35 +87,18 @@ namespace Mobamon.Moves
 			if (this.IsRunning)
 			{
 				this.CurrentDuration = this.CurrentDuration + Time.deltaTime;
-
+				
 				if (this.MainParticleSystem != null && this.CurrentDuration > this.MainParticleSystem.duration)
 				{
 					this.CurrentStopDuration = this.CurrentStopDuration + Time.deltaTime;
 				}
-
+				
 				this.HandleMovement();
-
-				if (this.EnemiesToHit.Count > 0)
-				{
-					this.HandleCollision();
-				}
-
+				this.HandleCollision();
 				this.HandleFX();
 			}
 		}
-
-		/// <summary>
-		/// When the move collider is triggered, stores the other collider to check for damage on next update
-		/// </summary>
-		/// <param name="otherCollider">Other collider.</param>
-		public void RegisterCollider(Collider otherCollider)
-		{
-			if (Network.isServer && this.EnemiesToHit != null && !this.EnemiesToHit.Contains(otherCollider))
-			{
-				this.EnemiesToHit.Add(otherCollider);
-			}
-		}
-
+		
 		/// <summary>
 		/// Sets the move parameters.
 		/// </summary>
@@ -142,7 +108,7 @@ namespace Mobamon.Moves
 		public float SetMoveParameters(string moveName, MoveTarget source, MoveTarget target)
 		{
 			float animationFreezeDuration = 0f;
-
+			
 			if (!Attackdex.move.ContainsKey(moveName))
 			{
 				Debug.LogError("The move '" + moveName + "' is not registered in Attackdex");
@@ -150,47 +116,40 @@ namespace Mobamon.Moves
 			else
 			{
 				this.Info = Attackdex.move[moveName];
-				Vector3 startPosition = source.StartPosition;
-				Vector3 forward = source.GameObject.transform.forward;
-
-				Collider collider = this.GetComponentInChildren<Collider>();
-				this.ColliderObject = collider.gameObject;
-
 				this.IsRunning = true;
 				this.Source = source;
 				this.Target = target;
-
-				startPosition = this.GetPosition();
-
-				// Move the collider to the right place
-				this.ColliderObject.transform.position = startPosition;
-				this.ColliderObject.transform.forward = forward;
-
+				
+				// Positions the Attack gameobject
+				this.transform.position = this.GetPosition();
+				this.transform.forward = source.GameObject.transform.forward;
+				
 				// Starts the FX
 				this.ParticleSystems = this.GetComponentsInChildren<ParticleSystem>().ToList();
-				this.PlayFX(startPosition, forward);
-
-				// If the move should not stop the attack animation, then we don't want to freeze it and we return 0.
-				if(this.Info.IsImmobilizingCaster)
+				this.PlayFX();
+				
+				// Retrieves the MainParticle
+				Transform mainParticleTransform = transform.Find("MainParticle");
+				
+				if(mainParticleTransform == null)
 				{
-					Transform mainParticleTransform = transform.Find("MainParticle");
-	
-					if(mainParticleTransform == null)
+					Debug.LogError("The move " + moveName + " has no MainParticle child.");
+				}
+				else
+				{
+					this.MainParticleSystem = (ParticleSystem)mainParticleTransform.gameObject.GetComponent(typeof(ParticleSystem));
+					
+					if(this.MainParticleSystem == null)
 					{
-						Debug.LogError("The move " + moveName + " has no MainParticle child.");
+						Debug.LogError("The MainParticle of the move " + moveName + " contains no ParticleSystem component.");
 					}
 					else
 					{
-						this.MainParticleSystem = (ParticleSystem)mainParticleTransform.gameObject.GetComponent(typeof(ParticleSystem));
-	
-						if(this.MainParticleSystem == null)
-						{
-							Debug.LogError("The MainParticle of the move " + moveName + " contains no ParticleSystem component.");
-						}
-						else
+						// If the move should not stop the attack animation, then we don't want to freeze it and we return 0.
+						if(this.Info.IsImmobilizingCaster)
 						{
 							animationFreezeDuration = this.MainParticleSystem.duration;
-	
+							
 							if(animationFreezeDuration > 2)
 							{
 								Debug.LogError("The MainParticle of " + moveName + " lasts way too long and may cause animation issues.");
@@ -199,14 +158,14 @@ namespace Mobamon.Moves
 					}
 				}
 			}
-
+			
 			return animationFreezeDuration;
 		}
-
+		
 		#endregion
-
+		
 		#region Private methods
-
+		
 		/// <summary>
 		/// Updates the position and forward direction of the move
 		/// </summary>
@@ -215,27 +174,17 @@ namespace Mobamon.Moves
 		{
 			GameObject moveObject = this.gameObject;
 			
-			// If the move is not immobilizing the caster, move the FX object to the new source position
+			// If the move is not immobilizing the caster, move the move object to the new source position
 			if (!this.Info.IsImmobilizingCaster)
 			{
-				Vector3 newPosition = this.GetPosition();
-				this.ColliderObject.transform.position = newPosition;
-
-				if (this.ParticleSystems != null)
-				{
-					foreach (ParticleSystem particleSystem in ParticleSystems)
-					{
-						particleSystem.transform.position = newPosition;
-					}
-				}
-
+				moveObject.transform.position = this.GetPosition();
 			}
 			
 			// If the move is following the target, change the destination of the move object
 			if (this.Info.IsFollowingTarget)
 			{
 				GameObject targetObject = this.Target.GameObject;
-
+				
 				if (targetObject != null)
 				{
 					Vector3 newDirection = Vector3.Normalize(targetObject.transform.position - this.Source.CurrentPosition);
@@ -248,25 +197,26 @@ namespace Mobamon.Moves
 					
 					switch (this.Info.Shape)
 					{
-						case MoveShape.Point:
-							moveObject.transform.position = targetObject.transform.position;
-							break;
-							
-						case MoveShape.Projectile:
-							moveObject.transform.forward = newDirection;
-							break;
-							
-						case MoveShape.Cone:
-							moveObject.transform.forward = newDirection;
-							break;
-							
-						case MoveShape.Sphere:
-							moveObject.transform.position = targetObject.transform.position - new Vector3(this.Info.Radius, this.Info.Radius, this.Info.Radius);
-							break;
-							
-						case MoveShape.Box:
-							moveObject.transform.forward = newDirection;					
-							break;
+					case MoveShape.Point:
+						moveObject.transform.position = targetObject.transform.position;
+						break;
+						
+					case MoveShape.Projectile:
+						moveObject.transform.forward = newDirection;
+						break;
+						
+					case MoveShape.Cone:
+						moveObject.transform.forward = newDirection;
+						break;
+						
+					case MoveShape.Sphere:
+						float radius = (this.Info.AdditionalData as SphereData).Radius;
+						moveObject.transform.position = targetObject.transform.position - new Vector3(radius, radius, radius);
+						break;
+						
+					case MoveShape.Box:
+						moveObject.transform.forward = newDirection;					
+						break;
 					}
 				}
 			}
@@ -279,26 +229,8 @@ namespace Mobamon.Moves
 					moveObject.transform.position = moveObject.transform.position + movement;
 				}
 			}
-
-			// Rescale the collider based the its alive duration
-			if (this.Info.Shape == MoveShape.Cone || this.Info.Shape == MoveShape.Box)
-			{
-				Collider collider = this.GetComponentInChildren<Collider>();
-				float basePercent = Mathf.Clamp(this.CurrentStopDuration / this.MainParticleSystem.duration, 0.0f, 1.0f);
-				float endPercent = Mathf.Clamp(this.CurrentDuration / this.MainParticleSystem.duration, 0.0f, 1.0f);
-
-				float middlePercent = ((endPercent + basePercent) / 2.0f);
-				float scaleZ = this.MainParticleSystem.startSpeed * (endPercent - basePercent);
-
-				if (collider is BoxCollider)
-				{
-					BoxCollider boxCollider = ((BoxCollider) collider);
-					boxCollider.center = new Vector3(0, boxCollider.size.y / 2f, middlePercent * this.InitialColliderZScale);
-					boxCollider.size = new Vector3(boxCollider.size.x, boxCollider.size.y, scaleZ);
-				}
-			}
 		}
-
+		
 		/// <summary>
 		/// Handles the collision.
 		/// For each detected collision, checks if the move should apply its damage to the collided Pokemon.
@@ -306,70 +238,119 @@ namespace Mobamon.Moves
 		private void HandleCollision()
 		{
 			PokemonController sourceController = this.Source.Controller;
-
-			foreach (Collider collider in this.EnemiesToHit)
+			PokemonController[] pokemons = null;
+			
+			// This is a special case, the attack is meant to damage only the target, so there is no collision to check on the other pokemons
+			if (this.Info.Shape == MoveShape.Point && this.Info.HittableTargetsNumber == MoveTargetNumber.One && this.Info.IsFollowingTarget)
 			{
-				// Retrieves the target PokemonController
-				PokemonController targetController = collider.gameObject.GetComponent<PokemonController>();
-				if (targetController == null)
+				pokemons = new PokemonController[] { this.Target.Controller };
+			}
+			else
+			{
+				GameObject pokemonsContainer = GameObject.Find("/Pokemon");
+				pokemons = pokemonsContainer.GetComponentsInChildren<PokemonController>();
+			}
+			
+			// Calculates the min and max range percent
+			float minPercent = Mathf.Clamp(this.CurrentStopDuration / this.MainParticleSystem.duration, 0.0f, 1.0f);
+			float maxPercent = Mathf.Clamp(this.CurrentDuration / this.MainParticleSystem.duration, 0.0f, 1.0f);
+			
+			// Checks each pokemon in the game
+			foreach (PokemonController pokemon in pokemons) 
+			{
+				bool isColliding = false;
+				
+				if (this.Info.Shape == MoveShape.Cone && this.Info.AdditionalData is ConeData)
 				{
-					continue;
+					// Checks if the pokemon is colliding with a cone
+					isColliding = this.IsCollidingWithCone(pokemon, minPercent, maxPercent);
 				}
-
-				// Retrieves the relation of the source pokemon with the target one
-				// If the move is not allowed for this relation, go to the next collision
-				PokemonRelation relation = sourceController.GetRelation(targetController);
-				if ((relation & this.Info.AllowedTargets) == 0)
+				else if (this.Info.Shape == MoveShape.Point && this.Info.HittableTargetsNumber == MoveTargetNumber.One && this.Info.IsFollowingTarget)
 				{
-					continue;
+					// The attack is a point following the target, so the target is always colliding
+					isColliding = true;
 				}
-
-				// Checks the move is only allowed to hit a single pokemon and it has already hit someone
-				if (this.Info.HittableTargetsNumber == MoveTargetNumber.One && this.EnemiesHit.Contains(collider))
+				
+				if (isColliding)
 				{
-					continue;
-				}
-
-				// Applies the damage
-				if (this.Info.EffectType == MoveEffectType.OnHit && this.CurrentDuration > this.Info.Duration * this.Info.DurationPercentEffectsApply)
-				{
-					// The damage applies on hit and the apply trigger is on
-					targetController.SetDamage(this.Info.Damage);
-					this.EnemiesHit.Add(collider);
-				}
-				else if (this.Info.EffectType == MoveEffectType.PerSecond)
-				{
-					// The damage applies per second
-					targetController.SetDamage(this.Info.Damage * Time.deltaTime);
-					this.EnemiesHit.Add(collider);
+					// Retrieves the relation of the source pokemon with the target one
+					// If the move is not allowed for this relation, go to the next collision
+					PokemonRelation relation = sourceController.GetRelation(pokemon);
+					if ((relation & this.Info.AllowedTargets) == 0)
+					{
+						continue;
+					}
+					
+					// Checks the move is only allowed to hit a single pokemon and it has already hit someone
+					if (this.Info.HittableTargetsNumber == MoveTargetNumber.One && this.EnemiesHit.Contains(pokemon))
+					{
+						continue;
+					}
+					
+					// Applies the damage
+					if (this.Info.EffectType == MoveEffectType.OnHit && this.CurrentDuration > this.Info.Duration * this.Info.DurationPercentEffectsApply)
+					{
+						// The damage applies on hit and the apply trigger is on
+						pokemon.SetDamage(this.Info.Damage);
+						this.EnemiesHit.Add(pokemon);
+					}
+					else if (this.Info.EffectType == MoveEffectType.PerSecond)
+					{
+						// The damage applies per second
+						pokemon.SetDamage(this.Info.Damage * Time.deltaTime);
+						this.EnemiesHit.Add(pokemon);
+					}
 				}
 			}
 		}
-
+		
+		/// <summary>
+		/// Determines whether this instance is colliding with a cone.
+		/// </summary>
+		/// <returns><c>true</c> if this instance is colliding with a cone.
+		/// otherwise, <c>false</c>.</returns>
+		/// <param name="target">The target PokemonController.</param>
+		/// <param name="minRangePercent">Minimum range percent.</param>
+		/// <param name="maxRangePercent">Max range percent.</param>
+		private bool IsCollidingWithCone(PokemonController target, float minRangePercent, float maxRangePercent)
+		{
+			Vector2 sourcePosition = this.Source.CurrentPosition.ToVector2_XZ();
+			Vector2 targetPosition = target.transform.position.ToVector2_XZ();
+			Vector2 sourceForward = this.Source.GameObject.transform.forward.ToVector2_XZ();
+			
+			float attackRange = this.MainParticleSystem.startSpeed;
+			float attackMinRange = attackRange * minRangePercent;
+			float attackMaxRange = attackRange * maxRangePercent;
+			float distance = Vector2.Distance (sourcePosition, targetPosition);
+			float enemyRadius = target.radius;
+			
+			float halfAngle = (this.Info.AdditionalData as ConeData).HalfAngle;
+			Vector2 sourceTargetVector = targetPosition - sourcePosition;
+			float angle = Vector2.Angle(sourceTargetVector, sourceForward);
+			
+			// If the enemy is in range, deals damage to it
+			return ((distance - enemyRadius) < attackMaxRange 
+			        && (distance + enemyRadius) > attackMinRange
+			        && (angle <= halfAngle || angle >= 360 - halfAngle));
+		}
+		
 		/// <summary>
 		/// Starts all the Particle systems
 		/// </summary>
-		private void PlayFX(Vector3 startPosition, Vector3 forward)
+		private void PlayFX()
 		{
 			this.CurrentDuration = 0f;
 			this.CurrentStopDuration = 0f;
-
+			
 			if (this.ParticleSystems != null)
 			{
 				foreach (ParticleSystem particleSystem in this.ParticleSystems)
 				{
-					particleSystem.transform.position = startPosition;
-
-					if (this.Info.Source == MoveSource.Laser)
-					{						
-						particleSystem.transform.forward = forward;
-					}
-
 					particleSystem.Play();
 				}
 			}
 		}
-
+		
 		/// <summary>
 		/// Handles FX and destroys the game object if all particles are dead
 		/// </summary>
@@ -381,7 +362,7 @@ namespace Mobamon.Moves
 				for (int i = 0; i < this.ParticleSystems.Count; i++)
 				{
 					ParticleSystem particleSystem = this.ParticleSystems[i];
-
+					
 					if (!particleSystem.IsAlive())
 					{
 						this.ParticleSystems.Remove(particleSystem);
@@ -389,7 +370,7 @@ namespace Mobamon.Moves
 						i--;
 					}
 				}
-
+				
 				// If there is no other particle systems available, destroy the game object
 				if (this.ParticleSystems.Count == 0)
 				{
@@ -401,23 +382,37 @@ namespace Mobamon.Moves
 				Destroy(this.gameObject);
 			}
 		}
-
+		
+		/// <summary>
+		/// Gets the position of the move object.
+		/// </summary>
+		/// <returns>The position.</returns>
 		private Vector3 GetPosition()
 		{
 			Vector3 position = Vector3.zero;
-
-			if (this.Info.Source == MoveSource.Laser)
+			
+			switch (this.Info.Source) 
 			{
+			case MoveSource.Area:
+				position = this.Source.StartPosition;
+				break;
+			case MoveSource.CasterBody:
+				position = this.Source.CurrentPosition;
+				break;
+			case MoveSource.TargetBody:
+				position = this.Target.CurrentPosition;
+				break;
+			case MoveSource.Laser:
 				position = this.Source.Controller.laserSource.position;
+				break;
+			default:
+				Debug.LogError("Invalid move source");
+				break;
 			}
-			else if (this.Info.Source == MoveSource.Body)
-			{
-				position = this.Target.GameObject.transform.position;
-			}
-
+			
 			return position;
 		}
-
+		
 		#endregion
 	}
 }

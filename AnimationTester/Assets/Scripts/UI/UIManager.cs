@@ -138,7 +138,8 @@ namespace Mobamon.UI
 
 				// We display the amount of HP.
 				Rect rectHealthPattern = new Rect();
-				rectHealthPattern.x = rectHealthBar.x + 3;
+				int displayOffset = 3 + (24 * (controller.team % 2));
+				rectHealthPattern.x = rectHealthBar.x + displayOffset;
 				rectHealthPattern.y = rectHealthBar.y + 3;
 				rectHealthPattern.width = healthPatternMaxWidth * controller.currentHP / controller.maxHP;
 				rectHealthPattern.height = healthPatternTexture.height;

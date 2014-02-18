@@ -75,6 +75,12 @@ namespace Mobamon.Database.Classes
 		public MoveShape Shape { get; set; }
 
 		/// <summary>
+		/// Gets or sets the range of the move (in cm).
+		/// </summary>
+		/// <value>Range in centimeters.</value>
+		public float Range { get; set; }
+
+		/// <summary>
 		/// Gets or sets the source.
 		/// </summary>
 		/// <value>The source.</value>
@@ -87,10 +93,10 @@ namespace Mobamon.Database.Classes
 		public MoveTargetKind TargetKind { get; set; }
 
 		/// <summary>
-		/// Gets or sets the radius
+		/// Gets or sets the additional data.
 		/// </summary>
-		/// <value>The radius.</value>
-		public float Radius { get; set; }
+		/// <value>The additional data.</value>
+		public IAdditionalMoveData AdditionalData { get; set; }
 	}
 }
 

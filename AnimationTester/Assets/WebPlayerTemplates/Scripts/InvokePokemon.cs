@@ -2,17 +2,19 @@ using UnityEngine;
 using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
+using Mobamon.Database.Enums;
+using Mobamon.Pokemon.Player;
 
 public class InvokePokemon : MonoBehaviour
 {
 	private static GameObject entity;
-	private static Vector3 spawnPosition = new Vector3(4.460348f, 0.2047846f, -9.289039f);
+	private static Vector3 spawnPosition = new Vector3(0f, 0f, 0f);
 	
 	private static Dictionary<string, AnimationClip> foundAnimList;
 	private static string laserSourcePath;
 	private static bool isFBX;
 	private static string laserBoneName = "Laser";
-	private static Dictionary<AttackCategory, float> attackAnimHalfDuration;	
+	private static Dictionary<MoveCategory, float> attackAnimHalfDuration;	
 	private static string pokemonToInvoke = "";
 	private static string modelsFolder = "Assets/Models/";
 
@@ -74,8 +76,9 @@ public class InvokePokemon : MonoBehaviour
 	{
 		laserSourcePath = "";
 		isFBX = false;
-		attackAnimHalfDuration = new Dictionary<AttackCategory, float>();
+		attackAnimHalfDuration = new Dictionary<MoveCategory, float>();
 		foundAnimList = new Dictionary<string, AnimationClip>();
+		foundAnimList.Clear();
 	}
 	
 	static bool GetData() // Returns TRUE if the model is OK and we should generate it.
@@ -224,8 +227,8 @@ public class InvokePokemon : MonoBehaviour
 		
 		if(isFBX)
 			entity.transform.localScale = new Vector3(20f, 20f, 20f);
-		else
-			entity.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+		/*else
+			entity.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);*/
 	}
 	
 	static void Invoke()
@@ -234,7 +237,7 @@ public class InvokePokemon : MonoBehaviour
 		entity.transform.parent = GameObject.Find("Pokemon").transform;
 	}
 	
-	static void AddAnimator()
+	static void AddAnimator() // Has bugs. The created animators are copies of the last one...
 	{
 		if(AssetDatabase.LoadAssetAtPath("Assets/Resources/Animator/" + pokemonToInvoke + ".controller", typeof(UnityEditorInternal.AnimatorController)) == null)
 		{
@@ -273,8 +276,8 @@ public class InvokePokemon : MonoBehaviour
 		}
 		else
 		{
-			nav.radius = 5f;
-			nav.height = 20f;
+			nav.radius = 1f;
+			nav.height = 4f;
 		}
 		
 		nav.stoppingDistance = 0f;
@@ -284,7 +287,7 @@ public class InvokePokemon : MonoBehaviour
 		if(isFBX)
 			nav.acceleration = 100f * nav.speed;
 		else
-			nav.acceleration = 1000f * nav.speed;
+			nav.acceleration = 400f * nav.speed;
 		
 		nav.angularSpeed = 0f;
 		
@@ -324,8 +327,8 @@ public class InvokePokemon : MonoBehaviour
 		}
 		else
 		{
-			sphereCollider.radius = 5f;
-			sphereCollider.center = new Vector3(0f, 5f, 0f);
+			sphereCollider.radius = 1f;
+			sphereCollider.center = new Vector3(0f, 1f, 0f);
 		}
 	}
 
@@ -337,24 +340,24 @@ public class InvokePokemon : MonoBehaviour
 	static void DestroyEntity()
 	{
 		entity.name = "_" + entity.name;
-		Destroy(entity); // Doesn't succeed because no Update() is called.
+		DestroyImmediate(entity);
 	}
 
-	static AttackCategory attackCategoryStringToEnum(string str)
+	static MoveCategory attackCategoryStringToEnum(string str)
 	{
 		switch(str)
 		{
 			case "PhysicalAttack":
-				return AttackCategory.Physical;
+				return MoveCategory.Physical;
 
 			case "SpecialAttack":
-				return AttackCategory.Special;
+				return MoveCategory.Special;
 
 			case "StatusAttack":
-				return AttackCategory.Status;
+				return MoveCategory.Status;
 
 			default:
-				return AttackCategory.ERROR;
+				return MoveCategory.ERROR;
 		}
 	}
 }

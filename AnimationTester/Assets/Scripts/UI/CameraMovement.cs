@@ -30,10 +30,17 @@ namespace Mobamon.UI
 
 			// 1) We compute the zoom.
 			float zoomDirection = 0f;
-			if(Input.GetAxis("Mouse ScrollWheel") < 0f) // Backward scrolling
-				zoomDirection = Input.GetAxis("Mouse ScrollWheel");
-			else if(Input.GetAxis("Mouse ScrollWheel") > 0f) // Forward scrolling
-				zoomDirection = Input.GetAxis("Mouse ScrollWheel");
+			if(Input.GetAxis("Mouse ScrollWheel") != 0f)
+			{
+				zoomDirection += Input.GetAxis("Mouse ScrollWheel");
+			}
+			else
+			{
+				if(Input.GetKey(KeyCode.KeypadMinus))
+					zoomDirection -= 0.04f;
+				else if(Input.GetKey(KeyCode.KeypadPlus))
+					zoomDirection += 0.04f;
+			}
 			
 			cameraHeight = Mathf.Clamp(cameraHeight - zoomDirection * zoomSpeed * Time.deltaTime, 3f, 25f);
 			cameraAngle = -(coeff / cameraHeight - 10f);
