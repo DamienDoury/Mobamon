@@ -9,6 +9,7 @@ public class Celshading : MonoBehaviour
 	private Transform pkmnList;
 	private Terrain terrain;
 	private Renderer treeRenderer;
+	private GameObject marker;
 
 	private Shader shaderNormal;
 	private Shader shaderToon;
@@ -102,8 +103,15 @@ public class Celshading : MonoBehaviour
 
 		terrain.materialTemplate = material;
 
+		/*marker = GameObject.FindWithTag("Marker");
+		if(marker != null)
+		{
+			Renderer rend = (Renderer)marker.GetComponentInChildren(typeof(Renderer));
+			rend.material.shader = shader;
+		}*/
+
 		// Finally, we refresh the map so the changes are accounted.
-		terrain.terrainData.RefreshPrototypes();
+ 		terrain.terrainData.RefreshPrototypes();
 		terrain.Flush();
 	}
 }

@@ -275,7 +275,7 @@ namespace Mobamon.Moves
 				{
 					// Retrieves the relation of the source pokemon with the target one
 					// If the move is not allowed for this relation, go to the next collision
-					PokemonRelation relation = sourceController.GetRelation(pokemon);
+					PokemonRelation relation = sourceController.GetRelation(pokemon.gameObject);
 					if ((relation & this.Info.AllowedTargets) == 0)
 					{
 						continue;

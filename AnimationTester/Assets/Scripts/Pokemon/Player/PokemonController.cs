@@ -65,9 +65,9 @@ namespace Mobamon.Pokemon.Player
 			hoverEntity = null;
 			
 			moveSet.Add("Surf");
-			moveSet.Add("Flamethrower");
+			moveSet.Add("Razor Leaf");
 			moveSet.Add("Bubble");
-			moveSet.Add("Thunder Shock");
+			moveSet.Add("Scratch");
 			
 			selectedMove = null;
 			
@@ -132,22 +132,18 @@ namespace Mobamon.Pokemon.Player
 					if((Input.GetKeyDown("q") || Input.GetKeyDown("a")) && moveSet[0] != null)
 					{
 						SelectMove(0);
-						//networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.Q, Input.mousePosition, NetworkViewID.unassigned);
 					}
 					else if((Input.GetKeyDown("w") || Input.GetKeyDown("z")) && moveSet[1] != null)
 					{
 						SelectMove(1);
-						//networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.W, Input.mousePosition, NetworkViewID.unassigned);
 					}
 					else if(Input.GetKeyDown("e") && moveSet[2] != null)
 					{
 						SelectMove(2);
-						//networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.E, Input.mousePosition, NetworkViewID.unassigned);
 					}
 					else if(Input.GetKeyDown("r") && moveSet[3] != null)
 					{
 						SelectMove(3);
-						//networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.R, Input.mousePosition, NetworkViewID.unassigned);
 					}
 				}
 				
@@ -168,8 +164,6 @@ namespace Mobamon.Pokemon.Player
 					}
 					else
 						hoverEntity = null;
-					
-					//hit.transform.position.Set(hit.transform.position.x, 0, hit.transform.position.z);
 				}
 				
 				if(Input.GetMouseButtonDown(0))
@@ -183,7 +177,6 @@ namespace Mobamon.Pokemon.Player
 						RaycastHit theChosenHit = new RaycastHit();
 						foreach(RaycastHit singleHit in hits)
 						{
-							//if(singleHit.collider.transform.name == "Ground")
 							if(singleHit.collider.transform.parent.name == "Terrain")
 							{
 								if(theChosenHit.Equals(new RaycastHit()) || singleHit.distance < theChosenHit.distance)
@@ -194,19 +187,12 @@ namespace Mobamon.Pokemon.Player
 						}
 						
 						if(!theChosenHit.Equals(new RaycastHit()))
-							//if(Physics.Raycast(ray, out hit) && (hit.transform.parent.name == "Terrain" || hit.transform.parent.name == "Pokemon"))
 						{
 							// The character has to move at least half of its width. 
-							// NOTE: We divide by five because the model scale is 1/5.
-							//if((hit.point - nav.transform.position).magnitude > nav.radius / 5) 
+							//if((theChosenHit.point - transform.position).magnitude >= nav.radius) 
 							{
-								//NavMeshHit sampleHit;
-								//if(NavMesh.SamplePosition(hit.point, out sampleHit, 1f, 1 << NavMesh.GetNavMeshLayerFromName("Default"))) // I was trying to prevent the character from touching the walls, using its NavMeshRadius.
-								{
-									theChosenHit.point.Set(theChosenHit.point.x, 0, theChosenHit.point.z);
-									
-									networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, theChosenHit.point, NetworkViewID.unassigned, -1);
-								}
+								theChosenHit.point.Set(theChosenHit.point.x, 0, theChosenHit.point.z);
+								networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, theChosenHit.point, NetworkViewID.unassigned, -1);
 							}
 						}
 					}
@@ -215,8 +201,9 @@ namespace Mobamon.Pokemon.Player
 						// If a move is selected, but not launched :
 						if(!selectedMove.IsLaunched())
 						{
+							bool attackLaunched = false;
+
 							MoveTargetKind targetKind = selectedMove.info.TargetKind;
-							PokemonRelation relation = PokemonRelation.Enemy; //this.GetRelation(selectedMove.target.Controller);
 							
 							int moveIndex = -1;
 							for(int i = 0; i < moveSet.Count; i++)
@@ -226,21 +213,27 @@ namespace Mobamon.Pokemon.Player
 							if(targetKind == MoveTargetKind.Area)
 							{
 								networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, hit.point, NetworkViewID.unassigned, moveIndex);
+								attackLaunched = true;
 							}
 							else if(targetKind == MoveTargetKind.Single && hoverEntity != null) // If the target type is not an area, then it's a single target spell. Therefore he needs a target.
 							{
-								//if(relation == PokemonRelation.Enemy && !hoverEntity.Equals(gameObject))
+								PokemonRelation relation = GetRelation(hoverEntity);
+
+								if((relation & selectedMove.info.AllowedTargets) != 0)
 								{
 									SphereCollider targetCollider = (SphereCollider)hoverEntity.collider;
 									
 									if(Vector3.Magnitude(hoverEntity.transform.position - transform.position) <= selectedMove.info.Range / 100f + nav.radius + targetCollider.radius)
+									{
 										networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, hit.point, hoverEntity.networkView.viewID, moveIndex);
+										attackLaunched = true;
+									}
 								}
 							}
-							else
+
+							if(!attackLaunched)
 							{
-								// If the player failed to click a right target for his attack, then we unselect it.
-								selectedMove = null;
+								selectedMove = null; // If the player failed to click a right target for his attack, then we unselect it.
 							}
 							
 							hoverEntity = null;
@@ -265,15 +258,31 @@ namespace Mobamon.Pokemon.Player
 			this.gameObject.networkView.RPC("SetLife", RPCMode.All, newLife);
 		}
 		
-		public PokemonRelation GetRelation(PokemonController controller)
+		public PokemonRelation GetRelation(GameObject pokemon)
 		{
-			if (this == controller)
+			PokemonController controller = (PokemonController)pokemon.GetComponent(typeof(PokemonController));
+
+			if(controller == null)
+			{
+				if(pokemon.transform.parent.name == "Pokemon")
+					return PokemonRelation.Enemy; // We can target the NPCs.
+				else
+					return PokemonRelation.ERROR;
+			}
+			else if(this == controller)
 			{
 				return PokemonRelation.Self;
 			}
 			else
 			{
-				return PokemonRelation.Enemy;
+				if(controller.team == team)
+				{
+					return PokemonRelation.Ally;
+				}
+				else
+				{
+					return PokemonRelation.Enemy; // Neutral monsters will also be considered as enemies.
+				}
 			}
 		}
 		
@@ -286,33 +295,15 @@ namespace Mobamon.Pokemon.Player
 		{
 			if(Network.isServer)
 			{
-				// Uses : selectedMove, hit and hoverEntity
-				
-				/*if(!(selectedMove != null && selectedMove.IsLaunched()))
-				{
-					if(input == (int)InputType.Q && moveSet[0] != null)
-					{
-						SelectMove(0);
-					}
-					else if(input == (int)InputType.W && moveSet[1] != null)
-					{
-						SelectMove(1);
-					}
-					else if(input == (int)InputType.E && moveSet[2] != null)
-					{
-						SelectMove(2);
-					}
-					else if(input == (int)InputType.R && moveSet[3] != null)
-					{
-						SelectMove(3);
-					}
-				}*/
-				
 				if(input == (int)InputType.LeftClick)
 				{
 					if(selectedMove == null && moveIndex == -1)
 					{
-						SetDestination(pos);
+						// The character has to move at least half of its width. 
+						//if((theChosenHit.point - transform.position).magnitude >= nav.radius) 
+						{
+							SetDestination(pos);
+						}
 					}
 					else
 					{
@@ -321,37 +312,49 @@ namespace Mobamon.Pokemon.Player
 						if(selectedMove == null && moveIndex != -1)
 						{
 							SelectMove(moveIndex);
+
+							GameObject targetPokemon = new GameObject();
+							PokemonRelation relation = PokemonRelation.ERROR;
+
+							if(viewID != NetworkViewID.unassigned)
+							{
+								targetPokemon = NetworkView.Find(viewID).gameObject;
+								relation = GetRelation(targetPokemon);
+							}
 							
 							MoveTargetKind targetKind = selectedMove.info.TargetKind;
-							PokemonRelation relation = PokemonRelation.Enemy;  //this.GetRelation(selectedMove.target.Controller);
-							
+							bool attackLaunched = false;
+
 							if(targetKind == MoveTargetKind.Area)
 							{
 								SetAttackState(NetworkViewID.unassigned, pos);
+								attackLaunched = true;
 							}
-							else if(targetKind == MoveTargetKind.Single && viewID != NetworkViewID.unassigned) // If the target type is not an area, then it's a single target spell. Therefore he needs a target.
+							else if(targetKind == MoveTargetKind.Single && relation != PokemonRelation.ERROR) // If the target type is not an area, then it's a single target spell. Therefore he needs a target.
 							{
-								bool isSelfOnly = (PokemonRelation.Self & selectedMove.info.AllowedTargets) == PokemonRelation.Self
-									&& (PokemonRelation.Ally & selectedMove.info.AllowedTargets) == 0
-										&& (PokemonRelation.Enemy & selectedMove.info.AllowedTargets) == 0;
+								bool isSelfOnly = ((int)PokemonRelation.Self ^ (int)selectedMove.info.AllowedTargets) == 0;
 
 								if(isSelfOnly)
+								{
 									SetAttackState(viewID, pos);
+									attackLaunched = true;
+								}
 								else
 								{
-									//if(relation == PokemonRelation.Enemy) // As we don't check if the player is targetting himself with an offensive spell, the player might cheat and kill himself.
+									if(((int)selectedMove.info.AllowedTargets & (int)relation) != 0)
 									{
-										GameObject targetPokemon = NetworkView.Find(viewID).gameObject;
 										SphereCollider targetCollider = (SphereCollider)targetPokemon.collider;
 
 										if(Vector3.Magnitude(targetPokemon.transform.position - transform.position) <= selectedMove.info.Range / 100f + nav.radius + targetCollider.radius)
+										{
 											SetAttackState(viewID, pos);
-										else
-											selectedMove = null;
+											attackLaunched = true;
+										}
 									}
 								}
 							}
-							else
+
+							if(!attackLaunched)
 							{
 								// If the player failed to click a right target for his attack, then we unselect it.
 								selectedMove = null;
@@ -409,9 +412,7 @@ namespace Mobamon.Pokemon.Player
 			
 			selectedMove = new SelectedMove(moveSet[index]);
 			
-			bool isSelfOnly = (PokemonRelation.Self & selectedMove.info.AllowedTargets) == PokemonRelation.Self
-				&& (PokemonRelation.Ally & selectedMove.info.AllowedTargets) == 0
-					&& (PokemonRelation.Enemy & selectedMove.info.AllowedTargets) == 0;
+			bool isSelfOnly = ((int)PokemonRelation.Self ^ (int)selectedMove.info.AllowedTargets) == 0;
 			
 			if(isSelfOnly)
 			{
@@ -663,6 +664,11 @@ namespace Mobamon.Pokemon.Player
 				nav.speed = speed;
 				transform.rotation = rotation;
 			}
+		}
+
+		private void OnParticleCollision(GameObject particle)
+		{
+			this.SetDamage(5f);
 		}
 		
 		#endregion

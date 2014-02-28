@@ -9,19 +9,24 @@ namespace Mobamon.Database.Enums
 	public enum PokemonRelation
 	{
 		/// <summary>
+		/// Either no Pokemon is targetted or an error occured
+		/// </summary>
+		ERROR = 0,
+
+		/// <summary>
 		/// The pokemons are the same
 		/// </summary>
-		Self = 1,
+		Self = 1 << 0,
 
 		/// <summary>
 		/// The pokemons are allied
 		/// </summary>
-		Ally = 2,
+		Ally = 1 << 1,
 
 		/// <summary>
 		/// The pokemons are enemies
 		/// </summary>
-		Enemy = 4
+		Enemy = 1 << 2
 	}
 }
 

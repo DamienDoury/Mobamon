@@ -12,6 +12,7 @@ namespace Mobamon.UI
 		private PokemonController controller = null;
 		private SelectedMove selectedMove;
 		private GameObject hoverEntity;
+		private Transform pkmnList;
 
 		private Texture2D hand;
 		private Vector2 handPos;
@@ -32,6 +33,8 @@ namespace Mobamon.UI
 		// Use this for initialization
 		void Start()
 		{
+			pkmnList = GameObject.Find("Pokemon").transform;
+
 			hand = (Texture2D)Resources.Load("GUI/Cursor/Hand", typeof(Texture2D));
 			single = (Texture2D)Resources.Load("GUI/Cursor/SingleTarget", typeof(Texture2D));
 			singleAlly = (Texture2D)Resources.Load("GUI/Cursor/SingleTarget_Ally", typeof(Texture2D));
@@ -58,6 +61,7 @@ namespace Mobamon.UI
 
 			DisplayCursor();
 			DisplayRangeIndicator();
+			HightlightEntities();
 		}
 
 		void GetController()
@@ -131,9 +135,7 @@ namespace Mobamon.UI
 		{
 			if(selectedMove != null && !selectedMove.IsLaunched())
 			{
-				bool isSelfOnly = (PokemonRelation.Self & selectedMove.info.AllowedTargets) == PokemonRelation.Self
-					&& (PokemonRelation.Ally & selectedMove.info.AllowedTargets) == 0
-						&& (PokemonRelation.Enemy & selectedMove.info.AllowedTargets) == 0;
+				bool isSelfOnly = ((int)PokemonRelation.Self ^ (int)selectedMove.info.AllowedTargets) == 0;
 				
 				if(isSelfOnly)
 					return;
@@ -189,6 +191,7 @@ namespace Mobamon.UI
 						float rayDistance = 0f;
 						groundPlane.Raycast(ray, out rayDistance);
 						Vector3 target = ray.GetPoint(rayDistance);
+						target = new Vector3(target.x, rangeIndicator.transform.position.y, target.z);
 						rangeIndicator.transform.LookAt(target);
 					}
 				}
@@ -205,6 +208,45 @@ namespace Mobamon.UI
 			
 			foreach(Transform child in rangeIndicator)
 				Destroy(child.gameObject);
+		}
+
+		void HightlightEntities()
+		{
+			GameObject caster = controller.gameObject;
+
+			foreach(Transform pkmn in pkmnList)
+			{
+				if(!pkmn.gameObject.activeSelf)
+					continue;
+
+				Color outlineColor = Color.black;
+
+				/*if(hoverEntity == pkmn.gameObject)
+					outlineColor = Color.white;*/
+
+				if(selectedMove != null && !selectedMove.IsLaunched())
+				{
+					float range = selectedMove.info.Range;
+					SphereCollider pkmnCollider = (SphereCollider)pkmn.GetComponent(typeof(Collider));
+
+					if(Vector3.Magnitude(pkmn.position - caster.transform.position) <= selectedMove.info.Range / 100f + controller.nav.radius + pkmnCollider.radius)
+					{
+						if(((int)controller.GetRelation(pkmn.gameObject) & (int)selectedMove.info.AllowedTargets) != 0)
+						{
+							outlineColor = Color.white;
+
+							if(selectedMove.info.TargetKind == MoveTargetKind.Single && hoverEntity == pkmn.gameObject)
+								outlineColor = Color.red;
+						}
+					}
+				}
+
+				Renderer rend = (Renderer)pkmn.GetComponentInChildren(typeof(Renderer));
+				foreach(Material mat in rend.materials)
+				{
+					mat.SetColor("_OutlineColor", outlineColor);
+				}
+			}
 		}
 	}
 }

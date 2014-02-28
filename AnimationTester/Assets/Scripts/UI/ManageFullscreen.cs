@@ -7,11 +7,11 @@ namespace Mobamon.UI
 	{
 		void Start()
 		{
-			if(!Network.isServer)
+			/*if(!Network.isServer)
 			{
 				if(!Screen.fullScreen)
 					Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, true);
-			}
+			}*/
 		}
 
 		void Update()

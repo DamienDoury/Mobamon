@@ -141,16 +141,15 @@ namespace Mobamon.Database
 					TargetKind = MoveTargetKind.Area,
 					AdditionalData = null
 				}
-			}
-			/*
-			 {
-				"Surf",
+			},
+			{
+				"Scratch",
 				new MoveInfo()
 				{
 					AllowedTargets = PokemonRelation.Enemy,
 					Category = MoveCategory.Special,
-					Damage = 90f,
-					Duration = 1f,
+					Damage = 40f,
+					Duration = 0.2f,
 					DurationPercentEffectsApply = 0.3f,
 					EffectType = MoveEffectType.OnHit,
 					HittableTargetsNumber = MoveTargetNumber.One,
@@ -158,12 +157,57 @@ namespace Mobamon.Database
 					IsImmobilizingCaster = false,
 					MovementSpeed = 0f,
 					Shape = MoveShape.Point,
-					Range = 650f,
+					Range = 400f,
 					Source = MoveSource.TargetBody,
 					TargetKind = MoveTargetKind.Single,
 					AdditionalData = null
 				}
-			}*/
+			},
+			{
+				"Razor Leaf",
+				new MoveInfo()
+				{
+					AllowedTargets = PokemonRelation.Enemy,
+					Category = MoveCategory.Special,
+					Damage = 55f,
+					Duration = 1f,
+					DurationPercentEffectsApply = 0.3f,
+					EffectType = MoveEffectType.PerSecond,
+					HittableTargetsNumber = MoveTargetNumber.Multiple,
+					IsFollowingTarget = false,
+					IsImmobilizingCaster = true,
+					MovementSpeed = 0f,
+					Shape = MoveShape.Cone,
+					Range = 780f,
+					Source = MoveSource.Laser,
+					TargetKind = MoveTargetKind.Area,
+					AdditionalData = new ConeData()
+					{
+						HalfAngle = 5f
+					}
+				}
+			},
+			{
+				"Poison Gas",
+				new MoveInfo()
+				{
+					AllowedTargets = PokemonRelation.Self,
+					Category = MoveCategory.Special,
+					Damage = 40f,
+					Duration = 1f,
+					DurationPercentEffectsApply = 0.3f,
+					EffectType = MoveEffectType.OnHit,
+					HittableTargetsNumber = MoveTargetNumber.Multiple,
+					IsFollowingTarget = true,
+					IsImmobilizingCaster = true,
+					MovementSpeed = 0f,
+					Shape = MoveShape.Sphere,
+					Range = 1050f,
+					Source = MoveSource.CasterBody,
+					TargetKind = MoveTargetKind.Area,
+					AdditionalData = null
+				}
+			}
 		};
 	}
 }

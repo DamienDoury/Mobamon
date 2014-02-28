@@ -64,9 +64,11 @@
      <Compile Include="Assets\Scripts\Database\GameInfo.cs" />
      <Compile Include="Assets\Scripts\Database\PokemonList.cs" />
      <Compile Include="Assets\Scripts\Moves\Move.cs" />
+     <Compile Include="Assets\Scripts\Moves\MoveBis.cs" />
      <Compile Include="Assets\Scripts\Networking\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\Networking\ServerManager.cs" />
      <Compile Include="Assets\Scripts\Pokemon\Classes\SelectedMove.cs" />
+     <Compile Include="Assets\Scripts\Pokemon\Player\Death.cs" />
      <Compile Include="Assets\Scripts\Pokemon\Player\PokemonController.cs" />
      <Compile Include="Assets\Scripts\UI\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\UI\Celshading.cs" />
@@ -79,6 +81,7 @@
      <None Include="Assets\Shaders\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Shaders\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Shaders\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
+     <None Include="Assets\Shaders\Custom\OpaqueParticle.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

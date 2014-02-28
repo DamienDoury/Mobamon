@@ -132,7 +132,7 @@ namespace Mobamon.UI
 					healthPatternTexture = healthPatternLowTexture;
 
 				// We display the health bar.
-				pos = cam.WorldToScreenPoint(tr.position + 3 * Vector3.up);
+				pos = cam.WorldToScreenPoint(tr.position + 3 * Vector3.up + 2 * Vector3.forward);
 				Rect rectHealthBar = new Rect(pos.x - healthBarTexture.width / 2, Screen.height - pos.y, healthBarTexture.width, healthBarTexture.height);
 				GUI.DrawTexture(rectHealthBar, healthBarTexture);
 
