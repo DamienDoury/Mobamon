@@ -94,7 +94,7 @@ namespace Mobamon.Moves
 				}
 				
 				this.HandleMovement();
-				this.HandleCollision();
+				//this.HandleCollision();
 				this.HandleFX();
 			}
 		}

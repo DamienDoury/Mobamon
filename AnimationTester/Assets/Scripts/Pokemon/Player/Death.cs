@@ -43,7 +43,7 @@ public class Death : MonoBehaviour
 		if(mesh == null)
 			return;
 
-		anim.enabled = false;
+		//anim.enabled = false;
 
 		Vector3 vanishingPoint = gameObject.transform.position;
 		Vector3[] vertices = mesh.vertices;
@@ -63,7 +63,7 @@ public class Death : MonoBehaviour
 		{
 			Vector3 vect = vertices[i];
 			Vector3 vertMove = new Vector3(Random.Range(-2f, 2f), 0, Random.Range(-1f, 1f));
-			vertices[i] = new Vector3(0, vect.y, vect.z);
+			vertices[i] = new Vector3(vect.x, 0, vect.z);
 			i++;
 		}
 

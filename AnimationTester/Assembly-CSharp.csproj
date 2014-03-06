@@ -62,7 +62,9 @@
      <Compile Include="Assets\Scripts\Database\Enums\MoveTargetNumber.cs" />
      <Compile Include="Assets\Scripts\Database\Enums\PokemonRelation.cs" />
      <Compile Include="Assets\Scripts\Database\GameInfo.cs" />
+     <Compile Include="Assets\Scripts\Database\Pokedex.cs" />
      <Compile Include="Assets\Scripts\Database\PokemonList.cs" />
+     <Compile Include="Assets\Scripts\Moves\DamageManager.cs" />
      <Compile Include="Assets\Scripts\Moves\Move.cs" />
      <Compile Include="Assets\Scripts\Moves\MoveBis.cs" />
      <Compile Include="Assets\Scripts\Networking\NetworkManager.cs" />

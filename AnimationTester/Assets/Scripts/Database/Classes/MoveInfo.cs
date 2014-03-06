@@ -8,10 +8,16 @@ namespace Mobamon.Database.Classes
 	public struct MoveInfo
 	{
 		/// <summary>
-		/// Gets or sets the allowed targets.
+		/// Gets or sets the categories of entities that a move can target.
 		/// </summary>
 		/// <value>The allowed targets.</value>
 		public PokemonRelation AllowedTargets { get; set; }
+
+		/// <summary>
+		/// Gets or sets the categories of entities that will take damage from this move.
+		/// </summary>
+		/// <value>The allowed targets.</value>
+		public PokemonRelation DamageTargets { get; set; }
 
 		/// <summary>
 		/// Gets or sets the category.
@@ -30,7 +36,13 @@ namespace Mobamon.Database.Classes
 		/// </summary>
 		/// <value>The duration.</value>
 		public float Duration { get; set; }
-		
+
+		/// <summary>
+		/// Gets or sets the type of the effect.
+		/// </summary>
+		/// <value>The type of the effect.</value>
+		public MoveEffectType EffectType { get; set; }
+
 		/// <summary>
 		/// Gets or sets the percent of the move duration at which the effects should apply.
 		/// WARNING : EffectType should be set to MoveEffectType.OnHit
@@ -39,10 +51,11 @@ namespace Mobamon.Database.Classes
 		public float DurationPercentEffectsApply { get; set; }
 
 		/// <summary>
-		/// Gets or sets the type of the effect.
+		/// Gets or sets the delay before the damage is applied for a on-hit move.
+		/// WARNING : This value has to be less than the duration.
 		/// </summary>
-		/// <value>The type of the effect.</value>
-		public MoveEffectType EffectType { get; set; }
+		/// <value>The delay in second.</value>
+		public float DelayBeforeDamage { get; set; }
 		
 		/// <summary>
 		/// Gets or sets the simultaneous hittable targets.

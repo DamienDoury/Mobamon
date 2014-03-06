@@ -64,10 +64,10 @@ namespace Mobamon.Pokemon.Player
 			
 			hoverEntity = null;
 			
-			moveSet.Add("Surf");
-			moveSet.Add("Razor Leaf");
 			moveSet.Add("Bubble");
-			moveSet.Add("Scratch");
+			moveSet.Add("Flamethrower");
+			moveSet.Add("Poison Gas");
+			moveSet.Add("Razor Leaf");
 			
 			selectedMove = null;
 			
@@ -87,11 +87,11 @@ namespace Mobamon.Pokemon.Player
 						Destroy(comp);*/
 				
 				// Camera list network management.
-				GameObject[] cameraList = GameObject.FindGameObjectsWithTag("Camera");
+				GameObject[] cameraList = GameObject.FindGameObjectsWithTag("MainCamera");
 				foreach(GameObject cam in cameraList)
 					Destroy(cam);
-				GameObject camera = (GameObject)Instantiate(Resources.Load("Camera/playerCamera"), new Vector3(transform.position.x, 5f, transform.position.z), Quaternion.identity);
-				camera.tag = "Camera";
+				GameObject camera = (GameObject)Instantiate(Resources.Load("Camera/PlayerCamera"), new Vector3(transform.position.x, 5f, transform.position.z), Quaternion.identity);
+				camera.tag = "MainCamera";
 				myCam = (Camera)camera.GetComponent(typeof(Camera));
 			}
 		}
@@ -251,7 +251,8 @@ namespace Mobamon.Pokemon.Player
 				}
 			}
 		}
-		
+
+		[RPC]
 		public void SetDamage(float dmg)
 		{
 			float newLife = Mathf.Max(0, currentHP - dmg);
@@ -516,10 +517,16 @@ namespace Mobamon.Pokemon.Player
 			{
 				GameObject move = (GameObject)Instantiate(Resources.Load("Moves/" + selectedMove.name));
 				move.transform.parent = GameObject.Find("Moves").transform;
-				
-				Move script = (Move)move.AddComponent(typeof(Move));
+
 				MoveTarget source = new MoveTarget(gameObject, transform.position);
-				float freezeDuration = script.SetMoveParameters(selectedMove.name, source, selectedMove.target);
+
+				DamageManager damageManagerScript = (DamageManager)move.AddComponent(typeof(DamageManager));
+				damageManagerScript.SetParameters(selectedMove.name, source, selectedMove.target);
+
+				Move moveScript = (Move)move.AddComponent(typeof(Move));
+				float freezeDuration = moveScript.SetMoveParameters(selectedMove.name, source, selectedMove.target);
+				//float freezeDuration = selectedMove.info.Duration;
+
 				Invoke("Unfreeze", freezeDuration); // Even the non-immobilizing moves need to "unfreeze" the animation.
 				
 				if(freezeDuration > 0)
@@ -668,7 +675,19 @@ namespace Mobamon.Pokemon.Player
 
 		private void OnParticleCollision(GameObject particle)
 		{
-			this.SetDamage(5f);
+			if(Network.isServer)
+			{
+				if(particle.name.Equals("MainParticle"))
+				{
+					Transform move = particle.transform;
+
+					while(move.parent.name != "Moves")
+						move = move.parent;
+
+					DamageManager man = move.GetComponent<DamageManager>();
+					man.HasCollided(gameObject, this);
+				}
+			}
 		}
 		
 		#endregion

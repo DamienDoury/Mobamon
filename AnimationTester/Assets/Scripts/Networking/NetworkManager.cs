@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using Mobamon.Pokemon.Player;
 
@@ -189,16 +189,28 @@ namespace Mobamon.Networking
 			string pokemonName;
 
 			GameObject player;
-			switch(pokemonID % 3)
+			switch(pokemonID % 6)
 			{
 				case 0:
 					pokemonName = "Caninos";
 					break;
 
 				case 1:
-					pokemonName = "Dimoret";
+					pokemonName = "Kokiyas";
 					break;
 
+				case 2:
+					pokemonName = "Krabboss";
+					break;
+
+				case 3:
+					pokemonName = "Rapion";
+					break;
+
+				case 4:
+					pokemonName = "Drascore";
+					break;
+				
 				default:
 					pokemonName = "Drakkarmin";
 					break;

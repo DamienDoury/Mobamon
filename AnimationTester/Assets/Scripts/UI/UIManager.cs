@@ -78,7 +78,7 @@ namespace Mobamon.UI
 
 		private void getCamera()
 		{
-			GameObject camObj = GameObject.FindGameObjectWithTag("Camera");
+			GameObject camObj = GameObject.FindGameObjectWithTag("MainCamera");
 			if(camObj != null)
 				cam = (Camera)camObj.GetComponent(typeof(Camera));
 		}

@@ -166,6 +166,8 @@ namespace Mobamon.UI
 					{
 						GameObject ri = (GameObject)GameObject.Instantiate((Object)obj, rangeIndicator.position, rangeIndicator.rotation);
 						ri.transform.parent = rangeIndicator;
+						foreach(SpriteRenderer child in ri.GetComponentsInChildren<SpriteRenderer>())
+							child.gameObject.layer = LayerMask.NameToLayer("Terrain");
 
 						if(shape == MoveShape.Cone)
 							ri.transform.position += rangeIndicator.forward * body_radius;
