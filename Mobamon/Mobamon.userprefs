@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Editor\Structs\NavMeshScale.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Editor\MobamonBuild.cs" Line="8" Column="13" />
+      <File FileName="e:\Work\Source codes\Unity\Mobamon\Mobamon\Assets\Scripts\Editor\InvokePokemon.cs" Line="463" Column="23" />
+      <File FileName="e:\Work\Source codes\Unity\Mobamon\Mobamon\Assets\Scripts\Editor\Structs\ColliderScale.cs" Line="19" Column="23" />
+      <File FileName="Assets\Scripts\Editor\Structs\NavMeshScale.cs" Line="26" Column="35" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

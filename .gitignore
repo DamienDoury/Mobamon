@@ -1,7 +1,8 @@
 .DS_Store
-AnimationTester/Library/
-AnimationTester/Temp/
-AnimationTester/obj/
-AnimationTester/build/
+Builds/
+Mobamon/Library/metadata/
+Mobamon/Library/ScriptAssemblies/
+Mobamon/Temp/
+Mobamon/obj/
 *.pidb
 build
