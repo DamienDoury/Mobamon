@@ -46,7 +46,7 @@ ModelImporter:
     9500000: //RootNode
     13700000: parshen
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 1
     materialSearch: 1
   animations:

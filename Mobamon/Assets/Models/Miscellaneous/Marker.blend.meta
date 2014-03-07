@@ -71,7 +71,7 @@ ModelImporter:
     13700004: Cube_002
     13700006: Cube_003
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:
