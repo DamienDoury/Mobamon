@@ -7,26 +7,26 @@ namespace Mobamon.UI
 {
 	public class UIManager : MonoBehaviour
 	{
-		private Texture spellBarTexture;
-		private Texture healthBarTexture;
-		private Texture healthBar1Texture;
-		private Texture healthBar2Texture;
-		private Texture healthPatternTexture;
-		private Texture healthPatternLowTexture;
-		private Texture healthPatternMediumTexture;
-		private Texture healthPatternHighTexture;
+		public Texture spellBarTexture;
+		public Texture healthBarTexture;
+		public Texture healthBar1Texture;
+		public Texture healthBar2Texture;
+		public Texture healthPatternLowTexture;
+		public Texture healthPatternMediumTexture;
+		public Texture healthPatternHighTexture;
 		private float healthPatternMaxWidth = 104f;
 
 		private List<float> FPSList = new List<float>();
 		private float LastFPSUpdate = 0f;
 		private float FPSRefreshRate = 1f;
 		private float LastFPSValue = 0f;
-		private Camera cam = null;
+        private Camera cam = null;
+        private Texture healthPatternTexture;
 		public Vector3 pos;
 
 		protected void Start()
 		{
-			getTextures();
+			//getTextures();
 		}
 		
 		protected void Update()
