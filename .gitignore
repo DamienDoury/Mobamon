@@ -1,5 +1,5 @@
 .DS_Store
-Builds/
+Builds/*
 Mobamon/Library/metadata/
 Mobamon/Library/ScriptAssemblies/
 Mobamon/Temp/

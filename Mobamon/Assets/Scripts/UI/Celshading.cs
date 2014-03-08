@@ -89,7 +89,10 @@ public class Celshading : MonoBehaviour
 				mat.shader = shader;
 
 				if(newMode > 1)
-					mat.SetTexture("_Ramp", ramp);
+                {
+                    mat.SetTexture("_Ramp", ramp);
+                    mat.SetFloat("_Outline", 0.002f);
+                }
 			}
 		}
 

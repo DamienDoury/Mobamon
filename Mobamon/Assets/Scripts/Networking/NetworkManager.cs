@@ -192,20 +192,20 @@ namespace Mobamon.Networking
 			switch(pokemonID % 6)
 			{
 				case 0:
-					pokemonName = "058 - Growlithe";
+                    pokemonName = "090 - Shellder";
 					break;
 
 				case 1:
-					pokemonName = "090 - Shellder";
+                    pokemonName = "133 - Eevee";
 					break;
 
 				case 2:
-					pokemonName = "099 - Kingler";
+                    pokemonName = "185 - Sudowoodo";
 					break;
 
 				case 3:
-					pokemonName = "451 - Skorupi";
-					break;
+                    pokemonName = "438 - Bonsly";
+                    break;
 
 				case 4:
 					pokemonName = "452 - Drapion";

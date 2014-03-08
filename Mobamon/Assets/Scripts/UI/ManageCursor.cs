@@ -8,25 +8,26 @@ using Mobamon.Database.Enums;
 namespace Mobamon.UI
 {
 	public class ManageCursor : MonoBehaviour
-	{
+    {
+        public GameObject ri_disk; // Preloaded range indicator type.
+        public GameObject ri_cone; // Preloaded range indicator type.
+        public Texture2D hand;
+        public Texture2D single;
+        public Texture2D singleAlly;
+        public Texture2D singleEnemy;
+
 		private PokemonController controller = null;
 		private SelectedMove selectedMove;
 		private GameObject hoverEntity;
 		private Transform pkmnList;
 
-		private Texture2D hand;
 		private Vector2 handPos;
-		private Texture2D single;
 		private Vector2 singlePos;
-		private Texture2D singleAlly;
 		private Vector2 singleAllyPos;
-		private Texture2D singleEnemy;
 		private Vector2 singleEnemyPos;
 
 		private Plane groundPlane; // The plane (x, z) at level zero.
 		private Transform rangeIndicator; // Container of the range indicator visuals. Only used for the rotation.
-		private GameObject ri_disk; // Preloaded range indicator type.
-		private GameObject ri_cone; // Preloaded range indicator type.
 		private float body_radius = 0f; // Radius of the navmesh agent. Used to increase the range of some spells.
 		private string lastSelectedMove = "";
 
@@ -34,11 +35,6 @@ namespace Mobamon.UI
 		void Start()
 		{
 			pkmnList = GameObject.Find("Pokemon").transform;
-
-			hand = (Texture2D)Resources.Load("GUI/Cursor/Hand", typeof(Texture2D));
-			single = (Texture2D)Resources.Load("GUI/Cursor/SingleTarget", typeof(Texture2D));
-			singleAlly = (Texture2D)Resources.Load("GUI/Cursor/SingleTarget_Ally", typeof(Texture2D));
-			singleEnemy = (Texture2D)Resources.Load("GUI/Cursor/SingleTarget_Enemy", typeof(Texture2D));
 			
 			handPos = new Vector2(9f, 12f);
 			singlePos = new Vector2(24f, 24f);
@@ -46,8 +42,6 @@ namespace Mobamon.UI
 			singleEnemyPos = new Vector2(24f, 24f);
 
 			groundPlane = new Plane(Vector3.up, Vector3.forward);
-			ri_disk = (GameObject)Resources.Load("RangeIndicators/disk");
-			ri_cone = (GameObject)Resources.Load("RangeIndicators/cone_10deg");
 
 			GetControllerInfos();
 		}

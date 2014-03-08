@@ -1,0 +1,726 @@
+fileFormatVersion: 2
+guid: 8b19368868919824a8ad9305903d053a
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Armature
+    100004: BackBone_Back
+    100006: BackBone_Front
+    100008: BackBone_Middle
+    100010: BLeg1_L
+    100012: BLeg1_R
+    100014: BLeg2_L
+    100016: BLeg2_R
+    100018: BLeg3_L
+    100020: BLeg3_R
+    100022: BLeg4_L
+    100024: BLeg4_R
+    100026: Ear_L
+    100028: Ear_R
+    100030: EarBase_L
+    100032: EarBase_R
+    100034: FLeg1_L
+    100036: FLeg1_R
+    100038: FLeg2_L
+    100040: FLeg2_R
+    100042: FLeg3_L
+    100044: FLeg3_R
+    100046: FLeg4_L
+    100048: FLeg4_R
+    100050: Head
+    100052: Laser
+    100054: LaserAttach
+    100056: Neck
+    100058: polygon1_mat1
+    100060: PreTail
+    100062: Tail1
+    100064: Tail2
+    100066: Tail3
+    100068: Tail4
+    400000: //RootNode
+    400002: Armature
+    400004: BackBone_Back
+    400006: BackBone_Front
+    400008: BackBone_Middle
+    400010: BLeg1_L
+    400012: BLeg1_R
+    400014: BLeg2_L
+    400016: BLeg2_R
+    400018: BLeg3_L
+    400020: BLeg3_R
+    400022: BLeg4_L
+    400024: BLeg4_R
+    400026: Ear_L
+    400028: Ear_R
+    400030: EarBase_L
+    400032: EarBase_R
+    400034: FLeg1_L
+    400036: FLeg1_R
+    400038: FLeg2_L
+    400040: FLeg2_R
+    400042: FLeg3_L
+    400044: FLeg3_R
+    400046: FLeg4_L
+    400048: FLeg4_R
+    400050: Head
+    400052: Laser
+    400054: LaserAttach
+    400056: Neck
+    400058: polygon1_mat1
+    400060: PreTail
+    400062: Tail1
+    400064: Tail2
+    400066: Tail3
+    400068: Tail4
+    4300000: polygon1_mat1
+    7400000: Default Take
+    7400002: Idle
+    7400004: PhysicalAttack
+    7400006: Run
+    7400008: SpecialAttack
+    7400010: Walk
+    9500000: //RootNode
+    13700000: polygon1_mat1
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: -1
+      lastFrame: 78
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/BackBone_Back
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L/FLeg2_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L/FLeg2_L/FLeg3_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L/FLeg2_L/FLeg3_L/FLeg4_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R/FLeg2_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R/FLeg2_R/FLeg3_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R/FLeg2_R/FLeg3_R/FLeg4_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/LaserAttach
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/LaserAttach/Laser
+        weight: 1
+      - path: Armature/BLeg1_L
+        weight: 1
+      - path: Armature/BLeg1_L/BLeg2_L
+        weight: 1
+      - path: Armature/BLeg1_L/BLeg2_L/BLeg3_L
+        weight: 1
+      - path: Armature/BLeg1_L/BLeg2_L/BLeg3_L/BLeg4_L
+        weight: 1
+      - path: Armature/BLeg1_R
+        weight: 1
+      - path: Armature/BLeg1_R/BLeg2_R
+        weight: 1
+      - path: Armature/BLeg1_R/BLeg2_R/BLeg3_R
+        weight: 1
+      - path: Armature/BLeg1_R/BLeg2_R/BLeg3_R/BLeg4_R
+        weight: 1
+      - path: Armature/PreTail
+        weight: 1
+      - path: Armature/PreTail/Tail1
+        weight: 1
+      - path: Armature/PreTail/Tail1/Tail2
+        weight: 1
+      - path: Armature/PreTail/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/PreTail/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: polygon1_mat1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle
+      takeName: Idle
+      firstFrame: -1
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/BackBone_Back
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L/FLeg2_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L/FLeg2_L/FLeg3_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L/FLeg2_L/FLeg3_L/FLeg4_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R/FLeg2_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R/FLeg2_R/FLeg3_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R/FLeg2_R/FLeg3_R/FLeg4_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/LaserAttach
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/LaserAttach/Laser
+        weight: 1
+      - path: Armature/BLeg1_L
+        weight: 1
+      - path: Armature/BLeg1_L/BLeg2_L
+        weight: 1
+      - path: Armature/BLeg1_L/BLeg2_L/BLeg3_L
+        weight: 1
+      - path: Armature/BLeg1_L/BLeg2_L/BLeg3_L/BLeg4_L
+        weight: 1
+      - path: Armature/BLeg1_R
+        weight: 1
+      - path: Armature/BLeg1_R/BLeg2_R
+        weight: 1
+      - path: Armature/BLeg1_R/BLeg2_R/BLeg3_R
+        weight: 1
+      - path: Armature/BLeg1_R/BLeg2_R/BLeg3_R/BLeg4_R
+        weight: 1
+      - path: Armature/PreTail
+        weight: 1
+      - path: Armature/PreTail/Tail1
+        weight: 1
+      - path: Armature/PreTail/Tail1/Tail2
+        weight: 1
+      - path: Armature/PreTail/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/PreTail/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: polygon1_mat1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: PhysicalAttack
+      takeName: PhysicalAttack
+      firstFrame: -1
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: .327790976
+        functionName: LaunchAttack
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/BackBone_Back
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L/FLeg2_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L/FLeg2_L/FLeg3_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L/FLeg2_L/FLeg3_L/FLeg4_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R/FLeg2_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R/FLeg2_R/FLeg3_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R/FLeg2_R/FLeg3_R/FLeg4_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/LaserAttach
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/LaserAttach/Laser
+        weight: 1
+      - path: Armature/BLeg1_L
+        weight: 1
+      - path: Armature/BLeg1_L/BLeg2_L
+        weight: 1
+      - path: Armature/BLeg1_L/BLeg2_L/BLeg3_L
+        weight: 1
+      - path: Armature/BLeg1_L/BLeg2_L/BLeg3_L/BLeg4_L
+        weight: 1
+      - path: Armature/BLeg1_R
+        weight: 1
+      - path: Armature/BLeg1_R/BLeg2_R
+        weight: 1
+      - path: Armature/BLeg1_R/BLeg2_R/BLeg3_R
+        weight: 1
+      - path: Armature/BLeg1_R/BLeg2_R/BLeg3_R/BLeg4_R
+        weight: 1
+      - path: Armature/PreTail
+        weight: 1
+      - path: Armature/PreTail/Tail1
+        weight: 1
+      - path: Armature/PreTail/Tail1/Tail2
+        weight: 1
+      - path: Armature/PreTail/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/PreTail/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: polygon1_mat1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Run
+      takeName: Run
+      firstFrame: -1
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/BackBone_Back
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L/FLeg2_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L/FLeg2_L/FLeg3_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L/FLeg2_L/FLeg3_L/FLeg4_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R/FLeg2_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R/FLeg2_R/FLeg3_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R/FLeg2_R/FLeg3_R/FLeg4_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/LaserAttach
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/LaserAttach/Laser
+        weight: 1
+      - path: Armature/BLeg1_L
+        weight: 1
+      - path: Armature/BLeg1_L/BLeg2_L
+        weight: 1
+      - path: Armature/BLeg1_L/BLeg2_L/BLeg3_L
+        weight: 1
+      - path: Armature/BLeg1_L/BLeg2_L/BLeg3_L/BLeg4_L
+        weight: 1
+      - path: Armature/BLeg1_R
+        weight: 1
+      - path: Armature/BLeg1_R/BLeg2_R
+        weight: 1
+      - path: Armature/BLeg1_R/BLeg2_R/BLeg3_R
+        weight: 1
+      - path: Armature/BLeg1_R/BLeg2_R/BLeg3_R/BLeg4_R
+        weight: 1
+      - path: Armature/PreTail
+        weight: 1
+      - path: Armature/PreTail/Tail1
+        weight: 1
+      - path: Armature/PreTail/Tail1/Tail2
+        weight: 1
+      - path: Armature/PreTail/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/PreTail/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: polygon1_mat1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: SpecialAttack
+      takeName: SpecialAttack
+      firstFrame: -1
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: .555819452
+        functionName: LaunchAttack
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/BackBone_Back
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L/FLeg2_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L/FLeg2_L/FLeg3_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L/FLeg2_L/FLeg3_L/FLeg4_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R/FLeg2_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R/FLeg2_R/FLeg3_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R/FLeg2_R/FLeg3_R/FLeg4_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/LaserAttach
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/LaserAttach/Laser
+        weight: 1
+      - path: Armature/BLeg1_L
+        weight: 1
+      - path: Armature/BLeg1_L/BLeg2_L
+        weight: 1
+      - path: Armature/BLeg1_L/BLeg2_L/BLeg3_L
+        weight: 1
+      - path: Armature/BLeg1_L/BLeg2_L/BLeg3_L/BLeg4_L
+        weight: 1
+      - path: Armature/BLeg1_R
+        weight: 1
+      - path: Armature/BLeg1_R/BLeg2_R
+        weight: 1
+      - path: Armature/BLeg1_R/BLeg2_R/BLeg3_R
+        weight: 1
+      - path: Armature/BLeg1_R/BLeg2_R/BLeg3_R/BLeg4_R
+        weight: 1
+      - path: Armature/PreTail
+        weight: 1
+      - path: Armature/PreTail/Tail1
+        weight: 1
+      - path: Armature/PreTail/Tail1/Tail2
+        weight: 1
+      - path: Armature/PreTail/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/PreTail/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: polygon1_mat1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Walk
+      takeName: Walk
+      firstFrame: -1
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/BackBone_Back
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L/FLeg2_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L/FLeg2_L/FLeg3_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_L/FLeg2_L/FLeg3_L/FLeg4_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R/FLeg2_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R/FLeg2_R/FLeg3_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/FLeg1_R/FLeg2_R/FLeg3_R/FLeg4_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_L/Ear_L
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/EarBase_R/Ear_R
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/LaserAttach
+        weight: 1
+      - path: Armature/BackBone_Back/BackBone_Middle/BackBone_Front/Neck/Head/LaserAttach/Laser
+        weight: 1
+      - path: Armature/BLeg1_L
+        weight: 1
+      - path: Armature/BLeg1_L/BLeg2_L
+        weight: 1
+      - path: Armature/BLeg1_L/BLeg2_L/BLeg3_L
+        weight: 1
+      - path: Armature/BLeg1_L/BLeg2_L/BLeg3_L/BLeg4_L
+        weight: 1
+      - path: Armature/BLeg1_R
+        weight: 1
+      - path: Armature/BLeg1_R/BLeg2_R
+        weight: 1
+      - path: Armature/BLeg1_R/BLeg2_R/BLeg3_R
+        weight: 1
+      - path: Armature/BLeg1_R/BLeg2_R/BLeg3_R/BLeg4_R
+        weight: 1
+      - path: Armature/PreTail
+        weight: 1
+      - path: Armature/PreTail/Tail1
+        weight: 1
+      - path: Armature/PreTail/Tail1/Tail2
+        weight: 1
+      - path: Armature/PreTail/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/PreTail/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: polygon1_mat1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 120
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  userData: 

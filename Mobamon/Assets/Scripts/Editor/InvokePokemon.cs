@@ -8,6 +8,7 @@ using UnityEditorInternal;
 using System;
 using System.Linq;
 using Mobamon.Editor.Structs;
+using System.IO;
 
 namespace Mobamon.Editor
 {
@@ -18,22 +19,22 @@ namespace Mobamon.Editor
         /// <summary>
         /// The models folder.
         /// </summary>
-        private static readonly string ModelsFolder = "Assets/Models/Pokemons";
+        private static readonly string ModelsFolder = "Assets/Models/Pokemons/";
 
         /// <summary>
         /// The prefabs folder.
         /// </summary>
-        private static readonly string PrefabsFolder = "Assets/Resources/Pokemons";
+        private static readonly string PrefabsFolder = "Assets/Resources/Pokemons/";
 
         /// <summary>
         /// The animators folder.
         /// </summary>
-        private static readonly string AnimatorsFolder = "Assets/Animators/Pokemons";
+        private static readonly string AnimatorsFolder = "Assets/Animators/Pokemons/";
 
         /// <summary>
         /// The template animator path.
         /// </summary>
-        private static readonly string TemplateAnimatorPath = "Assets/Templates/Animators/Template.animator";
+        private static readonly string TemplateAnimatorPath = "Assets/Templates/Animators/Template.controller";
 
         /// <summary>
         /// The model extensions.
@@ -80,6 +81,24 @@ namespace Mobamon.Editor
         private static readonly string LaserBoneName = "Laser";
 
          #endregion
+
+
+        /*public static void ImportPokemonBlend()
+        {
+            string fileToImport = EditorUtility.OpenFilePanel("Choose a Pokemon model file", "", ".blend|Blend file|*.fbx|FBX file");
+        }
+
+        /// <summary>
+        /// Imports the file.
+        /// </summary>
+        /// <param name="filePath">File path.</param>
+        private static void ImportFile(string filePath)
+        {
+            string folderPath = Path.GetDirectoryName(filePath);
+            string extension = Path.GetExtension(filePath);
+
+            //AssetDatabase.ImportAsset(filePath, ImportAssetOptions.ForceSynchronousImport);
+        }*/
 
         /// <summary>
         /// Generates all the assets and prefabs for each Pokemon models
@@ -142,7 +161,7 @@ namespace Mobamon.Editor
                 {
                     GameObject createdPrefab = null;
 
-                    if (CreatePrefab(modelPath, prefabPath, pokemonName, modelPath, out createdPrefab))
+                    if (CreatePrefab(modelPath, prefabPath, pokemonName, extension, out createdPrefab))
                     {
                         GameObject instance = (GameObject) Instantiate(createdPrefab, Vector3.zero, Quaternion.identity);
                         instance.transform.parent = GameObject.Find("Pokemon").transform;
@@ -154,12 +173,12 @@ namespace Mobamon.Editor
                         CreateNetworkView(createdPrefab);
                         CreateCollider(createdPrefab, extension);
 
-                        SavePrefab(createdPrefab, modelPath);
+                        //SavePrefab(createdPrefab, modelPath);
 
                         EditorApplication.SaveAssets();
                                                 
-                        createdPrefab.name = "_" + createdPrefab.name;
-                        DestroyImmediate(createdPrefab);
+                        //createdPrefab.name = "_" + createdPrefab.name;
+                        //DestroyImmediate(createdPrefab, false);
                     }
                 }
             }
@@ -243,7 +262,7 @@ namespace Mobamon.Editor
                                 time = animationClip.length / 2,
                                 functionName = LaunchAttackEventName
                             };
-                            animationClip.AddEvent(animationEvent);                            
+                            AnimationUtility.SetAnimationEvents(animationClip, new AnimationEvent[] { animationEvent });
                             attackHalfDuration.Add(move, animationClip.length / 2);
                             
                             //missingAnimationEvent = true;
@@ -286,7 +305,7 @@ namespace Mobamon.Editor
                 
                 ev.functionName = LaunchAttackEventName;
                 ev.time = anim.length * 0.45f;
-                anim.AddEvent(ev);
+                AnimationUtility.SetAnimationEvents(anim, new AnimationEvent[] { ev });
             }
             
             if (string.IsNullOrEmpty(laserBoneSourcePath))
@@ -320,8 +339,6 @@ namespace Mobamon.Editor
                     isLoopMissing = true;
                     Debug.LogError(string.Format("The Run animation of {0} is not looping. Please make it loop.", pokemonName));
                 }
-
-
             }
 
             if (animationsToFind.Count == 0 && !isLoopMissing && !isLaserSourcePathMissing)
@@ -350,31 +367,34 @@ namespace Mobamon.Editor
         {
             if (Resources.LoadAssetAtPath<AnimatorController>(animatorPath) == null)
             {
-                AssetDatabase.CopyAsset(TemplateAnimatorPath, animatorPath);
-                AssetDatabase.Refresh();
-
-                AnimatorController animatorController = Resources.LoadAssetAtPath<AnimatorController>(animatorPath);
-                StateMachine stateMachine = animatorController.GetLayer(0).stateMachine;
-
-                for (int i = 0; i < animationsFound.Count; i++)
+                bool isCopySucceeded = AssetDatabase.CopyAsset(TemplateAnimatorPath, animatorPath);
+                if (isCopySucceeded)
                 {
-                    State state = stateMachine.GetState(i);
+                    AssetDatabase.Refresh();
 
-                    if (state == null)
+                    AnimatorController animatorController = Resources.LoadAssetAtPath<AnimatorController>(animatorPath);
+                    StateMachine stateMachine = animatorController.GetLayer(0).stateMachine;
+
+                    for (int i = 0; i < animationsFound.Count; i++)
                     {
-                        break;
+                        State state = stateMachine.GetState(i);
+
+                        if (state == null)
+                        {
+                            break;
+                        }
+
+                        state.SetAnimationClip(animationsFound[state.name]);
                     }
 
-                    state.SetAnimationClip(animationsFound[state.name]);
-                }
+                    Animator animator = (Animator) prefab.GetComponent("Animator");
+                    if (!animator)
+                    {
+                        animator = (Animator) prefab.AddComponent<Animator>();
+                    }
 
-                Animator animator = (Animator) prefab.GetComponent("Animator");
-                if (!animator)
-                {
-                    animator = (Animator) prefab.AddComponent<Animator>();
+                    animator.runtimeAnimatorController = animatorController;
                 }
-
-                animator.runtimeAnimatorController = animatorController;
             }
         }
 
