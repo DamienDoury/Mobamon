@@ -38,6 +38,8 @@ ModelImporter:
     100064: Bone_R_001
     100066: Bone_R_002
     100068: polygon2
+    100070: Bone_006
+    100072: Laser
     400000: //RootNode
     400002: Armature
     400004: Bone
@@ -73,6 +75,8 @@ ModelImporter:
     400064: Bone_R_001
     400066: Bone_R_002
     400068: polygon2
+    400070: Bone_006
+    400072: Laser
     4300000: polygon2
     7400000: Default Take
     7400002: Idle
@@ -173,6 +177,10 @@ ModelImporter:
         weight: 1
       - path: Armature/Bone/Bone_001/Bone_004/Bone_002/Bone_002_R_006
         weight: 1
+      - path: Armature/Bone/Bone_001/Bone_004/Bone_002/Bone_006
+        weight: 1
+      - path: Armature/Bone/Bone_001/Bone_004/Bone_002/Bone_006/Laser
+        weight: 1
       - path: Armature/Bone/Bone_003
         weight: 1
       - path: Armature/Bone/Bone_003/Bone_005
@@ -205,7 +213,7 @@ ModelImporter:
       loop: 0
       loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
@@ -269,6 +277,10 @@ ModelImporter:
         weight: 1
       - path: Armature/Bone/Bone_001/Bone_004/Bone_002/Bone_002_R_006
         weight: 1
+      - path: Armature/Bone/Bone_001/Bone_004/Bone_002/Bone_006
+        weight: 1
+      - path: Armature/Bone/Bone_001/Bone_004/Bone_002/Bone_006/Laser
+        weight: 1
       - path: Armature/Bone/Bone_003
         weight: 1
       - path: Armature/Bone/Bone_003/Bone_005
@@ -312,7 +324,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: .5
+      - time: .469047636
         functionName: LaunchAttack
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -371,6 +383,10 @@ ModelImporter:
       - path: Armature/Bone/Bone_001/Bone_004/Bone_002/Bone_002_R/Bone_002_R_001/Bone_002_R_002/Bone_002_R_004/Bone_002_R_003/Bone_002_R_005
         weight: 1
       - path: Armature/Bone/Bone_001/Bone_004/Bone_002/Bone_002_R_006
+        weight: 1
+      - path: Armature/Bone/Bone_001/Bone_004/Bone_002/Bone_006
+        weight: 1
+      - path: Armature/Bone/Bone_001/Bone_004/Bone_002/Bone_006/Laser
         weight: 1
       - path: Armature/Bone/Bone_003
         weight: 1
@@ -468,6 +484,10 @@ ModelImporter:
         weight: 1
       - path: Armature/Bone/Bone_001/Bone_004/Bone_002/Bone_002_R_006
         weight: 1
+      - path: Armature/Bone/Bone_001/Bone_004/Bone_002/Bone_006
+        weight: 1
+      - path: Armature/Bone/Bone_001/Bone_004/Bone_002/Bone_006/Laser
+        weight: 1
       - path: Armature/Bone/Bone_003
         weight: 1
       - path: Armature/Bone/Bone_003/Bone_005
@@ -498,7 +518,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -564,6 +584,10 @@ ModelImporter:
         weight: 1
       - path: Armature/Bone/Bone_001/Bone_004/Bone_002/Bone_002_R_006
         weight: 1
+      - path: Armature/Bone/Bone_001/Bone_004/Bone_002/Bone_006
+        weight: 1
+      - path: Armature/Bone/Bone_001/Bone_004/Bone_002/Bone_006/Laser
+        weight: 1
       - path: Armature/Bone/Bone_003
         weight: 1
       - path: Armature/Bone/Bone_003/Bone_005
@@ -607,7 +631,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: .303571433
+      - time: .252380937
         functionName: LaunchAttack
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -667,6 +691,10 @@ ModelImporter:
         weight: 1
       - path: Armature/Bone/Bone_001/Bone_004/Bone_002/Bone_002_R_006
         weight: 1
+      - path: Armature/Bone/Bone_001/Bone_004/Bone_002/Bone_006
+        weight: 1
+      - path: Armature/Bone/Bone_001/Bone_004/Bone_002/Bone_006/Laser
+        weight: 1
       - path: Armature/Bone/Bone_003
         weight: 1
       - path: Armature/Bone/Bone_003/Bone_005
@@ -704,9 +732,9 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
   tangentSpace:
-    normalSmoothAngle: 60
+    normalSmoothAngle: 180
     splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0

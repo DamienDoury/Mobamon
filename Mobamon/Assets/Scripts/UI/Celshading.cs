@@ -101,7 +101,10 @@ public class Celshading : MonoBehaviour
 			treeMat.shader = shader;
 
 			if(newMode > 1)
-				treeMat.SetTexture("_Ramp", ramp);
+            {
+                treeMat.SetTexture("_Ramp", ramp);
+                treeMat.SetFloat("_Outline", 0.002f);
+            }
 		}
 
 		terrain.materialTemplate = material;

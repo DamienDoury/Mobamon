@@ -42,30 +42,6 @@ namespace Mobamon.Editor
         private static readonly string[] ModelExtensions = { ".blend", ".fbx" };
 
         /// <summary>
-        /// The model scales.
-        /// </summary>
-        private static readonly Dictionary<string, Vector3> ModelScales = new Dictionary<string, Vector3>() {
-            { ".blend", new Vector3(0.2f, 0.2f, 0.2f) },
-            { ".fbx", new Vector3(20.0f, 20.0f, 20.0f) },
-        };
-
-        /// <summary>
-        /// The model nav mesh scales.
-        /// </summary>
-        private static readonly Dictionary<string, NavMeshScale> ModelNavMeshScales = new Dictionary<string, NavMeshScale>() {
-            { ".blend", new NavMeshScale(4.0f, 1.0f, 400.0f) },
-            { ".fbx", new NavMeshScale(0.05f, 0.2f, 100.0f) },
-        };
-
-        /// <summary>
-        /// The model collider scales.
-        /// </summary>
-        private static readonly Dictionary<string, ColliderScale> ModelColliderScales = new Dictionary<string, ColliderScale>() {
-            { ".blend", new ColliderScale(1.0f, new Vector3(0f, 0.05f, 0f)) },
-            { ".fbx", new ColliderScale(0.05f, new Vector3(0f, 0.05f, 0f)) },
-        };
-
-        /// <summary>
         /// The model animations.
         /// </summary>
         private static readonly string[] ModelAnimations = { "Idle", "Run", "SpecialAttack", "PhysicalAttack" };
@@ -155,31 +131,37 @@ namespace Mobamon.Editor
             existingPrefab = Resources.LoadAssetAtPath<GameObject>(prefabPath);
 
             // If there is no existing prefab, then the Pokemon hasn't been generated yet
+            GameObject prefab = null;
+
             if (existingPrefab == null)
+            {
+                CreatePrefab(modelPath, prefabPath, pokemonName, out prefab);
+            }
+            else
+            {
+                prefab = existingPrefab;
+            }
+
+            if (prefab != null)
             {
                 if (ParseModel(pokemonName, modelPath, out foundAnimations, out attackAnimHalfDuration, out laserSourcePath))
                 {
-                    GameObject createdPrefab = null;
+                    GameObject instance = (GameObject) Instantiate(prefab, Vector3.zero, Quaternion.identity);
+                    instance.transform.parent = GameObject.Find("Pokemon").transform;
 
-                    if (CreatePrefab(modelPath, prefabPath, pokemonName, extension, out createdPrefab))
-                    {
-                        GameObject instance = (GameObject) Instantiate(createdPrefab, Vector3.zero, Quaternion.identity);
-                        instance.transform.parent = GameObject.Find("Pokemon").transform;
+                    CreateAnimator(animatorPath, foundAnimations, prefab);
+                    AddControllerScript(prefab, laserSourcePath, attackAnimHalfDuration);
 
-                        CreateAnimator(animatorPath, foundAnimations, createdPrefab);
-                        AddControllerScript(createdPrefab, laserSourcePath, attackAnimHalfDuration);
+                    CreateNavMeshAgent(prefab);
+                    CreateNetworkView(prefab);
+                    CreateCollider(prefab);
 
-                        CreateNavMeshAgent(createdPrefab, extension);
-                        CreateNetworkView(createdPrefab);
-                        CreateCollider(createdPrefab, extension);
+                    //SavePrefab(prefab, modelPath);
 
-                        //SavePrefab(createdPrefab, modelPath);
-
-                        EditorApplication.SaveAssets();
-                                                
-                        //createdPrefab.name = "_" + createdPrefab.name;
-                        //DestroyImmediate(createdPrefab, false);
-                    }
+                    EditorApplication.SaveAssets();
+                                            
+                    prefab.name = "_" + prefab.name; // We change the name of the prefab in case it can't be deleted, so it's easier to notice.
+                    DestroyImmediate(instance, false);
                 }
             }
         }
@@ -191,25 +173,22 @@ namespace Mobamon.Editor
         /// <param name="modelPath">Model path.</param>
         /// <param name="prefabPath">Prefab path.</param>
         /// <param name="pokemonName">Pokemon name.</param>
-        /// <param name="extension">Extension.</param>
-        /// <param name="createdPrefab">Created prefab.</param>
-        private static bool CreatePrefab(string modelPath, string prefabPath, string pokemonName, string extension, out GameObject createdPrefab)
+        /// <param name="prefab">Prefab to create.</param>
+        private static bool CreatePrefab(string modelPath, string prefabPath, string pokemonName, out GameObject prefab)
         {
             // Creates the prefab from the Pokemon model file
             GameObject pokemonGameObject = Resources.LoadAssetAtPath<GameObject>(modelPath);
             PrefabUtility.CreatePrefab(prefabPath, pokemonGameObject);
 
             // Loads the created prefab and checks whether it was correctly loaded or not
-            createdPrefab = Resources.LoadAssetAtPath<GameObject>(prefabPath);
+            prefab = Resources.LoadAssetAtPath<GameObject>(prefabPath);
 
-            if (createdPrefab == null)
+            if (prefab == null)
             {
                 Debug.LogError(string.Format ("The creation of the prefab '{0}' has failed", pokemonName));
                 return false;
             }
 
-            // Based on the extension, scale up or down the model
-            createdPrefab.transform.localScale = ModelScales[extension];
             return true;
         }
 
@@ -226,7 +205,8 @@ namespace Mobamon.Editor
             Dictionary<MoveCategory, float> attackHalfDuration = new Dictionary<MoveCategory, float>();
             Dictionary<string, AnimationClip> foundAnimations = new Dictionary<string, AnimationClip>();
             bool isLoopMissing = false;
-            bool isLaserSourcePathMissing = false;
+            bool isEventMissing = false;
+            bool isLaserSourcePathMissing = true;
             string laserBoneSourcePath = LaserBoneName;
 
             object[] assetList = AssetDatabase.LoadAllAssetsAtPath(modelPath);
@@ -236,12 +216,12 @@ namespace Mobamon.Editor
             {
                 AnimationClip animationClip = asset as AnimationClip;
                 Transform transform = asset as Transform;
-                bool eventIsPresent = false;
 
                 if (animationClip != null && Array.IndexOf(ModelAnimations, animationClip.name) > -1) 
                 {
                     if (animationClip.name.EndsWith("Attack"))
                     {
+                        bool eventLaunchAttackIsPresent = false;
                         AnimationEvent[] animationEvents = AnimationUtility.GetAnimationEvents(animationClip);
                         MoveCategory move = ParseMove(animationClip.name);
 
@@ -250,13 +230,18 @@ namespace Mobamon.Editor
                             if(animationEvent.functionName == LaunchAttackEventName)
                             {
                                 attackHalfDuration.Add(move, animationClip.length - animationEvent.time);
-                                eventIsPresent = true;
+                                eventLaunchAttackIsPresent = true;
                                 break;
                             }
                         }
                         
-                        if(!eventIsPresent)
+                        if(!eventLaunchAttackIsPresent)
                         {
+                            isEventMissing = true;
+                            Debug.LogError(string.Format("Missing {0} event in the {1} animation of {2}.", LaunchAttackEventName, animationClip.name, pokemonName));
+
+                            /*
+                             * DOESN'T WORK !
                             AnimationEvent animationEvent = new AnimationEvent()
                             {
                                 time = animationClip.length / 2,
@@ -264,7 +249,8 @@ namespace Mobamon.Editor
                             };
                             AnimationUtility.SetAnimationEvents(animationClip, new AnimationEvent[] { animationEvent });
                             attackHalfDuration.Add(move, animationClip.length / 2);
-                            
+                            */
+
                             //missingAnimationEvent = true;
                             //Debug.LogWarning("Please add the LaunchAttack event to the animation " + resource.name + " of " + pokemonToInvoke + ".");
                         }
@@ -284,10 +270,15 @@ namespace Mobamon.Editor
                             laserBoneSourcePath = parent.name + "/" + laserBoneSourcePath;
                             parent = parent.parent;
                         }
+
+                        isLaserSourcePathMissing = false;
                     }
                 }
             }
 
+            /*
+             * DOESNT WORK !
+             * 
             if(foundAnimations.ContainsKey("Idle"))
             {
                 foundAnimations["Idle"].wrapMode = WrapMode.Loop;
@@ -297,7 +288,8 @@ namespace Mobamon.Editor
             {
                 foundAnimations["Run"].wrapMode = WrapMode.Loop;
             }
-            
+
+
             if(foundAnimations.ContainsKey("SpecialAttack"))
             {
                 AnimationClip anim = foundAnimations["SpecialAttack"];
@@ -307,10 +299,10 @@ namespace Mobamon.Editor
                 ev.time = anim.length * 0.45f;
                 AnimationUtility.SetAnimationEvents(anim, new AnimationEvent[] { ev });
             }
+            */
             
-            if (string.IsNullOrEmpty(laserBoneSourcePath))
+            if (isLaserSourcePathMissing)
             {
-                isLaserSourcePathMissing = true;
                 Debug.LogError(string.Format("Missing {0} bone for {1}.", LaserBoneName, pokemonName));
             }
 
@@ -341,7 +333,7 @@ namespace Mobamon.Editor
                 }
             }
 
-            if (animationsToFind.Count == 0 && !isLoopMissing && !isLaserSourcePathMissing)
+            if (animationsToFind.Count == 0 && !isLoopMissing && !isEventMissing && !isLaserSourcePathMissing)
             {
                 animations = foundAnimations;
                 attackAnimHalfDuration = attackHalfDuration;
@@ -402,22 +394,21 @@ namespace Mobamon.Editor
         /// Creates the nav mesh agent.
         /// </summary>
         /// <param name="prefab">Prefab.</param>
-        /// <param name="extension">Extension.</param>
-        private static void CreateNavMeshAgent(GameObject prefab, string extension)
+        private static void CreateNavMeshAgent(GameObject prefab)
         {
             NavMeshAgent navMeshAgent = prefab.GetComponent<NavMeshAgent>();
             if (!navMeshAgent)
             {
                 navMeshAgent = (NavMeshAgent)prefab.AddComponent("NavMeshAgent");
-            }
             
-            navMeshAgent.stoppingDistance = 0f;            
-            navMeshAgent.speed = 5f;
-            navMeshAgent.radius = ModelNavMeshScales [extension].Radius;
-            navMeshAgent.height = ModelNavMeshScales [extension].Height;
-            navMeshAgent.acceleration = ModelNavMeshScales [extension].Acceleration * navMeshAgent.speed;
-            navMeshAgent.angularSpeed = 0f;            
-            navMeshAgent.autoBraking = false;
+                navMeshAgent.stoppingDistance = 0f;            
+                navMeshAgent.speed = 5f;
+                navMeshAgent.radius = 1f;
+                navMeshAgent.height = 5f;
+                navMeshAgent.acceleration = navMeshAgent.speed * 400f;
+                navMeshAgent.angularSpeed = 0f;            
+                navMeshAgent.autoBraking = false;
+            }
         }
 
         /// <summary>
@@ -457,15 +448,14 @@ namespace Mobamon.Editor
         /// Creates the collider.
         /// </summary>
         /// <param name="prefab">Prefab.</param>
-        /// <param name="extension">Extension.</param>
-        private static void CreateCollider(GameObject prefab, string extension)
+        private static void CreateCollider(GameObject prefab)
         {       
             if((Collider)prefab.GetComponent(typeof(Collider)) != null)
                 return;
             
             SphereCollider sphereCollider = (SphereCollider)prefab.AddComponent<SphereCollider>();
-            sphereCollider.radius = ModelColliderScales [extension].Radius;
-            sphereCollider.center = ModelColliderScales [extension].Center;
+            sphereCollider.radius = 1f;
+            sphereCollider.center = new Vector3(0f, 1f, 0f);
         }
 
         /// <summary>
