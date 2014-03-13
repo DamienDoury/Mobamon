@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Mobamon>
+	<MainMenu>
+		<Buttons>
+			<Play>Play</Play>
+			<Leaderboard>Leaderboard</Leaderboard>
+			<Options>Options</Options>
+			<Exit>Exit</Exit>
+			<Confirm>Yes</Confirm>
+			<Cancel>No</Cancel>
+		</Buttons>
+	</MainMenu>
+</Mobamon>

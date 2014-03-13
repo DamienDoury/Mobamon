@@ -1,14 +1,14 @@
-using UnityEngine;
-using UnityEditor;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using Mobamon.Database.Enums;
 using Mobamon.Pokemon.Player;
+using UnityEditor;
 using UnityEditorInternal;
-using System;
-using System.Linq;
+using UnityEngine;
 using Mobamon.Editor.Structs;
-using System.IO;
 
 namespace Mobamon.Editor
 {

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System;
 using System.Linq;
+using Mobamon.UI.Languages;
 
 namespace Mobamon.UI.Menus
 {
@@ -33,6 +34,7 @@ namespace Mobamon.UI.Menus
                     {
                         // The game has been launched manually
                         // TODO : Display an error message asking the user to use the launcher instead of running the game manually
+                        LanguageManager.Load();
                         Application.LoadLevel("MainMenuScene");
                     }
                 }

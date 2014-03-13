@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Mobamon.UI.Menus.Enums;
 using System;
+using Mobamon.UI.Languages;
 
 namespace Mobamon.UI.Menus
 {
@@ -77,10 +78,10 @@ namespace Mobamon.UI.Menus
             GUILayout.BeginArea(new Rect(100f, Screen.height * 0.3f, Screen.width - 200f, Screen.height * 0.6f));
             
             GUILayout.BeginVertical();
-            this.CreateButton(BUTTON_MAIN_PLAY, OnPlayMainButtonClicked);
-            this.CreateButton(BUTTON_MAIN_LEADERBOARD, OnLeaderboardMainButtonClicked);
-            this.CreateButton(BUTTON_MAIN_OPTIONS, OnOptionsMainButtonClicked);
-            this.CreateButton(BUTTON_MAIN_EXIT, OnExitMainButtonClicked);
+            this.CreateButton(LanguageManager.Language.MainMenu_Buttons_Play, OnPlayMainButtonClicked);
+            this.CreateButton(LanguageManager.Language.MainMenu_Buttons_Leaderboard, OnLeaderboardMainButtonClicked);
+            this.CreateButton(LanguageManager.Language.MainMenu_Buttons_Options, OnOptionsMainButtonClicked);
+            this.CreateButton(LanguageManager.Language.MainMenu_Buttons_Exit, OnExitMainButtonClicked);
             GUILayout.EndVertical();
             
             GUILayout.EndArea();
@@ -97,8 +98,8 @@ namespace Mobamon.UI.Menus
             GUILayout.BeginArea(new Rect(100f, Screen.height * 0.3f, Screen.width - 200f, Screen.height * 0.6f));
             
             GUILayout.BeginHorizontal();
-            this.CreateButton(BUTTON_EXIT_CONFIRM, OnConfirmExitButtonClicked);
-            this.CreateButton(BUTTON_EXIT_CANCEL, OnCancelExitButtonClicked);
+            this.CreateButton(LanguageManager.Language.MainMenu_Buttons_Confirm, OnConfirmExitButtonClicked);
+            this.CreateButton(LanguageManager.Language.MainMenu_Buttons_Cancel, OnCancelExitButtonClicked);
             GUILayout.EndHorizontal();
             
             GUILayout.EndArea();
@@ -139,12 +140,24 @@ namespace Mobamon.UI.Menus
             Application.OpenURL("http://rickrolled.fr");
         }
 
+        private bool test = false;
+
         /// <summary>
         /// Raises the options button clicked event.
         /// </summary>
         private void OnOptionsMainButtonClicked()
         {
             this.Step = MainMenuStep.Options;
+            if (test)
+            {
+                LanguageManager.Language = Language.Create(Resources.Load<TextAsset>("Languages/Language_en").text);
+                test = false;
+            }
+            else
+            {
+                LanguageManager.Language = Language.Create(Resources.Load<TextAsset>("Languages/Language_fr").text);
+                test = true;
+            }
         }
 
         /// <summary>

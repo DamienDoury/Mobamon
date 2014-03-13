@@ -51,6 +51,9 @@
      <Compile Include="Assets\Scripts\Editor\Structs\ColliderScale.cs" />
      <Compile Include="Assets\Scripts\Editor\Structs\NavMeshScale.cs" />
      <None Include="Assets\Shaders\Toon\Toony-Basic.shader" />
+     <None Include="Assets\Resources\Languages\Language_default.xml" />
+     <None Include="Assets\Resources\Languages\Language_en.xml" />
+     <None Include="Assets\Resources\Languages\Language_fr.xml" />
      <None Include="Assets\Shaders\Toon\Toony-BasicOutline.shader" />
      <None Include="Assets\Shaders\Toon\Toony-LightedOutline.shader" />
      <None Include="Assets\Shaders\Toon\Toony-Lighted.shader" />

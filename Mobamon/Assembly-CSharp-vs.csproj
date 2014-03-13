@@ -78,6 +78,8 @@
      <Compile Include="Assets\Scripts\Shop\ShopItem.cs" />
      <Compile Include="Assets\Scripts\UI\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\UI\Celshading.cs" />
+     <Compile Include="Assets\Scripts\UI\Languages\Language.cs" />
+     <Compile Include="Assets\Scripts\UI\Languages\LanguageManager.cs" />
      <Compile Include="Assets\Scripts\UI\ManageCursor.cs" />
      <Compile Include="Assets\Scripts\UI\ManageFullscreen.cs" />
      <Compile Include="Assets\Scripts\UI\Marker.cs" />
@@ -87,6 +89,9 @@
      <Compile Include="Assets\Scripts\UI\ScreenshotManager.cs" />
      <Compile Include="Assets\Scripts\UI\UIManager.cs" />
      <None Include="Assets\Shaders\Toon\Toony-Basic.shader" />
+     <None Include="Assets\Resources\Languages\Language_default.xml" />
+     <None Include="Assets\Resources\Languages\Language_en.xml" />
+     <None Include="Assets\Resources\Languages\Language_fr.xml" />
      <None Include="Assets\Shaders\Toon\Toony-BasicOutline.shader" />
      <None Include="Assets\Shaders\Toon\Toony-LightedOutline.shader" />
      <None Include="Assets\Shaders\Toon\Toony-Lighted.shader" />
