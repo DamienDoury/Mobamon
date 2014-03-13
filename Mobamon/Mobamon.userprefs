@@ -1,17 +1,23 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Networking\NetworkManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Shop\Shop.cs">
     <Files>
-      <File FileName="Assets\Scripts\Networking\NetworkManager.cs" Line="199" Column="39" />
-      <File FileName="Assets\Scripts\Moves\Move.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\ManageCursor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Shop\Shop.cs" Line="21" Column="28" />
+      <File FileName="Assets\Scripts\UI\UIManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Pokemon\Player\PokemonController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Editor\InvokePokemon.cs" Line="411" Column="14" />
-      <File FileName="Assets\Scripts\UI\Celshading.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Shop\ShopItem.cs" Line="8" Column="44" />
+      <File FileName="Assets\Scripts\Inventory\Inventory.cs" Line="47" Column="13" />
+      <File FileName="Assets\Scripts\Inventory\InventoryItem.cs" Line="3" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint enabled="false" file="C:\Users\Damien\Documents\GitHub\Mobamon\AnimationTester\Assets\Scripts\UI\Cellshading.cs" line="29" />
+      <Breakpoint file="C:\Users\Damien\Documents\GitHub\Mobamon\AnimationTester\Assets\Scripts\Pokemon\Player\PokemonController.cs" line="1045" />
+      <Breakpoint file="C:\Users\Damien\Documents\GitHub\Mobamon\AnimationTester\Assets\Scripts\Pokemon\Player\PokemonController.cs" line="975" />
+      <Breakpoint file="C:\Users\Damien\Documents\GitHub\Mobamon\AnimationTester\Assets\Scripts\Pokemon\Player\Death.cs" line="9" />
+      <Breakpoint file="C:\Users\Damien\Documents\GitHub\Mobamon\AnimationTester\Assets\Scripts\Pokemon\Player\Death.cs" line="36" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
