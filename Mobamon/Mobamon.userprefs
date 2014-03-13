@@ -1,5 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Shop\Shop.cs">
     <Files>
       <File FileName="Assets\Scripts\Shop\Shop.cs" Line="21" Column="28" />
@@ -8,6 +9,16 @@
       <File FileName="Assets\Scripts\Shop\ShopItem.cs" Line="8" Column="44" />
       <File FileName="Assets\Scripts\Inventory\Inventory.cs" Line="47" Column="13" />
       <File FileName="Assets\Scripts\Inventory\InventoryItem.cs" Line="3" Column="1" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UI\Menus\MainMenuController.cs">
+    <Files>
+      <File FileName="Assets\Scripts\UI\Menus\MainMenuController.cs" Line="154" Column="30" />
+      <File FileName="Assets\Scripts\UI\Languages\Language.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\Languages\LanguageManager.cs" Line="19" Column="45" />
+      <File FileName="Assets\Scripts\UI\Menus\MainMenuController.cs" Line="190" Column="1" />
+      <File FileName="Assets\Scripts\UI\Menus\StartMenuController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Editor\InvokePokemon.cs" Line="1" Column="1" />
+>>>>>>> 09c39311e86a34685c14797f17fd859464d31ebf
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -19,5 +30,7 @@
       <Breakpoint file="C:\Users\Damien\Documents\GitHub\Mobamon\AnimationTester\Assets\Scripts\Pokemon\Player\Death.cs" line="36" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Assets\Scripts\UI\Languages\Language.cs" line="62" offsetX="749" offsetY="1037" expression="translations" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
 </Properties>
