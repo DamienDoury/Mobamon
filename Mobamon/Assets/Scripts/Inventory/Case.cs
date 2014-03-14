@@ -5,21 +5,40 @@ namespace Mobamon.Inventory {
 
     public class Case : MonoBehaviour {
 
+        public Inventory inventory;
         public Texture caseNormalTexture;
         public Texture caseBerryTexture;
         public Texture caseSecureTexture;
         public Texture caseClosedTexture;
-        public Item item;
-        public Vector2 pos;
+        public Item item { 
+            get { return _item; } 
+            set { 
+                _item = value; 
+                initItem();
+            }
+        } 
+        private Item _item;
+        public Vector2 casePos {
+            get { return _casePos; }
+            set {
+                _casePos = value;
+                initItem();
+            }
+        }
+        private Vector2 _casePos;
+        public Vector2 itemPos;
         public CaseType type;
+        public bool isDragged = false;
+        public bool isDisplayed = true;
 
         public Case()
         {
         }
 
-        public void initCase(Vector2 pos, CaseType type, Texture caseNormalTexture, Texture caseBerryTexture, Texture caseSecureTexture, Texture caseClosedTexture)
+        public void initCase(Vector2 casePos, CaseType type, Texture caseNormalTexture, Texture caseBerryTexture, Texture caseSecureTexture, Texture caseClosedTexture, Inventory inventory)
         {
-            this.pos = pos;
+            this.inventory = inventory;
+            this.casePos = casePos;
             this.type = type;
             this.caseNormalTexture = caseNormalTexture;
             this.caseBerryTexture = caseBerryTexture;
@@ -27,9 +46,17 @@ namespace Mobamon.Inventory {
             this.caseClosedTexture = caseClosedTexture;
         }
 
-        public void DisplayBackground()
+        public void initItem()
         {
-            Rect myRect = new Rect(pos.x, pos.y, caseNormalTexture.width, caseNormalTexture.height);
+            if (this.item != null)
+            {
+                this.itemPos.Set(casePos.x + (caseClosedTexture.width - item.Picture.width) / 2, casePos.y + (caseClosedTexture.height - item.Picture.height) / 2);
+            }
+        }
+
+        private void DisplayBackground()
+        {
+            Rect myRect = new Rect(casePos.x, casePos.y, caseNormalTexture.width, caseNormalTexture.height);
 
             Texture texture = new Texture();
             switch (type)
@@ -51,10 +78,63 @@ namespace Mobamon.Inventory {
             GUI.DrawTexture(myRect, texture);
         }
 
-        public void DisplayItem()
+        private void DisplayItem()
         {
-            Rect myRect = new Rect(pos.x + (caseClosedTexture.width - item.Picture.width) / 2, pos.y + (caseClosedTexture.height - item.Picture.height) / 2, item.Picture.width, item.Picture.height);
-            GUI.DrawTexture(myRect, item.Picture);
+            if (item != null)
+            {
+                Rect myRect = new Rect(itemPos.x, itemPos.y, item.Picture.width, item.Picture.height);
+                GUI.DrawTexture(myRect, item.Picture);
+            }
+        }
+
+        private void ManageMouse()
+        {
+            Rect myRect = new Rect(itemPos.x, itemPos.y, caseNormalTexture.width, caseNormalTexture.height);
+
+            if (Event.current.type == EventType.MouseDown && myRect.Contains(Event.current.mousePosition) && isDisplayed)
+            {
+                if (this.item != null)
+                {
+                    this.isDragged = true;
+                }
+            }
+            else if (Event.current.type == EventType.MouseDrag && this.isDragged)
+            {
+                this.itemPos.Set(Event.current.mousePosition.x - (caseNormalTexture.width / 2), Event.current.mousePosition.y - (caseNormalTexture.height / 2));
+            }
+            else if (Event.current.type == EventType.MouseUp)
+            {
+                if (this.isDragged)
+                {
+                    bool itemMoved = false;
+                    foreach (Case currentCase in inventory.cases)
+                    {
+                        Rect currentRect = new Rect(currentCase.casePos.x, currentCase.casePos.y, currentCase.caseNormalTexture.width, currentCase.caseNormalTexture.height);
+                        if (currentRect.Contains(Event.current.mousePosition) && currentCase.isDisplayed)
+                        {
+                            Item currentItem = this.item;
+                            if (currentCase.item != null)
+                            {
+                                this.item = currentCase.item;
+                            }
+                            currentCase.item = currentItem;
+                            this.isDragged = false;
+                            itemMoved = true;
+                        }
+                    }
+                    if (!itemMoved)
+                    {
+                        initItem();
+                        this.isDragged = false;
+                    }
+                }
+                else if (this.item != null && this.item.isUsable)
+                {
+                     //TO DO
+                }
+
+                    
+            }
         }
 
         // Use this for initialization
@@ -70,8 +150,12 @@ namespace Mobamon.Inventory {
         void OnGUI() {
             if (!Network.isServer)
             {
-                DisplayBackground();
-                DisplayItem();
+                ManageMouse();
+                if (this.isDisplayed)
+                {
+                    DisplayBackground();
+                    DisplayItem();
+                }
             }
         }
     }
