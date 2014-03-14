@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Mobamon.Pokemon.Classes;
 using Mobamon.Database;
 using Mobamon.Database.Enums;
@@ -66,7 +67,7 @@ namespace Mobamon.Pokemon.Player
 			
 			moveSet.Add("Bubble");
 			moveSet.Add("Flamethrower");
-			moveSet.Add("Poison Gas");
+			moveSet.Add("Mud Sport");
 			moveSet.Add("Razor Leaf");
 			
 			selectedMove = null;
@@ -98,6 +99,7 @@ namespace Mobamon.Pokemon.Player
 		
 		public void Update()
 		{
+            RandomizeMoveSet();
 			RegenHP();
 			BlinkAfterDamage();
 			
@@ -685,10 +687,43 @@ namespace Mobamon.Pokemon.Player
 						move = move.parent;
 
 					DamageManager man = move.GetComponent<DamageManager>();
-					man.HasCollided(gameObject, this);
+					man.HasCollided(gameObject);
 				}
 			}
 		}
+
+        private void RandomizeMoveSet()
+        {
+            if(Input.GetKeyDown(KeyCode.Tab))
+            {
+                List<string> newMoveSet = new List<string>();
+                List<string> availableMoves = Attackdex.move.Keys.ToList();
+
+                for(int i = 0; i < moveSet.Count; i++)
+                {
+                    availableMoves.Remove(moveSet[i]);
+
+                    int rand = Random.Range(0, availableMoves.Count);
+                    newMoveSet.Add(availableMoves[rand]);
+
+                    availableMoves.RemoveAt(rand);
+                }
+
+                networkView.RPC("SaveMoveSet", RPCMode.AllBuffered, newMoveSet[0], newMoveSet[1], newMoveSet[2], newMoveSet[3]);
+            }
+        }
+
+        [RPC]
+        private void SaveMoveSet(string move0, string move1, string move2, string move3)
+        {
+            if(moveSet != null && moveSet.Count > 3)
+            {
+                moveSet[0] = move0;
+                moveSet[1] = move1;
+                moveSet[2] = move2;
+                moveSet[3] = move3;
+            }
+        }
 		
 		#endregion
 	}

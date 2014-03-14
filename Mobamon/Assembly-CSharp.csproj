@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\Moves\DamageManager.cs" />
      <Compile Include="Assets\Scripts\Moves\Move.cs" />
      <Compile Include="Assets\Scripts\Moves\MoveBis.cs" />
+     <Compile Include="Assets\Scripts\Moves\TransmitCollisionMessage.cs" />
      <Compile Include="Assets\Scripts\Networking\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\Networking\ServerManager.cs" />
      <Compile Include="Assets\Scripts\Pokemon\Classes\SelectedMove.cs" />

@@ -95,7 +95,7 @@ namespace Mobamon.Moves
 				
 				this.HandleMovement();
 				//this.HandleCollision();
-				this.HandleFX();
+				//this.HandleFX();
 			}
 		}
 		
@@ -126,7 +126,7 @@ namespace Mobamon.Moves
 				
 				// Starts the FX
 				this.ParticleSystems = this.GetComponentsInChildren<ParticleSystem>().ToList();
-				this.PlayFX();
+				//this.PlayFX();
 				
 				// Retrieves the MainParticle
 				Transform mainParticleTransform = transform.Find("MainParticle");
@@ -235,7 +235,7 @@ namespace Mobamon.Moves
 		/// Handles the collision.
 		/// For each detected collision, checks if the move should apply its damage to the collided Pokemon.
 		/// </summary>
-		private void HandleCollision()
+		/*private void HandleCollision()
 		{
 			PokemonController sourceController = this.Source.Controller;
 			PokemonController[] pokemons = null;
@@ -302,7 +302,7 @@ namespace Mobamon.Moves
 					}
 				}
 			}
-		}
+		}*/
 		
 		/// <summary>
 		/// Determines whether this instance is colliding with a cone.
@@ -337,7 +337,7 @@ namespace Mobamon.Moves
 		/// <summary>
 		/// Starts all the Particle systems
 		/// </summary>
-		private void PlayFX()
+		/*private void PlayFX()
 		{
 			this.CurrentDuration = 0f;
 			this.CurrentStopDuration = 0f;
@@ -349,12 +349,12 @@ namespace Mobamon.Moves
 					particleSystem.Play();
 				}
 			}
-		}
+		}*/
 		
 		/// <summary>
 		/// Handles FX and destroys the game object if all particles are dead
 		/// </summary>
-		private void HandleFX()
+		/*private void HandleFX()
 		{
 			// Destroy the dead particles
 			if (this.ParticleSystems != null)
@@ -381,7 +381,7 @@ namespace Mobamon.Moves
 			{
 				Destroy(this.gameObject);
 			}
-		}
+		}*/
 		
 		/// <summary>
 		/// Gets the position of the move object.
