@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Mobamon.Inventory;
 
 namespace Mobamon.Shop
 {
@@ -9,11 +10,11 @@ namespace Mobamon.Shop
 
         public Texture backgroundTexture;
         private bool display = false;
-        private List<ShopItem> items; 
+        private List<Item> items; 
 
     	// Use this for initialization
     	void Start () {
-            items = new List<ShopItem>();
+            items = new List<Item>();
     	}
     	
     	// Update is called once per frame
@@ -32,21 +33,7 @@ namespace Mobamon.Shop
 
         private void DisplayItems()
         {
-            int count = 0;
-            foreach (ShopItem item in items)
-            {
-                int backgroundLeft = (Screen.width - backgroundTexture.width) / 2;
-                int backgroundTop = (Screen.height - backgroundTexture.height) / 2;
 
-
-                Rect myRect = new Rect(backgroundLeft + 50, backgroundTop + 50 + (count * item.Picture.height), item.Picture.width, item.Picture.height); 
-                GUI.DrawTexture(myRect, item.Picture);
-                Rect myRect2 = new Rect(backgroundLeft + 60 + myRect.width, backgroundTop + 50 + (count * item.Picture.height), 200, item.Picture.height); 
-                GUI.Label(myRect2, item.Name);
-                Rect myRect3 = new Rect(backgroundLeft + 70 + myRect.width + myRect2.width, backgroundTop + 50 + (count * item.Picture.height), 50, item.Picture.height); 
-                GUI.Label(myRect3, item.Price + "$");
-                count += 1;
-            }
         }
 
         void OnGUI() {

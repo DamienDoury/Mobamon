@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: a8e5bea2521a9fd4a841e4e48d705583
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - caseNormalTexture: {instanceID: 0}
+  - caseBerryTexture: {instanceID: 0}
+  - caseSecureTexture: {instanceID: 0}
+  - caseClosedTexture: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
