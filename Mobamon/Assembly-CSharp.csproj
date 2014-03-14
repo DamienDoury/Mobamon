@@ -64,8 +64,11 @@
      <Compile Include="Assets\Scripts\Database\GameInfo.cs" />
      <Compile Include="Assets\Scripts\Database\Pokedex.cs" />
      <Compile Include="Assets\Scripts\Database\PokemonList.cs" />
+     <Compile Include="Assets\Scripts\Inventory\Case.cs" />
+     <Compile Include="Assets\Scripts\Inventory\CaseType.cs" />
+     <Compile Include="Assets\Scripts\Inventory\IItemBehavior.cs" />
      <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
-     <Compile Include="Assets\Scripts\Inventory\InventoryItem.cs" />
+     <Compile Include="Assets\Scripts\Inventory\Item.cs" />
      <Compile Include="Assets\Scripts\Moves\DamageManager.cs" />
      <Compile Include="Assets\Scripts\Moves\Move.cs" />
      <Compile Include="Assets\Scripts\Moves\MoveBis.cs" />
@@ -76,7 +79,6 @@
      <Compile Include="Assets\Scripts\Pokemon\Player\Death.cs" />
      <Compile Include="Assets\Scripts\Pokemon\Player\PokemonController.cs" />
      <Compile Include="Assets\Scripts\Shop\Shop.cs" />
-     <Compile Include="Assets\Scripts\Shop\ShopItem.cs" />
      <Compile Include="Assets\Scripts\UI\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\UI\Celshading.cs" />
      <Compile Include="Assets\Scripts\UI\Languages\Language.cs" />
