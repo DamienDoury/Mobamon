@@ -65,10 +65,10 @@ namespace Mobamon.Pokemon.Player
 			
 			hoverEntity = null;
 			
-			moveSet.Add("Bubble");
 			moveSet.Add("Flamethrower");
+			moveSet.Add("Frost Breath");
 			moveSet.Add("Mud Sport");
-			moveSet.Add("Razor Leaf");
+			moveSet.Add("Poison Sting");
 			
 			selectedMove = null;
 			

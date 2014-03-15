@@ -285,7 +285,7 @@ namespace Mobamon.Database
                     DurationPercentEffectsApply = 0.3f,
                     DelayBeforeDamage = 0.3f,
                     HittableTargetsNumber = MoveTargetNumber.One,
-                    IsFollowingTarget = true,
+                    IsFollowingTarget = false,
                     IsImmobilizingCaster = true,
                     MovementSpeed = 0f,
                     Shape = MoveShape.Point,
@@ -388,29 +388,49 @@ namespace Mobamon.Database
                 }
             },
             {
-                "Move test",
+                "Hurricane",
                 new MoveInfo()
                 {
                     AllowedTargets = PokemonRelation.Enemy,
                     DamageTargets = PokemonRelation.Enemy,
                     Category = MoveCategory.Special,
-                    Damage = 0f,
-                    Duration = 1f,
-                    EffectType = MoveEffectType.PerSecond,
+                    Damage = 110f,
+                    Duration = 0.5f,
+                    EffectType = MoveEffectType.OnHit,
                     DurationPercentEffectsApply = 0.3f,
                     DelayBeforeDamage = 0.2f,
                     HittableTargetsNumber = MoveTargetNumber.Multiple,
                     IsFollowingTarget = false,
+                    IsImmobilizingCaster = false,
+                    MovementSpeed = 0f,
+                    Shape = MoveShape.Sphere,
+                    Range = 800f,
+                    Source = MoveSource.Area,
+                    TargetKind = MoveTargetKind.Area,
+                    AdditionalData = null
+                }
+            },
+            {
+                "Frost Breath",
+                new MoveInfo()
+                {
+                    AllowedTargets = PokemonRelation.Enemy,
+                    DamageTargets = PokemonRelation.Enemy,
+                    Category = MoveCategory.Special,
+                    Damage = 120f,
+                    Duration = 1f,
+                    EffectType = MoveEffectType.OnHit,
+                    DurationPercentEffectsApply = 0.3f,
+                    DelayBeforeDamage = 0.2f,
+                    HittableTargetsNumber = MoveTargetNumber.One,
+                    IsFollowingTarget = false,
                     IsImmobilizingCaster = true,
                     MovementSpeed = 0f,
                     Shape = MoveShape.Cone,
-                    Range = 950f,
+                    Range = 600f,
                     Source = MoveSource.Laser,
                     TargetKind = MoveTargetKind.Area,
-                    AdditionalData = new ConeData()
-                    {
-                        HalfAngle = 5f
-                    }
+                    AdditionalData = null
                 }
             }
 		};

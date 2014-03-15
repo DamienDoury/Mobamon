@@ -394,7 +394,7 @@ namespace Mobamon.Moves
 			switch (this.Info.Source) 
 			{
 			case MoveSource.Area:
-				position = this.Source.StartPosition;
+                position = this.Target.StartPosition;
 				break;
 			case MoveSource.CasterBody:
 				position = this.Source.CurrentPosition;
