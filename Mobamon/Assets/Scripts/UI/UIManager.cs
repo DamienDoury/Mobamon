@@ -70,7 +70,6 @@ namespace Mobamon.UI
 				return;
 			}
 
-			DisplaySpellBar();
 			DisplayHealthBars();
 			DisplayPing();
 			DisplayFPS();
@@ -93,12 +92,6 @@ namespace Mobamon.UI
 			healthPatternHighTexture = (Texture)Resources.Load("GUI/high_health_pattern");
 
 			spellBarTexture = (Texture)Resources.Load("GUI/spell_bar");
-		}
-
-		private void DisplaySpellBar()
-		{
-			Rect myRect = new Rect(Screen.width / 2 - spellBarTexture.width / 2, Screen.height - spellBarTexture.height, spellBarTexture.width, spellBarTexture.height);
-			GUI.DrawTexture(myRect, spellBarTexture);
 		}
 
 		private void DisplayHealthBars()

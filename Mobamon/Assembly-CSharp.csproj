@@ -85,6 +85,8 @@
      <Compile Include="Assets\Scripts\UI\Languages\LanguageManager.cs" />
      <Compile Include="Assets\Scripts\UI\ManageCursor.cs" />
      <Compile Include="Assets\Scripts\UI\ManageFullscreen.cs" />
+     <Compile Include="Assets\Scripts\UI\ManageHealthBar.cs" />
+     <Compile Include="Assets\Scripts\UI\ManageSpellBar.cs" />
      <Compile Include="Assets\Scripts\UI\Marker.cs" />
      <Compile Include="Assets\Scripts\UI\Menus\Enums\MainMenuStep.cs" />
      <Compile Include="Assets\Scripts\UI\Menus\MainMenuController.cs" />
