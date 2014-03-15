@@ -12,6 +12,7 @@ namespace Mobamon.Inventory {
         public string Identifier { get; private set; }
         public string Description { get; private set; }
         public bool isUsable { get; private set; }
+        public bool isConsumed { get; private set; }
         public IItemBehavior behavior;
 
         public Item()
@@ -23,10 +24,13 @@ namespace Mobamon.Inventory {
             this.ID = id;
             this.Picture = (Texture)Resources.Load("Items/item_" + id);
 
-            if (id == 2 || id == 4)
+            if (id == 165)
             {
                 this.isUsable = true;
+                this.isConsumed = true;
+                this.behavior = new ItemHealthBehavior(50);
             }
+
         }
 
         public Item(int id, string identifier, string name, string description, int price, Texture2D picture, IItemBehavior behavior)

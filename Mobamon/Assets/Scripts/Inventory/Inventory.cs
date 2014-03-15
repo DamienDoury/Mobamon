@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Mobamon.Pokemon;
+using Mobamon.Pokemon.Player;
 
 namespace Mobamon.Inventory
 {
@@ -35,11 +37,12 @@ namespace Mobamon.Inventory
             {
                 Case myCase = this.gameObject.AddComponent<Case>();
                 myCase.initCase(casePosition, CaseType.Closed, caseNormalTexture, caseBerryTexture, caseSecureTexture, caseClosedTexture, this);
-                myCase.item = new Item(i + 1);
+                myCase.item = new Item(160 + i * 5);
                 cases.Add(myCase);
             }
 
             DisplayCases();
+
         }
         
         // Update is called once per frame

@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\Inventory\IItemBehavior.cs" />
      <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
      <Compile Include="Assets\Scripts\Inventory\Item.cs" />
+     <Compile Include="Assets\Scripts\Inventory\ItemHealthBehavior.cs" />
      <Compile Include="Assets\Scripts\Moves\DamageManager.cs" />
      <Compile Include="Assets\Scripts\Moves\Move.cs" />
      <Compile Include="Assets\Scripts\Moves\TransmitCollisionMessage.cs" />
