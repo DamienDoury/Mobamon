@@ -46,6 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Fog of War\Examples\Scripts\TSClickToMove.cs" />
+     <Compile Include="Assets\Fog of War\Examples\Scripts\TSMoveWithMouse.cs" />
+     <Compile Include="Assets\Fog of War\FoW\BetterList.cs" />
+     <Compile Include="Assets\Fog of War\FoW\FOWEffect.cs" />
+     <Compile Include="Assets\Fog of War\FoW\FOWRenderers.cs" />
+     <Compile Include="Assets\Fog of War\FoW\FOWRevealer.cs" />
+     <Compile Include="Assets\Fog of War\FoW\FOWSystem.cs" />
      <Compile Include="Assets\Scripts\Database\Attackdex.cs" />
      <Compile Include="Assets\Scripts\Database\Classes\ConeData.cs" />
      <Compile Include="Assets\Scripts\Database\Classes\IAdditionalMoveData.cs" />
@@ -96,11 +103,14 @@
      <None Include="Assets\Shaders\Toon\Toony-Basic.shader" />
      <None Include="Assets\Resources\Languages\Language_default.xml" />
      <None Include="Assets\Resources\Languages\Language_en.xml" />
+     <None Include="Assets\Fog of War\Examples\Shaders\Untextured.shader" />
      <None Include="Assets\Resources\Languages\Language_fr.xml" />
+     <None Include="Assets\Fog of War\FoW\FOW.shader" />
      <None Include="Assets\Shaders\Toon\Toony-BasicOutline.shader" />
      <None Include="Assets\Shaders\Toon\Toony-LightedOutline.shader" />
      <None Include="Assets\Shaders\Toon\Toony-Lighted.shader" />
      <None Include="Assets\Shaders\Custom\OpaqueParticle.shader" />
+     <None Include="Assets\Fog of War\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

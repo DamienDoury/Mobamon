@@ -94,6 +94,11 @@ namespace Mobamon.Pokemon.Player
 				GameObject camera = (GameObject)Instantiate(Resources.Load("Camera/PlayerCamera"), new Vector3(transform.position.x, 5f, transform.position.z), Quaternion.identity);
 				camera.tag = "MainCamera";
 				myCam = (Camera)camera.GetComponent(typeof(Camera));
+
+                // We add a Fog of War revealer.
+                FOWRevealer fow = gameObject.AddComponent<FOWRevealer>();
+                fow.range = new Vector2(0.5f, 20f);
+                fow.lineOfSightCheck = FOWSystem.LOSChecks.EveryUpdate;
 			}
 		}
 		
