@@ -196,7 +196,7 @@ namespace Mobamon.Networking
 					break;
 
 				case 1:
-                    pokemonName = "133 - Eevee";
+                    pokemonName = "452 - Drapion";
 					break;
 
 				case 2:
@@ -208,7 +208,7 @@ namespace Mobamon.Networking
                     break;
 
 				case 4:
-					pokemonName = "452 - Drapion";
+                    pokemonName = "133 - Eevee";
 					break;
 				
 				default:

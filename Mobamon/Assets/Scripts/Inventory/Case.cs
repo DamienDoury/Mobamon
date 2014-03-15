@@ -113,13 +113,10 @@ namespace Mobamon.Inventory {
                         if (currentRect.Contains(Event.current.mousePosition) && currentCase.isDisplayed)
                         {
                             Item currentItem = this.item;
-                            if (currentCase.item != null)
-                            {
-                                this.item = currentCase.item;
-                            }
+                            this.item = currentCase.item;
                             currentCase.item = currentItem;
-                            this.isDragged = false;
                             itemMoved = true;
+                            this.isDragged = false;
                         }
                     }
                     if (!itemMoved)
@@ -128,9 +125,14 @@ namespace Mobamon.Inventory {
                         this.isDragged = false;
                     }
                 }
-                else if (this.item != null && this.item.isUsable)
+
+                if (this.item != null && this.item.isUsable && myRect.Contains(Event.current.mousePosition) && isDisplayed)
                 {
-                     //TO DO
+                    this.item.behavior.onClick();
+                    if (this.item.isConsumed)
+                    {
+                        this.item = null;
+                    }
                 }
 
                     
@@ -144,7 +146,7 @@ namespace Mobamon.Inventory {
     	
     	// Update is called once per frame
     	void Update () {
-    	
+
     	}
 
         void OnGUI() {
