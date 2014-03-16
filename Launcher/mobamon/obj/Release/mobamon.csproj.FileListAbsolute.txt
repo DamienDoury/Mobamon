@@ -1,0 +1,9 @@
+c:\users\theo\documents\visual studio 2013\Projects\mobamon\mobamon\obj\Release\mobamon.Form1.resources
+c:\users\theo\documents\visual studio 2013\Projects\mobamon\mobamon\obj\Release\mobamon.Properties.Resources.resources
+c:\users\theo\documents\visual studio 2013\Projects\mobamon\mobamon\obj\Release\mobamon.csproj.GenerateResource.Cache
+c:\users\theo\documents\visual studio 2013\Projects\mobamon\mobamon\obj\Release\mobamon.csprojResolveAssemblyReference.cache
+c:\users\theo\documents\visual studio 2013\Projects\mobamon\mobamon\bin\Release\mobamonlauncher.exe.config
+c:\users\theo\documents\visual studio 2013\Projects\mobamon\mobamon\bin\Release\mobamonlauncher.exe
+c:\users\theo\documents\visual studio 2013\Projects\mobamon\mobamon\bin\Release\mobamonlauncher.pdb
+c:\users\theo\documents\visual studio 2013\Projects\mobamon\mobamon\obj\Release\mobamonlauncher.exe
+c:\users\theo\documents\visual studio 2013\Projects\mobamon\mobamon\obj\Release\mobamonlauncher.pdb
