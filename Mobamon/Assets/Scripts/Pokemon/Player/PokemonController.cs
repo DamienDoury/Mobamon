@@ -24,6 +24,7 @@ namespace Mobamon.Pokemon.Player
 		public int team;
 		public float radius = 4f;
 		public Camera myCam = null;
+        public List<string> moveSet = new List<string>(4);
 		
 		#endregion
 		
@@ -35,7 +36,6 @@ namespace Mobamon.Pokemon.Player
 		private bool canRotate = true;		
 		public float turnSmoothing = 20f;
 		private RaycastHit hit;		
-		private List<string> moveSet = new List<string>(4);
 		public Dictionary<MoveCategory, float> attackAnimHalfDuration = new Dictionary<MoveCategory, float>();		
 		private float regenRate = 0.05f; // in % of max health/sec.
 		

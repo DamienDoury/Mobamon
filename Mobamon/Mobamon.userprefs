@@ -1,19 +1,47 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UI\ManageSpellBar.cs">
     <Files>
       <File FileName="Assets\Scripts\Inventory\IItemBehavior.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Inventory\Inventory.cs" Line="39" Column="16" />
-      <File FileName="Assets\Scripts\Inventory\ItemHealthBehavior.cs" Line="23" Column="17" />
-      <File FileName="Assets\Scripts\Inventory\Item.cs" Line="31" Column="56" />
-      <File FileName="Assets\Scripts\Inventory\Case.cs" Line="162" Column="10" />
-      <File FileName="Assets\Scripts\UI\ManageHealthBar.cs" Line="52" Column="101" />
-      <File FileName="Assets\Scripts\UI\UIManager.cs" Line="98" Column="3" />
-      <File FileName="Assets\Scripts\UI\ManageSpellBar.cs" Line="10" Column="9" />
+      <File FileName="Assets\Scripts\Inventory\Inventory.cs" Line="43" Column="13" />
+      <File FileName="Assets\Scripts\Inventory\ItemHealthBehavior.cs" Line="24" Column="14" />
+      <File FileName="Assets\Scripts\Inventory\Item.cs" Line="16" Column="39" />
+      <File FileName="Assets\Scripts\Inventory\Case.cs" Line="104" Column="14" />
+      <File FileName="Assets\Scripts\UI\ManageHealthBar.cs" Line="50" Column="1" />
+      <File FileName="Assets\Scripts\UI\UIManager.cs" Line="136" Column="43" />
+      <File FileName="Assets\Scripts\UI\ManageSpellBar.cs" Line="53" Column="71" />
       <File FileName="Assets\Scripts\Moves\Move.cs" Line="102" Column="10" />
-      <File FileName="Assets\Scripts\Pokemon\Player\PokemonController.cs" Line="68" Column="15" />
-      <File FileName="Assets\Scripts\Pokemon\Classes\SelectedMove.cs" Line="20" Column="25" />
+      <File FileName="Assets\Scripts\Pokemon\Player\PokemonController.cs" Line="300" Column="3" />
+      <File FileName="Assets\Scripts\Database\Attackdex.cs" Line="11" Column="54" />
+      <File FileName="Assets\Scripts\UI\Celshading.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Pokemon\Classes\SelectedMove.cs" Line="8" Column="27" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Scripts" expanded="True">
+              <Node name="Database" expanded="True" />
+              <Node name="Inventory" expanded="True" />
+              <Node name="Moves" expanded="True" />
+              <Node name="Pokemon" expanded="True">
+                <Node name="Classes" expanded="True" />
+                <Node name="Player" expanded="True" />
+              </Node>
+              <Node name="UI" expanded="True">
+                <Node name="ManageSpellBar.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
