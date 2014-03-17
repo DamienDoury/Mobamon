@@ -1,0 +1,8119 @@
+Initialize engine version: 4.3.2f1 (0517a5ae8669)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 670M (ID=0x1213)
+    Vendor:   NVIDIA
+    VRAM:     2988 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Damien\Desktop\build\mobamon_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Damien\Desktop\build\mobamon_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Damien\Desktop\build\mobamon_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Damien\Desktop\build\mobamon_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+- Completed reload, in  0.044 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+The tree Tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+The tree Tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+The tree Tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+Running as client. No player ID set yet.
+ 
+(Filename:  Line: 2479)
+
+The tree Tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+The tree Tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+The tree Tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+The connection request to 127.0.0.1:25000 failed. Are you sure the server can be connected to?
+ 
+(Filename:  Line: 645)
+
+Running as server. Player ID is 0.
+ 
+(Filename:  Line: 2479)
+
+Server Initializied
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Connected to facilitator at 67.225.180.24:50005
+
+ 
+(Filename:  Line: 2479)
+
+Initialize engine version: 4.3.2f1 (0517a5ae8669)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 670M (ID=0x1213)
+    Vendor:   NVIDIA
+    VRAM:     2988 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Damien\Desktop\build\mobamon_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Damien\Desktop\build\mobamon_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Damien\Desktop\build\mobamon_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Damien\Desktop\build\mobamon_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+- Completed reload, in  0.035 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+The tree Tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+The tree Tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+The tree Tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+Running as client. No player ID set yet.
+ 
+(Filename:  Line: 2479)
+
+The tree Tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+The tree Tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+The tree Tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+Connected to 127.0.0.1:25000
+
+ 
+(Filename:  Line: 2479)
+
+New connection established (127.0.0.1:65206)
+ 
+(Filename:  Line: 2479)
+
+New scope index 0 is now in scope for SceneID: 4 Level Prefix: 0
+ 
+(Filename:  Line: 2479)
+
+New scope index 0 is now in scope for SceneID: 1 Level Prefix: 0
+ 
+(Filename:  Line: 2479)
+
+New scope index 0 is now in scope for SceneID: 3 Level Prefix: 0
+ 
+(Filename:  Line: 2479)
+
+New scope index 0 is now in scope for SceneID: 2 Level Prefix: 0
+ 
+(Filename:  Line: 2479)
+
+Sent initalization to player 1
+ 
+(Filename:  Line: 2479)
+
+Server Joined
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Set player ID to 1
+
+ 
+(Filename:  Line: 2479)
+
+Allocating view ID AllocatedID: 50.
+
+ 
+(Filename:  Line: 2479)
+
+Added RPC '__RPCNetworkInstantiate' to buffer.
+ 
+(Filename:  Line: 2479)
+
+Added RPC 'StoreNewEntity' to buffer.
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetDestination' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetDestination' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetDestination' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetDestination' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Initialize engine version: 4.3.2f1 (0517a5ae8669)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 670M (ID=0x1213)
+    Vendor:   NVIDIA
+    VRAM:     2988 MB
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Damien\Desktop\build\mobamon_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Damien\Desktop\build\mobamon_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Damien\Desktop\build\mobamon_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Damien\Desktop\build\mobamon_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+- Completed reload, in  0.043 seconds
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+The tree Tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+The tree Tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+The tree Tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Running as client. No player ID set yet.
+ 
+(Filename:  Line: 2479)
+
+The tree Tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+The tree Tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+The tree Tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+New connection established (127.0.0.1:53785)
+ 
+(Filename:  Line: 2479)
+
+Connected to 127.0.0.1:25000
+
+ 
+(Filename:  Line: 2479)
+
+New scope index 1 is now in scope for SceneID: 4 Level Prefix: 0
+ 
+(Filename:  Line: 2479)
+
+New scope index 1 is now in scope for SceneID: 1 Level Prefix: 0
+ 
+(Filename:  Line: 2479)
+
+New scope index 1 is now in scope for SceneID: 3 Level Prefix: 0
+ 
+(Filename:  Line: 2479)
+
+New scope index 1 is now in scope for SceneID: 2 Level Prefix: 0
+ 
+(Filename:  Line: 2479)
+
+New scope index 1 is now in scope for AllocatedID: 0
+ 
+(Filename:  Line: 2479)
+
+New scope index 1 is now in scope for AllocatedID: 50
+ 
+(Filename:  Line: 2479)
+
+Sent initalization to player 2
+ 
+(Filename:  Line: 2479)
+
+Server Joined
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Set player ID to 2
+
+ 
+(Filename:  Line: 2479)
+
+Allocating view ID AllocatedID: 150.
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Added RPC '__RPCNetworkInstantiate' to buffer.
+ 
+(Filename:  Line: 2479)
+
+Added RPC 'StoreNewEntity' to buffer.
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetDestination' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetDestination' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetDestination' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetDestination' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetDestination' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetAttackState' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Mobamon.Pokemon.Player.PokemonController.SetAttackState (NetworkViewID viewID, Vector3 pos) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Platform assembly: C:\Users\Damien\Desktop\build\mobamon_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Damien\Desktop\build\mobamon_Data\Managed\System.Core.dll (this message is harmless)
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetLife' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetDestination' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetAttackState' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Mobamon.Pokemon.Player.PokemonController.SetAttackState (NetworkViewID viewID, Vector3 pos) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetLife' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'ValidateControl' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetAttackState' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Mobamon.Pokemon.Player.PokemonController.SetAttackState (NetworkViewID viewID, Vector3 pos) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetDestination' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'ValidateControl' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetAttackState' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Mobamon.Pokemon.Player.PokemonController.SetAttackState (NetworkViewID viewID, Vector3 pos) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetAttackState' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Mobamon.Pokemon.Player.PokemonController.SetAttackState (NetworkViewID viewID, Vector3 pos) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetLife' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetAttackState' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Mobamon.Pokemon.Player.PokemonController.SetAttackState (NetworkViewID viewID, Vector3 pos) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetLife' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'ValidateControl' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetAttackState' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Mobamon.Pokemon.Player.PokemonController.SetAttackState (NetworkViewID viewID, Vector3 pos) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetAttackState' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Mobamon.Pokemon.Player.PokemonController.SetAttackState (NetworkViewID viewID, Vector3 pos) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetDestination' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetAttackState' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Mobamon.Pokemon.Player.PokemonController.SetAttackState (NetworkViewID viewID, Vector3 pos) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetDestination' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetDestination' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetAttackState' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Mobamon.Pokemon.Player.PokemonController.SetAttackState (NetworkViewID viewID, Vector3 pos) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetAttackState' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Mobamon.Pokemon.Player.PokemonController.SetAttackState (NetworkViewID viewID, Vector3 pos) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetAttackState' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Mobamon.Pokemon.Player.PokemonController.SetAttackState (NetworkViewID viewID, Vector3 pos) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetAttackState' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Mobamon.Pokemon.Player.PokemonController.SetAttackState (NetworkViewID viewID, Vector3 pos) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetDestination' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'SetAttackState' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Mobamon.Pokemon.Player.PokemonController.SetAttackState (NetworkViewID viewID, Vector3 pos) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+A client has disconnected from this server. Player ID 2, IP 127.0.0.1:53785
+ 
+(Filename:  Line: 2479)
+
+Clean up after player 2
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+RPC __RPCNetworkInstantiate with AllocatedID: 0, player ID 2 and group 0, removed from RPC buffer.
+ 
+(Filename:  Line: 2479)
+
+RPC StoreNewEntity with SceneID: 1 Level Prefix: 0, player ID 2 and group 0, removed from RPC buffer.
+ 
+(Filename:  Line: 2479)
+
+2 RPC function were removed with RemoveRPC
+ 
+(Filename:  Line: 2479)
+
+Destroying objects belonging to player 2
+ 
+(Filename:  Line: 2479)
+
+Destroying object with view ID 'AllocatedID: 150'
+ 
+(Filename:  Line: 1374)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+
+Sent RPC call 'WarpEntity' to all connected clients
+
+ 
+(Filename:  Line: 2479)
+

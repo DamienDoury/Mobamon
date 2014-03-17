@@ -98,8 +98,8 @@ namespace Mobamon.Moves
 				//this.HandleFX();
 			}
 		}
-		
-		/// <summary>
+
+        /// <summary>
 		/// Sets the move parameters.
 		/// </summary>
 		/// <param name="moveName">Move name.</param>

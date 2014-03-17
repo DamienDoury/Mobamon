@@ -1,0 +1,113 @@
+Unity Player [version: Unity 4.3.2f1_0517a5ae8669]
+
+mobamon.exe caused an Access Violation (0xc0000005)
+  in module mobamon.exe at 0033:3f943b69.
+
+Error occurred at 2014-03-03_232732.
+C:\Users\Theo\Documents\visual studio 2013\Projects\mobamon\mobamon\bin\mobamon.exe, run by Theo.
+71% memory in use.
+8113 MB physical memory [2332 MB free].
+16224 MB paging file [6499 MB free].
+8388608 MB user address space [8388234 MB free].
+Read from location 00000020 caused an access violation.
+
+Context:
+RDI:    0x000029ba  RSI: 0x00000000  RAX:   0x00000000
+RBX:    0x0429f500  RCX: 0x00000008  RDX:   0x4022f1d0
+RIP:    0x3f943b69  RBP: 0x002deba0  SegCs: 0x00000033
+EFlags: 0x00010202  RSP: 0x002deae0  SegSs: 0x0000002b
+R8:    0x00000000  R9: 0x00000008  R10:   0x00000000
+R11:    0x0262d3f8  R12: 0x002def90  R13:   0x02244d48
+R14:    0x002df070  R15: 0x00000000
+
+Bytes at CS:EIP:
+48 8b 40 20 48 83 c4 28 c3 cc cc cc cc cc cc cc Module 1
+C:\Windows\system32\xinput1_3.dll
+Image Base: 0x00400000  Image Size: 0x0001e000
+File Size:  107368      File Time:  2007-04-04_185422
+Version:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® DirectX for Windows®
+   FileDesc:   Microsoft Common Controller API
+   FileVer:    9.18.944.0
+   ProdVer:    9.18.944.0
+
+Module 2
+C:\Program Files\NVIDIA Corporation\CoProcManager\detoured.dll
+Image Base: 0x0f000000  Image Size: 0x00006000
+File Size:  13088       File Time:  2014-02-08_193452
+Version:
+   Company:    
+   Product:    
+   FileDesc:   
+   FileVer:    0.0.0.0
+   ProdVer:    0.0.0.0
+
+Module 3
+C:\Program Files\Bonjour\mdnsNSP.dll
+Image Base: 0x71c50000  Image Size: 0x00026000
+File Size:  132968      File Time:  2011-08-30_230532
+Version:
+   Company:    Apple Inc.
+   Product:    Bonjour
+   FileDesc:   Bonjour Namespace Provider
+   FileVer:    3.0.0.10
+   ProdVer:    3.0.0.10
+
+Module 4
+C:\Windows\system32\ksuser.dll
+Image Base: 0x74e80000  Image Size: 0x00006000
+File Size:  5120        File Time:  2009-07-14_024114
+Version:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   User CSA Library
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 5
+C:\Windows\system32\kernel32.dll
+Image Base: 0x77090000  Image Size: 0x0011f000
+File Size:  1161216     File Time:  2013-08-02_031336
+Version:
+   Company:    Microsoft Corporation
+   Product:    Système d’exploitation Microsoft® Windows®
+   FileDesc:   DLL du client API BASE Windows NT
+   FileVer:    6.1.7601.18229
+   ProdVer:    6.1.7601.18229
+
+Module 6
+C:\Windows\system32\USER32.dll
+Image Base: 0x771b0000  Image Size: 0x000fa000
+File Size:  1008128     File Time:  2010-11-20_142728
+Version:
+   Company:    Microsoft Corporation
+   Product:    Système d’exploitation Microsoft® Windows®
+   FileDesc:   DLL client de l’API uilisateur de Windows multi-utilisateurs
+   FileVer:    6.1.7601.17514
+   ProdVer:    6.1.7601.17514
+
+Module 7
+C:\Windows\SYSTEM32\ntdll.dll
+Image Base: 0x772b0000  Image Size: 0x001a9000
+File Size:  1732032     File Time:  2013-08-29_031636
+Version:
+   Company:    Microsoft Corporation
+   Product:    Système d’exploitation Microsoft® Windows®
+   FileDesc:   DLL Couche NT
+   FileVer:    6.1.7601.18247
+   ProdVer:    6.1.7601.18247
+
+Module 8
+C:\Windows\system32\PSAPI.DLL
+Image Base: 0x77480000  Image Size: 0x00007000
+File Size:  9216        File Time:  2009-07-14_024154
+Version:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   Process Status Helper
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+
+== [end of error.log] ==

@@ -191,7 +191,15 @@ namespace Mobamon.Networking
 			GameObject player;
 			switch(pokemonID % 2)
 			{
-			    case 1:
+				case 0:
+                    pokemonName = "090 - Shellder";
+					break;
+
+				case 1:
+                    pokemonName = "232 - Donphan";
+					break;
+
+				case 2:
                     pokemonName = "185 - Sudowoodo";
                     break;
 				
