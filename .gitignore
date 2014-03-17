@@ -4,5 +4,6 @@ Mobamon/Library/metadata/
 Mobamon/Library/ScriptAssemblies/
 Mobamon/Temp/
 Mobamon/obj/
+Mobamon/Mobamon*
 *.pidb
 build
