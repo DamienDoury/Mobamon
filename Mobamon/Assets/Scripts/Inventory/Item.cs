@@ -44,5 +44,16 @@ namespace Mobamon.Inventory {
             this.behavior = behavior;
         }
 
+        public Item(int id, string name, string identifier, string description)
+        {
+            this.ID = id;
+            this.Name = name;
+            this.Identifier = identifier;
+            this.Description = description;
+
+            this.Price = 0;
+            this.Picture = (Texture)Resources.Load("Items/item_" + id);           
+            this.behavior = null;
+        }
     }
 }
