@@ -7,11 +7,16 @@ using UnityEngine;
 [AddComponentMenu("Fog of War/Renderers")]
 public class FOWRenderers : MonoBehaviour
 {
-	Transform mTrans;
-	Renderer[] mRenderers;
-	float mNextUpdate = 0f;
-	bool mIsVisible = true;
-	bool mUpdate = true;
+	private Transform mTrans;
+    private Renderer[] mRenderers;
+    private float mNextUpdate = 0f;
+    private bool mIsVisible = true;
+    private bool mUpdate = true;
+
+    /// <summary>
+    /// The checking rate to hide/display a gameobject (in seconds).
+    /// </summary>
+    public float refreshRate = 0.1f;
 
 	/// <summary>
 	/// Whether the renderers are currently visible or not.
@@ -23,14 +28,25 @@ public class FOWRenderers : MonoBehaviour
 	/// Rebuild the list of renderers and immediately update their visibility state.
 	/// </summary>
 
-	public void Rebuild () { mUpdate = true; }
+	public void Rebuild ()
+    {
+        mUpdate = true;
+    }
 
-	void Awake () { mTrans = transform; }
-	void LateUpdate () { if (mNextUpdate < Time.time) UpdateNow(); }
+	void Awake ()
+    {
+        mTrans = transform;
+    }
+
+	void LateUpdate ()
+    {
+        if (mNextUpdate < Time.time)
+            UpdateNow();
+    }
 
 	void UpdateNow ()
 	{
-		mNextUpdate = Time.time + 0.075f + Random.value * 0.05f;
+		mNextUpdate = Time.time + refreshRate;
 
 		if (FOWSystem.instance == null)
 		{
@@ -38,7 +54,8 @@ public class FOWRenderers : MonoBehaviour
 			return;
 		}
 
-		if (mUpdate) mRenderers = GetComponentsInChildren<Renderer>();
+		if (mUpdate)
+            mRenderers = GetComponentsInChildren<Renderer>();
 
 		bool visible = FOWSystem.instance.IsVisible(mTrans.position);
 
