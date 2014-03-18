@@ -54,6 +54,13 @@ namespace Mobamon.Inventory {
             this.Price = 0;
             this.Picture = (Texture)Resources.Load("Items/item_" + id);           
             this.behavior = null;
+
+            if (id == 165)
+            {
+                this.isUsable = true;
+                this.isConsumed = true;
+                this.behavior = new ItemHealthBehavior(50);
+            }
         }
     }
 }

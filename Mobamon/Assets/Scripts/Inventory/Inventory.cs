@@ -38,7 +38,7 @@ namespace Mobamon.Inventory
             {
                 Case myCase = this.gameObject.AddComponent<Case>();
                 myCase.initCase(casePosition, CaseType.Closed, caseNormalTexture, caseBerryTexture, caseSecureTexture, caseClosedTexture, this);
-                myCase.item = ItemPool.item[160 + i * 5];
+                myCase.item = ItemPool.item[240 + i * 5 - 1];
                 cases.Add(myCase);
             }
 
