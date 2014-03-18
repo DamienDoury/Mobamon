@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Mobamon.Pokemon;
 using Mobamon.Pokemon.Player;
+using Mobamon.Database;
 
 namespace Mobamon.Inventory
 {
@@ -37,7 +38,7 @@ namespace Mobamon.Inventory
             {
                 Case myCase = this.gameObject.AddComponent<Case>();
                 myCase.initCase(casePosition, CaseType.Closed, caseNormalTexture, caseBerryTexture, caseSecureTexture, caseClosedTexture, this);
-                myCase.item = new Item(160 + i * 5);
+                myCase.item = ItemPool.item[160 + i * 5];
                 cases.Add(myCase);
             }
 

@@ -33,14 +33,14 @@ namespace Mobamon.Inventory {
 
         }
 
-        public Item(int id, string identifier, string name, string description, int price, Texture2D picture, IItemBehavior behavior)
+        public Item(int id, string identifier, string name, string description, int price, IItemBehavior behavior)
         {
             this.ID = id;
             this.Identifier = identifier;
             this.Name = name;
             this.Description = description;
             this.Price = price;
-            this.Picture = picture;
+            this.Picture = (Texture)Resources.Load("Items/item_" + id);   
             this.behavior = behavior;
         }
 
