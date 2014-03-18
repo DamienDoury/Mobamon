@@ -228,7 +228,7 @@ namespace Mobamon.Networking
 				newEntityView.gameObject.transform.parent = GameObject.Find("Pokemon").transform;
 				PokemonController controller = (PokemonController)newEntityView.gameObject.gameObject.GetComponent("PokemonController");
 				controller.team = teamID;
-			}
+            }
 		}
 	}
 }

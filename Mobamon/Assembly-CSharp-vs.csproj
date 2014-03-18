@@ -95,6 +95,7 @@
      <Compile Include="Assets\Scripts\UI\ManageFullscreen.cs" />
      <Compile Include="Assets\Scripts\UI\ManageHealthBar.cs" />
      <Compile Include="Assets\Scripts\UI\ManageSpellBar.cs" />
+     <Compile Include="Assets\Scripts\UI\ManageTeamBar.cs" />
      <Compile Include="Assets\Scripts\UI\Marker.cs" />
      <Compile Include="Assets\Scripts\UI\Menus\Enums\MainMenuStep.cs" />
      <Compile Include="Assets\Scripts\UI\Menus\MainMenuController.cs" />

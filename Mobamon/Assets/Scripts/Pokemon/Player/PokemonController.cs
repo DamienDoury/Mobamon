@@ -14,6 +14,7 @@ namespace Mobamon.Pokemon.Player
 	{
 		#region Public fields
 		
+        public int id;
 		public NavMeshAgent nav;
 		public Transform laserSource;
 		public string laserSourcePath = "";
@@ -52,6 +53,8 @@ namespace Mobamon.Pokemon.Player
 		
 		public void Start()
 		{
+            id = int.Parse(name.Split('-')[0]);
+
 			anim = GetComponent<Animator>();
 			nav = GetComponent<NavMeshAgent>();
 			
