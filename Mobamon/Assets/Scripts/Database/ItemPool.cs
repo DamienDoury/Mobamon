@@ -17,8 +17,8 @@ namespace Mobamon.Database
                     (
                         name: "Ability Urge",
                         identifier: "Battle items",
-                        description: "When used, it activates the Ability of an ally Pok‚mon.",
-                        id: "319"
+                        description: "When used, it activates the Ability of an ally Pokémon.",
+                        id: 319
                         )
             },
             {
@@ -28,7 +28,7 @@ namespace Mobamon.Database
                         name: "Absorb Bulb",
                         identifier: "Hold items",
                         description: "A consumable bulb. If the holder is hit by a Water-type move, its Sp. Atk will rise.",
-                        id: "40"
+                        id: 40
                         )
             },
             {
@@ -37,8 +37,8 @@ namespace Mobamon.Database
                     (
                         name: "Adamant Orb",
                         identifier: "Hold items",
-                        description: "A brightly gleaming orb to be held by DIALGA. It boosts the power of Dragon-? and Steel-type moves.",
-                        id: "123"
+                        description: "A brightly gleaming orb to be held by DIALGA. It boosts the power of Dragon-, and Steel-type moves.",
+                        id: 123
                         )
             },
             {
@@ -47,8 +47,8 @@ namespace Mobamon.Database
                     (
                         name: "Aguav Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it restores the user?s HP in a pinch, but will cause confusion if it hates the taste.",
-                        id: "241"
+                        description: "If held by a Pokémon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+                        id: 241
                         )
             },
             {
@@ -57,8 +57,8 @@ namespace Mobamon.Database
                     (
                         name: "Air Balloon",
                         identifier: "Hold items",
-                        description: "When held by a Pok‚mon, the Pok‚mon will float into the air. When the holder is attacked, this item will burst.",
-                        id: "36"
+                        description: "When held by a Pokémon, the Pokémon will float into the air. When the holder is attacked, this item will burst.",
+                        id: 36
                         )
             },
             {
@@ -67,8 +67,8 @@ namespace Mobamon.Database
                     (
                         name: "Amulet Coin",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It doubles a battle?s prize money if the holding Pok‚mon joins in.",
-                        id: "111"
+                        description: "An item to be held by a Pokémon. It doubles a battle's prize money if the holding Pokémon joins in.",
+                        id: 111
                         )
             },
             {
@@ -77,8 +77,8 @@ namespace Mobamon.Database
                     (
                         name: "Antidote",
                         identifier: "Medicine",
-                        description: "A spray-type medicine. It lifts the effect of poison from one Pok‚mon.",
-                        id: "178"
+                        description: "A spray-type medicine. It lifts the effect of poison from one Pokémon.",
+                        id: 178
                         )
             },
             {
@@ -87,8 +87,8 @@ namespace Mobamon.Database
                     (
                         name: "Apicot Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it raises its Sp. Def stat in a pinch.",
-                        id: "284"
+                        description: "If held by a Pokémon, it raises its Sp. Def stat in a pinch.",
+                        id: 284
                         )
             },
             {
@@ -97,8 +97,8 @@ namespace Mobamon.Database
                     (
                         name: "Armor Fossil",
                         identifier: "General items",
-                        description: "A fossil from a prehistoric Pok‚mon that lived on the land. It appears to be part of a collar.",
-                        id: "348"
+                        description: "A fossil from a prehistoric Pokémon that lived on the land. It appears to be part of a collar.",
+                        id: 348
                         )
             },
             {
@@ -107,8 +107,8 @@ namespace Mobamon.Database
                     (
                         name: "Aspear Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it defrosts it.",
-                        id: "232"
+                        description: "If held by a Pokémon, it defrosts it.",
+                        id: 232
                         )
             },
             {
@@ -117,8 +117,8 @@ namespace Mobamon.Database
                     (
                         name: "Awakening",
                         identifier: "Medicine",
-                        description: "A spray-type medicine. It awakens a Pok‚mon from the clutches of sleep.",
-                        id: "181"
+                        description: "A spray-type medicine. It awakens a Pokémon from the clutches of sleep.",
+                        id: 181
                         )
             },
             {
@@ -127,8 +127,8 @@ namespace Mobamon.Database
                     (
                         name: "Babiri Berry",
                         identifier: "Berries",
-                        description: "Weakens a supereffective Steel-type attack against the holding Pok‚mon.",
-                        id: "278"
+                        description: "Weakens a supereffective Steel-type attack against the holding Pokémon.",
+                        id: 278
                         )
             },
             {
@@ -138,7 +138,7 @@ namespace Mobamon.Database
                         name: "BalmMushroom",
                         identifier: "General items",
                         description: "A rare mushroom which gives off a nice fragrance. A maniac will buy it for a high price.",
-                        id: "371"
+                        id: 371
                         )
             },
             {
@@ -148,7 +148,7 @@ namespace Mobamon.Database
                         name: "Belue Berry",
                         identifier: "Berries",
                         description: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-                        id: "262"
+                        id: 262
                         )
             },
             {
@@ -157,8 +157,8 @@ namespace Mobamon.Database
                     (
                         name: "Berry Juice",
                         identifier: "Medicine",
-                        description: "A 100% pure juice made of Berries. It restores the HP of one Pok‚mon by just 20 points.",
-                        id: "176"
+                        description: "A 100% pure juice made of Berries. It restores the HP of one Pokémon by just 20 points.",
+                        id: 176
                         )
             },
             {
@@ -168,7 +168,7 @@ namespace Mobamon.Database
                         name: "Big Mushroom",
                         identifier: "General items",
                         description: "A large and rare mushroom. It is sought after by collectors.",
-                        id: "363"
+                        id: 363
                         )
             },
             {
@@ -178,7 +178,7 @@ namespace Mobamon.Database
                         name: "Big Nugget",
                         identifier: "General items",
                         description: "A big nugget of pure gold that gives off a lustrous gleam. A maniac will buy it for a high price.",
-                        id: "372"
+                        id: 372
                         )
             },
             {
@@ -188,7 +188,7 @@ namespace Mobamon.Database
                         name: "Big Pearl",
                         identifier: "General items",
                         description: "A quite-large pearl that sparkles in a pretty silver color. It can be sold at a high price to shops.",
-                        id: "365"
+                        id: 365
                         )
             },
             {
@@ -197,8 +197,8 @@ namespace Mobamon.Database
                     (
                         name: "Big Root",
                         identifier: "Hold items",
-                        description: "A Pok‚mon held item that boosts the power of HP-stealing moves to let the holder recover more HP.",
-                        id: "30"
+                        description: "A Pokémon held item that boosts the power of HP-stealing moves to let the holder recover more HP.",
+                        id: 30
                         )
             },
             {
@@ -208,7 +208,7 @@ namespace Mobamon.Database
                         name: "Binding Band",
                         identifier: "Hold items",
                         description: "A band that increases the power of binding moves when held.",
-                        id: "39"
+                        id: 39
                         )
             },
             {
@@ -217,8 +217,8 @@ namespace Mobamon.Database
                     (
                         name: "Black Belt",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a belt that boosts determination and Fighting-type moves.",
-                        id: "50"
+                        description: "An item to be held by a Pokémon. It is a belt that boosts determination and Fighting-type moves.",
+                        id: 50
                         )
             },
             {
@@ -228,7 +228,7 @@ namespace Mobamon.Database
                         name: "Black Flute",
                         identifier: "General items",
                         description: "A toy flute made from black glass. A maniac will buy it for a high price.",
-                        id: "355"
+                        id: 355
                         )
             },
             {
@@ -237,8 +237,8 @@ namespace Mobamon.Database
                     (
                         name: "Black Sludge",
                         identifier: "Hold items",
-                        description: "A held item that gradually restores the HP of Poison-type Pok‚mon. It inflicts damage on all other types.",
-                        id: "23"
+                        description: "A held item that gradually restores the HP of Poison-type Pokémon. It inflicts damage on all other types.",
+                        id: 23
                         )
             },
             {
@@ -247,8 +247,8 @@ namespace Mobamon.Database
                     (
                         name: "BlackGlasses",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a shady-looking pair of glasses that boosts Dark-type moves.",
-                        id: "49"
+                        description: "An item to be held by a Pokémon. It is a shady-looking pair of glasses that boosts Dark-type moves.",
+                        id: 49
                         )
             },
             {
@@ -258,7 +258,7 @@ namespace Mobamon.Database
                         name: "Blk Apricorn",
                         identifier: "General items",
                         description: "A black Apricorn It has an indescribable scent.",
-                        id: "395"
+                        id: 395
                         )
             },
             {
@@ -268,7 +268,7 @@ namespace Mobamon.Database
                         name: "Blu Apricorn",
                         identifier: "General items",
                         description: "A blue Apricorn. It smells a bit like grass.",
-                        id: "390"
+                        id: 390
                         )
             },
             {
@@ -278,7 +278,7 @@ namespace Mobamon.Database
                         name: "Blue Flute",
                         identifier: "General items",
                         description: "A toy flute made from blue glass. A maniac will buy it for a high price.",
-                        id: "405"
+                        id: 405
                         )
             },
             {
@@ -287,8 +287,8 @@ namespace Mobamon.Database
                     (
                         name: "Blue Scarf",
                         identifier: "General items",
-                        description: "An item to be held by a Pok‚mon. It boosts the Beauty aspect of the holder in a Contest.",
-                        id: "401"
+                        description: "An item to be held by a Pokémon. It boosts the Beauty aspect of the holder in a Contest.",
+                        id: 401
                         )
             },
             {
@@ -298,7 +298,7 @@ namespace Mobamon.Database
                         name: "Blue Shard",
                         identifier: "General items",
                         description: "A small blue shard. It appears to be from some sort of implement made long ago.",
-                        id: "385"
+                        id: 385
                         )
             },
             {
@@ -308,7 +308,7 @@ namespace Mobamon.Database
                         name: "Bluk Berry",
                         identifier: "Berries",
                         description: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-                        id: "250"
+                        id: 250
                         )
             },
             {
@@ -317,8 +317,8 @@ namespace Mobamon.Database
                     (
                         name: "BrightPowder",
                         identifier: "Hold items",
-                        description: "An item to be held by a POK‚MON. It casts a tricky glare that lowers the opponent?s accuracy.",
-                        id: "1"
+                        description: "An item to be held by a POKÉMON. It casts a tricky glare that lowers the opponent's accuracy.",
+                        id: 1
                         )
             },
             {
@@ -328,7 +328,7 @@ namespace Mobamon.Database
                         name: "Bug Gem",
                         identifier: "Hold items",
                         description: "A gem with an insect-like essence. When held, it strengthens the power of a Bug-type move only once.",
-                        id: "92"
+                        id: 92
                         )
             },
             {
@@ -338,7 +338,7 @@ namespace Mobamon.Database
                         name: "Burn Drive",
                         identifier: "Hold items",
                         description: "A cassette to be held by Genesect. It changes Techno Blast to a Fire-type move.",
-                        id: "137"
+                        id: 137
                         )
             },
             {
@@ -347,8 +347,8 @@ namespace Mobamon.Database
                     (
                         name: "Burn Heal",
                         identifier: "Medicine",
-                        description: "A spray-type medicine. It heals a single Pok‚mon that is suffering from a burn.",
-                        id: "179"
+                        description: "A spray-type medicine. It heals a single Pokémon that is suffering from a burn.",
+                        id: 179
                         )
             },
             {
@@ -357,8 +357,8 @@ namespace Mobamon.Database
                     (
                         name: "Calcium",
                         identifier: "Medicine",
-                        description: "A nutritious drink for Pok‚mon. It raises the base Sp. Atk (Special Attack) stat of a single Pok‚mon.",
-                        id: "200"
+                        description: "A nutritious drink for Pokémon. It raises the base Sp. Atk (Special Attack) stat of a single Pokémon.",
+                        id: 200
                         )
             },
             {
@@ -367,8 +367,8 @@ namespace Mobamon.Database
                     (
                         name: "Carbos",
                         identifier: "Medicine",
-                        description: "A nutritious drink for Pok‚mon. It raises the base Speed stat of a single Pok‚mon.",
-                        id: "199"
+                        description: "A nutritious drink for Pokémon. It raises the base Speed stat of a single Pokémon.",
+                        id: 199
                         )
             },
             {
@@ -377,8 +377,8 @@ namespace Mobamon.Database
                     (
                         name: "Casteliacone",
                         identifier: "Medicine",
-                        description: "Castelia City?s specialty, soft-serve ice cream. It heals all the status problems of a single Pok‚mon.",
-                        id: "187"
+                        description: "Castelia City's specialty, soft-serve ice cream. It heals all the status problems of a single Pokémon.",
+                        id: 187
                         )
             },
             {
@@ -388,7 +388,7 @@ namespace Mobamon.Database
                         name: "Cell Battery",
                         identifier: "Hold items",
                         description: "A consumable battery. If the holder is hit by an Electric-type move, its Attack will rise.",
-                        id: "41"
+                        id: 41
                         )
             },
             {
@@ -397,8 +397,8 @@ namespace Mobamon.Database
                     (
                         name: "Charcoal",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a combustible fuel that boosts the power of Fire-type moves.",
-                        id: "58"
+                        description: "An item to be held by a Pokémon. It is a combustible fuel that boosts the power of Fire-type moves.",
+                        id: 58
                         )
             },
             {
@@ -407,8 +407,8 @@ namespace Mobamon.Database
                     (
                         name: "Charti Berry",
                         identifier: "Berries",
-                        description: "Weakens a supereffective Rock-type attack against the holding Pok‚mon.",
-                        id: "274"
+                        description: "Weakens a supereffective Rock-type attack against the holding Pokémon.",
+                        id: 274
                         )
             },
             {
@@ -417,8 +417,8 @@ namespace Mobamon.Database
                     (
                         name: "Cheri Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it recovers from paralysis.",
-                        id: "228"
+                        description: "If held by a Pokémon, it recovers from paralysis.",
+                        id: 228
                         )
             },
             {
@@ -427,8 +427,8 @@ namespace Mobamon.Database
                     (
                         name: "Cherish Ball",
                         identifier: "Pokeballs",
-                        description: "A quite rare Pok‚ Ball that has been specially crafted to commemorate an occasion of some sort.",
-                        id: "156"
+                        description: "A quite rare Poké Ball that has been specially crafted to commemorate an occasion of some sort.",
+                        id: 156
                         )
             },
             {
@@ -437,8 +437,8 @@ namespace Mobamon.Database
                     (
                         name: "Chesto Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it recovers from sleep.",
-                        id: "229"
+                        description: "If held by a Pokémon, it recovers from sleep.",
+                        id: 229
                         )
             },
             {
@@ -447,8 +447,8 @@ namespace Mobamon.Database
                     (
                         name: "Chilan Berry",
                         identifier: "Berries",
-                        description: "Weakens a Normal-type attack against the Pok‚mon holding this berry.",
-                        id: "279"
+                        description: "Weakens a Normal-type attack against the Pokémon holding this berry.",
+                        id: 279
                         )
             },
             {
@@ -458,7 +458,7 @@ namespace Mobamon.Database
                         name: "Chill Drive",
                         identifier: "Hold items",
                         description: "A cassette to be held by Genesect. It changes Techno Blast to an Ice-type move.",
-                        id: "138"
+                        id: 138
                         )
             },
             {
@@ -467,8 +467,8 @@ namespace Mobamon.Database
                     (
                         name: "Choice Band",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. This headband ups Attack, but allows the use of only one of its moves.",
-                        id: "99"
+                        description: "An item to be held by a Pokémon. This headband ups Attack, but allows the use of only one of its moves.",
+                        id: 99
                         )
             },
             {
@@ -477,8 +477,8 @@ namespace Mobamon.Database
                     (
                         name: "Choice Scarf",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. This scarf boosts Speed, but allows the use of only one of its moves.",
-                        id: "100"
+                        description: "An item to be held by a Pokémon. This scarf boosts Speed, but allows the use of only one of its moves.",
+                        id: 100
                         )
             },
             {
@@ -487,8 +487,8 @@ namespace Mobamon.Database
                     (
                         name: "Choice Specs",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. These distinctive glasses boost Sp. Atk but allow the use of only one of its moves.",
-                        id: "101"
+                        description: "An item to be held by a Pokémon. These distinctive glasses boost Sp. Atk but allow the use of only one of its moves.",
+                        id: 101
                         )
             },
             {
@@ -497,8 +497,8 @@ namespace Mobamon.Database
                     (
                         name: "Chople Berry",
                         identifier: "Berries",
-                        description: "Weakens a supereffective Fighting-type attack against the holding Pok‚mon.",
-                        id: "268"
+                        description: "Weakens a supereffective Fighting-type attack against the holding Pokémon.",
+                        id: 268
                         )
             },
             {
@@ -507,8 +507,8 @@ namespace Mobamon.Database
                     (
                         name: "Claw Fossil",
                         identifier: "General items",
-                        description: "A fossil of an ancient Pok‚mon that lived in the sea. It appears to be part of a claw.",
-                        id: "344"
+                        description: "A fossil of an ancient Pokémon that lived in the sea. It appears to be part of a claw.",
+                        id: 344
                         )
             },
             {
@@ -517,8 +517,8 @@ namespace Mobamon.Database
                     (
                         name: "Cleanse Tag",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It helps keep wild Pok‚mon away if the holder is the first one in the party.",
-                        id: "112"
+                        description: "An item to be held by a Pokémon. It helps keep wild Pokémon away if the holder is the first one in the party.",
+                        id: 112
                         )
             },
             {
@@ -527,8 +527,8 @@ namespace Mobamon.Database
                     (
                         name: "Clever Wing",
                         identifier: "Medicine",
-                        description: "An item for use on a Pok‚mon. It slightly increases the base Sp. Def stat of a single Pok‚mon.",
-                        id: "209"
+                        description: "An item for use on a Pokémon. It slightly increases the base Sp. Def stat of a single Pokémon.",
+                        id: 209
                         )
             },
             {
@@ -537,8 +537,8 @@ namespace Mobamon.Database
                     (
                         name: "Coba Berry",
                         identifier: "Berries",
-                        description: "Weakens a supereffective Flying-type attack against the holding Pok‚mon.",
-                        id: "271"
+                        description: "Weakens a supereffective Flying-type attack against the holding Pokémon.",
+                        id: 271
                         )
             },
             {
@@ -547,8 +547,8 @@ namespace Mobamon.Database
                     (
                         name: "Colbur Berry",
                         identifier: "Berries",
-                        description: "Weakens a supereffective Dark-type attack against the holding Pok‚mon.",
-                        id: "277"
+                        description: "Weakens a supereffective Dark-type attack against the holding Pokémon.",
+                        id: 277
                         )
             },
             {
@@ -558,7 +558,7 @@ namespace Mobamon.Database
                         name: "Comet Shard",
                         identifier: "General items",
                         description: "A shard which fell to the ground when a comet approached. A maniac will buy it for a high price.",
-                        id: "374"
+                        id: 374
                         )
             },
             {
@@ -568,7 +568,7 @@ namespace Mobamon.Database
                         name: "Cornn Berry",
                         identifier: "Berries",
                         description: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-                        id: "254"
+                        id: 254
                         )
             },
             {
@@ -577,8 +577,8 @@ namespace Mobamon.Database
                     (
                         name: "Cover Fossil",
                         identifier: "General items",
-                        description: "A fossil of an ancient Pok‚mon that lived in the sea in ancient times. It appears to be part of its back.",
-                        id: "351"
+                        description: "A fossil of an ancient Pokémon that lived in the sea in ancient times. It appears to be part of its back.",
+                        id: 351
                         )
             },
             {
@@ -587,8 +587,8 @@ namespace Mobamon.Database
                     (
                         name: "Custap Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it gets to move first just once in a pinch.",
-                        id: "288"
+                        description: "If held by a Pokémon, it gets to move first just once in a pinch.",
+                        id: 288
                         )
             },
             {
@@ -598,7 +598,7 @@ namespace Mobamon.Database
                         name: "Damp Mulch",
                         identifier: "General items",
                         description: "A fertilizer to be spread on soft soil in regions where Berries are grown. A maniac will buy it for a high price.",
-                        id: "397"
+                        id: 397
                         )
             },
             {
@@ -607,8 +607,8 @@ namespace Mobamon.Database
                     (
                         name: "Damp Rock",
                         identifier: "Hold items",
-                        description: "A Pok‚mon held item that extends the duration of the move Rain Dance used by the holder.",
-                        id: "27"
+                        description: "A Pokémon held item that extends the duration of the move Rain Dance used by the holder.",
+                        id: 27
                         )
             },
             {
@@ -618,7 +618,7 @@ namespace Mobamon.Database
                         name: "Dark Gem",
                         identifier: "Hold items",
                         description: "A gem with an essence of darkness. When held, it strengthens the power of a Dark-type move only once.",
-                        id: "95"
+                        id: 95
                         )
             },
             {
@@ -627,8 +627,8 @@ namespace Mobamon.Database
                     (
                         name: "Dawn Stone",
                         identifier: "General items",
-                        description: "A peculiar stone that makes certain species of Pok‚mon evolve. It sparkles like eyes.",
-                        id: "332"
+                        description: "A peculiar stone that makes certain species of Pokémon evolve. It sparkles like eyes.",
+                        id: 332
                         )
             },
             {
@@ -638,7 +638,7 @@ namespace Mobamon.Database
                         name: "DeepSeaScale",
                         identifier: "Hold items",
                         description: "An item to be held by CLAMPERL. A scale that shines a faint pink, it raises the Sp. Def stat.",
-                        id: "127"
+                        id: 127
                         )
             },
             {
@@ -648,7 +648,7 @@ namespace Mobamon.Database
                         name: "DeepSeaTooth",
                         identifier: "Hold items",
                         description: "An item to be held by CLAMPERL. A fang that gleams a sharp silver, it raises the Sp. Atk stat.",
-                        id: "126"
+                        id: 126
                         )
             },
             {
@@ -657,8 +657,8 @@ namespace Mobamon.Database
                     (
                         name: "Destiny Knot",
                         identifier: "Hold items",
-                        description: "A long, thin, bright-red string to be held by a Pok‚mon. If the holder becomes infatuated, the foe does too.",
-                        id: "22"
+                        description: "A long, thin, bright-red string to be held by a Pokémon. If the holder becomes infatuated, the foe does too.",
+                        id: 22
                         )
             },
             {
@@ -667,8 +667,8 @@ namespace Mobamon.Database
                     (
                         name: "Dire Hit",
                         identifier: "Battle items",
-                        description: "It raises the critical-hit ratio greatly. It can be used only once and wears off if the Pok‚mon is withdrawn.",
-                        id: "293"
+                        description: "It raises the critical-hit ratio greatly. It can be used only once and wears off if the Pokémon is withdrawn.",
+                        id: 293
                         )
             },
             {
@@ -677,8 +677,8 @@ namespace Mobamon.Database
                     (
                         name: "Dire Hit 2",
                         identifier: "Battle items",
-                        description: "It can be used many times to raise the critical-hit ratio of one Pok‚mon. It wears off if the Pok‚mon is withdrawn.",
-                        id: "300"
+                        description: "It can be used many times to raise the critical-hit ratio of one Pokémon. It wears off if the Pokémon is withdrawn.",
+                        id: 300
                         )
             },
             {
@@ -687,8 +687,8 @@ namespace Mobamon.Database
                     (
                         name: "Dire Hit 3",
                         identifier: "Battle items",
-                        description: "It can be used many times to greatly raise a Pok‚mon?s critical-hit ratio. It wears off if the Pok‚mon is withdrawn.",
-                        id: "323"
+                        description: "It can be used many times to greatly raise a Pokémon's critical-hit ratio. It wears off if the Pokémon is withdrawn.",
+                        id: 323
                         )
             },
             {
@@ -697,8 +697,8 @@ namespace Mobamon.Database
                     (
                         name: "Dive Ball",
                         identifier: "Pokeballs",
-                        description: "A somewhat different Pok‚ Ball that works especially well on Pok‚mon that live underwater.",
-                        id: "147"
+                        description: "A somewhat different Poké Ball that works especially well on Pokémon that live underwater.",
+                        id: 147
                         )
             },
             {
@@ -707,8 +707,8 @@ namespace Mobamon.Database
                     (
                         name: "Dome Fossil",
                         identifier: "General items",
-                        description: "A fossil of an ancient Pok‚mon that lived in the sea. It appears to be part of a shell.",
-                        id: "346"
+                        description: "A fossil of an ancient Pokémon that lived in the sea. It appears to be part of a shell.",
+                        id: 346
                         )
             },
             {
@@ -718,7 +718,7 @@ namespace Mobamon.Database
                         name: "Douse Drive",
                         identifier: "Hold items",
                         description: "A cassette to be held by Genesect. It changes Techno Blast to a Water-type move.",
-                        id: "135"
+                        id: 135
                         )
             },
             {
@@ -728,7 +728,7 @@ namespace Mobamon.Database
                         name: "Draco Plate",
                         identifier: "Hold items",
                         description: "Increases power of Dragon-type moves. Changes Arceus' type to Dragon.",
-                        id: "79"
+                        id: 79
                         )
             },
             {
@@ -737,8 +737,8 @@ namespace Mobamon.Database
                     (
                         name: "Dragon Fang",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a hard and sharp fang that ups the power of Dragon-type moves.",
-                        id: "59"
+                        description: "An item to be held by a Pokémon. It is a hard and sharp fang that ups the power of Dragon-type moves.",
+                        id: 59
                         )
             },
             {
@@ -748,7 +748,7 @@ namespace Mobamon.Database
                         name: "Dragon Gem",
                         identifier: "Hold items",
                         description: "A gem with a draconic essence. When held, it strengthens the power of a Dragon-type move only once.",
-                        id: "97"
+                        id: 97
                         )
             },
             {
@@ -757,8 +757,8 @@ namespace Mobamon.Database
                     (
                         name: "Dragon Scale",
                         identifier: "General items",
-                        description: "A thick and tough scale. Dragon-type Pok‚mon may be holding this item when caught.",
-                        id: "334"
+                        description: "A thick and tough scale. Dragon-type Pokémon may be holding this item when caught.",
+                        id: 334
                         )
             },
             {
@@ -768,7 +768,7 @@ namespace Mobamon.Database
                         name: "Dread Plate",
                         identifier: "Hold items",
                         description: "Increases power of Dark-type moves. Changes Arceus' type to Dark.",
-                        id: "80"
+                        id: 80
                         )
             },
             {
@@ -777,8 +777,8 @@ namespace Mobamon.Database
                     (
                         name: "Dream Ball",
                         identifier: "Pokeballs",
-                        description: "A special Pok‚ Ball that appears out of nowhere in a bag at the Entree Forest. It can catch any Pok‚mon.",
-                        id: "157"
+                        description: "A special Poké Ball that appears out of nowhere in a bag at the Entree Forest. It can catch any Pokémon.",
+                        id: 157
                         )
             },
             {
@@ -788,7 +788,7 @@ namespace Mobamon.Database
                         name: "Dubious Disc",
                         identifier: "General items",
                         description: "A transparent device overflowing with dubious data. Its producer is unknown.",
-                        id: "339"
+                        id: 339
                         )
             },
             {
@@ -798,7 +798,7 @@ namespace Mobamon.Database
                         name: "Durin Berry",
                         identifier: "Berries",
                         description: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-                        id: "261"
+                        id: 261
                         )
             },
             {
@@ -807,8 +807,8 @@ namespace Mobamon.Database
                     (
                         name: "Dusk Ball",
                         identifier: "Pokeballs",
-                        description: "A somewhat different Pok‚ Ball that makes it easier to catch wild Pok‚mon at night or in dark places like caves.",
-                        id: "153"
+                        description: "A somewhat different Poké Ball that makes it easier to catch wild Pokémon at night or in dark places like caves.",
+                        id: 153
                         )
             },
             {
@@ -817,8 +817,8 @@ namespace Mobamon.Database
                     (
                         name: "Dusk Stone",
                         identifier: "General items",
-                        description: "A peculiar stone that makes certain species of Pok‚mon evolve. It is as dark as dark can be.",
-                        id: "331"
+                        description: "A peculiar stone that makes certain species of Pokémon evolve. It is as dark as dark can be.",
+                        id: 331
                         )
             },
             {
@@ -828,7 +828,7 @@ namespace Mobamon.Database
                         name: "Earth Plate",
                         identifier: "Hold items",
                         description: "Increases power of Ground-type moves. Changes Arceus' type to Ground.",
-                        id: "73"
+                        id: 73
                         )
             },
             {
@@ -837,8 +837,8 @@ namespace Mobamon.Database
                     (
                         name: "Eject Button",
                         identifier: "Hold items",
-                        description: "If the holder is hit by an attack, it will switch with another Pok‚mon in your party.",
-                        id: "42"
+                        description: "If the holder is hit by an attack, it will switch with another Pokémon in your party.",
+                        id: 42
                         )
             },
             {
@@ -847,8 +847,8 @@ namespace Mobamon.Database
                     (
                         name: "Electirizer",
                         identifier: "General items",
-                        description: "A box packed with a tremendous amount of electric energy. It is loved by a certain Pok‚mon.",
-                        id: "337"
+                        description: "A box packed with a tremendous amount of electric energy. It is loved by a certain Pokémon.",
+                        id: 337
                         )
             },
             {
@@ -858,7 +858,7 @@ namespace Mobamon.Database
                         name: "Electric Gem",
                         identifier: "Hold items",
                         description: "A gem with an essence of electricity. When held, it strengthens the power of an Electric-type move only once.",
-                        id: "84"
+                        id: 84
                         )
             },
             {
@@ -867,8 +867,8 @@ namespace Mobamon.Database
                     (
                         name: "Elixir",
                         identifier: "Medicine",
-                        description: "It restores the PP of all the moves learned by the targeted Pok‚mon by 10 points each.",
-                        id: "194"
+                        description: "It restores the PP of all the moves learned by the targeted Pokémon by 10 points each.",
+                        id: 194
                         )
             },
             {
@@ -877,8 +877,8 @@ namespace Mobamon.Database
                     (
                         name: "Energy Root",
                         identifier: "Medicine",
-                        description: "A very bitter root. It restores the HP of one POK‚MON by 200 points.",
-                        id: "175"
+                        description: "A very bitter root. It restores the HP of one POKÉMON by 200 points.",
+                        id: 175
                         )
             },
             {
@@ -887,8 +887,8 @@ namespace Mobamon.Database
                     (
                         name: "EnergyPowder",
                         identifier: "Medicine",
-                        description: "A very bitter medicine powder. It restores the HP of one POK‚MON by 50 points.",
-                        id: "174"
+                        description: "A very bitter medicine powder. It restores the HP of one POKÉMON by 50 points.",
+                        id: 174
                         )
             },
             {
@@ -897,8 +897,8 @@ namespace Mobamon.Database
                     (
                         name: "Enigma Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it restores its HP if it is hit by any supereffective attack.",
-                        id: "289"
+                        description: "If held by a Pokémon, it restores its HP if it is hit by any supereffective attack.",
+                        id: 289
                         )
             },
             {
@@ -908,7 +908,7 @@ namespace Mobamon.Database
                         name: "Escape Rope",
                         identifier: "General items",
                         description: "A long, durable rope. Use it to escape instantly from a cave or a dungeon.",
-                        id: "359"
+                        id: 359
                         )
             },
             {
@@ -917,8 +917,8 @@ namespace Mobamon.Database
                     (
                         name: "Ether",
                         identifier: "Medicine",
-                        description: "It restores the PP of a Pok‚mon?s selected move by a maximum of 10 points.",
-                        id: "192"
+                        description: "It restores the PP of a Pokémon's selected move by a maximum of 10 points.",
+                        id: 192
                         )
             },
             {
@@ -927,8 +927,8 @@ namespace Mobamon.Database
                     (
                         name: "Everstone",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. The Pok‚mon holding this peculiar stone is prevented from evolving.",
-                        id: "113"
+                        description: "An item to be held by a Pokémon. The Pokémon holding this peculiar stone is prevented from evolving.",
+                        id: 113
                         )
             },
             {
@@ -937,8 +937,8 @@ namespace Mobamon.Database
                     (
                         name: "Eviolite",
                         identifier: "Hold items",
-                        description: "A mysterious evolutionary lump. When held, it raises the Defense and Sp. Def of a Pok‚mon that can still evolve.",
-                        id: "33"
+                        description: "A mysterious evolutionary lump. When held, it raises the Defense and Sp. Def of a Pokémon that can still evolve.",
+                        id: 33
                         )
             },
             {
@@ -947,8 +947,8 @@ namespace Mobamon.Database
                     (
                         name: "Exp. Share",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. The holder gets a share of a battle?s Exp. Points without battling.",
-                        id: "109"
+                        description: "An item to be held by a Pokémon. The holder gets a share of a battle's Exp. Points without battling.",
+                        id: 109
                         )
             },
             {
@@ -957,8 +957,8 @@ namespace Mobamon.Database
                     (
                         name: "Expert Belt",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a well-worn belt that slightly boosts the power of supereffective moves.",
-                        id: "15"
+                        description: "An item to be held by a Pokémon. It is a well-worn belt that slightly boosts the power of supereffective moves.",
+                        id: 15
                         )
             },
             {
@@ -967,8 +967,8 @@ namespace Mobamon.Database
                     (
                         name: "Fast Ball",
                         identifier: "Pokeballs",
-                        description: "A Pok‚ Ball that makes it easier to catch Pok‚mon which are quick to run away.",
-                        id: "162"
+                        description: "A Poké Ball that makes it easier to catch Pokémon which are quick to run away.",
+                        id: 162
                         )
             },
             {
@@ -978,7 +978,7 @@ namespace Mobamon.Database
                         name: "Fighting Gem",
                         identifier: "Hold items",
                         description: "A gem with an essence of combat. When held, it strengthens the power of a Fighting-type move only once.",
-                        id: "87"
+                        id: 87
                         )
             },
             {
@@ -987,8 +987,8 @@ namespace Mobamon.Database
                     (
                         name: "Figy Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it restores the user?s HP in a pinch, but will cause confusion if it hates the taste.",
-                        id: "238"
+                        description: "If held by a Pokémon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+                        id: 238
                         )
             },
             {
@@ -998,7 +998,7 @@ namespace Mobamon.Database
                         name: "Fire Gem",
                         identifier: "Hold items",
                         description: "A gem with an essence of fire. When held, it strengthens the power of a Fire-type move only once.",
-                        id: "82"
+                        id: 82
                         )
             },
             {
@@ -1007,8 +1007,8 @@ namespace Mobamon.Database
                     (
                         name: "Fire Stone",
                         identifier: "General items",
-                        description: "A peculiar stone that makes certain species of POK‚MON evolve. It is colored orange.",
-                        id: "326"
+                        description: "A peculiar stone that makes certain species of POKÉMON evolve. It is colored orange.",
+                        id: 326
                         )
             },
             {
@@ -1018,7 +1018,7 @@ namespace Mobamon.Database
                         name: "Fist Plate",
                         identifier: "Hold items",
                         description: "Increases power of Fighting-type moves. Changes Arceus' type to Fighting.",
-                        id: "71"
+                        id: 71
                         )
             },
             {
@@ -1027,8 +1027,8 @@ namespace Mobamon.Database
                     (
                         name: "Flame Orb",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a bizarre orb that inflicts a burn on the holder in battle.",
-                        id: "118"
+                        description: "An item to be held by a Pokémon. It is a bizarre orb that inflicts a burn on the holder in battle.",
+                        id: 118
                         )
             },
             {
@@ -1038,7 +1038,7 @@ namespace Mobamon.Database
                         name: "Flame Plate",
                         identifier: "Hold items",
                         description: "Increases power of Fire-type moves. Changes Arceus' type to Fire.",
-                        id: "66"
+                        id: 66
                         )
             },
             {
@@ -1047,8 +1047,8 @@ namespace Mobamon.Database
                     (
                         name: "Float Stone",
                         identifier: "Hold items",
-                        description: "A very light stone. It reduces the weight of a Pok‚mon when held.",
-                        id: "34"
+                        description: "A very light stone. It reduces the weight of a Pokémon when held.",
+                        id: 34
                         )
             },
             {
@@ -1057,8 +1057,8 @@ namespace Mobamon.Database
                     (
                         name: "Fluffy Tail",
                         identifier: "General items",
-                        description: "An item that attracts Pok‚mon. Use it to flee from any battle with a wild Pok‚mon.",
-                        id: "354"
+                        description: "An item that attracts Pokémon. Use it to flee from any battle with a wild Pokémon.",
+                        id: 354
                         )
             },
             {
@@ -1068,7 +1068,7 @@ namespace Mobamon.Database
                         name: "Flying Gem",
                         identifier: "Hold items",
                         description: "A gem with an essence of air. When held, it strengthens the power of a Flying-type move only once.",
-                        id: "90"
+                        id: 90
                         )
             },
             {
@@ -1077,8 +1077,8 @@ namespace Mobamon.Database
                     (
                         name: "Focus Band",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. The holder may endure a potential KO attack, leaving it with just 1 HP.",
-                        id: "7"
+                        description: "An item to be held by a Pokémon. The holder may endure a potential KO attack, leaving it with just 1 HP.",
+                        id: 7
                         )
             },
             {
@@ -1087,8 +1087,8 @@ namespace Mobamon.Database
                     (
                         name: "Focus Sash",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. If it has full HP, the holder will endure one potential KO attack, leaving 1 HP.",
-                        id: "19"
+                        description: "An item to be held by a Pokémon. If it has full HP, the holder will endure one potential KO attack, leaving 1 HP.",
+                        id: 19
                         )
             },
             {
@@ -1097,8 +1097,8 @@ namespace Mobamon.Database
                     (
                         name: "Fresh Water",
                         identifier: "Medicine",
-                        description: "Water with a high mineral content. It restores the HP of one POK‚MON by 50 points.",
-                        id: "170"
+                        description: "Water with a high mineral content. It restores the HP of one POKÉMON by 50 points.",
+                        id: 170
                         )
             },
             {
@@ -1107,8 +1107,8 @@ namespace Mobamon.Database
                     (
                         name: "Friend Ball",
                         identifier: "Pokeballs",
-                        description: "A Pok‚ Ball that makes caught Pok‚mon more friendly.",
-                        id: "163"
+                        description: "A Poké Ball that makes caught Pokémon more friendly.",
+                        id: 163
                         )
             },
             {
@@ -1117,8 +1117,8 @@ namespace Mobamon.Database
                     (
                         name: "Full Heal",
                         identifier: "Medicine",
-                        description: "A spray-type medicine. It heals all the status problems of a single Pok‚mon.",
-                        id: "183"
+                        description: "A spray-type medicine. It heals all the status problems of a single Pokémon.",
+                        id: 183
                         )
             },
             {
@@ -1127,8 +1127,8 @@ namespace Mobamon.Database
                     (
                         name: "Full Incense",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is an exotic-smelling incense that makes the holder bloated and slow moving.",
-                        id: "122"
+                        description: "An item to be held by a Pokémon. It is an exotic-smelling incense that makes the holder bloated and slow moving.",
+                        id: 122
                         )
             },
             {
@@ -1137,8 +1137,8 @@ namespace Mobamon.Database
                     (
                         name: "Full Restore",
                         identifier: "Medicine",
-                        description: "A medicine that fully restores the HP and heals any status problems of a single Pok‚mon.",
-                        id: "166"
+                        description: "A medicine that fully restores the HP and heals any status problems of a single Pokémon.",
+                        id: 166
                         )
             },
             {
@@ -1147,8 +1147,8 @@ namespace Mobamon.Database
                     (
                         name: "Ganlon Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it raises its Defense stat in a pinch.",
-                        id: "281"
+                        description: "If held by a Pokémon, it raises its Defense stat in a pinch.",
+                        id: 281
                         )
             },
             {
@@ -1157,8 +1157,8 @@ namespace Mobamon.Database
                     (
                         name: "Genius Wing",
                         identifier: "Medicine",
-                        description: "An item for use on a Pok‚mon. It slightly increases the base Sp. Atk stat of a single Pok‚mon.",
-                        id: "208"
+                        description: "An item for use on a Pokémon. It slightly increases the base Sp. Atk stat of a single Pokémon.",
+                        id: 208
                         )
             },
             {
@@ -1168,7 +1168,7 @@ namespace Mobamon.Database
                         name: "Ghost Gem",
                         identifier: "Hold items",
                         description: "A gem with a spectral essence. When held, it strengthens the power of a Ghost-type move only once.",
-                        id: "94"
+                        id: 94
                         )
             },
             {
@@ -1178,7 +1178,7 @@ namespace Mobamon.Database
                         name: "Gooey Mulch",
                         identifier: "General items",
                         description: "A fertilizer to be spread on soft soil in regions where Berries are grown. A maniac will buy it for a high price.",
-                        id: "399"
+                        id: 399
                         )
             },
             {
@@ -1188,7 +1188,7 @@ namespace Mobamon.Database
                         name: "Grass Gem",
                         identifier: "Hold items",
                         description: "A gem with an essence of nature. When held, it strengthens the power of a Grass-type move only once.",
-                        id: "85"
+                        id: 85
                         )
             },
             {
@@ -1197,8 +1197,8 @@ namespace Mobamon.Database
                     (
                         name: "Great Ball",
                         identifier: "Pokeballs",
-                        description: "A good, high-performance Ball that provides a higher Pok‚mon catch rate than a standard Pok‚ Ball.",
-                        id: "141"
+                        description: "A good, high-performance Ball that provides a higher Pokémon catch rate than a standard Poké Ball.",
+                        id: 141
                         )
             },
             {
@@ -1207,8 +1207,8 @@ namespace Mobamon.Database
                     (
                         name: "Green Scarf",
                         identifier: "General items",
-                        description: "An item to be held by a Pok‚mon. It boosts the Smart aspect of the holder in a Contest.",
-                        id: "403"
+                        description: "An item to be held by a Pokémon. It boosts the Smart aspect of the holder in a Contest.",
+                        id: 403
                         )
             },
             {
@@ -1218,7 +1218,7 @@ namespace Mobamon.Database
                         name: "Green Shard",
                         identifier: "General items",
                         description: "A small green shard. It appears to be from some sort of implement made long ago.",
-                        id: "387"
+                        id: 387
                         )
             },
             {
@@ -1227,8 +1227,8 @@ namespace Mobamon.Database
                     (
                         name: "Grepa Berry",
                         identifier: "Berries",
-                        description: "Using it on a Pok‚mon makes it more friendly, but it also lowers its base Sp. Def stat.",
-                        id: "247"
+                        description: "Using it on a Pokémon makes it more friendly, but it also lowers its base Sp. Def stat.",
+                        id: 247
                         )
             },
             {
@@ -1237,8 +1237,8 @@ namespace Mobamon.Database
                     (
                         name: "Grip Claw",
                         identifier: "Hold items",
-                        description: "A Pok‚mon held item that extends the duration of multiturn attacks like Bind and Wrap.",
-                        id: "28"
+                        description: "A Pokémon held item that extends the duration of multiturn attacks like Bind and Wrap.",
+                        id: 28
                         )
             },
             {
@@ -1248,7 +1248,7 @@ namespace Mobamon.Database
                         name: "Griseous Orb",
                         identifier: "Hold items",
                         description: "A glowing orb to be held by GIRATINA. It boosts the power of Dragon- and Ghost-type moves.",
-                        id: "134"
+                        id: 134
                         )
             },
             {
@@ -1258,7 +1258,7 @@ namespace Mobamon.Database
                         name: "Grn Apricorn",
                         identifier: "General items",
                         description: "A green Apricorn. It has a mysterious, aromatic scent.",
-                        id: "392"
+                        id: 392
                         )
             },
             {
@@ -1268,7 +1268,7 @@ namespace Mobamon.Database
                         name: "Ground Gem",
                         identifier: "Hold items",
                         description: "A gem with an essence of land. When held, it strengthens the power of a Ground-type move only once.",
-                        id: "89"
+                        id: 89
                         )
             },
             {
@@ -1278,7 +1278,7 @@ namespace Mobamon.Database
                         name: "Growth Mulch",
                         identifier: "General items",
                         description: "A fertilizer to be spread on soft soil in regions where Berries are grown. A maniac will buy it for a high price.",
-                        id: "396"
+                        id: 396
                         )
             },
             {
@@ -1287,8 +1287,8 @@ namespace Mobamon.Database
                     (
                         name: "Guard Spec.",
                         identifier: "Battle items",
-                        description: "An item that prevents stat reduction among the Trainer?s party Pok‚mon for five turns after use.",
-                        id: "292"
+                        description: "An item that prevents stat reduction among the Trainer's party Pokémon for five turns after use.",
+                        id: 292
                         )
             },
             {
@@ -1298,7 +1298,7 @@ namespace Mobamon.Database
                         name: "HM01",
                         identifier: "Machines",
                         description: "Teaches the move Cut.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -1308,7 +1308,7 @@ namespace Mobamon.Database
                         name: "HM02",
                         identifier: "Machines",
                         description: "Teaches the move Fly.",
-                        id: "220"
+                        id: 220
                         )
             },
             {
@@ -1318,7 +1318,7 @@ namespace Mobamon.Database
                         name: "HM03",
                         identifier: "Machines",
                         description: "Teaches the move Surf.",
-                        id: "213"
+                        id: 213
                         )
             },
             {
@@ -1328,7 +1328,7 @@ namespace Mobamon.Database
                         name: "HM04",
                         identifier: "Machines",
                         description: "Teaches the move Strength.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -1338,7 +1338,7 @@ namespace Mobamon.Database
                         name: "HM05",
                         identifier: "Machines",
                         description: "Teaches the move Flash/Defog/Whirlpool/Waterfall.",
-                        id: "213"
+                        id: 213
                         )
             },
             {
@@ -1348,7 +1348,7 @@ namespace Mobamon.Database
                         name: "HM06",
                         identifier: "Machines",
                         description: "Teaches the move Whirlpool/Rock Smash/Dive.",
-                        id: "213"
+                        id: 213
                         )
             },
             {
@@ -1358,7 +1358,7 @@ namespace Mobamon.Database
                         name: "HM07",
                         identifier: "Machines",
                         description: "Teaches the move Waterfall.",
-                        id: "213"
+                        id: 213
                         )
             },
             {
@@ -1368,7 +1368,7 @@ namespace Mobamon.Database
                         name: "HM08",
                         identifier: "Machines",
                         description: "Teaches the move Dive/Rock Climb.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -1377,8 +1377,8 @@ namespace Mobamon.Database
                     (
                         name: "HP Up",
                         identifier: "Medicine",
-                        description: "A nutritious drink for Pok‚mon. It raises the base HP of a single Pok‚mon.",
-                        id: "196"
+                        description: "A nutritious drink for Pokémon. It raises the base HP of a single Pokémon.",
+                        id: 196
                         )
             },
             {
@@ -1387,8 +1387,8 @@ namespace Mobamon.Database
                     (
                         name: "Haban Berry",
                         identifier: "Berries",
-                        description: "Weakens a supereffective Dragon-type attack against the holding Pok‚mon.",
-                        id: "276"
+                        description: "Weakens a supereffective Dragon-type attack against the holding Pokémon.",
+                        id: 276
                         )
             },
             {
@@ -1397,8 +1397,8 @@ namespace Mobamon.Database
                     (
                         name: "Hard Stone",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is an unbreakable stone that ups the power of Rock-type moves.",
-                        id: "47"
+                        description: "An item to be held by a Pokémon. It is an unbreakable stone that ups the power of Rock-type moves.",
+                        id: 47
                         )
             },
             {
@@ -1407,8 +1407,8 @@ namespace Mobamon.Database
                     (
                         name: "Heal Ball",
                         identifier: "Pokeballs",
-                        description: "A remedial Pok‚ Ball that restores the caught Pok‚mon?s HP and eliminates any status problem.",
-                        id: "154"
+                        description: "A remedial Poké Ball that restores the caught Pokémon's HP and eliminates any status problem.",
+                        id: 154
                         )
             },
             {
@@ -1417,8 +1417,8 @@ namespace Mobamon.Database
                     (
                         name: "Heal Powder",
                         identifier: "Medicine",
-                        description: "A very bitter medicine powder. It heals all the status problems of a single Pok‚mon.",
-                        id: "184"
+                        description: "A very bitter medicine powder. It heals all the status problems of a single Pokémon.",
+                        id: 184
                         )
             },
             {
@@ -1427,8 +1427,8 @@ namespace Mobamon.Database
                     (
                         name: "Health Wing",
                         identifier: "Medicine",
-                        description: "An item for use on a Pok‚mon. It slightly increases the base HP of a single Pok‚mon.",
-                        id: "205"
+                        description: "An item for use on a Pokémon. It slightly increases the base HP of a single Pokémon.",
+                        id: 205
                         )
             },
             {
@@ -1438,7 +1438,7 @@ namespace Mobamon.Database
                         name: "Heart Scale",
                         identifier: "General items",
                         description: "A pretty, heart-shaped scale that is extremely rare. It glows faintly in the colors of the rainbow.",
-                        id: "388"
+                        id: 388
                         )
             },
             {
@@ -1447,8 +1447,8 @@ namespace Mobamon.Database
                     (
                         name: "Heat Rock",
                         identifier: "Hold items",
-                        description: "A Pok‚mon held item that extends the duration of the move Sunny Day used by the holder.",
-                        id: "26"
+                        description: "A Pokémon held item that extends the duration of the move Sunny Day used by the holder.",
+                        id: 26
                         )
             },
             {
@@ -1457,8 +1457,8 @@ namespace Mobamon.Database
                     (
                         name: "Heavy Ball",
                         identifier: "Pokeballs",
-                        description: "A Pok‚ Ball for catching very heavy Pok‚mon.",
-                        id: "161"
+                        description: "A Poké Ball for catching very heavy Pokémon.",
+                        id: 161
                         )
             },
             {
@@ -1467,8 +1467,8 @@ namespace Mobamon.Database
                     (
                         name: "Helix Fossil",
                         identifier: "General items",
-                        description: "A fossil of an ancient Pok‚mon that lived in the sea. It appears to be part of a seashell.",
-                        id: "345"
+                        description: "A fossil of an ancient Pokémon that lived in the sea. It appears to be part of a seashell.",
+                        id: 345
                         )
             },
             {
@@ -1477,8 +1477,8 @@ namespace Mobamon.Database
                     (
                         name: "Hondew Berry",
                         identifier: "Berries",
-                        description: "Using it on a Pok‚mon makes it more friendly, but it also lowers its base Sp. Atk stat.",
-                        id: "246"
+                        description: "Using it on a Pokémon makes it more friendly, but it also lowers its base Sp. Atk stat.",
+                        id: 246
                         )
             },
             {
@@ -1487,8 +1487,8 @@ namespace Mobamon.Database
                     (
                         name: "Honey",
                         identifier: "General items",
-                        description: "A sweet honey with a lush aroma that attracts wild Pok‚mon when it is used in grass, caves, or on special trees.",
-                        id: "342"
+                        description: "A sweet honey with a lush aroma that attracts wild Pokémon when it is used in grass, caves, or on special trees.",
+                        id: 342
                         )
             },
             {
@@ -1497,8 +1497,8 @@ namespace Mobamon.Database
                     (
                         name: "Hyper Potion",
                         identifier: "Medicine",
-                        description: "A spray-type medicine for wounds. It restores the HP of one Pok‚mon by 200 points.",
-                        id: "168"
+                        description: "A spray-type medicine for wounds. It restores the HP of one Pokémon by 200 points.",
+                        id: 168
                         )
             },
             {
@@ -1507,8 +1507,8 @@ namespace Mobamon.Database
                     (
                         name: "Iapapa Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it restores the user?s HP in a pinch, but will cause confusion if it hates the taste.",
-                        id: "242"
+                        description: "If held by a Pokémon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+                        id: 242
                         )
             },
             {
@@ -1518,7 +1518,7 @@ namespace Mobamon.Database
                         name: "Ice Gem",
                         identifier: "Hold items",
                         description: "A gem with an essence of ice. When held, it strengthens the power of an Ice-type move only once.",
-                        id: "86"
+                        id: 86
                         )
             },
             {
@@ -1527,8 +1527,8 @@ namespace Mobamon.Database
                     (
                         name: "Ice Heal",
                         identifier: "Medicine",
-                        description: "A spray-type medicine. It defrosts a Pok‚mon that has been frozen solid.",
-                        id: "180"
+                        description: "A spray-type medicine. It defrosts a Pokémon that has been frozen solid.",
+                        id: 180
                         )
             },
             {
@@ -1538,7 +1538,7 @@ namespace Mobamon.Database
                         name: "Icicle Plate",
                         identifier: "Hold items",
                         description: "Increases power of Ice-type moves. Changes Arceus' type to Ice.",
-                        id: "70"
+                        id: 70
                         )
             },
             {
@@ -1547,8 +1547,8 @@ namespace Mobamon.Database
                     (
                         name: "Icy Rock",
                         identifier: "Hold items",
-                        description: "A Pok‚mon held item that extends the duration of the move Hail used by the holder.",
-                        id: "24"
+                        description: "A Pokémon held item that extends the duration of the move Hail used by the holder.",
+                        id: 24
                         )
             },
             {
@@ -1558,7 +1558,7 @@ namespace Mobamon.Database
                         name: "Insect Plate",
                         identifier: "Hold items",
                         description: "Increases power of Bug-type moves. Changes Arceus' type to Bug.",
-                        id: "76"
+                        id: 76
                         )
             },
             {
@@ -1567,8 +1567,8 @@ namespace Mobamon.Database
                     (
                         name: "Iron",
                         identifier: "Medicine",
-                        description: "A nutritious drink for Pok‚mon. It raises the base Defense stat of a single Pok‚mon.",
-                        id: "198"
+                        description: "A nutritious drink for Pokémon. It raises the base Defense stat of a single Pokémon.",
+                        id: 198
                         )
             },
             {
@@ -1577,8 +1577,8 @@ namespace Mobamon.Database
                     (
                         name: "Iron Ball",
                         identifier: "Hold items",
-                        description: "A Pok‚mon held item that cuts Speed. It makes Flying-type and levitating holders susceptible to Ground moves.",
-                        id: "119"
+                        description: "A Pokémon held item that cuts Speed. It makes Flying-type and levitating holders susceptible to Ground moves.",
+                        id: 119
                         )
             },
             {
@@ -1588,7 +1588,7 @@ namespace Mobamon.Database
                         name: "Iron Plate",
                         identifier: "Hold items",
                         description: "Increases power of Steel-type moves. Changes Arceus' type to Steel.",
-                        id: "81"
+                        id: 81
                         )
             },
             {
@@ -1597,8 +1597,8 @@ namespace Mobamon.Database
                     (
                         name: "Item Drop",
                         identifier: "Battle items",
-                        description: "When used, it causes an ally Pok‚mon to drop a held item.",
-                        id: "320"
+                        description: "When used, it causes an ally Pokémon to drop a held item.",
+                        id: 320
                         )
             },
             {
@@ -1607,8 +1607,8 @@ namespace Mobamon.Database
                     (
                         name: "Item Urge",
                         identifier: "Battle items",
-                        description: "When used, it causes an ally Pok‚mon to use its held item.",
-                        id: "321"
+                        description: "When used, it causes an ally Pokémon to use its held item.",
+                        id: 321
                         )
             },
             {
@@ -1617,8 +1617,8 @@ namespace Mobamon.Database
                     (
                         name: "Jaboca Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon and a physical attack lands, the attacker also takes damage.",
-                        id: "290"
+                        description: "If held by a Pokémon and a physical attack lands, the attacker also takes damage.",
+                        id: 290
                         )
             },
             {
@@ -1627,8 +1627,8 @@ namespace Mobamon.Database
                     (
                         name: "Kasib Berry",
                         identifier: "Berries",
-                        description: "Weakens a supereffective Ghost-type attack against the holding Pok‚mon.",
-                        id: "275"
+                        description: "Weakens a supereffective Ghost-type attack against the holding Pokémon.",
+                        id: 275
                         )
             },
             {
@@ -1637,8 +1637,8 @@ namespace Mobamon.Database
                     (
                         name: "Kebia Berry",
                         identifier: "Berries",
-                        description: "Weakens a supereffective Poison-type attack against the holding Pok‚mon.",
-                        id: "269"
+                        description: "Weakens a supereffective Poison-type attack against the holding Pokémon.",
+                        id: 269
                         )
             },
             {
@@ -1647,8 +1647,8 @@ namespace Mobamon.Database
                     (
                         name: "Kelpsy Berry",
                         identifier: "Berries",
-                        description: "Using it on a Pok‚mon makes it more friendly, but it also lowers its base Attack stat.",
-                        id: "244"
+                        description: "Using it on a Pokémon makes it more friendly, but it also lowers its base Attack stat.",
+                        id: 244
                         )
             },
             {
@@ -1657,8 +1657,8 @@ namespace Mobamon.Database
                     (
                         name: "King's Rock",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. When the holder inflicts damage, the target may flinch.",
-                        id: "5"
+                        description: "An item to be held by a Pokémon. When the holder inflicts damage, the target may flinch.",
+                        id: 5
                         )
             },
             {
@@ -1667,8 +1667,8 @@ namespace Mobamon.Database
                     (
                         name: "Lagging Tail",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is tremendously heavy and makes the holder move slower than usual.",
-                        id: "120"
+                        description: "An item to be held by a Pokémon. It is tremendously heavy and makes the holder move slower than usual.",
+                        id: 120
                         )
             },
             {
@@ -1677,8 +1677,8 @@ namespace Mobamon.Database
                     (
                         name: "Lansat Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it raises its critical-hit ratio in a pinch.",
-                        id: "285"
+                        description: "If held by a Pokémon, it raises its critical-hit ratio in a pinch.",
+                        id: 285
                         )
             },
             {
@@ -1687,8 +1687,8 @@ namespace Mobamon.Database
                     (
                         name: "Lava Cookie",
                         identifier: "Medicine",
-                        description: "LAVARIDGE TOWN?s local specialty. It heals all the status problems of one POK‚MON.",
-                        id: "185"
+                        description: "LAVARIDGE TOWN's local specialty. It heals all the status problems of one POKÉMON.",
+                        id: 185
                         )
             },
             {
@@ -1697,8 +1697,8 @@ namespace Mobamon.Database
                     (
                         name: "Lax Incense",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. The tricky aroma of this incense may make attacks miss the holder.",
-                        id: "11"
+                        description: "An item to be held by a Pokémon. The tricky aroma of this incense may make attacks miss the holder.",
+                        id: 11
                         )
             },
             {
@@ -1707,8 +1707,8 @@ namespace Mobamon.Database
                     (
                         name: "Leaf Stone",
                         identifier: "General items",
-                        description: "A peculiar stone that makes certain species of POK‚MON evolve. It has a leaf pattern.",
-                        id: "329"
+                        description: "A peculiar stone that makes certain species of POKÉMON evolve. It has a leaf pattern.",
+                        id: 329
                         )
             },
             {
@@ -1717,8 +1717,8 @@ namespace Mobamon.Database
                     (
                         name: "Leftovers",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. The holder?s HP is gradually restored during battle.",
-                        id: "9"
+                        description: "An item to be held by a Pokémon. The holder's HP is gradually restored during battle.",
+                        id: 9
                         )
             },
             {
@@ -1727,8 +1727,8 @@ namespace Mobamon.Database
                     (
                         name: "Lemonade",
                         identifier: "Medicine",
-                        description: "A very sweet drink. It restores the HP of one POK‚MON by 80 points.",
-                        id: "172"
+                        description: "A very sweet drink. It restores the HP of one POKÉMON by 80 points.",
+                        id: 172
                         )
             },
             {
@@ -1737,8 +1737,8 @@ namespace Mobamon.Database
                     (
                         name: "Leppa Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it restores a move?s PP by 10.",
-                        id: "233"
+                        description: "If held by a Pokémon, it restores a move's PP by 10.",
+                        id: 233
                         )
             },
             {
@@ -1747,8 +1747,8 @@ namespace Mobamon.Database
                     (
                         name: "Level Ball",
                         identifier: "Pokeballs",
-                        description: "A Pok‚ Ball for catching Pok‚mon that are a lower level than your own.",
-                        id: "159"
+                        description: "A Poké Ball for catching Pokémon that are a lower level than your own.",
+                        id: 159
                         )
             },
             {
@@ -1757,8 +1757,8 @@ namespace Mobamon.Database
                     (
                         name: "Liechi Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it raises its Attack stat in a pinch.",
-                        id: "280"
+                        description: "If held by a Pokémon, it raises its Attack stat in a pinch.",
+                        id: 280
                         )
             },
             {
@@ -1767,8 +1767,8 @@ namespace Mobamon.Database
                     (
                         name: "Life Orb",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It boosts the power of moves, but at the cost of some HP on each hit.",
-                        id: "17"
+                        description: "An item to be held by a Pokémon. It boosts the power of moves, but at the cost of some HP on each hit.",
+                        id: 17
                         )
             },
             {
@@ -1778,7 +1778,7 @@ namespace Mobamon.Database
                         name: "Light Ball",
                         identifier: "Hold items",
                         description: "An item to be held by PIKACHU. It is a puzzling orb that raises the Attack and Sp. Atk stat.",
-                        id: "128"
+                        id: 128
                         )
             },
             {
@@ -1787,8 +1787,8 @@ namespace Mobamon.Database
                     (
                         name: "Light Clay",
                         identifier: "Hold items",
-                        description: "A Pok‚mon held item that extends the duration of barrier moves like Light Screen and Reflect used by the holder.",
-                        id: "16"
+                        description: "A Pokémon held item that extends the duration of barrier moves like Light Screen and Reflect used by the holder.",
+                        id: 16
                         )
             },
             {
@@ -1797,8 +1797,8 @@ namespace Mobamon.Database
                     (
                         name: "Love Ball",
                         identifier: "Pokeballs",
-                        description: "Pok‚ Ball for catching Pok‚mon that are the opposite gender of your Pok‚mon.",
-                        id: "164"
+                        description: "Poké Ball for catching Pokémon that are the opposite gender of your Pokémon.",
+                        id: 164
                         )
             },
             {
@@ -1807,8 +1807,8 @@ namespace Mobamon.Database
                     (
                         name: "Luck Incense",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It doubles a battle?s prize money if the holding Pok‚mon joins in.",
-                        id: "115"
+                        description: "An item to be held by a Pokémon. It doubles a battle's prize money if the holding Pokémon joins in.",
+                        id: 115
                         )
             },
             {
@@ -1817,8 +1817,8 @@ namespace Mobamon.Database
                     (
                         name: "Lucky Egg",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is an egg filled with happiness that earns extra Exp. Points in battle.",
-                        id: "114"
+                        description: "An item to be held by a Pokémon. It is an egg filled with happiness that earns extra Exp. Points in battle.",
+                        id: 114
                         )
             },
             {
@@ -1827,8 +1827,8 @@ namespace Mobamon.Database
                     (
                         name: "Lucky Punch",
                         identifier: "Hold items",
-                        description: "An item to be held by CHANSEY. It is a pair of gloves that boosts CHANSEY?s critical-hit ratio.",
-                        id: "129"
+                        description: "An item to be held by CHANSEY. It is a pair of gloves that boosts CHANSEY's critical-hit ratio.",
+                        id: 129
                         )
             },
             {
@@ -1837,8 +1837,8 @@ namespace Mobamon.Database
                     (
                         name: "Lum Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it recovers from any status problem.",
-                        id: "236"
+                        description: "If held by a Pokémon, it recovers from any status problem.",
+                        id: 236
                         )
             },
             {
@@ -1847,8 +1847,8 @@ namespace Mobamon.Database
                     (
                         name: "Lure Ball",
                         identifier: "Pokeballs",
-                        description: "A Pok‚ Ball for catching Pok‚mon hooked by a Rod when fishing.",
-                        id: "158"
+                        description: "A Poké Ball for catching Pokémon hooked by a Rod when fishing.",
+                        id: 158
                         )
             },
             {
@@ -1857,8 +1857,8 @@ namespace Mobamon.Database
                     (
                         name: "Lustrous Orb",
                         identifier: "Hold items",
-                        description: "A beautifully glowing orb to be held by PALKIA. It boosts the power of Dragon-? and Water-type moves.",
-                        id: "124"
+                        description: "A beautifully glowing orb to be held by PALKIA. It boosts the power of Dragon-, and Water-type moves.",
+                        id: 124
                         )
             },
             {
@@ -1867,8 +1867,8 @@ namespace Mobamon.Database
                     (
                         name: "Luxury Ball",
                         identifier: "Pokeballs",
-                        description: "A comfortable Pok‚ Ball that makes a caught wild Pok‚mon quickly grow friendly.",
-                        id: "151"
+                        description: "A comfortable Poké Ball that makes a caught wild Pokémon quickly grow friendly.",
+                        id: 151
                         )
             },
             {
@@ -1877,8 +1877,8 @@ namespace Mobamon.Database
                     (
                         name: "Macho Brace",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a stiff and heavy brace that promotes strong growth but lowers Speed.",
-                        id: "102"
+                        description: "An item to be held by a Pokémon. It is a stiff and heavy brace that promotes strong growth but lowers Speed.",
+                        id: 102
                         )
             },
             {
@@ -1887,8 +1887,8 @@ namespace Mobamon.Database
                     (
                         name: "Magmarizer",
                         identifier: "General items",
-                        description: "A box packed with a tremendous amount of magma energy. It is loved by a certain Pok‚mon.",
-                        id: "338"
+                        description: "A box packed with a tremendous amount of magma energy. It is loved by a certain Pokémon.",
+                        id: 338
                         )
             },
             {
@@ -1897,8 +1897,8 @@ namespace Mobamon.Database
                     (
                         name: "Magnet",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a powerful magnet that boosts the power of Electric-type moves.",
-                        id: "51"
+                        description: "An item to be held by a Pokémon. It is a powerful magnet that boosts the power of Electric-type moves.",
+                        id: 51
                         )
             },
             {
@@ -1907,8 +1907,8 @@ namespace Mobamon.Database
                     (
                         name: "Mago Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it restores the user?s HP in a pinch, but will cause confusion if it hates the taste.",
-                        id: "240"
+                        description: "If held by a Pokémon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+                        id: 240
                         )
             },
             {
@@ -1918,7 +1918,7 @@ namespace Mobamon.Database
                         name: "Magost Berry",
                         identifier: "Berries",
                         description: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-                        id: "255"
+                        id: 255
                         )
             },
             {
@@ -1927,8 +1927,8 @@ namespace Mobamon.Database
                     (
                         name: "Master Ball",
                         identifier: "Pokeballs",
-                        description: "The best Ball with the ultimate level of performance. It will catch any wild Pok‚mon without fail.",
-                        id: "139"
+                        description: "The best Ball with the ultimate level of performance. It will catch any wild Pokémon without fail.",
+                        id: 139
                         )
             },
             {
@@ -1937,8 +1937,8 @@ namespace Mobamon.Database
                     (
                         name: "Max Elixir",
                         identifier: "Medicine",
-                        description: "It fully restores the PP of all the moves learned by the targeted Pok‚mon.",
-                        id: "195"
+                        description: "It fully restores the PP of all the moves learned by the targeted Pokémon.",
+                        id: 195
                         )
             },
             {
@@ -1947,8 +1947,8 @@ namespace Mobamon.Database
                     (
                         name: "Max Ether",
                         identifier: "Medicine",
-                        description: "It fully restores the PP of a single selected move that has been learned by the target Pok‚mon.",
-                        id: "193"
+                        description: "It fully restores the PP of a single selected move that has been learned by the target Pokémon.",
+                        id: 193
                         )
             },
             {
@@ -1957,8 +1957,8 @@ namespace Mobamon.Database
                     (
                         name: "Max Potion",
                         identifier: "Medicine",
-                        description: "A spray-type medicine for wounds. It completely restores the HP of a single Pok‚mon.",
-                        id: "167"
+                        description: "A spray-type medicine for wounds. It completely restores the HP of a single Pokémon.",
+                        id: 167
                         )
             },
             {
@@ -1967,8 +1967,8 @@ namespace Mobamon.Database
                     (
                         name: "Max Repel",
                         identifier: "General items",
-                        description: "An item that prevents weak wild Pok‚mon from appearing for 250 steps after its use.",
-                        id: "358"
+                        description: "An item that prevents weak wild Pokémon from appearing for 250 steps after its use.",
+                        id: 358
                         )
             },
             {
@@ -1977,8 +1977,8 @@ namespace Mobamon.Database
                     (
                         name: "Max Revive",
                         identifier: "Medicine",
-                        description: "A medicine that revives a fainted Pok‚mon. It fully restores the Pok‚mon?s HP.",
-                        id: "189"
+                        description: "A medicine that revives a fainted Pokémon. It fully restores the Pokémon's HP.",
+                        id: 189
                         )
             },
             {
@@ -1988,7 +1988,7 @@ namespace Mobamon.Database
                         name: "Meadow Plate",
                         identifier: "Hold items",
                         description: "Increases power of Grass-type moves. Changes Arceus' type to Grass.",
-                        id: "69"
+                        id: 69
                         )
             },
             {
@@ -1997,8 +1997,8 @@ namespace Mobamon.Database
                     (
                         name: "Mental Herb",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It snaps the holder out of infatuation. It can be used only once.",
-                        id: "4"
+                        description: "An item to be held by a Pokémon. It snaps the holder out of infatuation. It can be used only once.",
+                        id: 4
                         )
             },
             {
@@ -2007,8 +2007,8 @@ namespace Mobamon.Database
                     (
                         name: "Metal Coat",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a special metallic film that ups the power of Steel-type moves.",
-                        id: "45"
+                        description: "An item to be held by a Pokémon. It is a special metallic film that ups the power of Steel-type moves.",
+                        id: 45
                         )
             },
             {
@@ -2018,7 +2018,7 @@ namespace Mobamon.Database
                         name: "Metal Powder",
                         identifier: "Hold items",
                         description: "An item to be held by DITTO. Extremely fine yet hard, this odd powder boosts the Defense stat.",
-                        id: "130"
+                        id: 130
                         )
             },
             {
@@ -2027,8 +2027,8 @@ namespace Mobamon.Database
                     (
                         name: "Metronome",
                         identifier: "Hold items",
-                        description: "A Pok‚mon held item that boosts a move used consecutively. Its effect is reset if another move is used.",
-                        id: "21"
+                        description: "A Pokémon held item that boosts a move used consecutively. Its effect is reset if another move is used.",
+                        id: 21
                         )
             },
             {
@@ -2037,8 +2037,8 @@ namespace Mobamon.Database
                     (
                         name: "Micle Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it raises the accuracy of a move just once in a pinch.",
-                        id: "287"
+                        description: "If held by a Pokémon, it raises the accuracy of a move just once in a pinch.",
+                        id: 287
                         )
             },
             {
@@ -2048,7 +2048,7 @@ namespace Mobamon.Database
                         name: "Mind Plate",
                         identifier: "Hold items",
                         description: "Increases power of Psychic-type moves. Changes Arceus' type to Psychic.",
-                        id: "75"
+                        id: 75
                         )
             },
             {
@@ -2057,8 +2057,8 @@ namespace Mobamon.Database
                     (
                         name: "Miracle Seed",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a seed imbued with life that ups the power of Grass-type moves.",
-                        id: "48"
+                        description: "An item to be held by a Pokémon. It is a seed imbued with life that ups the power of Grass-type moves.",
+                        id: 48
                         )
             },
             {
@@ -2067,8 +2067,8 @@ namespace Mobamon.Database
                     (
                         name: "Moomoo Milk",
                         identifier: "Medicine",
-                        description: "Milk with a very high nutrition content. It restores the HP of one Pok‚mon by 100 points.",
-                        id: "173"
+                        description: "Milk with a very high nutrition content. It restores the HP of one Pokémon by 100 points.",
+                        id: 173
                         )
             },
             {
@@ -2077,8 +2077,8 @@ namespace Mobamon.Database
                     (
                         name: "Moon Ball",
                         identifier: "Pokeballs",
-                        description: "A Pok‚ Ball for catching Pok‚mon that evolve using the Moon Stone.",
-                        id: "160"
+                        description: "A Poké Ball for catching Pokémon that evolve using the Moon Stone.",
+                        id: 160
                         )
             },
             {
@@ -2087,8 +2087,8 @@ namespace Mobamon.Database
                     (
                         name: "Moon Stone",
                         identifier: "General items",
-                        description: "A peculiar stone that makes certain species of POK‚MON evolve. It is as black as the night sky.",
-                        id: "325"
+                        description: "A peculiar stone that makes certain species of POKÉMON evolve. It is as black as the night sky.",
+                        id: 325
                         )
             },
             {
@@ -2097,8 +2097,8 @@ namespace Mobamon.Database
                     (
                         name: "Muscle Band",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a headband that slightly boosts the power of physical moves.",
-                        id: "13"
+                        description: "An item to be held by a Pokémon. It is a headband that slightly boosts the power of physical moves.",
+                        id: 13
                         )
             },
             {
@@ -2107,8 +2107,8 @@ namespace Mobamon.Database
                     (
                         name: "Muscle Wing",
                         identifier: "Medicine",
-                        description: "An item for use on a Pok‚mon. It slightly increases the base Attack stat of a single Pok‚mon.",
-                        id: "206"
+                        description: "An item for use on a Pokémon. It slightly increases the base Attack stat of a single Pokémon.",
+                        id: 206
                         )
             },
             {
@@ -2117,8 +2117,8 @@ namespace Mobamon.Database
                     (
                         name: "Mystic Water",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a teardrop-shaped gem that ups the power of Water-type moves.",
-                        id: "52"
+                        description: "An item to be held by a Pokémon. It is a teardrop-shaped gem that ups the power of Water-type moves.",
+                        id: 52
                         )
             },
             {
@@ -2128,7 +2128,7 @@ namespace Mobamon.Database
                         name: "Nanab Berry",
                         identifier: "Berries",
                         description: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-                        id: "251"
+                        id: 251
                         )
             },
             {
@@ -2137,8 +2137,8 @@ namespace Mobamon.Database
                     (
                         name: "Nest Ball",
                         identifier: "Pokeballs",
-                        description: "A somewhat different Pok‚ Ball that works especially well on weaker Pok‚mon in the wild.",
-                        id: "148"
+                        description: "A somewhat different Poké Ball that works especially well on weaker Pokémon in the wild.",
+                        id: 148
                         )
             },
             {
@@ -2147,8 +2147,8 @@ namespace Mobamon.Database
                     (
                         name: "Net Ball",
                         identifier: "Pokeballs",
-                        description: "A somewhat different Pok‚ Ball that works especially well on Water- and Bug-type Pok‚mon.",
-                        id: "146"
+                        description: "A somewhat different Poké Ball that works especially well on Water- and Bug-type Pokémon.",
+                        id: 146
                         )
             },
             {
@@ -2157,8 +2157,8 @@ namespace Mobamon.Database
                     (
                         name: "NeverMeltIce",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a piece of ice that repels heat and boosts Ice-type moves.",
-                        id: "55"
+                        description: "An item to be held by a Pokémon. It is a piece of ice that repels heat and boosts Ice-type moves.",
+                        id: 55
                         )
             },
             {
@@ -2168,7 +2168,7 @@ namespace Mobamon.Database
                         name: "Nomel Berry",
                         identifier: "Berries",
                         description: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-                        id: "257"
+                        id: 257
                         )
             },
             {
@@ -2178,7 +2178,7 @@ namespace Mobamon.Database
                         name: "Normal Gem",
                         identifier: "Hold items",
                         description: "A gem with an ordinary essence. When held, it strengthens the power of a Normal-type move only once.",
-                        id: "98"
+                        id: 98
                         )
             },
             {
@@ -2188,7 +2188,7 @@ namespace Mobamon.Database
                         name: "Nugget",
                         identifier: "General items",
                         description: "A nugget of pure gold that gives off a lustrous gleam. It can be sold at a high price to shops.",
-                        id: "368"
+                        id: 368
                         )
             },
             {
@@ -2197,8 +2197,8 @@ namespace Mobamon.Database
                     (
                         name: "Occa Berry",
                         identifier: "Berries",
-                        description: "Weakens a supereffective Fire-type attack against the holding Pok‚mon.",
-                        id: "263"
+                        description: "Weakens a supereffective Fire-type attack against the holding Pokémon.",
+                        id: 263
                         )
             },
             {
@@ -2207,8 +2207,8 @@ namespace Mobamon.Database
                     (
                         name: "Odd Incense",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is an exotic-smelling incense that boosts the power of Psychic-type moves.",
-                        id: "62"
+                        description: "An item to be held by a Pokémon. It is an exotic-smelling incense that boosts the power of Psychic-type moves.",
+                        id: 62
                         )
             },
             {
@@ -2218,7 +2218,7 @@ namespace Mobamon.Database
                         name: "Odd Keystone",
                         identifier: "General items",
                         description: "A vital item that is needed to keep a stone tower from collapsing. Voices can be heard from it occasionally.",
-                        id: "350"
+                        id: 350
                         )
             },
             {
@@ -2227,8 +2227,8 @@ namespace Mobamon.Database
                     (
                         name: "Old Amber",
                         identifier: "General items",
-                        description: "A piece of amber that contains the genetic material of an ancient Pok‚mon. It is clear with a reddish tint.",
-                        id: "347"
+                        description: "A piece of amber that contains the genetic material of an ancient Pokémon. It is clear with a reddish tint.",
+                        id: 347
                         )
             },
             {
@@ -2237,8 +2237,8 @@ namespace Mobamon.Database
                     (
                         name: "Old Gateau",
                         identifier: "Medicine",
-                        description: "Old Chateau?s hidden specialty. It heals all the status problems of a single Pok‚mon.",
-                        id: "186"
+                        description: "Old Chateau's hidden specialty. It heals all the status problems of a single Pokémon.",
+                        id: 186
                         )
             },
             {
@@ -2247,8 +2247,8 @@ namespace Mobamon.Database
                     (
                         name: "Oran Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it heals the user by just 10 HP.",
-                        id: "234"
+                        description: "If held by a Pokémon, it heals the user by just 10 HP.",
+                        id: 234
                         )
             },
             {
@@ -2257,8 +2257,8 @@ namespace Mobamon.Database
                     (
                         name: "Oval Stone",
                         identifier: "General items",
-                        description: "A peculiar stone that makes certain species of Pok‚mon evolve. It is shaped like an egg.",
-                        id: "333"
+                        description: "A peculiar stone that makes certain species of Pokémon evolve. It is shaped like an egg.",
+                        id: 333
                         )
             },
             {
@@ -2267,8 +2267,8 @@ namespace Mobamon.Database
                     (
                         name: "PP Max",
                         identifier: "Medicine",
-                        description: "It maximally raises the top PP of a selected move that has been learned by the target Pok‚mon.",
-                        id: "204"
+                        description: "It maximally raises the top PP of a selected move that has been learned by the target Pokémon.",
+                        id: 204
                         )
             },
             {
@@ -2277,8 +2277,8 @@ namespace Mobamon.Database
                     (
                         name: "PP Up",
                         identifier: "Medicine",
-                        description: "It slightly raises the maximum PP of a selected move that has been learned by the target Pok‚mon.",
-                        id: "202"
+                        description: "It slightly raises the maximum PP of a selected move that has been learned by the target Pokémon.",
+                        id: 202
                         )
             },
             {
@@ -2288,7 +2288,7 @@ namespace Mobamon.Database
                         name: "Pamtre Berry",
                         identifier: "Berries",
                         description: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-                        id: "259"
+                        id: 259
                         )
             },
             {
@@ -2297,8 +2297,8 @@ namespace Mobamon.Database
                     (
                         name: "Park Ball",
                         identifier: "Pokeballs",
-                        description: "A special Pok‚ Ball for the Pal Park.",
-                        id: "144"
+                        description: "A special Poké Ball for the Pal Park.",
+                        id: 144
                         )
             },
             {
@@ -2307,8 +2307,8 @@ namespace Mobamon.Database
                     (
                         name: "Parlyz Heal",
                         identifier: "Medicine",
-                        description: "A spray-type medicine. It eliminates paralysis from a single Pok‚mon.",
-                        id: "182"
+                        description: "A spray-type medicine. It eliminates paralysis from a single Pokémon.",
+                        id: 182
                         )
             },
             {
@@ -2318,7 +2318,7 @@ namespace Mobamon.Database
                         name: "Pass Orb",
                         identifier: "Hold items",
                         description: "A mysterious orb containing the power of the Unova region, to be used when generating Pass Power.",
-                        id: "43"
+                        id: 43
                         )
             },
             {
@@ -2327,8 +2327,8 @@ namespace Mobamon.Database
                     (
                         name: "Passho Berry",
                         identifier: "Berries",
-                        description: "Weakens a supereffective Water-type attack against the holding Pok‚mon.",
-                        id: "264"
+                        description: "Weakens a supereffective Water-type attack against the holding Pokémon.",
+                        id: 264
                         )
             },
             {
@@ -2337,8 +2337,8 @@ namespace Mobamon.Database
                     (
                         name: "Payapa Berry",
                         identifier: "Berries",
-                        description: "Weakens a supereffective Psychic-type attack against the holding Pok‚mon.",
-                        id: "272"
+                        description: "Weakens a supereffective Psychic-type attack against the holding Pokémon.",
+                        id: 272
                         )
             },
             {
@@ -2348,7 +2348,7 @@ namespace Mobamon.Database
                         name: "Pearl",
                         identifier: "General items",
                         description: "A somewhat-small pearl that sparkles in a pretty silver color. It can be sold cheaply to shops.",
-                        id: "364"
+                        id: 364
                         )
             },
             {
@@ -2358,7 +2358,7 @@ namespace Mobamon.Database
                         name: "Pearl String",
                         identifier: "General items",
                         description: "Very large pearls that sparkle in a pretty silver color. A maniac will buy them for a high price.",
-                        id: "373"
+                        id: 373
                         )
             },
             {
@@ -2367,8 +2367,8 @@ namespace Mobamon.Database
                     (
                         name: "Pecha Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it recovers from poison.",
-                        id: "230"
+                        description: "If held by a Pokémon, it recovers from poison.",
+                        id: 230
                         )
             },
             {
@@ -2377,8 +2377,8 @@ namespace Mobamon.Database
                     (
                         name: "Persim Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it recovers from confusion.",
-                        id: "235"
+                        description: "If held by a Pokémon, it recovers from confusion.",
+                        id: 235
                         )
             },
             {
@@ -2387,8 +2387,8 @@ namespace Mobamon.Database
                     (
                         name: "Petaya Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it raises its Sp. Atk stat in a pinch.",
-                        id: "283"
+                        description: "If held by a Pokémon, it raises its Sp. Atk stat in a pinch.",
+                        id: 283
                         )
             },
             {
@@ -2398,7 +2398,7 @@ namespace Mobamon.Database
                         name: "Pinap Berry",
                         identifier: "Berries",
                         description: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-                        id: "253"
+                        id: 253
                         )
             },
             {
@@ -2407,8 +2407,8 @@ namespace Mobamon.Database
                     (
                         name: "Pink Scarf",
                         identifier: "General items",
-                        description: "An item to be held by a Pok‚mon. It boosts the Cute aspect of the holder in a Contest.",
-                        id: "402"
+                        description: "An item to be held by a Pokémon. It boosts the Cute aspect of the holder in a Contest.",
+                        id: 402
                         )
             },
             {
@@ -2417,8 +2417,8 @@ namespace Mobamon.Database
                     (
                         name: "Plume Fossil",
                         identifier: "General items",
-                        description: "A fossil of an ancient Pok‚mon that flew in the sky in ancient times. It appears to be part of its wing.",
-                        id: "352"
+                        description: "A fossil of an ancient Pokémon that flew in the sky in ancient times. It appears to be part of its wing.",
+                        id: 352
                         )
             },
             {
@@ -2428,7 +2428,7 @@ namespace Mobamon.Database
                         name: "Pnk Apricorn",
                         identifier: "General items",
                         description: "A pink Apricorn. It has a nice, sweet scent.",
-                        id: "393"
+                        id: 393
                         )
             },
             {
@@ -2437,8 +2437,8 @@ namespace Mobamon.Database
                     (
                         name: "Poison Barb",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a small, poisonous barb that ups the power of Poison-type moves.",
-                        id: "54"
+                        description: "An item to be held by a Pokémon. It is a small, poisonous barb that ups the power of Poison-type moves.",
+                        id: 54
                         )
             },
             {
@@ -2448,37 +2448,37 @@ namespace Mobamon.Database
                         name: "Poison Gem",
                         identifier: "Hold items",
                         description: "A gem with an essence of poison. When held, it strengthens the power of a Poison-type move only once.",
-                        id: "88"
+                        id: 88
                         )
             },
             {
                 245,
                 new Item
                     (
-                        name: "Pok‚ Ball",
+                        name: "Poké Ball",
                         identifier: "Pokeballs",
-                        description: "A device for catching wild Pok‚mon. It is thrown like a ball at the target. It is designed as a capsule system.",
-                        id: "142"
+                        description: "A device for catching wild Pokémon. It is thrown like a ball at the target. It is designed as a capsule system.",
+                        id: 142
                         )
             },
             {
                 246,
                 new Item
                     (
-                        name: "Pok‚ Doll",
+                        name: "Poké Doll",
                         identifier: "General items",
-                        description: "A doll that attracts Pok‚mon. Use it to flee from any battle with a wild Pok‚mon.",
-                        id: "353"
+                        description: "A doll that attracts Pokémon. Use it to flee from any battle with a wild Pokémon.",
+                        id: 353
                         )
             },
             {
                 247,
                 new Item
                     (
-                        name: "Pok‚ Toy",
+                        name: "Poké Toy",
                         identifier: "General items",
-                        description: "An item that attracts Pok‚mon. Use it to flee from any battle with a wild Pok‚mon.",
-                        id: "361"
+                        description: "An item that attracts Pokémon. Use it to flee from any battle with a wild Pokémon.",
+                        id: 361
                         )
             },
             {
@@ -2487,8 +2487,8 @@ namespace Mobamon.Database
                     (
                         name: "Pomeg Berry",
                         identifier: "Berries",
-                        description: "Using it on a Pok‚mon makes it more friendly, but it also lowers its base HP.",
-                        id: "243"
+                        description: "Using it on a Pokémon makes it more friendly, but it also lowers its base HP.",
+                        id: 243
                         )
             },
             {
@@ -2497,8 +2497,8 @@ namespace Mobamon.Database
                     (
                         name: "Potion",
                         identifier: "Medicine",
-                        description: "A spray-type medicine for wounds. It restores the HP of one Pok‚mon by just 20 points.",
-                        id: "165"
+                        description: "A spray-type medicine for wounds. It restores the HP of one Pokémon by just 20 points.",
+                        id: 165
                         )
             },
             {
@@ -2507,8 +2507,8 @@ namespace Mobamon.Database
                     (
                         name: "Power Anklet",
                         identifier: "Hold items",
-                        description: "A Pok‚mon held item that promotes Speed gain on leveling, but reduces the Speed stat.",
-                        id: "107"
+                        description: "A Pokémon held item that promotes Speed gain on leveling, but reduces the Speed stat.",
+                        id: 107
                         )
             },
             {
@@ -2517,8 +2517,8 @@ namespace Mobamon.Database
                     (
                         name: "Power Band",
                         identifier: "Hold items",
-                        description: "A Pok‚mon held item that promotes Sp. Def gain on leveling, but reduces the Speed stat.",
-                        id: "106"
+                        description: "A Pokémon held item that promotes Sp. Def gain on leveling, but reduces the Speed stat.",
+                        id: 106
                         )
             },
             {
@@ -2527,8 +2527,8 @@ namespace Mobamon.Database
                     (
                         name: "Power Belt",
                         identifier: "Hold items",
-                        description: "A Pok‚mon held item that promotes Defense gain on leveling, but reduces the Speed stat.",
-                        id: "104"
+                        description: "A Pokémon held item that promotes Defense gain on leveling, but reduces the Speed stat.",
+                        id: 104
                         )
             },
             {
@@ -2537,8 +2537,8 @@ namespace Mobamon.Database
                     (
                         name: "Power Bracer",
                         identifier: "Hold items",
-                        description: "A Pok‚mon held item that promotes Attack gain on leveling, but reduces the Speed stat.",
-                        id: "103"
+                        description: "A Pokémon held item that promotes Attack gain on leveling, but reduces the Speed stat.",
+                        id: 103
                         )
             },
             {
@@ -2547,8 +2547,8 @@ namespace Mobamon.Database
                     (
                         name: "Power Herb",
                         identifier: "Hold items",
-                        description: "A single-use item to be held by a Pok‚mon. It allows the immediate use of a move that charges on the first turn.",
-                        id: "18"
+                        description: "A single-use item to be held by a Pokémon. It allows the immediate use of a move that charges on the first turn.",
+                        id: 18
                         )
             },
             {
@@ -2557,8 +2557,8 @@ namespace Mobamon.Database
                     (
                         name: "Power Lens",
                         identifier: "Hold items",
-                        description: "A Pok‚mon held item that promotes Sp. Atk gain on leveling, but reduces the Speed stat.",
-                        id: "105"
+                        description: "A Pokémon held item that promotes Sp. Atk gain on leveling, but reduces the Speed stat.",
+                        id: 105
                         )
             },
             {
@@ -2567,8 +2567,8 @@ namespace Mobamon.Database
                     (
                         name: "Power Weight",
                         identifier: "Hold items",
-                        description: "A Pok‚mon held item that promotes HP gain on leveling, but reduces the Speed stat.",
-                        id: "108"
+                        description: "A Pokémon held item that promotes HP gain on leveling, but reduces the Speed stat.",
+                        id: 108
                         )
             },
             {
@@ -2577,8 +2577,8 @@ namespace Mobamon.Database
                     (
                         name: "Premier Ball",
                         identifier: "Pokeballs",
-                        description: "A somewhat rare Pok‚ Ball that has been specially made to commemorate an event of some sort.",
-                        id: "152"
+                        description: "A somewhat rare Poké Ball that has been specially made to commemorate an event of some sort.",
+                        id: 152
                         )
             },
             {
@@ -2587,8 +2587,8 @@ namespace Mobamon.Database
                     (
                         name: "Pretty Wing",
                         identifier: "General items",
-                        description: "Though this feather is beautiful, it?s just a regular feather and has no effect on Pok‚mon.",
-                        id: "370"
+                        description: "Though this feather is beautiful, it's just a regular feather and has no effect on Pokémon.",
+                        id: 370
                         )
             },
             {
@@ -2597,8 +2597,8 @@ namespace Mobamon.Database
                     (
                         name: "Prism Scale",
                         identifier: "General items",
-                        description: "A mysterious scale that evolves certain Pok‚mon. It shines in rainbow colors.",
-                        id: "341"
+                        description: "A mysterious scale that evolves certain Pokémon. It shines in rainbow colors.",
+                        id: 341
                         )
             },
             {
@@ -2607,8 +2607,8 @@ namespace Mobamon.Database
                     (
                         name: "Protector",
                         identifier: "General items",
-                        description: "A protective item of some sort. It is extremely stiff and heavy. It is loved by a certain Pok‚mon.",
-                        id: "336"
+                        description: "A protective item of some sort. It is extremely stiff and heavy. It is loved by a certain Pokémon.",
+                        id: 336
                         )
             },
             {
@@ -2617,8 +2617,8 @@ namespace Mobamon.Database
                     (
                         name: "Protein",
                         identifier: "Medicine",
-                        description: "A nutritious drink for Pok‚mon. It raises the base Attack stat of a single Pok‚mon.",
-                        id: "197"
+                        description: "A nutritious drink for Pokémon. It raises the base Attack stat of a single Pokémon.",
+                        id: 197
                         )
             },
             {
@@ -2628,7 +2628,7 @@ namespace Mobamon.Database
                         name: "Psychic Gem",
                         identifier: "Hold items",
                         description: "A gem with an essence of the mind. When held, it strengthens the power of a Psychic-type move only once.",
-                        id: "91"
+                        id: 91
                         )
             },
             {
@@ -2637,8 +2637,8 @@ namespace Mobamon.Database
                     (
                         name: "Pure Incense",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It helps keep wild Pok‚mon away if the holder is the first one in the party.",
-                        id: "116"
+                        description: "An item to be held by a Pokémon. It helps keep wild Pokémon away if the holder is the first one in the party.",
+                        id: 116
                         )
             },
             {
@@ -2647,8 +2647,8 @@ namespace Mobamon.Database
                     (
                         name: "Qualot Berry",
                         identifier: "Berries",
-                        description: "Using it on a Pok‚mon makes it more friendly, but it also lowers its base Defense stat.",
-                        id: "245"
+                        description: "Using it on a Pokémon makes it more friendly, but it also lowers its base Defense stat.",
+                        id: 245
                         )
             },
             {
@@ -2657,8 +2657,8 @@ namespace Mobamon.Database
                     (
                         name: "Quick Ball",
                         identifier: "Pokeballs",
-                        description: "A somewhat different Pok‚ Ball that provides a better catch rate if it is used at the start of a wild encounter.",
-                        id: "155"
+                        description: "A somewhat different Poké Ball that provides a better catch rate if it is used at the start of a wild encounter.",
+                        id: 155
                         )
             },
             {
@@ -2667,8 +2667,8 @@ namespace Mobamon.Database
                     (
                         name: "Quick Claw",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. A light, sharp claw that lets the bearer move first occasionally.",
-                        id: "3"
+                        description: "An item to be held by a Pokémon. A light, sharp claw that lets the bearer move first occasionally.",
+                        id: 3
                         )
             },
             {
@@ -2678,7 +2678,7 @@ namespace Mobamon.Database
                         name: "Quick Powder",
                         identifier: "Hold items",
                         description: "An item to be held by DITTO. Extremely fine yet hard, this odd powder boosts the Speed stat.",
-                        id: "133"
+                        id: 133
                         )
             },
             {
@@ -2688,7 +2688,7 @@ namespace Mobamon.Database
                         name: "Rabuta Berry",
                         identifier: "Berries",
                         description: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-                        id: "256"
+                        id: 256
                         )
             },
             {
@@ -2697,8 +2697,8 @@ namespace Mobamon.Database
                     (
                         name: "Rare Bone",
                         identifier: "General items",
-                        description: "A bone that is extremely valuable for Pok‚mon archeology. It can be sold for a high price to shops.",
-                        id: "369"
+                        description: "A bone that is extremely valuable for Pokémon archeology. It can be sold for a high price to shops.",
+                        id: 369
                         )
             },
             {
@@ -2707,8 +2707,8 @@ namespace Mobamon.Database
                     (
                         name: "Rare Candy",
                         identifier: "Medicine",
-                        description: "A candy that is packed with energy. It raises the level of a single Pok‚mon by one.",
-                        id: "201"
+                        description: "A candy that is packed with energy. It raises the level of a single Pokémon by one.",
+                        id: 201
                         )
             },
             {
@@ -2717,8 +2717,8 @@ namespace Mobamon.Database
                     (
                         name: "Rawst Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it recovers from a burn.",
-                        id: "231"
+                        description: "If held by a Pokémon, it recovers from a burn.",
+                        id: 231
                         )
             },
             {
@@ -2727,8 +2727,8 @@ namespace Mobamon.Database
                     (
                         name: "Razor Claw",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a sharply hooked claw that ups the holder?s critical-hit ratio.",
-                        id: "31"
+                        description: "An item to be held by a Pokémon. It is a sharply hooked claw that ups the holder's critical-hit ratio.",
+                        id: 31
                         )
             },
             {
@@ -2737,8 +2737,8 @@ namespace Mobamon.Database
                     (
                         name: "Razor Fang",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It may make foes and allies flinch when the holder inflicts damage.",
-                        id: "32"
+                        description: "An item to be held by a Pokémon. It may make foes and allies flinch when the holder inflicts damage.",
+                        id: 32
                         )
             },
             {
@@ -2748,7 +2748,7 @@ namespace Mobamon.Database
                         name: "Razz Berry",
                         identifier: "Berries",
                         description: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-                        id: "249"
+                        id: 249
                         )
             },
             {
@@ -2757,8 +2757,8 @@ namespace Mobamon.Database
                     (
                         name: "Reaper Cloth",
                         identifier: "General items",
-                        description: "A cloth imbued with horrifyingly strong spiritual energy. It is loved by a certain Pok‚mon.",
-                        id: "340"
+                        description: "A cloth imbued with horrifyingly strong spiritual energy. It is loved by a certain Pokémon.",
+                        id: 340
                         )
             },
             {
@@ -2768,7 +2768,7 @@ namespace Mobamon.Database
                         name: "Red Apricorn",
                         identifier: "General items",
                         description: "A red Apricorn. It assails your nostrils.",
-                        id: "389"
+                        id: 389
                         )
             },
             {
@@ -2778,7 +2778,7 @@ namespace Mobamon.Database
                         name: "Red Card",
                         identifier: "Hold items",
                         description: "A card with a mysterious power. When the holder is struck by a foe, the attacker is removed from battle.",
-                        id: "37"
+                        id: 37
                         )
             },
             {
@@ -2788,7 +2788,7 @@ namespace Mobamon.Database
                         name: "Red Flute",
                         identifier: "General items",
                         description: "A toy flute made from red glass. A maniac will buy it for a high price.",
-                        id: "407"
+                        id: 407
                         )
             },
             {
@@ -2797,8 +2797,8 @@ namespace Mobamon.Database
                     (
                         name: "Red Scarf",
                         identifier: "General items",
-                        description: "An item to be held by a Pok‚mon. It boosts the Cool aspect of the holder in a Contest.",
-                        id: "400"
+                        description: "An item to be held by a Pokémon. It boosts the Cool aspect of the holder in a Contest.",
+                        id: 400
                         )
             },
             {
@@ -2808,7 +2808,7 @@ namespace Mobamon.Database
                         name: "Red Shard",
                         identifier: "General items",
                         description: "A small red shard. It appears to be from some sort of implement made long ago.",
-                        id: "384"
+                        id: 384
                         )
             },
             {
@@ -2818,7 +2818,7 @@ namespace Mobamon.Database
                         name: "Relic Band",
                         identifier: "General items",
                         description: "A bracelet made in a civilization about 3,000 years ago. A maniac will buy it for a high price.",
-                        id: "379"
+                        id: 379
                         )
             },
             {
@@ -2828,7 +2828,7 @@ namespace Mobamon.Database
                         name: "Relic Copper",
                         identifier: "General items",
                         description: "A copper coin used in a civilization about 3,000 years ago. A maniac will buy it for a high price.",
-                        id: "375"
+                        id: 375
                         )
             },
             {
@@ -2838,7 +2838,7 @@ namespace Mobamon.Database
                         name: "Relic Crown",
                         identifier: "General items",
                         description: "A crown made in a civilization about 3,000 years ago. A maniac will buy it for a high price.",
-                        id: "381"
+                        id: 381
                         )
             },
             {
@@ -2848,7 +2848,7 @@ namespace Mobamon.Database
                         name: "Relic Gold",
                         identifier: "General items",
                         description: "A gold coin used in a civilization about 3,000 years ago. A maniac will buy it for a high price.",
-                        id: "377"
+                        id: 377
                         )
             },
             {
@@ -2858,7 +2858,7 @@ namespace Mobamon.Database
                         name: "Relic Silver",
                         identifier: "General items",
                         description: "A silver coin used in a civilization about 3,000 years ago. A maniac will buy it for a high price.",
-                        id: "376"
+                        id: 376
                         )
             },
             {
@@ -2868,7 +2868,7 @@ namespace Mobamon.Database
                         name: "Relic Statue",
                         identifier: "General items",
                         description: "A stone figure made in a civilization about 3,000 years ago. A maniac will buy it for a high price.",
-                        id: "380"
+                        id: 380
                         )
             },
             {
@@ -2878,7 +2878,7 @@ namespace Mobamon.Database
                         name: "Relic Vase",
                         identifier: "General items",
                         description: "A vase made in a civilization about 3,000 years ago. A maniac will buy it for a high price.",
-                        id: "378"
+                        id: 378
                         )
             },
             {
@@ -2887,8 +2887,8 @@ namespace Mobamon.Database
                     (
                         name: "Repeat Ball",
                         identifier: "Pokeballs",
-                        description: "A somewhat different Pok‚ Ball that works especially well on Pok‚mon species that were previously caught.",
-                        id: "149"
+                        description: "A somewhat different Poké Ball that works especially well on Pokémon species that were previously caught.",
+                        id: 149
                         )
             },
             {
@@ -2897,8 +2897,8 @@ namespace Mobamon.Database
                     (
                         name: "Repel",
                         identifier: "General items",
-                        description: "An item that prevents weak wild Pok‚mon from appearing for 100 steps after its use.",
-                        id: "360"
+                        description: "An item that prevents weak wild Pokémon from appearing for 100 steps after its use.",
+                        id: 360
                         )
             },
             {
@@ -2907,8 +2907,8 @@ namespace Mobamon.Database
                     (
                         name: "Reset Urge",
                         identifier: "Battle items",
-                        description: "When used, it restores any stat changes of an ally Pok‚mon.",
-                        id: "322"
+                        description: "When used, it restores any stat changes of an ally Pokémon.",
+                        id: 322
                         )
             },
             {
@@ -2917,8 +2917,8 @@ namespace Mobamon.Database
                     (
                         name: "Resist Wing",
                         identifier: "Medicine",
-                        description: "An item for use on a Pok‚mon. It slightly increases the base Defense stat of a single Pok‚mon.",
-                        id: "207"
+                        description: "An item for use on a Pokémon. It slightly increases the base Defense stat of a single Pokémon.",
+                        id: 207
                         )
             },
             {
@@ -2927,8 +2927,8 @@ namespace Mobamon.Database
                     (
                         name: "Revival Herb",
                         identifier: "Medicine",
-                        description: "A very bitter medicinal herb. It revives a fainted Pok‚mon, fully restoring its HP.",
-                        id: "190"
+                        description: "A very bitter medicinal herb. It revives a fainted Pokémon, fully restoring its HP.",
+                        id: 190
                         )
             },
             {
@@ -2937,8 +2937,8 @@ namespace Mobamon.Database
                     (
                         name: "Revive",
                         identifier: "Medicine",
-                        description: "A medicine that revives a fainted Pok‚mon. It restores half the Pok‚mon?s maximum HP.",
-                        id: "188"
+                        description: "A medicine that revives a fainted Pokémon. It restores half the Pokémon's maximum HP.",
+                        id: 188
                         )
             },
             {
@@ -2947,8 +2947,8 @@ namespace Mobamon.Database
                     (
                         name: "Rindo Berry",
                         identifier: "Berries",
-                        description: "Weakens a supereffective Grass-type attack against the holding Pok‚mon.",
-                        id: "266"
+                        description: "Weakens a supereffective Grass-type attack against the holding Pokémon.",
+                        id: 266
                         )
             },
             {
@@ -2957,8 +2957,8 @@ namespace Mobamon.Database
                     (
                         name: "Ring Target",
                         identifier: "Hold items",
-                        description: "Moves that would otherwise have no effect will land on the Pok‚mon that holds it.",
-                        id: "38"
+                        description: "Moves that would otherwise have no effect will land on the Pokémon that holds it.",
+                        id: 38
                         )
             },
             {
@@ -2968,7 +2968,7 @@ namespace Mobamon.Database
                         name: "Rock Gem",
                         identifier: "Hold items",
                         description: "A gem with an essence of rock. When held, it strengthens the power of a Rock-type move only once.",
-                        id: "93"
+                        id: 93
                         )
             },
             {
@@ -2977,8 +2977,8 @@ namespace Mobamon.Database
                     (
                         name: "Rock Incense",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is an exotic-smelling incense that boosts the power of Rock-type moves.",
-                        id: "63"
+                        description: "An item to be held by a Pokémon. It is an exotic-smelling incense that boosts the power of Rock-type moves.",
+                        id: 63
                         )
             },
             {
@@ -2988,7 +2988,7 @@ namespace Mobamon.Database
                         name: "Rocky Helmet",
                         identifier: "Hold items",
                         description: "If the holder of this item takes damage, the attacker will also be damaged upon contact.",
-                        id: "35"
+                        id: 35
                         )
             },
             {
@@ -2997,8 +2997,8 @@ namespace Mobamon.Database
                     (
                         name: "Root Fossil",
                         identifier: "General items",
-                        description: "A fossil of an ancient Pok‚mon that lived in the sea. It appears to be part of a plant root.",
-                        id: "343"
+                        description: "A fossil of an ancient Pokémon that lived in the sea. It appears to be part of a plant root.",
+                        id: 343
                         )
             },
             {
@@ -3007,8 +3007,8 @@ namespace Mobamon.Database
                     (
                         name: "Rose Incense",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is an exotic-smelling incense that boosts the power of Grass-type moves.",
-                        id: "65"
+                        description: "An item to be held by a Pokémon. It is an exotic-smelling incense that boosts the power of Grass-type moves.",
+                        id: 65
                         )
             },
             {
@@ -3017,8 +3017,8 @@ namespace Mobamon.Database
                     (
                         name: "Rowap Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon and a special attack lands, the attacker also takes damage.",
-                        id: "291"
+                        description: "If held by a Pokémon and a special attack lands, the attacker also takes damage.",
+                        id: 291
                         )
             },
             {
@@ -3027,8 +3027,8 @@ namespace Mobamon.Database
                     (
                         name: "Sacred Ash",
                         identifier: "Medicine",
-                        description: "It revives all fainted Pok‚mon. In doing so, it also fully restores their HP.",
-                        id: "191"
+                        description: "It revives all fainted Pokémon. In doing so, it also fully restores their HP.",
+                        id: 191
                         )
             },
             {
@@ -3037,8 +3037,8 @@ namespace Mobamon.Database
                     (
                         name: "Safari Ball",
                         identifier: "Pokeballs",
-                        description: "A special Pok‚ Ball that is used only in the Great Marsh. It is decorated in a camouflage pattern.",
-                        id: "143"
+                        description: "A special Poké Ball that is used only in the Great Marsh. It is decorated in a camouflage pattern.",
+                        id: 143
                         )
             },
             {
@@ -3047,8 +3047,8 @@ namespace Mobamon.Database
                     (
                         name: "Salac Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it raises its Speed stat in a pinch.",
-                        id: "282"
+                        description: "If held by a Pokémon, it raises its Speed stat in a pinch.",
+                        id: 282
                         )
             },
             {
@@ -3057,8 +3057,8 @@ namespace Mobamon.Database
                     (
                         name: "Scope Lens",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a lens that boosts the holder?s critical-hit ratio.",
-                        id: "8"
+                        description: "An item to be held by a Pokémon. It is a lens that boosts the holder's critical-hit ratio.",
+                        id: 8
                         )
             },
             {
@@ -3067,8 +3067,8 @@ namespace Mobamon.Database
                     (
                         name: "Sea Incense",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is incense with a curious aroma that boosts the power of Water-type moves.",
-                        id: "61"
+                        description: "An item to be held by a Pokémon. It is incense with a curious aroma that boosts the power of Water-type moves.",
+                        id: 61
                         )
             },
             {
@@ -3077,8 +3077,8 @@ namespace Mobamon.Database
                     (
                         name: "Sharp Beak",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a long, sharp beak that boosts the power of Flying-type moves.",
-                        id: "53"
+                        description: "An item to be held by a Pokémon. It is a long, sharp beak that boosts the power of Flying-type moves.",
+                        id: 53
                         )
             },
             {
@@ -3087,8 +3087,8 @@ namespace Mobamon.Database
                     (
                         name: "Shed Shell",
                         identifier: "Hold items",
-                        description: "A tough, discarded carapace to be held by a Pok‚mon. It enables the holder to switch with a waiting Pok‚mon in battle.",
-                        id: "29"
+                        description: "A tough, discarded carapace to be held by a Pokémon. It enables the holder to switch with a waiting Pokémon in battle.",
+                        id: 29
                         )
             },
             {
@@ -3097,8 +3097,8 @@ namespace Mobamon.Database
                     (
                         name: "Shell Bell",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. The holder?s HP is restored a little every time it inflicts damage.",
-                        id: "10"
+                        description: "An item to be held by a Pokémon. The holder's HP is restored a little every time it inflicts damage.",
+                        id: 10
                         )
             },
             {
@@ -3107,8 +3107,8 @@ namespace Mobamon.Database
                     (
                         name: "Shiny Stone",
                         identifier: "General items",
-                        description: "A peculiar stone that makes certain species of Pok‚mon evolve. It shines with a dazzling light.",
-                        id: "330"
+                        description: "A peculiar stone that makes certain species of Pokémon evolve. It shines with a dazzling light.",
+                        id: 330
                         )
             },
             {
@@ -3118,7 +3118,7 @@ namespace Mobamon.Database
                         name: "Shoal Salt",
                         identifier: "General items",
                         description: "Pure salt that can be discovered deep inside the Shoal Cave. A maniac will buy it for a high price.",
-                        id: "382"
+                        id: 382
                         )
             },
             {
@@ -3128,7 +3128,7 @@ namespace Mobamon.Database
                         name: "Shoal Shell",
                         identifier: "General items",
                         description: "A pretty seashell that can be found deep inside the Shoal Cave. A maniac will buy it for a high price.",
-                        id: "383"
+                        id: 383
                         )
             },
             {
@@ -3138,7 +3138,7 @@ namespace Mobamon.Database
                         name: "Shock Drive",
                         identifier: "Hold items",
                         description: "A cassette to be held by Genesect. It changes Techno Blast to an Electric-type move.",
-                        id: "136"
+                        id: 136
                         )
             },
             {
@@ -3147,8 +3147,8 @@ namespace Mobamon.Database
                     (
                         name: "Shuca Berry",
                         identifier: "Berries",
-                        description: "Weakens a supereffective Ground-type attack against the holding Pok‚mon.",
-                        id: "270"
+                        description: "Weakens a supereffective Ground-type attack against the holding Pokémon.",
+                        id: 270
                         )
             },
             {
@@ -3157,8 +3157,8 @@ namespace Mobamon.Database
                     (
                         name: "Silk Scarf",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a sumptuous scarf that boosts the power of Normal-type moves.",
-                        id: "60"
+                        description: "An item to be held by a Pokémon. It is a sumptuous scarf that boosts the power of Normal-type moves.",
+                        id: 60
                         )
             },
             {
@@ -3167,8 +3167,8 @@ namespace Mobamon.Database
                     (
                         name: "SilverPowder",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a shiny, silver powder that ups the power of Bug-type moves.",
-                        id: "44"
+                        description: "An item to be held by a Pokémon. It is a shiny, silver powder that ups the power of Bug-type moves.",
+                        id: 44
                         )
             },
             {
@@ -3177,8 +3177,8 @@ namespace Mobamon.Database
                     (
                         name: "Sitrus Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it heals the user?s HP a little.",
-                        id: "237"
+                        description: "If held by a Pokémon, it heals the user's HP a little.",
+                        id: 237
                         )
             },
             {
@@ -3187,8 +3187,8 @@ namespace Mobamon.Database
                     (
                         name: "Skull Fossil",
                         identifier: "General items",
-                        description: "A fossil from a prehistoric Pok‚mon that lived on the land. It appears to be part of a head.",
-                        id: "349"
+                        description: "A fossil from a prehistoric Pokémon that lived on the land. It appears to be part of a head.",
+                        id: 349
                         )
             },
             {
@@ -3198,7 +3198,7 @@ namespace Mobamon.Database
                         name: "Sky Plate",
                         identifier: "Hold items",
                         description: "Increases power of Flying-type moves. Changes Arceus' type to Flying.",
-                        id: "74"
+                        id: 74
                         )
             },
             {
@@ -3207,8 +3207,8 @@ namespace Mobamon.Database
                     (
                         name: "Smoke Ball",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It enables the holder to flee from any wild Pok‚mon without fail.",
-                        id: "6"
+                        description: "An item to be held by a Pokémon. It enables the holder to flee from any wild Pokémon without fail.",
+                        id: 6
                         )
             },
             {
@@ -3217,8 +3217,8 @@ namespace Mobamon.Database
                     (
                         name: "Smooth Rock",
                         identifier: "Hold items",
-                        description: "A Pok‚mon held item that extends the duration of the move Sandstorm used by the holder.",
-                        id: "25"
+                        description: "A Pokémon held item that extends the duration of the move Sandstorm used by the holder.",
+                        id: 25
                         )
             },
             {
@@ -3227,8 +3227,8 @@ namespace Mobamon.Database
                     (
                         name: "Soda Pop",
                         identifier: "Medicine",
-                        description: "A fizzy soda drink. It restores the HP of one POK‚MON by 60 points.",
-                        id: "171"
+                        description: "A fizzy soda drink. It restores the HP of one POKÉMON by 60 points.",
+                        id: 171
                         )
             },
             {
@@ -3237,8 +3237,8 @@ namespace Mobamon.Database
                     (
                         name: "Soft Sand",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a loose, silky sand that boosts the power of Ground-type moves.",
-                        id: "46"
+                        description: "An item to be held by a Pokémon. It is a loose, silky sand that boosts the power of Ground-type moves.",
+                        id: 46
                         )
             },
             {
@@ -3247,8 +3247,8 @@ namespace Mobamon.Database
                     (
                         name: "Soothe Bell",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a bell with a comforting chime that calms the holder and makes it friendly.",
-                        id: "110"
+                        description: "An item to be held by a Pokémon. It is a bell with a comforting chime that calms the holder and makes it friendly.",
+                        id: 110
                         )
             },
             {
@@ -3258,7 +3258,7 @@ namespace Mobamon.Database
                         name: "Soul Dew",
                         identifier: "Hold items",
                         description: "A wondrous orb to be held by LATIOS or LATIAS. It raises both the Sp. Atk and Sp. Def stats.",
-                        id: "125"
+                        id: 125
                         )
             },
             {
@@ -3267,8 +3267,8 @@ namespace Mobamon.Database
                     (
                         name: "Spell Tag",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a sinister, eerie tag that boosts the power of Ghost-type moves.",
-                        id: "56"
+                        description: "An item to be held by a Pokémon. It is a sinister, eerie tag that boosts the power of Ghost-type moves.",
+                        id: 56
                         )
             },
             {
@@ -3278,7 +3278,7 @@ namespace Mobamon.Database
                         name: "Spelon Berry",
                         identifier: "Berries",
                         description: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-                        id: "258"
+                        id: 258
                         )
             },
             {
@@ -3288,7 +3288,7 @@ namespace Mobamon.Database
                         name: "Splash Plate",
                         identifier: "Hold items",
                         description: "Increases power of Water-type moves. Changes Arceus' type to Water.",
-                        id: "67"
+                        id: 67
                         )
             },
             {
@@ -3298,7 +3298,7 @@ namespace Mobamon.Database
                         name: "Spooky Plate",
                         identifier: "Hold items",
                         description: "Increases power of Ghost-type moves. Changes Arceus' type to Ghost.",
-                        id: "78"
+                        id: 78
                         )
             },
             {
@@ -3307,8 +3307,8 @@ namespace Mobamon.Database
                     (
                         name: "Sport Ball",
                         identifier: "Pokeballs",
-                        description: "A special Pok‚ Ball for the Bug-Catching Contest.",
-                        id: "145"
+                        description: "A special Poké Ball for the Bug-Catching Contest.",
+                        id: 145
                         )
             },
             {
@@ -3318,7 +3318,7 @@ namespace Mobamon.Database
                         name: "Stable Mulch",
                         identifier: "General items",
                         description: "A fertilizer to be spread on soft soil in regions where Berries are grown. A maniac will buy it for a high price.",
-                        id: "398"
+                        id: 398
                         )
             },
             {
@@ -3328,7 +3328,7 @@ namespace Mobamon.Database
                         name: "Star Piece",
                         identifier: "General items",
                         description: "A shard of a pretty gem that sparkles in a red color. It can be sold at a high price to shops.",
-                        id: "367"
+                        id: 367
                         )
             },
             {
@@ -3338,7 +3338,7 @@ namespace Mobamon.Database
                         name: "Stardust",
                         identifier: "General items",
                         description: "Lovely, red-colored sand with a loose, silky feel. It can be sold at a high price to shops.",
-                        id: "366"
+                        id: 366
                         )
             },
             {
@@ -3347,8 +3347,8 @@ namespace Mobamon.Database
                     (
                         name: "Starf Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it sharply raises one of its stats in a pinch.",
-                        id: "286"
+                        description: "If held by a Pokémon, it sharply raises one of its stats in a pinch.",
+                        id: 286
                         )
             },
             {
@@ -3358,7 +3358,7 @@ namespace Mobamon.Database
                         name: "Steel Gem",
                         identifier: "Hold items",
                         description: "A gem with an essence of steel. When held, it strengthens the power of a Steel-type move only once.",
-                        id: "96"
+                        id: 96
                         )
             },
             {
@@ -3367,8 +3367,8 @@ namespace Mobamon.Database
                     (
                         name: "Stick",
                         identifier: "Hold items",
-                        description: "An item to be held by FARFETCH?D. It is a very long and stiff stalk of leek that boosts the critical-hit ratio.",
-                        id: "132"
+                        description: "An item to be held by FARFETCH'D. It is a very long and stiff stalk of leek that boosts the critical-hit ratio.",
+                        id: 132
                         )
             },
             {
@@ -3378,7 +3378,7 @@ namespace Mobamon.Database
                         name: "Sticky Barb",
                         identifier: "Hold items",
                         description: "A held item that damages the holder on every turn. It may latch on to foes and allies that touch the holder.",
-                        id: "121"
+                        id: 121
                         )
             },
             {
@@ -3388,7 +3388,7 @@ namespace Mobamon.Database
                         name: "Stone Plate",
                         identifier: "Hold items",
                         description: "Increases power of Rock-type moves. Changes Arceus' type to Rock.",
-                        id: "77"
+                        id: 77
                         )
             },
             {
@@ -3397,8 +3397,8 @@ namespace Mobamon.Database
                     (
                         name: "Sun Stone",
                         identifier: "General items",
-                        description: "A peculiar stone that makes certain species of POK‚MON evolve. It is as red as the sun.",
-                        id: "324"
+                        description: "A peculiar stone that makes certain species of POKÉMON evolve. It is as red as the sun.",
+                        id: 324
                         )
             },
             {
@@ -3407,8 +3407,8 @@ namespace Mobamon.Database
                     (
                         name: "Super Potion",
                         identifier: "Medicine",
-                        description: "A spray-type medicine for wounds. It restores the HP of one Pok‚mon by 50 points.",
-                        id: "169"
+                        description: "A spray-type medicine for wounds. It restores the HP of one Pokémon by 50 points.",
+                        id: 169
                         )
             },
             {
@@ -3417,8 +3417,8 @@ namespace Mobamon.Database
                     (
                         name: "Super Repel",
                         identifier: "General items",
-                        description: "An item that prevents weak wild Pok‚mon from appearing for 200 steps after its use.",
-                        id: "357"
+                        description: "An item that prevents weak wild Pokémon from appearing for 200 steps after its use.",
+                        id: 357
                         )
             },
             {
@@ -3427,8 +3427,8 @@ namespace Mobamon.Database
                     (
                         name: "Sweet Heart",
                         identifier: "Medicine",
-                        description: "Very sweet chocolate. It restores the HP of one Pok‚mon by only 20 points.",
-                        id: "177"
+                        description: "Very sweet chocolate. It restores the HP of one Pokémon by only 20 points.",
+                        id: 177
                         )
             },
             {
@@ -3437,8 +3437,8 @@ namespace Mobamon.Database
                     (
                         name: "Swift Wing",
                         identifier: "Medicine",
-                        description: "An item for use on a Pok‚mon. It slightly increases the base Speed stat of a single Pok‚mon.",
-                        id: "210"
+                        description: "An item for use on a Pokémon. It slightly increases the base Speed stat of a single Pokémon.",
+                        id: 210
                         )
             },
             {
@@ -3448,7 +3448,7 @@ namespace Mobamon.Database
                         name: "TM01",
                         identifier: "Machines",
                         description: "Teaches the move Mega Punch/DynamicPunch/Focus Punch/Hone Claws.",
-                        id: "226"
+                        id: 226
                         )
             },
             {
@@ -3458,7 +3458,7 @@ namespace Mobamon.Database
                         name: "TM02",
                         identifier: "Machines",
                         description: "Teaches the move Razor Wind/Headbutt/Dragon Claw.",
-                        id: "225"
+                        id: 225
                         )
             },
             {
@@ -3468,7 +3468,7 @@ namespace Mobamon.Database
                         name: "TM03",
                         identifier: "Machines",
                         description: "Teaches the move Swords Dance/Curse/Water Pulse/Psyshock.",
-                        id: "221"
+                        id: 221
                         )
             },
             {
@@ -3478,7 +3478,7 @@ namespace Mobamon.Database
                         name: "TM04",
                         identifier: "Machines",
                         description: "Teaches the move Whirlwind/Rollout/Calm Mind.",
-                        id: "221"
+                        id: 221
                         )
             },
             {
@@ -3488,7 +3488,7 @@ namespace Mobamon.Database
                         name: "TM05",
                         identifier: "Machines",
                         description: "Teaches the move Mega Kick/Roar.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -3498,7 +3498,7 @@ namespace Mobamon.Database
                         name: "TM06",
                         identifier: "Machines",
                         description: "Teaches the move Toxic.",
-                        id: "218"
+                        id: 218
                         )
             },
             {
@@ -3508,7 +3508,7 @@ namespace Mobamon.Database
                         name: "TM07",
                         identifier: "Machines",
                         description: "Teaches the move Horn Drill/Zap Cannon/Hail.",
-                        id: "216"
+                        id: 216
                         )
             },
             {
@@ -3518,7 +3518,7 @@ namespace Mobamon.Database
                         name: "TM08",
                         identifier: "Machines",
                         description: "Teaches the move Body Slam/Rock Smash/Bulk Up.",
-                        id: "217"
+                        id: 217
                         )
             },
             {
@@ -3528,7 +3528,7 @@ namespace Mobamon.Database
                         name: "TM09",
                         identifier: "Machines",
                         description: "Teaches the move Take Down/Psych Up/Bullet Seed/Venoshock.",
-                        id: "218"
+                        id: 218
                         )
             },
             {
@@ -3538,7 +3538,7 @@ namespace Mobamon.Database
                         name: "TM10",
                         identifier: "Machines",
                         description: "Teaches the move Double-Edge/Hidden Power.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -3548,7 +3548,7 @@ namespace Mobamon.Database
                         name: "TM11",
                         identifier: "Machines",
                         description: "Teaches the move BubbleBeam/Sunny Day.",
-                        id: "212"
+                        id: 212
                         )
             },
             {
@@ -3558,7 +3558,7 @@ namespace Mobamon.Database
                         name: "TM12",
                         identifier: "Machines",
                         description: "Teaches the move Water Gun/Sweet Scent/Taunt.",
-                        id: "226"
+                        id: 226
                         )
             },
             {
@@ -3568,7 +3568,7 @@ namespace Mobamon.Database
                         name: "TM13",
                         identifier: "Machines",
                         description: "Teaches the move Snore/Ice Beam.",
-                        id: "216"
+                        id: 216
                         )
             },
             {
@@ -3578,7 +3578,7 @@ namespace Mobamon.Database
                         name: "TM14",
                         identifier: "Machines",
                         description: "Teaches the move Blizzard.",
-                        id: "216"
+                        id: 216
                         )
             },
             {
@@ -3588,7 +3588,7 @@ namespace Mobamon.Database
                         name: "TM15",
                         identifier: "Machines",
                         description: "Teaches the move Hyper Beam.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -3598,7 +3598,7 @@ namespace Mobamon.Database
                         name: "TM16",
                         identifier: "Machines",
                         description: "Teaches the move Pay Day/Icy Wind/Light Screen.",
-                        id: "221"
+                        id: 221
                         )
             },
             {
@@ -3608,7 +3608,7 @@ namespace Mobamon.Database
                         name: "TM17",
                         identifier: "Machines",
                         description: "Teaches the move Submission/Protect.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -3618,7 +3618,7 @@ namespace Mobamon.Database
                         name: "TM18",
                         identifier: "Machines",
                         description: "Teaches the move Counter/Rain Dance.",
-                        id: "213"
+                        id: 213
                         )
             },
             {
@@ -3628,7 +3628,7 @@ namespace Mobamon.Database
                         name: "TM19",
                         identifier: "Machines",
                         description: "Teaches the move Seismic Toss/Giga Drain/Telekinesis/Roost.",
-                        id: "221"
+                        id: 221
                         )
             },
             {
@@ -3638,7 +3638,7 @@ namespace Mobamon.Database
                         name: "TM20",
                         identifier: "Machines",
                         description: "Teaches the move Rage/Endure/Safeguard.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -3648,7 +3648,7 @@ namespace Mobamon.Database
                         name: "TM21",
                         identifier: "Machines",
                         description: "Teaches the move Mega Drain/Frustration.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -3658,7 +3658,7 @@ namespace Mobamon.Database
                         name: "TM22",
                         identifier: "Machines",
                         description: "Teaches the move SolarBeam.",
-                        id: "215"
+                        id: 215
                         )
             },
             {
@@ -3668,7 +3668,7 @@ namespace Mobamon.Database
                         name: "TM23",
                         identifier: "Machines",
                         description: "Teaches the move Dragon Rage/Iron Tail/Smack Down.",
-                        id: "223"
+                        id: 223
                         )
             },
             {
@@ -3678,7 +3678,7 @@ namespace Mobamon.Database
                         name: "TM24",
                         identifier: "Machines",
                         description: "Teaches the move Thunderbolt/DragonBreath.",
-                        id: "214"
+                        id: 214
                         )
             },
             {
@@ -3688,7 +3688,7 @@ namespace Mobamon.Database
                         name: "TM25",
                         identifier: "Machines",
                         description: "Teaches the move Thunder.",
-                        id: "214"
+                        id: 214
                         )
             },
             {
@@ -3698,7 +3698,7 @@ namespace Mobamon.Database
                         name: "TM26",
                         identifier: "Machines",
                         description: "Teaches the move Earthquake.",
-                        id: "219"
+                        id: 219
                         )
             },
             {
@@ -3708,7 +3708,7 @@ namespace Mobamon.Database
                         name: "TM27",
                         identifier: "Machines",
                         description: "Teaches the move Fissure/Return.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -3718,7 +3718,7 @@ namespace Mobamon.Database
                         name: "TM28",
                         identifier: "Machines",
                         description: "Teaches the move Dig.",
-                        id: "219"
+                        id: 219
                         )
             },
             {
@@ -3728,7 +3728,7 @@ namespace Mobamon.Database
                         name: "TM29",
                         identifier: "Machines",
                         description: "Teaches the move Psychic.",
-                        id: "221"
+                        id: 221
                         )
             },
             {
@@ -3738,7 +3738,7 @@ namespace Mobamon.Database
                         name: "TM30",
                         identifier: "Machines",
                         description: "Teaches the move Teleport/Shadow Ball.",
-                        id: "224"
+                        id: 224
                         )
             },
             {
@@ -3748,7 +3748,7 @@ namespace Mobamon.Database
                         name: "TM31",
                         identifier: "Machines",
                         description: "Teaches the move Mimic/Mud-Slap/Brick Break.",
-                        id: "217"
+                        id: 217
                         )
             },
             {
@@ -3758,7 +3758,7 @@ namespace Mobamon.Database
                         name: "TM32",
                         identifier: "Machines",
                         description: "Teaches the move Double Team.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -3768,7 +3768,7 @@ namespace Mobamon.Database
                         name: "TM33",
                         identifier: "Machines",
                         description: "Teaches the move Ice Punch/Reflect.",
-                        id: "221"
+                        id: 221
                         )
             },
             {
@@ -3778,7 +3778,7 @@ namespace Mobamon.Database
                         name: "TM34",
                         identifier: "Machines",
                         description: "Teaches the move Bide/Swagger/Shock Wave/Sludge Wave.",
-                        id: "218"
+                        id: 218
                         )
             },
             {
@@ -3788,7 +3788,7 @@ namespace Mobamon.Database
                         name: "TM35",
                         identifier: "Machines",
                         description: "Teaches the move Metronome/Sleep Talk/Flamethrower.",
-                        id: "212"
+                        id: 212
                         )
             },
             {
@@ -3798,7 +3798,7 @@ namespace Mobamon.Database
                         name: "TM36",
                         identifier: "Machines",
                         description: "Teaches the move Selfdestruct/Sludge Bomb.",
-                        id: "218"
+                        id: 218
                         )
             },
             {
@@ -3808,7 +3808,7 @@ namespace Mobamon.Database
                         name: "TM37",
                         identifier: "Machines",
                         description: "Teaches the move Egg Bomb/Sandstorm.",
-                        id: "223"
+                        id: 223
                         )
             },
             {
@@ -3818,7 +3818,7 @@ namespace Mobamon.Database
                         name: "TM38",
                         identifier: "Machines",
                         description: "Teaches the move Fire Blast.",
-                        id: "212"
+                        id: 212
                         )
             },
             {
@@ -3828,7 +3828,7 @@ namespace Mobamon.Database
                         name: "TM39",
                         identifier: "Machines",
                         description: "Teaches the move Swift/Rock Tomb.",
-                        id: "223"
+                        id: 223
                         )
             },
             {
@@ -3838,7 +3838,7 @@ namespace Mobamon.Database
                         name: "TM40",
                         identifier: "Machines",
                         description: "Teaches the move Skull Bash/Defense Curl/Aerial Ace.",
-                        id: "220"
+                        id: 220
                         )
             },
             {
@@ -3848,7 +3848,7 @@ namespace Mobamon.Database
                         name: "TM41",
                         identifier: "Machines",
                         description: "Teaches the move Softboiled/ThunderPunch/Torment.",
-                        id: "226"
+                        id: 226
                         )
             },
             {
@@ -3858,7 +3858,7 @@ namespace Mobamon.Database
                         name: "TM42",
                         identifier: "Machines",
                         description: "Teaches the move Dream Eater/Facade.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -3868,7 +3868,7 @@ namespace Mobamon.Database
                         name: "TM43",
                         identifier: "Machines",
                         description: "Teaches the move Sky Attack/Detect/Secret Power/Flame Charge.",
-                        id: "212"
+                        id: 212
                         )
             },
             {
@@ -3878,7 +3878,7 @@ namespace Mobamon.Database
                         name: "TM44",
                         identifier: "Machines",
                         description: "Teaches the move Rest.",
-                        id: "221"
+                        id: 221
                         )
             },
             {
@@ -3888,7 +3888,7 @@ namespace Mobamon.Database
                         name: "TM45",
                         identifier: "Machines",
                         description: "Teaches the move Thunder Wave/Attract.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -3898,7 +3898,7 @@ namespace Mobamon.Database
                         name: "TM46",
                         identifier: "Machines",
                         description: "Teaches the move Psywave/Thief.",
-                        id: "226"
+                        id: 226
                         )
             },
             {
@@ -3908,7 +3908,7 @@ namespace Mobamon.Database
                         name: "TM47",
                         identifier: "Machines",
                         description: "Teaches the move Explosion/Steel Wing/Low Sweep.",
-                        id: "217"
+                        id: 217
                         )
             },
             {
@@ -3918,7 +3918,7 @@ namespace Mobamon.Database
                         name: "TM48",
                         identifier: "Machines",
                         description: "Teaches the move Rock Slide/Fire Punch/Skill Swap/Round.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -3928,7 +3928,7 @@ namespace Mobamon.Database
                         name: "TM49",
                         identifier: "Machines",
                         description: "Teaches the move Tri Attack/Fury Cutter/Snatch/Echoed Voice.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -3938,7 +3938,7 @@ namespace Mobamon.Database
                         name: "TM50",
                         identifier: "Machines",
                         description: "Teaches the move Substitute/Nightmare/Overheat.",
-                        id: "212"
+                        id: 212
                         )
             },
             {
@@ -3948,7 +3948,7 @@ namespace Mobamon.Database
                         name: "TM51",
                         identifier: "Machines",
                         description: "Teaches the move Roost/Ally Switch/Steel Wing.",
-                        id: "221"
+                        id: 221
                         )
             },
             {
@@ -3958,7 +3958,7 @@ namespace Mobamon.Database
                         name: "TM52",
                         identifier: "Machines",
                         description: "Teaches the move Focus Blast.",
-                        id: "217"
+                        id: 217
                         )
             },
             {
@@ -3968,7 +3968,7 @@ namespace Mobamon.Database
                         name: "TM53",
                         identifier: "Machines",
                         description: "Teaches the move Energy Ball.",
-                        id: "215"
+                        id: 215
                         )
             },
             {
@@ -3978,7 +3978,7 @@ namespace Mobamon.Database
                         name: "TM54",
                         identifier: "Machines",
                         description: "Teaches the move False Swipe.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -3988,7 +3988,7 @@ namespace Mobamon.Database
                         name: "TM55",
                         identifier: "Machines",
                         description: "Teaches the move Brine/Scald.",
-                        id: "213"
+                        id: 213
                         )
             },
             {
@@ -3998,7 +3998,7 @@ namespace Mobamon.Database
                         name: "TM56",
                         identifier: "Machines",
                         description: "Teaches the move Fling.",
-                        id: "226"
+                        id: 226
                         )
             },
             {
@@ -4008,7 +4008,7 @@ namespace Mobamon.Database
                         name: "TM57",
                         identifier: "Machines",
                         description: "Teaches the move Charge Beam.",
-                        id: "214"
+                        id: 214
                         )
             },
             {
@@ -4018,7 +4018,7 @@ namespace Mobamon.Database
                         name: "TM58",
                         identifier: "Machines",
                         description: "Teaches the move Endure/Sky Drop.",
-                        id: "220"
+                        id: 220
                         )
             },
             {
@@ -4028,7 +4028,7 @@ namespace Mobamon.Database
                         name: "TM59",
                         identifier: "Machines",
                         description: "Teaches the move Dragon Pulse/Incinerate.",
-                        id: "212"
+                        id: 212
                         )
             },
             {
@@ -4038,7 +4038,7 @@ namespace Mobamon.Database
                         name: "TM60",
                         identifier: "Machines",
                         description: "Teaches the move Drain Punch/Quash.",
-                        id: "226"
+                        id: 226
                         )
             },
             {
@@ -4048,7 +4048,7 @@ namespace Mobamon.Database
                         name: "TM61",
                         identifier: "Machines",
                         description: "Teaches the move Will-O-Wisp.",
-                        id: "212"
+                        id: 212
                         )
             },
             {
@@ -4058,7 +4058,7 @@ namespace Mobamon.Database
                         name: "TM62",
                         identifier: "Machines",
                         description: "Teaches the move Silver Wind/Acrobatics.",
-                        id: "220"
+                        id: 220
                         )
             },
             {
@@ -4068,7 +4068,7 @@ namespace Mobamon.Database
                         name: "TM63",
                         identifier: "Machines",
                         description: "Teaches the move Embargo.",
-                        id: "226"
+                        id: 226
                         )
             },
             {
@@ -4078,7 +4078,7 @@ namespace Mobamon.Database
                         name: "TM64",
                         identifier: "Machines",
                         description: "Teaches the move Explosion.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -4088,7 +4088,7 @@ namespace Mobamon.Database
                         name: "TM65",
                         identifier: "Machines",
                         description: "Teaches the move Shadow Claw.",
-                        id: "224"
+                        id: 224
                         )
             },
             {
@@ -4098,7 +4098,7 @@ namespace Mobamon.Database
                         name: "TM66",
                         identifier: "Machines",
                         description: "Teaches the move Payback.",
-                        id: "226"
+                        id: 226
                         )
             },
             {
@@ -4108,7 +4108,7 @@ namespace Mobamon.Database
                         name: "TM67",
                         identifier: "Machines",
                         description: "Teaches the move Recycle/Retaliate.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -4118,7 +4118,7 @@ namespace Mobamon.Database
                         name: "TM68",
                         identifier: "Machines",
                         description: "Teaches the move Giga Impact.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -4128,7 +4128,7 @@ namespace Mobamon.Database
                         name: "TM69",
                         identifier: "Machines",
                         description: "Teaches the move Rock Polish.",
-                        id: "223"
+                        id: 223
                         )
             },
             {
@@ -4138,7 +4138,7 @@ namespace Mobamon.Database
                         name: "TM70",
                         identifier: "Machines",
                         description: "Teaches the move Flash.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -4148,7 +4148,7 @@ namespace Mobamon.Database
                         name: "TM71",
                         identifier: "Machines",
                         description: "Teaches the move Stone Edge.",
-                        id: "223"
+                        id: 223
                         )
             },
             {
@@ -4158,7 +4158,7 @@ namespace Mobamon.Database
                         name: "TM72",
                         identifier: "Machines",
                         description: "Teaches the move Avalanche/Volt Switch.",
-                        id: "214"
+                        id: 214
                         )
             },
             {
@@ -4168,7 +4168,7 @@ namespace Mobamon.Database
                         name: "TM73",
                         identifier: "Machines",
                         description: "Teaches the move Thunder Wave.",
-                        id: "214"
+                        id: 214
                         )
             },
             {
@@ -4178,7 +4178,7 @@ namespace Mobamon.Database
                         name: "TM74",
                         identifier: "Machines",
                         description: "Teaches the move Gyro Ball.",
-                        id: "227"
+                        id: 227
                         )
             },
             {
@@ -4188,7 +4188,7 @@ namespace Mobamon.Database
                         name: "TM75",
                         identifier: "Machines",
                         description: "Teaches the move Swords Dance.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -4198,7 +4198,7 @@ namespace Mobamon.Database
                         name: "TM76",
                         identifier: "Machines",
                         description: "Teaches the move Stealth Rock/Struggle Bug.",
-                        id: "222"
+                        id: 222
                         )
             },
             {
@@ -4208,7 +4208,7 @@ namespace Mobamon.Database
                         name: "TM77",
                         identifier: "Machines",
                         description: "Teaches the move Psych Up.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -4218,7 +4218,7 @@ namespace Mobamon.Database
                         name: "TM78",
                         identifier: "Machines",
                         description: "Teaches the move Captivate/Bulldoze.",
-                        id: "219"
+                        id: 219
                         )
             },
             {
@@ -4228,7 +4228,7 @@ namespace Mobamon.Database
                         name: "TM79",
                         identifier: "Machines",
                         description: "Teaches the move Dark Pulse/Frost Breath.",
-                        id: "216"
+                        id: 216
                         )
             },
             {
@@ -4238,7 +4238,7 @@ namespace Mobamon.Database
                         name: "TM80",
                         identifier: "Machines",
                         description: "Teaches the move Rock Slide.",
-                        id: "223"
+                        id: 223
                         )
             },
             {
@@ -4248,7 +4248,7 @@ namespace Mobamon.Database
                         name: "TM81",
                         identifier: "Machines",
                         description: "Teaches the move X-Scissor.",
-                        id: "222"
+                        id: 222
                         )
             },
             {
@@ -4258,7 +4258,7 @@ namespace Mobamon.Database
                         name: "TM82",
                         identifier: "Machines",
                         description: "Teaches the move Sleep Talk/Dragon Tail.",
-                        id: "225"
+                        id: 225
                         )
             },
             {
@@ -4268,7 +4268,7 @@ namespace Mobamon.Database
                         name: "TM83",
                         identifier: "Machines",
                         description: "Teaches the move Natural Gift/Work Up/Infestation.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -4278,7 +4278,7 @@ namespace Mobamon.Database
                         name: "TM84",
                         identifier: "Machines",
                         description: "Teaches the move Poison Jab.",
-                        id: "218"
+                        id: 218
                         )
             },
             {
@@ -4288,7 +4288,7 @@ namespace Mobamon.Database
                         name: "TM85",
                         identifier: "Machines",
                         description: "Teaches the move Dream Eater.",
-                        id: "221"
+                        id: 221
                         )
             },
             {
@@ -4298,7 +4298,7 @@ namespace Mobamon.Database
                         name: "TM86",
                         identifier: "Machines",
                         description: "Teaches the move Grass Knot.",
-                        id: "215"
+                        id: 215
                         )
             },
             {
@@ -4308,7 +4308,7 @@ namespace Mobamon.Database
                         name: "TM87",
                         identifier: "Machines",
                         description: "Teaches the move Swagger.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -4318,7 +4318,7 @@ namespace Mobamon.Database
                         name: "TM88",
                         identifier: "Machines",
                         description: "Teaches the move Pluck/Sleep Talk.",
-                        id: "220"
+                        id: 220
                         )
             },
             {
@@ -4328,7 +4328,7 @@ namespace Mobamon.Database
                         name: "TM89",
                         identifier: "Machines",
                         description: "Teaches the move U-turn.",
-                        id: "222"
+                        id: 222
                         )
             },
             {
@@ -4338,7 +4338,7 @@ namespace Mobamon.Database
                         name: "TM90",
                         identifier: "Machines",
                         description: "Teaches the move Substitute.",
-                        id: "211"
+                        id: 211
                         )
             },
             {
@@ -4348,7 +4348,7 @@ namespace Mobamon.Database
                         name: "TM91",
                         identifier: "Machines",
                         description: "Teaches the move Flash Cannon.",
-                        id: "227"
+                        id: 227
                         )
             },
             {
@@ -4358,7 +4358,7 @@ namespace Mobamon.Database
                         name: "TM92",
                         identifier: "Machines",
                         description: "Teaches the move Trick Room.",
-                        id: "221"
+                        id: 221
                         )
             },
             {
@@ -4368,7 +4368,7 @@ namespace Mobamon.Database
                         name: "TM93",
                         identifier: "Machines",
                         description: "Teaches the move Wild Charge.",
-                        id: "214"
+                        id: 214
                         )
             },
             {
@@ -4378,7 +4378,7 @@ namespace Mobamon.Database
                         name: "TM94",
                         identifier: "Machines",
                         description: "Teaches the move Rock Smash.",
-                        id: "217"
+                        id: 217
                         )
             },
             {
@@ -4388,7 +4388,7 @@ namespace Mobamon.Database
                         name: "TM95",
                         identifier: "Machines",
                         description: "Teaches the move Snarl.",
-                        id: "226"
+                        id: 226
                         )
             },
             {
@@ -4397,8 +4397,8 @@ namespace Mobamon.Database
                     (
                         name: "Tamato Berry",
                         identifier: "Berries",
-                        description: "Using it on a Pok‚mon makes it more friendly, but it also lowers its base Speed stat.",
-                        id: "248"
+                        description: "Using it on a Pokémon makes it more friendly, but it also lowers its base Speed stat.",
+                        id: 248
                         )
             },
             {
@@ -4407,8 +4407,8 @@ namespace Mobamon.Database
                     (
                         name: "Tanga Berry",
                         identifier: "Berries",
-                        description: "Weakens a supereffective Bug-type attack against the holding Pok‚mon.",
-                        id: "273"
+                        description: "Weakens a supereffective Bug-type attack against the holding Pokémon.",
+                        id: 273
                         )
             },
             {
@@ -4418,7 +4418,7 @@ namespace Mobamon.Database
                         name: "Thick Club",
                         identifier: "Hold items",
                         description: "An item to be held by CUBONE or MAROWAK. It is a hard bone of some sort that boosts the Attack stat.",
-                        id: "131"
+                        id: 131
                         )
             },
             {
@@ -4427,8 +4427,8 @@ namespace Mobamon.Database
                     (
                         name: "Thunderstone",
                         identifier: "General items",
-                        description: "A peculiar stone that makes certain species of POK‚MON evolve. It has a thunderbolt pattern.",
-                        id: "327"
+                        description: "A peculiar stone that makes certain species of POKÉMON evolve. It has a thunderbolt pattern.",
+                        id: 327
                         )
             },
             {
@@ -4438,7 +4438,7 @@ namespace Mobamon.Database
                         name: "Timer Ball",
                         identifier: "Pokeballs",
                         description: "A somewhat different BALL that becomes progressively better the more turns there are in a battle.",
-                        id: "150"
+                        id: 150
                         )
             },
             {
@@ -4448,7 +4448,7 @@ namespace Mobamon.Database
                         name: "TinyMushroom",
                         identifier: "General items",
                         description: "A small and rare mushroom. It is sought after by collectors.",
-                        id: "362"
+                        id: 362
                         )
             },
             {
@@ -4457,8 +4457,8 @@ namespace Mobamon.Database
                     (
                         name: "Toxic Orb",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a bizarre orb that badly poisons the holder in battle.",
-                        id: "117"
+                        description: "An item to be held by a Pokémon. It is a bizarre orb that badly poisons the holder in battle.",
+                        id: 117
                         )
             },
             {
@@ -4468,7 +4468,7 @@ namespace Mobamon.Database
                         name: "Toxic Plate",
                         identifier: "Hold items",
                         description: "Increases power of Poison-type moves. Changes Arceus' type to Poison.",
-                        id: "72"
+                        id: 72
                         )
             },
             {
@@ -4477,8 +4477,8 @@ namespace Mobamon.Database
                     (
                         name: "TwistedSpoon",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a spoon imbued with telekinetic power that boosts Psychic-type moves.",
-                        id: "57"
+                        description: "An item to be held by a Pokémon. It is a spoon imbued with telekinetic power that boosts Psychic-type moves.",
+                        id: 57
                         )
             },
             {
@@ -4487,8 +4487,8 @@ namespace Mobamon.Database
                     (
                         name: "Ultra Ball",
                         identifier: "Pokeballs",
-                        description: "An ultra-performance Ball that provides a higher Pok‚mon catch rate than a Great Ball.",
-                        id: "140"
+                        description: "An ultra-performance Ball that provides a higher Pokémon catch rate than a Great Ball.",
+                        id: 140
                         )
             },
             {
@@ -4498,7 +4498,7 @@ namespace Mobamon.Database
                         name: "Up-Grade",
                         identifier: "General items",
                         description: "A transparent device filled with all sorts of data. It was produced by Silph Co.",
-                        id: "335"
+                        id: 335
                         )
             },
             {
@@ -4507,8 +4507,8 @@ namespace Mobamon.Database
                     (
                         name: "Wacan Berry",
                         identifier: "Berries",
-                        description: "Weakens a supereffective Electric-type attack against the holding Pok‚mon.",
-                        id: "265"
+                        description: "Weakens a supereffective Electric-type attack against the holding Pokémon.",
+                        id: 265
                         )
             },
             {
@@ -4518,7 +4518,7 @@ namespace Mobamon.Database
                         name: "Water Gem",
                         identifier: "Hold items",
                         description: "A gem with an essence of water. When held, it strengthens the power of a Water-type move only once.",
-                        id: "83"
+                        id: 83
                         )
             },
             {
@@ -4527,8 +4527,8 @@ namespace Mobamon.Database
                     (
                         name: "Water Stone",
                         identifier: "General items",
-                        description: "A peculiar stone that makes certain species of Pok‚mon evolve. It is a clear, light blue.",
-                        id: "328"
+                        description: "A peculiar stone that makes certain species of Pokémon evolve. It is a clear, light blue.",
+                        id: 328
                         )
             },
             {
@@ -4538,7 +4538,7 @@ namespace Mobamon.Database
                         name: "Watmel Berry",
                         identifier: "Berries",
                         description: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-                        id: "260"
+                        id: 260
                         )
             },
             {
@@ -4547,8 +4547,8 @@ namespace Mobamon.Database
                     (
                         name: "Wave Incense",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is incense with a curious aroma that boosts the power of Water-type moves.",
-                        id: "64"
+                        description: "An item to be held by a Pokémon. It is incense with a curious aroma that boosts the power of Water-type moves.",
+                        id: 64
                         )
             },
             {
@@ -4558,7 +4558,7 @@ namespace Mobamon.Database
                         name: "Wepear Berry",
                         identifier: "Berries",
                         description: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-                        id: "252"
+                        id: 252
                         )
             },
             {
@@ -4568,7 +4568,7 @@ namespace Mobamon.Database
                         name: "White Flute",
                         identifier: "General items",
                         description: "A toy flute made from white glass. A maniac will buy it for a high price.",
-                        id: "356"
+                        id: 356
                         )
             },
             {
@@ -4577,8 +4577,8 @@ namespace Mobamon.Database
                     (
                         name: "White Herb",
                         identifier: "Hold items",
-                        description: "An item to be held by a POK‚MON. It restores any lowered stat in battle. It can be used only once.",
-                        id: "2"
+                        description: "An item to be held by a POKÉMON. It restores any lowered stat in battle. It can be used only once.",
+                        id: 2
                         )
             },
             {
@@ -4587,8 +4587,8 @@ namespace Mobamon.Database
                     (
                         name: "Wht Apricorn",
                         identifier: "General items",
-                        description: "A white Apricorn. It doesn?t smell like anything.",
-                        id: "394"
+                        description: "A white Apricorn. It doesn't smell like anything.",
+                        id: 394
                         )
             },
             {
@@ -4597,8 +4597,8 @@ namespace Mobamon.Database
                     (
                         name: "Wide Lens",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a magnifying lens that slightly boosts the accuracy of moves.",
-                        id: "12"
+                        description: "An item to be held by a Pokémon. It is a magnifying lens that slightly boosts the accuracy of moves.",
+                        id: 12
                         )
             },
             {
@@ -4607,8 +4607,8 @@ namespace Mobamon.Database
                     (
                         name: "Wiki Berry",
                         identifier: "Berries",
-                        description: "If held by a Pok‚mon, it restores the user?s HP in a pinch, but will cause confusion if it hates the taste.",
-                        id: "239"
+                        description: "If held by a Pokémon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste.",
+                        id: 239
                         )
             },
             {
@@ -4617,8 +4617,8 @@ namespace Mobamon.Database
                     (
                         name: "Wise Glasses",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. It is a thick pair of glasses that slightly boosts the power of special moves.",
-                        id: "14"
+                        description: "An item to be held by a Pokémon. It is a thick pair of glasses that slightly boosts the power of special moves.",
+                        id: 14
                         )
             },
             {
@@ -4627,8 +4627,8 @@ namespace Mobamon.Database
                     (
                         name: "X Accuracy",
                         identifier: "Battle items",
-                        description: "An item that raises the accuracy of a Pok‚mon in battle. It wears off if the Pok‚mon is withdrawn.",
-                        id: "297"
+                        description: "An item that raises the accuracy of a Pokémon in battle. It wears off if the Pokémon is withdrawn.",
+                        id: 297
                         )
             },
             {
@@ -4637,8 +4637,8 @@ namespace Mobamon.Database
                     (
                         name: "X Accuracy 2",
                         identifier: "Battle items",
-                        description: "It sharply raises the accuracy of a Pok‚mon in battle. It wears off if the Pok‚mon is withdrawn.",
-                        id: "306"
+                        description: "It sharply raises the accuracy of a Pokémon in battle. It wears off if the Pokémon is withdrawn.",
+                        id: 306
                         )
             },
             {
@@ -4647,8 +4647,8 @@ namespace Mobamon.Database
                     (
                         name: "X Accuracy 3",
                         identifier: "Battle items",
-                        description: "It drastically raises the accuracy of a Pok‚mon in battle. It wears off if the Pok‚mon is withdrawn.",
-                        id: "312"
+                        description: "It drastically raises the accuracy of a Pokémon in battle. It wears off if the Pokémon is withdrawn.",
+                        id: 312
                         )
             },
             {
@@ -4657,8 +4657,8 @@ namespace Mobamon.Database
                     (
                         name: "X Accuracy 6",
                         identifier: "Battle items",
-                        description: "It raises the accuracy of a Pok‚mon in battle immensely. It wears off if the Pok‚mon is withdrawn.",
-                        id: "318"
+                        description: "It raises the accuracy of a Pokémon in battle immensely. It wears off if the Pokémon is withdrawn.",
+                        id: 318
                         )
             },
             {
@@ -4667,8 +4667,8 @@ namespace Mobamon.Database
                     (
                         name: "X Attack",
                         identifier: "Battle items",
-                        description: "An item that raises the Attack stat of a Pok‚mon in battle. It wears off if the Pok‚mon is withdrawn.",
-                        id: "294"
+                        description: "An item that raises the Attack stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.",
+                        id: 294
                         )
             },
             {
@@ -4677,8 +4677,8 @@ namespace Mobamon.Database
                     (
                         name: "X Attack 2",
                         identifier: "Battle items",
-                        description: "It sharply raises the Attack stat of a Pok‚mon in battle. It wears off if the Pok‚mon is withdrawn.",
-                        id: "305"
+                        description: "It sharply raises the Attack stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.",
+                        id: 305
                         )
             },
             {
@@ -4687,8 +4687,8 @@ namespace Mobamon.Database
                     (
                         name: "X Attack 3",
                         identifier: "Battle items",
-                        description: "It drastically raises the Attack stat of a Pok‚mon in battle. It wears off if the Pok‚mon is withdrawn.",
-                        id: "311"
+                        description: "It drastically raises the Attack stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.",
+                        id: 311
                         )
             },
             {
@@ -4697,8 +4697,8 @@ namespace Mobamon.Database
                     (
                         name: "X Attack 6",
                         identifier: "Battle items",
-                        description: "It raises the Attack stat of a Pok‚mon in battle immensely. It wears off if the Pok‚mon is withdrawn.",
-                        id: "317"
+                        description: "It raises the Attack stat of a Pokémon in battle immensely. It wears off if the Pokémon is withdrawn.",
+                        id: 317
                         )
             },
             {
@@ -4707,8 +4707,8 @@ namespace Mobamon.Database
                     (
                         name: "X Defend",
                         identifier: "Battle items",
-                        description: "An item that raises the Defense stat of a Pok‚mon in battle. It wears off if the Pok‚mon is withdrawn.",
-                        id: "295"
+                        description: "An item that raises the Defense stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.",
+                        id: 295
                         )
             },
             {
@@ -4717,8 +4717,8 @@ namespace Mobamon.Database
                     (
                         name: "X Defend 2",
                         identifier: "Battle items",
-                        description: "It sharply raises the Defense stat of a Pok‚mon in battle. It wears off if the Pok‚mon is withdrawn.",
-                        id: "304"
+                        description: "It sharply raises the Defense stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.",
+                        id: 304
                         )
             },
             {
@@ -4727,8 +4727,8 @@ namespace Mobamon.Database
                     (
                         name: "X Defend 3",
                         identifier: "Battle items",
-                        description: "It drastically raises the Defense stat of a Pok‚mon in battle. It wears off if the Pok‚mon is withdrawn.",
-                        id: "310"
+                        description: "It drastically raises the Defense stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.",
+                        id: 310
                         )
             },
             {
@@ -4737,8 +4737,8 @@ namespace Mobamon.Database
                     (
                         name: "X Defend 6",
                         identifier: "Battle items",
-                        description: "It raises the Defense stat of a Pok‚mon in battle immensely. It wears off if the Pok‚mon is withdrawn.",
-                        id: "316"
+                        description: "It raises the Defense stat of a Pokémon in battle immensely. It wears off if the Pokémon is withdrawn.",
+                        id: 316
                         )
             },
             {
@@ -4747,8 +4747,8 @@ namespace Mobamon.Database
                     (
                         name: "X Sp. Def",
                         identifier: "Battle items",
-                        description: "An item that raises the Sp. Def stat of a Pok‚mon in battle. It wears off if the Pok‚mon is withdrawn.",
-                        id: "299"
+                        description: "An item that raises the Sp. Def stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.",
+                        id: 299
                         )
             },
             {
@@ -4757,8 +4757,8 @@ namespace Mobamon.Database
                     (
                         name: "X Sp. Def 2",
                         identifier: "Battle items",
-                        description: "It sharply raises the Sp. Def stat of a Pok‚mon in battle. It wears off if the Pok‚mon is withdrawn.",
-                        id: "303"
+                        description: "It sharply raises the Sp. Def stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.",
+                        id: 303
                         )
             },
             {
@@ -4767,8 +4767,8 @@ namespace Mobamon.Database
                     (
                         name: "X Sp. Def 3",
                         identifier: "Battle items",
-                        description: "It drastically raises the Sp. Def stat of a Pok‚mon in battle. It wears off if the Pok‚mon is withdrawn.",
-                        id: "309"
+                        description: "It drastically raises the Sp. Def stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.",
+                        id: 309
                         )
             },
             {
@@ -4777,8 +4777,8 @@ namespace Mobamon.Database
                     (
                         name: "X Sp. Def 6",
                         identifier: "Battle items",
-                        description: "It raises the Sp. Def stat of a Pok‚mon in battle immensely. It wears off if the Pok‚mon is withdrawn.",
-                        id: "315"
+                        description: "It raises the Sp. Def stat of a Pokémon in battle immensely. It wears off if the Pokémon is withdrawn.",
+                        id: 315
                         )
             },
             {
@@ -4787,8 +4787,8 @@ namespace Mobamon.Database
                     (
                         name: "X Special",
                         identifier: "Battle items",
-                        description: "An item that raises the Sp. Atk stat of a Pok‚mon in battle. It wears off if the Pok‚mon is withdrawn.",
-                        id: "298"
+                        description: "An item that raises the Sp. Atk stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.",
+                        id: 298
                         )
             },
             {
@@ -4797,8 +4797,8 @@ namespace Mobamon.Database
                     (
                         name: "X Special 2",
                         identifier: "Battle items",
-                        description: "It sharply raises the Sp. Atk stat of a Pok‚mon in battle. It wears off if the Pok‚mon is withdrawn.",
-                        id: "302"
+                        description: "It sharply raises the Sp. Atk stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.",
+                        id: 302
                         )
             },
             {
@@ -4807,8 +4807,8 @@ namespace Mobamon.Database
                     (
                         name: "X Special 3",
                         identifier: "Battle items",
-                        description: "It drastically raises the Sp. Atk stat of a Pok‚mon in battle. It wears off if the Pok‚mon is withdrawn.",
-                        id: "308"
+                        description: "It drastically raises the Sp. Atk stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.",
+                        id: 308
                         )
             },
             {
@@ -4817,8 +4817,8 @@ namespace Mobamon.Database
                     (
                         name: "X Special 6",
                         identifier: "Battle items",
-                        description: "It raises the Sp. Atk stat of a Pok‚mon in battle immensely. It wears off if the Pok‚mon is withdrawn.",
-                        id: "314"
+                        description: "It raises the Sp. Atk stat of a Pokémon in battle immensely. It wears off if the Pokémon is withdrawn.",
+                        id: 314
                         )
             },
             {
@@ -4827,8 +4827,8 @@ namespace Mobamon.Database
                     (
                         name: "X Speed",
                         identifier: "Battle items",
-                        description: "An item that raises the Speed stat of a Pok‚mon in battle. It wears off if the Pok‚mon is withdrawn.",
-                        id: "296"
+                        description: "An item that raises the Speed stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.",
+                        id: 296
                         )
             },
             {
@@ -4837,8 +4837,8 @@ namespace Mobamon.Database
                     (
                         name: "X Speed 2",
                         identifier: "Battle items",
-                        description: "It sharply raises the Speed stat of a Pok‚mon in battle. It wears off if the Pok‚mon is withdrawn.",
-                        id: "301"
+                        description: "It sharply raises the Speed stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.",
+                        id: 301
                         )
             },
             {
@@ -4847,8 +4847,8 @@ namespace Mobamon.Database
                     (
                         name: "X Speed 3",
                         identifier: "Battle items",
-                        description: "It drastically raises the Speed stat of a Pok‚mon in battle. It wears off if the Pok‚mon is withdrawn.",
-                        id: "307"
+                        description: "It drastically raises the Speed stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.",
+                        id: 307
                         )
             },
             {
@@ -4857,8 +4857,8 @@ namespace Mobamon.Database
                     (
                         name: "X Speed 6",
                         identifier: "Battle items",
-                        description: "It raises the Speed stat of a Pok‚mon in battle immensely. It wears off if the Pok‚mon is withdrawn.",
-                        id: "313"
+                        description: "It raises the Speed stat of a Pokémon in battle immensely. It wears off if the Pokémon is withdrawn.",
+                        id: 313
                         )
             },
             {
@@ -4867,8 +4867,8 @@ namespace Mobamon.Database
                     (
                         name: "Yache Berry",
                         identifier: "Berries",
-                        description: "Weakens a supereffective Ice-type attack against the holding Pok‚mon.",
-                        id: "267"
+                        description: "Weakens a supereffective Ice-type attack against the holding Pokémon.",
+                        id: 267
                         )
             },
             {
@@ -4878,7 +4878,7 @@ namespace Mobamon.Database
                         name: "Yellow Flute",
                         identifier: "General items",
                         description: "A toy flute made from yellow glass. A maniac will buy it for a high price.",
-                        id: "406"
+                        id: 406
                         )
             },
             {
@@ -4887,8 +4887,8 @@ namespace Mobamon.Database
                     (
                         name: "Yellow Scarf",
                         identifier: "General items",
-                        description: "An item to be held by a Pok‚mon. It boosts the Tough aspect of the holder in a Contest.",
-                        id: "404"
+                        description: "An item to be held by a Pokémon. It boosts the Tough aspect of the holder in a Contest.",
+                        id: 404
                         )
             },
             {
@@ -4898,7 +4898,7 @@ namespace Mobamon.Database
                         name: "Yellow Shard",
                         identifier: "General items",
                         description: "A small yellow shard. It appears to be from some sort of implement made long ago.",
-                        id: "386"
+                        id: 386
                         )
             },
             {
@@ -4908,7 +4908,7 @@ namespace Mobamon.Database
                         name: "Ylw Apricorn",
                         identifier: "General items",
                         description: "A yellow Apricorn. It has an invigorating scent.",
-                        id: "391"
+                        id: 391
                         )
             },
             {
@@ -4918,7 +4918,7 @@ namespace Mobamon.Database
                         name: "Zap Plate",
                         identifier: "Hold items",
                         description: "Increases power of Electric-type moves. Changes Arceus' type to Electric.",
-                        id: "68"
+                        id: 68
                         )
             },
             {
@@ -4927,8 +4927,8 @@ namespace Mobamon.Database
                     (
                         name: "Zinc",
                         identifier: "Medicine",
-                        description: "A nutritious drink for Pok‚mon. It raises the base Sp. Def (Special Defense) stat of a single Pok‚mon.",
-                        id: "203"
+                        description: "A nutritious drink for Pokémon. It raises the base Sp. Def (Special Defense) stat of a single Pokémon.",
+                        id: 203
                         )
             },
             {
@@ -4937,10 +4937,11 @@ namespace Mobamon.Database
                     (
                         name: "Zoom Lens",
                         identifier: "Hold items",
-                        description: "An item to be held by a Pok‚mon. If the holder moves after its target, its accuracy will be boosted.",
-                        id: "20"
+                        description: "An item to be held by a Pokémon. If the holder moves after its target, its accuracy will be boosted.",
+                        id: 20
                         )
             }
+
         };
     }
 }
