@@ -66,10 +66,15 @@ namespace Mobamon.UI
             GUI.DrawTexture(myRect, frontBottomTexture);
         }
 
-        // Use this for initialization
-        void Start () {
+        public void InitPos()
+        {
             pos.Set((Screen.width - centerTexture.width) / 2, (Screen.height - centerTexture.height) - 5);
             angle = 0;
+        }
+
+        // Use this for initialization
+        void Start () {
+
         }
         
         // Update is called once per frame
@@ -80,6 +85,7 @@ namespace Mobamon.UI
         void OnGUI() {
             if (!Network.isServer)
             {
+                InitPos();
                 DisplayBackground();
                 DisplayHealth();
                 DisplayXP();

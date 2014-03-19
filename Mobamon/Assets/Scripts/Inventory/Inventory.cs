@@ -13,6 +13,7 @@ namespace Mobamon.Inventory
         public Texture bagOpenTexture;
         public Texture bagClosedTexture;
         public Texture bagBackgroundTexture;
+        public Texture bagReverseBackgroundTexture;
         public Texture caseNormalTexture;
         public Texture caseBerryTexture;
         public Texture caseSecureTexture;
@@ -21,6 +22,7 @@ namespace Mobamon.Inventory
         public Vector2 bagBackgroundPosition;
         public bool isOpen; 
         public List<Case> cases; 
+        public float lastScreenWidth = 0f;
         
         // Use this for initialization
         void Start () {
@@ -29,9 +31,6 @@ namespace Mobamon.Inventory
 
             cases = new List<Case>();
 
-            bagBackgroundPosition.Set(5, Screen.height - bagBackgroundTexture.height - 5);
-            bagPosition.Set(bagBackgroundPosition.x + (bagBackgroundTexture.width - bagOpenTexture.width) / 2, bagBackgroundPosition.y + (bagBackgroundTexture.height - bagOpenTexture.height) / 2);
-        
             Vector2 casePosition = new Vector2(bagBackgroundPosition.x + bagBackgroundTexture.width + 5, Screen.height - caseNormalTexture.height - 5);
 
             for (int i = 0; i < 8; i++)
@@ -54,7 +53,9 @@ namespace Mobamon.Inventory
         private void DisplayBackground()
         {
             Rect myRect = new Rect(bagBackgroundPosition.x, bagBackgroundPosition.y, bagBackgroundTexture.width, bagBackgroundTexture.height);
-            GUI.DrawTexture(myRect, bagBackgroundTexture);
+
+            Texture texture = (isOpen ? bagReverseBackgroundTexture : bagBackgroundTexture);
+            GUI.DrawTexture(myRect, texture);
         }
 
         private void DisplayBag()
@@ -96,12 +97,25 @@ namespace Mobamon.Inventory
 
         }
 
+        public void InitPos()
+        {
+            bagBackgroundPosition.Set(5, Screen.height - bagBackgroundTexture.height - 5);
+            bagPosition.Set(bagBackgroundPosition.x + (bagBackgroundTexture.width - bagOpenTexture.width) / 2, bagBackgroundPosition.y + (bagBackgroundTexture.height - bagOpenTexture.height) / 2);
+        }
+
         void OnGUI() {
             if (!Network.isServer)
             {
+                InitPos();
                 ManageMouse();
                 DisplayBackground();
                 DisplayBag();
+
+                if (lastScreenWidth != Screen.width)
+                {
+                    lastScreenWidth = Screen.width;
+                    DisplayCases();
+                }
             }
         }
 

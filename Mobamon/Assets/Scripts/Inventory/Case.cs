@@ -2,9 +2,9 @@
 using System.Collections;
 
 namespace Mobamon.Inventory {
-
+    
     public class Case : MonoBehaviour {
-
+        
         public Inventory inventory;
         public Texture caseNormalTexture;
         public Texture caseBerryTexture;
@@ -27,14 +27,15 @@ namespace Mobamon.Inventory {
         }
         private Vector2 _casePos;
         public Vector2 itemPos;
+        public Vector2 itemInitialPos;
         public CaseType type;
         public bool isDragged = false;
         public bool isDisplayed = true;
-
+        
         public Case()
         {
         }
-
+        
         public void initCase(Vector2 casePos, CaseType type, Texture caseNormalTexture, Texture caseBerryTexture, Texture caseSecureTexture, Texture caseClosedTexture, Inventory inventory)
         {
             this.inventory = inventory;
@@ -45,7 +46,7 @@ namespace Mobamon.Inventory {
             this.caseSecureTexture = caseSecureTexture;
             this.caseClosedTexture = caseClosedTexture;
         }
-
+        
         public void initItem()
         {
             if (this.item != null)
@@ -53,11 +54,11 @@ namespace Mobamon.Inventory {
                 this.itemPos.Set(casePos.x + (caseClosedTexture.width - item.Picture.width) / 2, casePos.y + (caseClosedTexture.height - item.Picture.height) / 2);
             }
         }
-
+        
         private void DisplayBackground()
         {
             Rect myRect = new Rect(casePos.x, casePos.y, caseNormalTexture.width, caseNormalTexture.height);
-
+            
             Texture texture = new Texture();
             switch (type)
             {
@@ -74,10 +75,10 @@ namespace Mobamon.Inventory {
                     texture = caseSecureTexture;
                     break;
             }
-
+            
             GUI.DrawTexture(myRect, texture);
         }
-
+        
         private void DisplayItem()
         {
             if (item != null)
@@ -86,16 +87,18 @@ namespace Mobamon.Inventory {
                 GUI.DrawTexture(myRect, item.Picture);
             }
         }
-
+        
         private void ManageMouse()
         {
-            Rect myRect = new Rect(itemPos.x, itemPos.y, caseNormalTexture.width, caseNormalTexture.height);
-
-            if (Event.current.type == EventType.MouseDown && myRect.Contains(Event.current.mousePosition) && isDisplayed)
+            Rect itemPosRect = new Rect(itemPos.x, itemPos.y, caseNormalTexture.width, caseNormalTexture.height);
+            Rect itemInitialPosRect = new Rect(itemInitialPos.x, itemInitialPos.y, caseNormalTexture.width, caseNormalTexture.height);
+            
+            if (Event.current.type == EventType.MouseDown && itemPosRect.Contains(Event.current.mousePosition) && isDisplayed)
             {
                 if (this.item != null)
                 {
                     this.isDragged = true;
+                    this.itemInitialPos = this.itemPos;
                 }
             }
             else if (Event.current.type == EventType.MouseDrag && this.isDragged)
@@ -125,8 +128,8 @@ namespace Mobamon.Inventory {
                         this.isDragged = false;
                     }
                 }
-
-                if (this.item != null && this.item.isUsable && myRect.Contains(Event.current.mousePosition) && isDisplayed)
+                
+                if (this.item != null && this.item.isUsable && itemInitialPosRect.Contains(Event.current.mousePosition) && isDisplayed)
                 {
                     this.item.behavior.onClick();
                     if (this.item.isConsumed)
@@ -134,21 +137,21 @@ namespace Mobamon.Inventory {
                         this.item = null;
                     }
                 }
-
-                    
+                
+                
             }
         }
-
+        
         // Use this for initialization
-    	void Start () {
-    	
-    	}
-    	
-    	// Update is called once per frame
-    	void Update () {
-
-    	}
-
+        void Start () {
+            
+        }
+        
+        // Update is called once per frame
+        void Update () {
+            
+        }
+        
         void OnGUI() {
             if (!Network.isServer)
             {

@@ -59,14 +59,18 @@ namespace Mobamon.UI
             }
         }
 
-        // Use this for initialization
-        void Start () {
-            moveSet = new List<SelectedMove>();
+        public void initPos()
+        {
             movePosition = new Dictionary<int, Vector2>();
             movePosition.Add(0, new Vector2((Screen.width / 2) - attackBarBorderTexture.width - 80, Screen.height - attackBarBorderTexture.height - 55));
             movePosition.Add(1, new Vector2((Screen.width / 2) - attackBarBorderTexture.width - 40, Screen.height - attackBarBorderTexture.height - 80));
             movePosition.Add(2, new Vector2((Screen.width / 2) + 40, Screen.height - attackBarBorderTexture.height - 80));
             movePosition.Add(3, new Vector2((Screen.width / 2) + 80, Screen.height - attackBarBorderTexture.height - 55));
+        }
+
+        // Use this for initialization
+        void Start () {
+            moveSet = new List<SelectedMove>();
         }
         
         // Update is called once per frame
@@ -78,6 +82,7 @@ namespace Mobamon.UI
 
             if (!Network.isServer)
             {
+                initPos();
                 initMoves();   
                 displayMoves();
             }
