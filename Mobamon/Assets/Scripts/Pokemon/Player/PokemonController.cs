@@ -96,7 +96,7 @@ namespace Mobamon.Pokemon.Player
 					Destroy(cam);
 				GameObject camera = (GameObject)Instantiate(Resources.Load("Camera/PlayerCamera"), new Vector3(transform.position.x, 5f, transform.position.z), Quaternion.identity);
 				camera.tag = "MainCamera";
-				myCam = (Camera)camera.GetComponent(typeof(Camera));
+				myCam = camera.GetComponentInChildren<Camera>();
 
                 // We add a Fog of War revealer.
                 FOWRevealer fow = gameObject.AddComponent<FOWRevealer>();

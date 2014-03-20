@@ -79,7 +79,7 @@ namespace Mobamon.UI
 		{
 			GameObject camObj = GameObject.FindGameObjectWithTag("MainCamera");
 			if(camObj != null)
-				cam = (Camera)camObj.GetComponent(typeof(Camera));
+                cam = camObj.GetComponentInChildren<Camera>();
 		}
 
 		private void getTextures()
