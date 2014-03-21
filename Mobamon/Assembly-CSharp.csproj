@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Database\Classes\IAdditionalMoveData.cs" />
      <Compile Include="Assets\Scripts\Database\Classes\MoveInfo.cs" />
      <Compile Include="Assets\Scripts\Database\Classes\MoveTarget.cs" />
+     <Compile Include="Assets\Scripts\Database\Classes\PokemonInfo.cs" />
      <Compile Include="Assets\Scripts\Database\Classes\SphereData.cs" />
      <Compile Include="Assets\Scripts\Database\Classes\Vector3Extensions.cs" />
      <Compile Include="Assets\Scripts\Database\Enums\InputType.cs" />

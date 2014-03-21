@@ -2,27 +2,20 @@
 using Mobamon.UI.Menus.Enums;
 using System;
 using Mobamon.UI.Languages;
+using System.Text.RegularExpressions;
+using Mobamon.Pokemon.Player;
+using Mobamon.Networking;
+using Mobamon.Database;
 
 namespace Mobamon.UI.Menus
 {
     public class MainMenuController : MonoBehaviour
     {
-        #region Constants
-
-        private const string BUTTON_MAIN_PLAY = "Play";
-        private const string BUTTON_MAIN_LEADERBOARD = "Leaderboard";
-        private const string BUTTON_MAIN_OPTIONS = "Options";
-        private const string BUTTON_MAIN_EXIT = "Exit";
-
-        private const string BUTTON_EXIT_CONFIRM = "Yes";
-        private const string BUTTON_EXIT_CANCEL = "No";
-
-        #endregion
-
         #region Fields
 
         public Texture backgroundTexture;
         public GUISkin guiSkin;
+        private Vector2 scrollPosition;
 
         #endregion
 
@@ -45,6 +38,10 @@ namespace Mobamon.UI.Menus
             {
                 case MainMenuStep.Exit:
                     this.DrawExitMenu();
+                    break;
+
+                case MainMenuStep.PokemonSelection:
+                    this.DrawSelectPokemonMenu();
                     break;
 
                 case MainMenuStep.Play:
@@ -105,14 +102,69 @@ namespace Mobamon.UI.Menus
             GUILayout.EndArea();
         }
 
+        private void DrawSelectPokemonMenu()
+        {
+            // Draws the background image
+            GUI.DrawTexture(new Rect(0f, 0f, Screen.width, Screen.height), this.backgroundTexture);
+
+            GUILayout.BeginArea(new Rect(100f, Screen.height * 0.3f, Screen.width - 200f, Screen.height * 0.6f));
+
+            GUILayout.BeginHorizontal();
+            scrollPosition = GUILayout.BeginScrollView(scrollPosition, new GUIStyle());
+
+            var pokemons = Resources.LoadAll("Pokemons");
+            Regex regex = new Regex("(?<id>[0-9]{3}) - [a-zA-Z0-9]+");
+            foreach (var pokemon in pokemons)
+            {
+                GameObject pokemonGO = (GameObject)pokemon;
+                var controller = pokemonGO.GetComponent<PokemonController>();
+                if (controller == null)
+                {
+                    continue;
+                }
+
+                Match match = regex.Match(pokemon.name);
+
+                if (match.Success)
+                {
+                    int id = int.Parse(match.Groups["id"].Value);
+                    string pokemonKey = Pokedex.pokemons[id].NameKey;
+                    string name = LanguageManager.Language[pokemonKey];
+
+                    Texture icon = Resources.Load<Texture>("Portraits/Front/pokemon_front_" + id);
+                    GUIContent content = new GUIContent(name, icon);
+
+                    this.CreateButton(content, () => { this.OnPokemonSelected(id); });
+                }
+            }
+
+            GUILayout.EndScrollView();
+            GUILayout.EndHorizontal();
+
+            GUILayout.EndArea();
+        }
+
         /// <summary>
         /// Draws the button with the given text and checks if it's currently clicked
         /// </summary>
         /// <param name="buttonText">Button text.</param>
         /// <param name="clickAction">Method to call when the button is clicked.</param>
-        private void CreateButton(string buttonText, Action clickAction)
+        private void CreateButton(string text, Action clickAction)
         {
-            if (GUILayout.Button(buttonText))
+            if (GUILayout.Button(text))
+            {
+                clickAction();
+            }
+        }
+        
+        /// <summary>
+        /// Draws the button with the given text and checks if it's currently clicked
+        /// </summary>
+        /// <param name="buttonText">Button text.</param>
+        /// <param name="clickAction">Method to call when the button is clicked.</param>
+        private void CreateButton(GUIContent content, Action clickAction)
+        {
+            if (GUILayout.Button(content))
             {
                 clickAction();
             }
@@ -127,8 +179,7 @@ namespace Mobamon.UI.Menus
         /// </summary>
         private void OnPlayMainButtonClicked()
         {
-            this.Step = MainMenuStep.Play;
-            Application.LoadLevel("Test");
+            this.Step = MainMenuStep.PokemonSelection;
         }
 
         /// <summary>
@@ -182,6 +233,13 @@ namespace Mobamon.UI.Menus
         private void OnCancelExitButtonClicked()
         {
             this.Step = MainMenuStep.Main;
+        }
+
+        private void OnPokemonSelected(int id)
+        {
+            this.Step = MainMenuStep.Play;
+            NetworkManager.ChosenPokemonId = id;
+            Application.LoadLevel("Test");
         }
 
         #endregion

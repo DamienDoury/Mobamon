@@ -63,7 +63,7 @@ namespace Mobamob.Towers
 
             foreach (PokemonController pokemon in availableTarget)
             {
-                if (lastTarget != null && availableTarget.Find(lastTarget))
+                if (lastTarget != null && availableTarget.Contains(lastTarget))
                 {
                     currentTarget = lastTarget;
                 }

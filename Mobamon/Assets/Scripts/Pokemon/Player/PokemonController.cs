@@ -31,6 +31,7 @@ namespace Mobamon.Pokemon.Player
 		
 		#region Private fields
 
+        private bool isMine;
 		private Animator anim;
 		private GameObject marker;		
 		private bool canMove = true;
@@ -53,7 +54,10 @@ namespace Mobamon.Pokemon.Player
 		
 		public void Start()
 		{
-            id = int.Parse(name.Split('-')[0]);
+            if (int.TryParse(name.Split('-') [0], out id))
+            {
+                Debug.Log("The GameObject's name doesn't contain the id");
+            }
 
 			anim = GetComponent<Animator>();
 			nav = GetComponent<NavMeshAgent>();
@@ -77,32 +81,6 @@ namespace Mobamon.Pokemon.Player
 			
 			currentHP = maxHP;
 			savedDestination = new Vector3();
-			
-			if (networkView.isMine)
-			{
-				// Player controller list network management.
-				GameObject[] pokemonList = GameObject.FindGameObjectsWithTag("CameraTarget");
-				foreach(GameObject pokemon in pokemonList)
-					if(pokemon != gameObject)
-						pokemon.tag = "Untagged";
-				/*Component[] controllerList = GameObject.Find("Pokemon").GetComponentsInChildren(typeof(PokemonController));
-				foreach(Component comp in controllerList)
-					if(comp.gameObject != gameObject)
-						Destroy(comp);*/
-				
-				// Camera list network management.
-				GameObject[] cameraList = GameObject.FindGameObjectsWithTag("MainCamera");
-				foreach(GameObject cam in cameraList)
-					Destroy(cam);
-				GameObject camera = (GameObject)Instantiate(Resources.Load("Camera/PlayerCamera"), new Vector3(transform.position.x, 5f, transform.position.z), Quaternion.identity);
-				camera.tag = "MainCamera";
-				myCam = camera.GetComponentInChildren<Camera>();
-
-                // We add a Fog of War revealer.
-                FOWRevealer fow = gameObject.AddComponent<FOWRevealer>();
-                fow.range = new Vector2(0.5f, 20f);
-                fow.lineOfSightCheck = FOWSystem.LOSChecks.EveryUpdate;
-			}
 		}
 		
 		public void Update()
@@ -111,7 +89,7 @@ namespace Mobamon.Pokemon.Player
 			RegenHP();
 			BlinkAfterDamage();
 			
-			if (networkView.isMine)
+			if (isMine)
 			{
 				Controls();
 			}
@@ -125,15 +103,44 @@ namespace Mobamon.Pokemon.Player
 			if(canRotate)
 				Rotating();
 			
-			if(nav.remainingDistance > 0f)
+			if(nav != null && nav.remainingDistance > 0f)
 				Movement();
 			
-			anim.SetFloat("Speed", nav.velocity.magnitude);
+            if (nav != null)
+			    anim.SetFloat("Speed", nav.velocity.magnitude);
 		}
+
+        public void SetMine()
+        {
+            isMine = true;
+
+            // Player controller list network management.
+            GameObject[] pokemonList = GameObject.FindGameObjectsWithTag("CameraTarget");
+            foreach(GameObject pokemon in pokemonList)
+                if(pokemon != gameObject)
+                    pokemon.tag = "Untagged";
+            /*Component[] controllerList = GameObject.Find("Pokemon").GetComponentsInChildren(typeof(PokemonController));
+                foreach(Component comp in controllerList)
+                    if(comp.gameObject != gameObject)
+                        Destroy(comp);*/
+            
+            // Camera list network management.
+            GameObject[] cameraList = GameObject.FindGameObjectsWithTag("MainCamera");
+            foreach(GameObject cam in cameraList)
+                Destroy(cam);
+            GameObject camera = (GameObject)Instantiate(Resources.Load("Camera/PlayerCamera"), new Vector3(transform.position.x, 5f, transform.position.z), Quaternion.identity);
+            camera.tag = "MainCamera";
+            myCam = camera.GetComponentInChildren<Camera>();
+            
+            // We add a Fog of War revealer.
+            FOWRevealer fow = gameObject.AddComponent<FOWRevealer>();
+            fow.range = new Vector2(0.5f, 20f);
+            fow.lineOfSightCheck = FOWSystem.LOSChecks.EveryUpdate;
+        }
 		
 		public void Controls()
 		{
-			if (networkView.isMine)
+			if (isMine)
 			{
 				// Uses : selectedMove, hit and hoverEntity
 				
@@ -384,7 +391,7 @@ namespace Mobamon.Pokemon.Player
 				networkView.RPC("SetDestination", RPCMode.Others, pos);
 			}
 			
-			if(networkView.isMine)
+			if(isMine)
 			{
 				if(marker != null)
 					Destroy(marker);
@@ -479,7 +486,7 @@ namespace Mobamon.Pokemon.Player
 					LaunchAttackAnim();
 				}
 			}
-			else if(nav.remainingDistance > 0.3f)
+			else if(nav != null && nav.remainingDistance > 0.3f)
 			{
 				target = nav.steeringTarget;
 				target -= gameObject.transform.position;

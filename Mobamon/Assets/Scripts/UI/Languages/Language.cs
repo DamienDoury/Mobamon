@@ -14,85 +14,72 @@ namespace Mobamon.UI.Languages
 
         public string MainMenu_Buttons_Play
         {
-            get;
-            private set;
+            get { return translations ["MainMenu_Buttons_Play"]; }
         }
 
         public string MainMenu_Buttons_Leaderboard
         {
-            get;
-            private set;
+            get { return translations ["MainMenu_Buttons_Leaderboard"]; }
         }
 
         public string MainMenu_Buttons_Options
         {
-            get;
-            private set;
+            get { return translations ["MainMenu_Buttons_Options"]; }
         }
 
         public string MainMenu_Buttons_Exit
         {
-            get;
-            private set;
+            get { return translations ["MainMenu_Buttons_Exit"]; }
         }
 
         public string MainMenu_Buttons_Confirm
         {
-            get;
-            private set;
+            get { return translations ["MainMenu_Buttons_Confirm"]; }
         }
 
         public string MainMenu_Buttons_Cancel
         {
-            get;
-            private set;
+            get { return translations ["MainMenu_Buttons_Cancel"]; }
         }
 
         #endregion
 
         #endregion
+
+        private static Dictionary<string, string> translations;
+
+        public string this[string key]
+        {
+            get { return translations.ContainsKey(key) ? translations[key] : key; }
+            private set { translations[key] = value; }
+        }
 
         public static Language Create(string fileContent)
         {
             Language language = new Language();
-            Type type = typeof(Language);
             XDocument document = XDocument.Parse(fileContent);
             var root = document.Root;
 
-            Dictionary<string, string> translations = new Dictionary<string, string>();
-
-            foreach (XElement element in root.Elements())
-            {
-                var values = ReadDocument(element, string.Empty);
-                foreach (var kvp in values)
-                {
-                    translations.Add(kvp.Key, kvp.Value);
-                }
-            }
-
-            foreach (var translation in translations)
-            {
-                var property = type.GetProperty(translation.Key);
-
-                if (property != null)
-                {
-                    property.SetValue(language, translation.Value, null);
-                }
-            }
+            translations = ReadDocument(root, string.Empty, true);
 
             return language;
         }
 
-        private static Dictionary<string, string> ReadDocument(XElement root, string rootString)
+        private static Dictionary<string, string> ReadDocument(XElement root, string rootString, bool isRoot)
         {
             Dictionary<string, string> results = new Dictionary<string, string>();
-            string key = string.IsNullOrEmpty(rootString) ? root.Name.ToString() : string.Format("{0}_{1}", rootString, root.Name);
+            string key = string.Empty;
+
+            if (!isRoot)
+            {
+                key = string.IsNullOrEmpty(rootString) ? root.Name.ToString() : string.Format("{0}_{1}", rootString, root.Name);
+            }
             
             if (root.HasElements)
             {
                 foreach (var element in root.Elements())
                 {
-                    var values = ReadDocument(element, key);
+                    var values = ReadDocument(element, key, false);
 
                     foreach (var kvp in values)
                     {
@@ -110,12 +97,6 @@ namespace Mobamon.UI.Languages
 
         private Language()
         {
-            this.MainMenu_Buttons_Cancel = "MainMenu_Buttons_Cancel";
-            this.MainMenu_Buttons_Confirm = "MainMenu_Buttons_Confirm";
-            this.MainMenu_Buttons_Exit = "MainMenu_Buttons_Exit";
-            this.MainMenu_Buttons_Leaderboard = "MainMenu_Buttons_Leaderboard";
-            this.MainMenu_Buttons_Options = "MainMenu_Buttons_Options";
-            this.MainMenu_Buttons_Play = "MainMenu_Buttons_Play";
         }
     }
 }

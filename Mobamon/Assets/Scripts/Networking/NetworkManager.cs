@@ -1,11 +1,17 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using Mobamon.Pokemon.Player;
+using System;
+using Mobamon.Database;
+using System.Linq;
 
 namespace Mobamon.Networking
 {
 	public class NetworkManager : MonoBehaviour
 	{
+        public static int ChosenPokemonId = -1;
+
 		private const string typeName = "MobamonDev";
 		private const string gameName = "RoomName";
 		private HostData[] hostList;
@@ -24,6 +30,9 @@ namespace Mobamon.Networking
 		private GameObject pkmn;
 		private float positionUpdateFrequency = 0.1f;
 		private float nextPositionUpdate = 0f;
+
+        private Dictionary<string, GameObject> playerPokemons = new Dictionary<string, GameObject>();
+
 
 		void Start()
 		{
@@ -165,6 +174,7 @@ namespace Mobamon.Networking
 			{
 				Debug.Log("Clean up after player " + player);
 				Network.RemoveRPCs(player);
+                Network.Destroy(playerPokemons[player.guid]);
 				Network.DestroyPlayerObjects(player);
 			}
 		}
@@ -172,63 +182,56 @@ namespace Mobamon.Networking
 		void OnConnectedToServer()
 		{
 			Debug.Log("Server Joined");
-		}
-
-		void OnPlayerConnected(NetworkPlayer player)
-		{
-			if(Network.isServer)
-			{
-				networkView.RPC("SpawnPlayer", player, (Network.connections.Length - 1) % 2 + 1, Network.connections.Length);
-			}
-		}
-
-		// The following method is called from the client.
-		[RPC]
-		private void SpawnPlayer(int teamID, int pokemonID) // "teamID" is either 1 or 2.
-		{
-			string pokemonName;
-
-			GameObject player;
-			switch(pokemonID % 2)
-			{
-				case 0:
-                    pokemonName = "090 - Shellder";
-					break;
-
-				case 1:
-                    pokemonName = "621 - Druddigon";
-					break;
-
-				case 2:
-                    pokemonName = "185 - Sudowoodo";
-                    break;
-				
-				default:
-					pokemonName = "232 - Donphan";
-					break;
-			}
-
-			Vector3 spawnPos = teamID % 2 == 1 ? GameInfo.blueTeamSpawn : GameInfo.redTeamSpawn;
-			player = (GameObject)Network.Instantiate(Resources.Load ("Pokemons/" + pokemonName), spawnPos, Quaternion.identity, 0);
-			player.transform.parent = GameObject.Find("Pokemon").transform;
-			player.tag = "CameraTarget";
-			PokemonController controller = (PokemonController)player.gameObject.GetComponent("PokemonController");
-			controller.team = teamID;
-
-			networkView.RPC("StoreNewEntity", RPCMode.OthersBuffered, player.networkView.viewID, teamID);
-		}
-
-		[RPC]
-		private void StoreNewEntity(NetworkViewID viewID, int teamID)
-		{
-			NetworkView newEntityView = NetworkView.Find(viewID);
-
-			if(newEntityView != null)
-			{
-				newEntityView.gameObject.transform.parent = GameObject.Find("Pokemon").transform;
-				PokemonController controller = (PokemonController)newEntityView.gameObject.gameObject.GetComponent("PokemonController");
-				controller.team = teamID;
+            if (!Network.isServer)
+            {
+                // When the server has accepted the connection, sends the selected pokemon
+                networkView.RPC("ChoosePokemon", RPCMode.Server, Network.player.guid, ChosenPokemonId);
             }
 		}
-	}
+
+        [RPC]
+        private void ChoosePokemon(string playerGuid, int pokemonId)
+        {
+            int teamId = (Network.connections.Length - 1) % 2 + 1;
+
+            // Spawns the pokemon
+            string pokemonResourceName = Pokedex.pokemons[pokemonId].ResourceName;
+            
+            Vector3 spawnPos = teamId % 2 == 1 ? GameInfo.blueTeamSpawn : GameInfo.redTeamSpawn;
+            GameObject instantiatedPokemon = (GameObject)Network.Instantiate(Resources.Load ("Pokemons/" + pokemonResourceName), spawnPos, Quaternion.identity, 0);
+            playerPokemons.Add(playerGuid, instantiatedPokemon);
+
+            // Sets the team id and the ownership
+            networkView.RPC("SetPokemonControllerValues", RPCMode.All, playerGuid, instantiatedPokemon.networkView.viewID, teamId);
+        }
+
+        [RPC]
+        private void SetPokemonControllerValues(string playerGuid, NetworkViewID viewId, int teamId)
+        {
+            // When a client sends its chosen pokemon id, asks every one to spawn the chosen pokemon
+            bool isMine = Network.player.guid == playerGuid;
+            NetworkView networkView = NetworkView.Find(viewId);
+
+            if (networkView != null)
+            {
+                GameObject gameObject = networkView.gameObject;
+
+                if (gameObject != null)
+                {
+                    PokemonController controller = (PokemonController)gameObject.GetComponent("PokemonController");
+
+                    if (controller != null)
+                    {
+                        controller.team = teamId;
+
+                        if (isMine)
+                        {
+                            gameObject.tag = "CameraTarget";
+                            controller.SetMine();
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
