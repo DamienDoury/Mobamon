@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\Database\Classes\PokemonInfo.cs" />
      <Compile Include="Assets\Scripts\Database\Classes\SphereData.cs" />
      <Compile Include="Assets\Scripts\Database\Classes\Vector3Extensions.cs" />
+     <Compile Include="Assets\Scripts\Database\Enums\Container.cs" />
      <Compile Include="Assets\Scripts\Database\Enums\InputType.cs" />
      <Compile Include="Assets\Scripts\Database\Enums\MoveCategory.cs" />
      <Compile Include="Assets\Scripts\Database\Enums\MoveEffectType.cs" />
@@ -73,6 +74,7 @@
      <Compile Include="Assets\Scripts\Database\ItemPool.cs" />
      <Compile Include="Assets\Scripts\Database\Pokedex.cs" />
      <Compile Include="Assets\Scripts\Database\PokemonList.cs" />
+     <Compile Include="Assets\Scripts\Database\SceneHelper.cs" />
      <Compile Include="Assets\Scripts\Inventory\Case.cs" />
      <Compile Include="Assets\Scripts\Inventory\CaseType.cs" />
      <Compile Include="Assets\Scripts\Inventory\IItemBehavior.cs" />

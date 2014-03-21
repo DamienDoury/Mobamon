@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Mobamon.Database;
 using Mobamon.Database.Classes;
 using Mobamon.Pokemon.Player;
 

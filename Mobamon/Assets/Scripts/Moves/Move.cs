@@ -247,8 +247,7 @@ namespace Mobamon.Moves
 			}
 			else
 			{
-				GameObject pokemonsContainer = GameObject.Find("/Pokemon");
-				pokemons = pokemonsContainer.GetComponentsInChildren<PokemonController>();
+				pokemons = SceneHelper.GetContainer(Container.Pokemons).GetComponentsInChildren<PokemonController>();
 			}
 			
 			// Calculates the min and max range percent

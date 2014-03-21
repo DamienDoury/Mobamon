@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Mobamon.Moves;
+using Mobamon.Database;
+using Mobamon.Database.Enums;
 
 public class TransmitCollisionMessage : MonoBehaviour
 {
@@ -24,7 +26,7 @@ public class TransmitCollisionMessage : MonoBehaviour
     /// <summary>
     /// The GameObject that is used as a container for all the players' Pokemon.
     /// </summary>
-    private GameObject pkmnContainer = null;
+    private GameObject entitiesContainer = null;
     #endregion
 
     public void SetManager(DamageManager _manager)
@@ -35,7 +37,7 @@ public class TransmitCollisionMessage : MonoBehaviour
     #region Protected Methods
 	protected void Start()
     {
-        pkmnContainer = GameObject.Find("Pokemon");
+        entitiesContainer = SceneHelper.GetContainer(Container.Entities);
         collisionParticle = this.GetComponent<ParticleSystem>();
 	}
 	
@@ -60,7 +62,7 @@ public class TransmitCollisionMessage : MonoBehaviour
             if(victim == manager.caster.GameObject)
                 return;
 
-            if(victim.transform.parent != pkmnContainer.transform)
+            if(victim.transform.root != entitiesContainer.transform)
                 return;
 
             if(!manager.hitTargetList.Contains(victim))
@@ -80,7 +82,7 @@ public class TransmitCollisionMessage : MonoBehaviour
             ParticleSystem.Particle[] particlesArray = new ParticleSystem.Particle[collisionParticle.particleCount];      
             collisionParticle.GetParticles(particlesArray);
             
-            foreach(SphereCollider collider in pkmnContainer.GetComponentsInChildren<SphereCollider>()) // For each pkmn with a collider ...
+            foreach(SphereCollider collider in entitiesContainer.GetComponentsInChildren<SphereCollider>()) // For each pkmn with a collider ...
             {
                 // In Unity 4.3.2, we cannot know if the ParticleSystem sends collision messages.
                 // Thus, we get the safeCollisionEventSize. If it's greater than zero, then the ParticleSystem sends messages.
