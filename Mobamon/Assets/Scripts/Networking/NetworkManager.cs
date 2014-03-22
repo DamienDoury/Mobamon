@@ -64,7 +64,7 @@ namespace Mobamon.Networking
 						if(cont.transform.parent.gameObject != pkmn)
 							continue;
 						
-						cont.networkView.RPC("WarpEntity", RPCMode.Others, cont.networkView.viewID, cont.transform.position, cont.nav.speed, cont.transform.rotation, cont.nav.destination);
+						cont.networkView.RPC("WarpEntity", RPCMode.OthersBuffered, cont.networkView.viewID, cont.transform.position, cont.nav.speed, cont.transform.rotation, cont.nav.destination);
 					}
 				}
 				else
@@ -174,8 +174,10 @@ namespace Mobamon.Networking
 			{
 				Debug.Log("Clean up after player " + player);
 				Network.RemoveRPCs(player);
-                Network.Destroy(playerPokemons[player.guid]);
+                Network.Destroy(playerPokemons[player.guid].networkView.viewID);
 				Network.DestroyPlayerObjects(player);
+
+                playerPokemons.Remove(player.guid);
 			}
 		}
 		
@@ -202,7 +204,7 @@ namespace Mobamon.Networking
             playerPokemons.Add(playerGuid, instantiatedPokemon);
 
             // Sets the team id and the ownership
-            networkView.RPC("SetPokemonControllerValues", RPCMode.All, playerGuid, instantiatedPokemon.networkView.viewID, teamId);
+            networkView.RPC("SetPokemonControllerValues", RPCMode.AllBuffered, playerGuid, instantiatedPokemon.networkView.viewID, teamId);
         }
 
         [RPC]
