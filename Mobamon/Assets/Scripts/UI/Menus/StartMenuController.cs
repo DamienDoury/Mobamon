@@ -8,7 +8,7 @@ namespace Mobamon.UI.Menus
     public class StartMenuController : MonoBehaviour 
     {
         // Entry point
-        protected void Awake()
+        protected void Start()
         {
             bool launchedByLauncher = false;
             bool isServer = false;
