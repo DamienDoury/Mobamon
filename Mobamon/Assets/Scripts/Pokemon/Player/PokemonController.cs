@@ -83,6 +83,8 @@ namespace Mobamon.Pokemon.Player
 			savedDestination = new Vector3();
 
             this.gameObject.transform.parent = SceneHelper.GetContainer(Container.Pokemons).transform;
+
+            Celshading.instance.ApplyShadingMode();
 		}
 		
 		public void Update()

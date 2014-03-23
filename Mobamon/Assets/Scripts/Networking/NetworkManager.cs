@@ -238,8 +238,6 @@ namespace Mobamon.Networking
                     }
                 }
             }
-
-            Celshading.instance.ApplyShadingMode();
         }
     }
 }
