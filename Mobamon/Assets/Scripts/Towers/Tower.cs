@@ -2,8 +2,10 @@ using System;
 using UnityEngine;
 using Mobamon.Pokemon.Player;
 using System.Collections.Generic;
+using Mobamon.Database;
+using Mobamon.Database.Enums;
 
-namespace Mobamob.Towers
+namespace Mobamon.Towers
 {
     public class Tower : MonoBehaviour
     {
@@ -36,13 +38,12 @@ namespace Mobamob.Towers
 
         public void GetAvailableTargets()
         {
-            Component[] transformList = GameObject.Find("Pokemon").GetComponentsInChildren(typeof(Transform));
+            Transform[] transformList = SceneHelper.GetContainer(Container.Pokemons).GetComponentsInChildren<Transform>();
             this.availableTarget.Clear();
 
-            foreach (Component comp in transformList)
+            foreach (Transform tr in transformList)
             {
-                Transform tr = comp.transform;
-                if (tr.parent != GameObject.Find("Pokemon").transform)
+                if (tr.parent != SceneHelper.GetContainer(Container.Pokemons).transform)
                     continue;
                 
                 PokemonController controller = (PokemonController)tr.gameObject.GetComponent(typeof(PokemonController));

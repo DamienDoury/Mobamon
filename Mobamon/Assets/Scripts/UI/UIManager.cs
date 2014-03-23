@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using Mobamon.Pokemon.Player;
+using Mobamon.Database;
+using Mobamon.Database.Enums;
 
 namespace Mobamon.UI
 {
@@ -96,13 +98,13 @@ namespace Mobamon.UI
 
 		private void DisplayHealthBars()
 		{
-			Component[] transformList = GameObject.Find("Pokemon").GetComponentsInChildren(typeof(Transform));
+            Component[] transformList = SceneHelper.GetContainer(Container.Pokemons).GetComponentsInChildren(typeof(Transform));
 
 			foreach(Component comp in transformList)
 			{
 				// Securities.
 				Transform tr = comp.transform;
-				if(tr.parent != GameObject.Find("Pokemon").transform)
+                if(tr.parent != SceneHelper.GetContainer(Container.Pokemons).transform)
 					continue;
 
 				PokemonController controller = (PokemonController)tr.gameObject.GetComponent(typeof(PokemonController));

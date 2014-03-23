@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Mobamon.Database;
 using Mobamon.Database.Enums;
 using Mobamon.Pokemon.Player;
 using UnityEditor;
@@ -147,7 +148,7 @@ namespace Mobamon.Editor
                 if (ParseModel(pokemonName, modelPath, out foundAnimations, out attackAnimHalfDuration, out laserSourcePath))
                 {
                     GameObject instance = (GameObject) Instantiate(prefab, Vector3.zero, Quaternion.identity);
-                    instance.transform.parent = GameObject.Find("Pokemon").transform;
+                    instance.transform.parent = SceneHelper.GetContainer(Container.Pokemons).transform;
 
                     CreateAnimator(animatorPath, foundAnimations, prefab);
                     AddControllerScript(prefab, laserSourcePath, attackAnimHalfDuration);

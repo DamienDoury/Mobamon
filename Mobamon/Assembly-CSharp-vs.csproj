@@ -73,7 +73,6 @@
      <Compile Include="Assets\Scripts\Database\GameInfo.cs" />
      <Compile Include="Assets\Scripts\Database\ItemPool.cs" />
      <Compile Include="Assets\Scripts\Database\Pokedex.cs" />
-     <Compile Include="Assets\Scripts\Database\PokemonList.cs" />
      <Compile Include="Assets\Scripts\Database\SceneHelper.cs" />
      <Compile Include="Assets\Scripts\Inventory\Case.cs" />
      <Compile Include="Assets\Scripts\Inventory\CaseType.cs" />

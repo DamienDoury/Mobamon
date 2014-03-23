@@ -9,7 +9,7 @@ namespace Mobamon.Database
     {
         private static Dictionary<Container, GameObject> _container = new Dictionary<Container, GameObject>();
         
-        private void Start()
+        private void Awake()
         {
             GetContainers();
         }

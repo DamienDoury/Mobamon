@@ -3,6 +3,8 @@ using UnityEngine;
 using Mobamon.Pokemon.Player;
 using System.Collections.Generic;
 using Mobamon.Pokemon.Classes;
+using Mobamon.Database;
+using Mobamon.Database.Enums;
 
 namespace Mobamon.UI
 {
@@ -30,17 +32,16 @@ namespace Mobamon.UI
         }
 
         public void DisplayHealth() {
-            Component[] transformList = GameObject.Find("Pokemon").GetComponentsInChildren(typeof(Transform));
+            Transform[] transformList = SceneHelper.GetContainer(Container.Pokemons).GetComponentsInChildren<Transform>();
             Texture healthPatternTexture;
             posTeam1.Set(50, 0);
             posTeam2.Set(Screen.width - 96 - 50, 0);
             Vector2 pos = new Vector2(0, 0);
             Texture texture = new Texture();
 
-            foreach (Component comp in transformList)
+            foreach (Transform tr in transformList)
             {
-                Transform tr = comp.transform;
-                if (tr.parent != GameObject.Find("Pokemon").transform)
+                if (tr.parent != SceneHelper.GetContainer(Container.Pokemons).transform)
                     continue;
                 
                 PokemonController controller = (PokemonController)tr.gameObject.GetComponent(typeof(PokemonController));

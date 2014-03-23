@@ -19,7 +19,7 @@ namespace Mobamon.UI
 		private PokemonController controller = null;
 		private SelectedMove selectedMove;
 		private GameObject hoverEntity;
-		private Transform pkmnList;
+		private Transform entityList;
 
 		private Vector2 handPos;
 		private Vector2 singlePos;
@@ -34,7 +34,7 @@ namespace Mobamon.UI
 		// Use this for initialization
 		void Start()
 		{
-			pkmnList = GameObject.Find("Pokemon").transform;
+			entityList = SceneHelper.GetContainer(Container.Entities).transform;
 			
 			handPos = new Vector2(9f, 12f);
 			singlePos = new Vector2(24f, 24f);
@@ -209,10 +209,11 @@ namespace Mobamon.UI
 		void HightlightEntities()
 		{
 			GameObject caster = controller.gameObject;
+            SphereCollider[] colliderList = entityList.GetComponentsInChildren<SphereCollider>();
 
-			foreach(Transform pkmn in pkmnList)
+            foreach(SphereCollider collider in colliderList)
 			{
-				if(!pkmn.gameObject.activeSelf)
+                if(!collider.gameObject.activeSelf)
 					continue;
 
 				Color outlineColor = Color.black;
@@ -223,21 +224,21 @@ namespace Mobamon.UI
 				if(selectedMove != null && !selectedMove.IsLaunched())
 				{
 					float range = selectedMove.info.Range;
-					SphereCollider pkmnCollider = (SphereCollider)pkmn.GetComponent(typeof(Collider));
+					//SphereCollider pkmnCollider = (SphereCollider)pkmn.GetComponent(typeof(Collider));
 
-					if(Vector3.Magnitude(pkmn.position - caster.transform.position) <= selectedMove.info.Range / 100f + controller.nav.radius + pkmnCollider.radius)
+                    if(Vector3.Magnitude(collider.transform.position - caster.transform.position) <= selectedMove.info.Range / 100f + controller.nav.radius + collider.radius)
 					{
-						if(((int)controller.GetRelation(pkmn.gameObject) & (int)selectedMove.info.AllowedTargets) != 0)
+						if(((int)controller.GetRelation(collider.gameObject) & (int)selectedMove.info.AllowedTargets) != 0)
 						{
 							outlineColor = Color.white;
 
-							if(selectedMove.info.TargetKind == MoveTargetKind.Single && hoverEntity == pkmn.gameObject)
+                            if(selectedMove.info.TargetKind == MoveTargetKind.Single && hoverEntity == collider.gameObject)
 								outlineColor = Color.red;
 						}
 					}
 				}
 
-				Renderer rend = (Renderer)pkmn.GetComponentInChildren(typeof(Renderer));
+				Renderer rend = (Renderer)collider.GetComponentInChildren(typeof(Renderer));
 				foreach(Material mat in rend.materials)
 				{
 					mat.SetColor("_OutlineColor", outlineColor);

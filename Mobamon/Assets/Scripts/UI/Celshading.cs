@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Mobamon.Database;
+using Mobamon.Database.Enums;
 
 public class Celshading : MonoBehaviour
 {
@@ -22,7 +24,7 @@ public class Celshading : MonoBehaviour
 	
 	private void Start()
 	{
-		pkmnList = GameObject.Find("Pokemon").transform;
+		pkmnList = SceneHelper.GetContainer(Container.Entities).transform;
 
 		GameObject terrainObj = GameObject.Find("Map");
 		terrain = (Terrain)terrainObj.GetComponent(typeof(Terrain));
@@ -82,7 +84,7 @@ public class Celshading : MonoBehaviour
 		// Then, we apply it to the pokemons, trees and ground.
 		foreach(Transform pkmn in pkmnList)
 		{
-			SkinnedMeshRenderer rend = (SkinnedMeshRenderer)pkmn.gameObject.GetComponentInChildren(typeof(SkinnedMeshRenderer));
+			MeshRenderer rend = (MeshRenderer)pkmn.gameObject.GetComponentInChildren(typeof(MeshRenderer));
 
 			foreach(Material mat in rend.materials)
 			{

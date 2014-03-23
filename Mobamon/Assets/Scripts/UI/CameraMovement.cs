@@ -32,7 +32,7 @@ namespace Mobamon.UI
 
 		private Vector3 targetPos;
 		
-        private void Awake()
+        private void Start()
 		{
 			getCameraTarget();
 

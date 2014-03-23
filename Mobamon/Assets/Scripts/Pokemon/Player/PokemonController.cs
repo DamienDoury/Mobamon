@@ -81,6 +81,8 @@ namespace Mobamon.Pokemon.Player
 			
 			currentHP = maxHP;
 			savedDestination = new Vector3();
+
+            this.gameObject.transform.parent = SceneHelper.GetContainer(Container.Pokemons).transform;
 		}
 		
 		public void Update()
@@ -119,10 +121,6 @@ namespace Mobamon.Pokemon.Player
             foreach(GameObject pokemon in pokemonList)
                 if(pokemon != gameObject)
                     pokemon.tag = "Untagged";
-            /*Component[] controllerList = GameObject.Find("Pokemon").GetComponentsInChildren(typeof(PokemonController));
-                foreach(Component comp in controllerList)
-                    if(comp.gameObject != gameObject)
-                        Destroy(comp);*/
             
             // Camera list network management.
             GameObject[] cameraList = GameObject.FindGameObjectsWithTag("MainCamera");
@@ -168,7 +166,7 @@ namespace Mobamon.Pokemon.Player
 				{
 					Ray ray = myCam.ScreenPointToRay(Input.mousePosition);
 					
-					if(Physics.Raycast(ray, out hit) && hit.transform.parent.name == "Pokemon")
+					if(Physics.Raycast(ray, out hit) && hit.transform.root == SceneHelper.GetContainer(Container.Entities))
 					{
 						hoverEntity = hit.transform.gameObject;
 
@@ -282,7 +280,7 @@ namespace Mobamon.Pokemon.Player
 
 			if(controller == null)
 			{
-				if(pokemon.transform.parent.name == "Pokemon")
+				if(pokemon.transform.parent.name == "Pokemons")
 					return PokemonRelation.Enemy; // We can target the NPCs.
 				else
 					return PokemonRelation.ERROR;

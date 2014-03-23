@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Mobamon.Pokemon.Player;
 using System;
 using Mobamon.Database;
+using Mobamon.Database.Enums;
 using System.Linq;
 
 namespace Mobamon.Networking
@@ -34,9 +35,12 @@ namespace Mobamon.Networking
         private Dictionary<string, GameObject> playerPokemons = new Dictionary<string, GameObject>();
 
 
-		void Start()
+		void Awake()
 		{
-			pkmn = GameObject.Find("Pokemon");
+            if(Application.isEditor)
+                Application.LoadLevel("StartScene");
+
+			pkmn = SceneHelper.GetContainer(Container.Pokemons);
 
 			if(Application.platform == RuntimePlatform.LinuxPlayer) // If this is Lucas' server, then we launch the server. Otherwise, we launch a client (that may become a server later).
 				StartServer();
