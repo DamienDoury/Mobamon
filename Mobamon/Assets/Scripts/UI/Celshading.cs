@@ -5,10 +5,11 @@ using Mobamon.Database.Enums;
 
 public class Celshading : MonoBehaviour
 {
-	private int shadingMode = 0;
+    private int shadingMode;
 	private int initialShadingMode = 3;
+    private int newMode;
 
-	private Transform pkmnList;
+	private Transform entitiesList;
 	private Terrain terrain;
 	private Renderer treeRenderer;
 	private GameObject marker;
@@ -21,10 +22,14 @@ public class Celshading : MonoBehaviour
 
 	public Material smoothToonMaterial;
 	public Material sharpToonMaterial;
+
+    public static Celshading instance;
 	
 	private void Start()
 	{
-		pkmnList = SceneHelper.GetContainer(Container.Entities).transform;
+        instance = this;
+
+        entitiesList = SceneHelper.GetContainer(Container.Entities).transform;
 
 		GameObject terrainObj = GameObject.Find("Map");
 		terrain = (Terrain)terrainObj.GetComponent(typeof(Terrain));
@@ -33,48 +38,51 @@ public class Celshading : MonoBehaviour
 		shaderNormal = Shader.Find("Diffuse");
 		shaderToon = Shader.Find("Toon/Lighted Outline");
 
-		ApplyShadingMode(initialShadingMode);
+        shadingMode = initialShadingMode;
+        newMode = shadingMode;
+		ApplyShadingMode();
 	}
 	
 	private void Update()
 	{
 		if(Input.GetKeyDown(KeyCode.F1))
-			ApplyShadingMode(1);
+			newMode = 1;
 		else if(Input.GetKeyDown(KeyCode.F2))
-			ApplyShadingMode(2);
+            newMode = 2;
 		else if(Input.GetKeyDown(KeyCode.F3))
-			ApplyShadingMode(3);
+            newMode = 3;
+
+        if(newMode != shadingMode)
+        {
+            shadingMode = newMode;
+            ApplyShadingMode();
+        }
 	}
 
-	public void ApplyShadingMode(int newMode)
+	public void ApplyShadingMode()
 	{
 		// Securities.
 		if(Application.platform == RuntimePlatform.WindowsEditor)
-			return;
-
-		if(newMode == shadingMode)
-			return;
-		else
-			shadingMode = newMode;
+			return;            	
 
 		// First of all, we select the shader, ramp textures and the material.
 		Shader shader = new Shader();
 		Texture ramp = new Texture();
 		Material material = new Material(shaderNormal);
 		
-		if(newMode == 1) // No cell shading.
+        if(shadingMode == 1) // No cell shading.
 		{
 			shader = shaderNormal;
 			ramp = null;
 			material = null;
 		}
-		else if(newMode == 2) // Outline only.
+        else if(shadingMode == 2) // Outline only.
 		{
 			shader = shaderToon;
 			ramp = smoothToonRampTexture;
 			material = smoothToonMaterial;
 		}
-		else if(newMode == 3) // Full cell shading : outline and lights.
+        else if(shadingMode == 3) // Full cell shading : outline and lights.
 		{
 			shader = shaderToon;
 			ramp = sharpToonRampTexture;
@@ -82,15 +90,16 @@ public class Celshading : MonoBehaviour
 		}
 
 		// Then, we apply it to the pokemons, trees and ground.
-		foreach(Transform pkmn in pkmnList)
+        SkinnedMeshRenderer[] rendList = entitiesList.gameObject.GetComponentsInChildren<SkinnedMeshRenderer>();
+        foreach(SkinnedMeshRenderer rend in rendList)
 		{
-			MeshRenderer rend = (MeshRenderer)pkmn.gameObject.GetComponentInChildren(typeof(MeshRenderer));
+			//MeshRenderer rend = (MeshRenderer)pkmn.gameObject.GetComponentInChildren(typeof(MeshRenderer));
 
 			foreach(Material mat in rend.materials)
 			{
 				mat.shader = shader;
 
-				if(newMode > 1)
+                if(shadingMode > 1)
                 {
                     mat.SetTexture("_Ramp", ramp);
                     mat.SetFloat("_Outline", 0.002f);
@@ -102,7 +111,7 @@ public class Celshading : MonoBehaviour
 		{
 			treeMat.shader = shader;
 
-			if(newMode > 1)
+            if(shadingMode > 1)
             {
                 treeMat.SetTexture("_Ramp", ramp);
                 treeMat.SetFloat("_Outline", 0.002f);
