@@ -19,9 +19,13 @@ namespace Mobamon.Shop
     	
     	// Update is called once per frame
     	void Update () {
-            if (display && Input.GetKeyUp(KeyCode.Escape))
+            if (display && (Input.GetKeyUp(KeyCode.Escape) || Input.GetButtonUp("Shop")))
             {
                 display = false;
+            } 
+            else if (!display && Input.GetButtonUp("Shop"))
+            {
+                display = true;
             }
     	}
 
