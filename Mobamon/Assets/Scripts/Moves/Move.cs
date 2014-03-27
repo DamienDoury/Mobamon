@@ -321,7 +321,7 @@ namespace Mobamon.Moves
 			float attackMinRange = attackRange * minRangePercent;
 			float attackMaxRange = attackRange * maxRangePercent;
 			float distance = Vector2.Distance (sourcePosition, targetPosition);
-			float enemyRadius = target.radius;
+            float enemyRadius = 4f;//target.radius;
 			
 			float halfAngle = (this.Info.AdditionalData as ConeData).HalfAngle;
 			Vector2 sourceTargetVector = targetPosition - sourcePosition;

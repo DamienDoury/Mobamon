@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Mobamon.Pokemon;
 using Mobamon.Pokemon.Classes;
 using Mobamon.Database;
 using Mobamon.Database.Enums;
@@ -12,21 +13,20 @@ namespace Mobamon.Pokemon.Player
 {
 	public class PokemonController : MonoBehaviour
 	{
-		#region Public fields
-		
-        public int id;
+		#region Public fields		
+        public int pokedex_id;
 		public NavMeshAgent nav;
 		public Transform laserSource;
 		public string laserSourcePath = "";
 		public GameObject hoverEntity;
 		public SelectedMove selectedMove;
-		public float maxHP = 300f;
+		/*public float maxHP = 300f;
 		public float currentHP;
-		public int team;
-		public float radius = 4f;
+		public int team;*/
+		//public float radius = 4f;
 		public Camera myCam = null;
         public List<string> moveSet = new List<string>(4);
-		
+        public EntityManager entityManager { get; private set; }
 		#endregion
 		
 		#region Private fields
@@ -39,13 +39,13 @@ namespace Mobamon.Pokemon.Player
 		public float turnSmoothing = 20f;
 		private RaycastHit hit;		
 		public Dictionary<MoveCategory, float> attackAnimHalfDuration = new Dictionary<MoveCategory, float>();		
-		private float regenRate = 0.05f; // in % of max health/sec.
+		/*private float regenRate = 0.05f; // in % of max health/sec.
 		
 		private bool blinkAfterDamage = false;
 		private float blinkDuration = 0f;
 		private float blinkMaxDuration = 0.5f;
 		private int numberOfBlinks = 1;
-		private Color originalColor = new Color(0.8f, 0.8f, 0.8f, 1f);
+		private Color originalColor = new Color(0.8f, 0.8f, 0.8f, 1f);*/
 		
 		private Vector3 savedDestination;
 		#endregion
@@ -54,9 +54,11 @@ namespace Mobamon.Pokemon.Player
 		
 		public void Start()
 		{
-            if (int.TryParse(name.Split('-') [0], out id))
+            entityManager = GetComponent<EntityManager>();
+
+            if (int.TryParse(name.Split('-') [0], out pokedex_id))
             {
-                Debug.Log("The GameObject's name doesn't contain the id");
+                Debug.Log("The GameObject's name doesn't contain the Pokedex ID");
             }
 
 			anim = GetComponent<Animator>();
@@ -79,8 +81,8 @@ namespace Mobamon.Pokemon.Player
 			
 			selectedMove = null;
 			
-			currentHP = maxHP;
-			savedDestination = new Vector3();
+			/*currentHP = maxHP;
+			savedDestination = new Vector3();*/
 
             this.gameObject.transform.parent = SceneHelper.GetContainer(Container.Pokemons).transform;
 
@@ -90,8 +92,8 @@ namespace Mobamon.Pokemon.Player
 		public void Update()
 		{
             RandomizeMoveSet();
-			RegenHP();
-			BlinkAfterDamage();
+			//RegenHP();
+			//BlinkAfterDamage();
 			
 			if (isMine)
 			{
@@ -234,7 +236,7 @@ namespace Mobamon.Pokemon.Player
 							}
 							else if(targetKind == MoveTargetKind.Single && hoverEntity != null) // If the target type is not an area, then it's a single target spell. Therefore he needs a target.
 							{
-								PokemonRelation relation = GetRelation(hoverEntity);
+								PokemonRelation relation = entityManager.GetRelation(hoverEntity);
 
 								if((relation & selectedMove.info.AllowedTargets) != 0)
 								{
@@ -269,14 +271,14 @@ namespace Mobamon.Pokemon.Player
 			}
 		}
 
-		[RPC]
+		/*[RPC]
 		public void SetDamage(float dmg)
 		{
 			float newLife = Mathf.Max(0, currentHP - dmg);
 			this.gameObject.networkView.RPC("SetLife", RPCMode.All, newLife);
-		}
+		}*/
 		
-		public PokemonRelation GetRelation(GameObject pokemon)
+		/*public PokemonRelation GetRelation(GameObject pokemon)
 		{
 			PokemonController controller = (PokemonController)pokemon.GetComponent(typeof(PokemonController));
 
@@ -302,8 +304,13 @@ namespace Mobamon.Pokemon.Player
 					return PokemonRelation.Enemy; // Neutral monsters will also be considered as enemies.
 				}
 			}
-		}
+		}*/
 		
+        public void ResetMovingRestrictions()
+        {
+            canMove = true;
+            canRotate = true;
+        }
 		#endregion
 		
 		#region Private methods
@@ -337,7 +344,7 @@ namespace Mobamon.Pokemon.Player
 							if(viewID != NetworkViewID.unassigned)
 							{
 								targetPokemon = NetworkView.Find(viewID).gameObject;
-								relation = GetRelation(targetPokemon);
+								relation = entityManager.GetRelation(targetPokemon);
 							}
 							
 							MoveTargetKind targetKind = selectedMove.info.TargetKind;
@@ -583,7 +590,7 @@ namespace Mobamon.Pokemon.Player
 			selectedMove = null;
 		}
 		
-		private void RegenHP()
+		/*private void RegenHP()
 		{
 			currentHP = Mathf.Min(maxHP, currentHP + maxHP * regenRate * Time.deltaTime);
 		}
@@ -618,7 +625,7 @@ namespace Mobamon.Pokemon.Player
 			nav.ResetPath();
 			
 			// Logical setters
-			currentHP = maxHP;
+            entityManager.currentHP = entityManager.maxHP;
 			selectedMove = null;
 			canMove = true;
 			canRotate = true;
@@ -648,25 +655,25 @@ namespace Mobamon.Pokemon.Player
 			foreach(Material mat in matList)
 			{
 				float lerp = Mathf.PingPong(blinkDuration, blinkMaxDuration) / blinkMaxDuration;
-				mat.color = Color.Lerp(originalColor, Color.red, lerp);
+				mat.color = Color.Lerp(originalColor, Color.red, lerp);*/
 				//mat.Lerp(mat, dmgMat, lerp);
 				//mat = dmgMat;
 				// Alternate solution: Material.Lerp() with a plain red template material.
-			}
+			/*}
 			
-			/*for(int i = 0; i < matList.Length; i++)
+			for(int i = 0; i < matList.Length; i++)
 				matList[i].SetTexture("_MainTex", dmgMat.GetTexture("_MainTex"));
 
 			for(int i = 0; i < matList.Length; i++)
 				matList[i].CopyPropertiesFromMaterial(dmgMat);*/
 			
-			if(blinkDuration <= 0f)
+			/*if(blinkDuration <= 0f)
 			{
 				ResetBlinking();
 			}
-		}
+		}*/
 		
-		private void ResetBlinking()
+		/*private void ResetBlinking()
 		{
 			blinkAfterDamage = false;
 			
@@ -674,7 +681,7 @@ namespace Mobamon.Pokemon.Player
 			Material[] matList = rend.materials;
 			foreach(Material mat in matList)
 				mat.color = originalColor;
-		}
+		}*/
 		
 		[RPC]
 		private void WarpEntity(NetworkViewID viewID, Vector3 pos, float speed, Quaternion rotation, Vector3 destination)
@@ -690,7 +697,7 @@ namespace Mobamon.Pokemon.Player
 			}
 		}
 
-		private void OnParticleCollision(GameObject particle)
+		/*private void OnParticleCollision(GameObject particle)
 		{
 			if(Network.isServer)
 			{
@@ -705,7 +712,7 @@ namespace Mobamon.Pokemon.Player
 					man.HasCollided(gameObject);
 				}
 			}
-		}
+		}*/
 
         private void RandomizeMoveSet()
         {

@@ -1,5 +1,6 @@
 using UnityEngine;
 using Mobamon.Pokemon.Player;
+using Mobamon.Pokemon;
 
 namespace Mobamon.Database.Classes
 {
@@ -58,5 +59,24 @@ namespace Mobamon.Database.Classes
 				return result;
 			}
 		}
+
+        /// <summary>
+        /// Gets the entity manager.
+        /// </summary>
+        /// <value>The entity manager of this entity.</value>
+        public EntityManager EntityManager
+        {
+            get
+            {
+                EntityManager result = null;
+                
+                if (this.GameObject != null)
+                {
+                    result = this.GameObject.GetComponent<EntityManager>();
+                }
+                
+                return result;
+            }
+        }
 	}
 }

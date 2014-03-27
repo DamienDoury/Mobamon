@@ -20,7 +20,7 @@ namespace Mobamon.Inventory
                 GameObject pokemon = GameObject.FindWithTag("CameraTarget").gameObject;
             
                 PokemonController controller = (PokemonController)pokemon.GetComponent<PokemonController>();
-                controller.currentHP = (controller.currentHP + hpRestored >= controller.maxHP ? controller.maxHP : controller.currentHP + hpRestored);
+                controller.entityManager.currentHP = (controller.entityManager.currentHP + hpRestored >= controller.entityManager.maxHP ? controller.entityManager.maxHP : controller.entityManager.currentHP + hpRestored);
             }
 
 

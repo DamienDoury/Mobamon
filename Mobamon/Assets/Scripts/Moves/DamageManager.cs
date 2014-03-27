@@ -6,6 +6,7 @@ using Mobamon.Database;
 using Mobamon.Database.Classes;
 using Mobamon.Database.Enums;
 using Mobamon.Moves;
+using Mobamon.Pokemon;
 
 namespace Mobamon.Moves
 {
@@ -60,15 +61,15 @@ namespace Mobamon.Moves
                     
                     // Damage calculation
                     if(timeBeforeDamage <= 0
-                       && (moveInfo.AllowedTargets & caster.Controller.GetRelation(target.Controller.gameObject)) != 0)
+                       && (moveInfo.AllowedTargets & caster.EntityManager.GetRelation(target.GameObject)) != 0)
                     {
                         if(moveInfo.EffectType == MoveEffectType.OnHit)
                         {
-                            target.Controller.SetDamage(moveInfo.Damage);
+                            target.EntityManager.SetDamage(moveInfo.Damage);
                         }
                         else if(moveInfo.EffectType == MoveEffectType.PerSecond)
                         {
-                            target.Controller.SetDamage(moveInfo.Damage);
+                            target.EntityManager.SetDamage(moveInfo.Damage);
                         }
                     }
                 }
@@ -117,7 +118,6 @@ namespace Mobamon.Moves
         /// Apply the damage for the non Single Target moves.
         /// </summary>
         /// <param name="victim">The GameObject of the hit Pokemon.</param>
-        /// <param name="victimController">The PokemonController of the hit Pokemon.</param>
         public void HasCollided(GameObject victim)
         {
             if(Network.isServer)
@@ -135,23 +135,23 @@ namespace Mobamon.Moves
                 if(moveInfo.HittableTargetsNumber == MoveTargetNumber.One && hitTargetList.Count > 0)
                     return;
                 
-                PokemonController victimController = victim.GetComponent<PokemonController>();
+                EntityManager victimManager = victim.GetComponent<EntityManager>();
                 
-                if(victimController != null)
+                if(victimManager != null)
                 {
                     // Damage calculation
-                    if((moveInfo.AllowedTargets & caster.Controller.GetRelation(victimController.gameObject)) != 0 
+                    if((moveInfo.AllowedTargets & caster.EntityManager.GetRelation(victimManager.gameObject)) != 0 
                        && !hitTargetList.Contains(victim))
                     {
                         hitTargetList.Add(victim);
                         
                         if(moveInfo.EffectType == MoveEffectType.OnHit)
                         {
-                            victimController.SetDamage(moveInfo.Damage);
+                            victimManager.SetDamage(moveInfo.Damage);
                         }
                         else if(moveInfo.EffectType == MoveEffectType.PerSecond)
                         {
-                            victimController.SetDamage(moveInfo.Damage);
+                            victimManager.SetDamage(moveInfo.Damage);
                         }
                     }
                 }

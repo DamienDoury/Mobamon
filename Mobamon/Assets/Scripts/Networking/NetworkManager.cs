@@ -1,8 +1,10 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Mobamon.Pokemon;
 using Mobamon.Pokemon.Player;
 using System;
+using Mobamon.GameManager;
 using Mobamon.Database;
 using Mobamon.Database.Enums;
 using System.Linq;
@@ -34,12 +36,8 @@ namespace Mobamon.Networking
 
         private Dictionary<string, GameObject> playerPokemons = new Dictionary<string, GameObject>();
 
-
-		void Awake()
+		void Start()
 		{
-            if(Application.isEditor)
-                Application.LoadLevel("StartScene");
-
 			pkmn = SceneHelper.GetContainer(Container.Pokemons);
 
 			if(Application.platform == RuntimePlatform.LinuxPlayer) // If this is Lucas' server, then we launch the server. Otherwise, we launch a client (that may become a server later).
@@ -176,14 +174,23 @@ namespace Mobamon.Networking
 		{
 			if(Network.isServer)
 			{
+                NetworkViewID viewID = playerPokemons[player.guid].networkView.viewID;
+
 				Debug.Log("Clean up after player " + player);
 				Network.RemoveRPCs(player);
-                Network.Destroy(playerPokemons[player.guid].networkView.viewID);
-				Network.DestroyPlayerObjects(player);
+                Network.RemoveRPCs(viewID);
+                Network.Destroy(viewID);
+				//Network.DestroyPlayerObjects(player);
 
                 playerPokemons.Remove(player.guid);
+                networkView.RPC("RemovePlayerData", RPCMode.AllBuffered, viewID);
 			}
 		}
+
+        void RemovePlayerData(NetworkViewID viewID)
+        {
+            PlayerRegistrar.Instance.List.Remove(viewID);
+        }
 		
 		void OnConnectedToServer()
 		{
@@ -191,7 +198,7 @@ namespace Mobamon.Networking
             if (!Network.isServer)
             {
                 // When the server has accepted the connection, sends the selected pokemon
-                networkView.RPC("ChoosePokemon", RPCMode.Server, Network.player.guid, ChosenPokemonId);
+                networkView.RPC("ChoosePokemon", RPCMode.Server, Network.player.guid, (ChosenPokemonId == -1 ? 58 : ChosenPokemonId));
             }
 		}
 
@@ -220,22 +227,28 @@ namespace Mobamon.Networking
 
             if (networkView != null)
             {
-                GameObject gameObject = networkView.gameObject;
+                GameObject gameObject = networkView.gameObject;               
 
                 if (gameObject != null)
                 {
+                    EntityManager em = gameObject.AddComponent<EntityManager>();
+                    if(em != null)
+                    {
+                        em.team = teamId;
+                    }
+
                     PokemonController controller = (PokemonController)gameObject.GetComponent("PokemonController");
 
                     if (controller != null)
                     {
-                        controller.team = teamId;
-
                         if (isMine)
                         {
                             gameObject.tag = "CameraTarget";
                             controller.SetMine();
                         }
                     }
+
+                    PlayerRegistrar.Instance.List.Add(viewId, gameObject);
                 }
             }
         }

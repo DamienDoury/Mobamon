@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Mobamon.Pokemon;
 using Mobamon.Pokemon.Player;
 
 namespace Mobamon.UI
@@ -46,10 +47,10 @@ namespace Mobamon.UI
             if (GameObject.FindWithTag("CameraTarget") != null)
             {
                 GameObject pokemon = GameObject.FindWithTag("CameraTarget").gameObject;
-                PokemonController controller = (PokemonController)pokemon.GetComponent<PokemonController>();
+                EntityManager em = pokemon.GetComponent<EntityManager>();
 
                 pivot.Set(Screen.width / 2, Screen.height - (centerTexture.height / 2) - 5);
-                angle = ((controller.maxHP - controller.currentHP) * 100 / controller.maxHP) * -1.8f;
+                angle = ((em.maxHP - em.currentHP) * 100 / em.maxHP) * -1.8f;
             }
 
 

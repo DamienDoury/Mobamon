@@ -74,6 +74,8 @@
      <Compile Include="Assets\Scripts\Database\ItemPool.cs" />
      <Compile Include="Assets\Scripts\Database\Pokedex.cs" />
      <Compile Include="Assets\Scripts\Database\SceneHelper.cs" />
+     <Compile Include="Assets\Scripts\GameManager\PlayerRegistrar.cs" />
+     <Compile Include="Assets\Scripts\GameManager\TheReaper.cs" />
      <Compile Include="Assets\Scripts\Inventory\Case.cs" />
      <Compile Include="Assets\Scripts\Inventory\CaseType.cs" />
      <Compile Include="Assets\Scripts\Inventory\IItemBehavior.cs" />
@@ -85,10 +87,13 @@
      <Compile Include="Assets\Scripts\Moves\TransmitCollisionMessage.cs" />
      <Compile Include="Assets\Scripts\Networking\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\Networking\ServerManager.cs" />
+     <Compile Include="Assets\Scripts\Plugin\InvokeWithParameters.cs" />
      <Compile Include="Assets\Scripts\Pokemon\Classes\SelectedMove.cs" />
+     <Compile Include="Assets\Scripts\Pokemon\EntityManager.cs" />
      <Compile Include="Assets\Scripts\Pokemon\Player\Death.cs" />
      <Compile Include="Assets\Scripts\Pokemon\Player\PokemonController.cs" />
      <Compile Include="Assets\Scripts\Shop\Shop.cs" />
+     <Compile Include="Assets\Scripts\Test.cs" />
      <Compile Include="Assets\Scripts\Towers\Tower.cs" />
      <Compile Include="Assets\Scripts\UI\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\UI\Celshading.cs" />

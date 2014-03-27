@@ -40,7 +40,7 @@ namespace Mobamon.Database
 					AllowedTargets = PokemonRelation.Enemy,
 					DamageTargets = PokemonRelation.Enemy,
 					Category = MoveCategory.Special,
-					Damage = 90f,
+					Damage = 200f,
 					Duration = 1f,
 					EffectType = MoveEffectType.PerSecond,
 					DurationPercentEffectsApply = 0.3f,

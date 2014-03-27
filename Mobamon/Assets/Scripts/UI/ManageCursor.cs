@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Mobamon.Pokemon;
 using Mobamon.Pokemon.Player;
 using Mobamon.Pokemon.Classes;
 using Mobamon.Database;
@@ -208,7 +209,9 @@ namespace Mobamon.UI
 
 		void HightlightEntities()
 		{
-			GameObject caster = controller.gameObject;
+            GameObject caster = controller.gameObject;
+            EntityManager em = controller.GetComponent<EntityManager>();
+
             SphereCollider[] colliderList = entityList.GetComponentsInChildren<SphereCollider>();
 
             foreach(SphereCollider collider in colliderList)
@@ -228,7 +231,7 @@ namespace Mobamon.UI
 
                     if(Vector3.Magnitude(collider.transform.position - caster.transform.position) <= selectedMove.info.Range / 100f + controller.nav.radius + collider.radius)
 					{
-						if(((int)controller.GetRelation(collider.gameObject) & (int)selectedMove.info.AllowedTargets) != 0)
+                        if(((int)em.GetRelation(collider.gameObject) & (int)selectedMove.info.AllowedTargets) != 0)
 						{
 							outlineColor = Color.white;
 

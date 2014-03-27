@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Mobamon.Pokemon;
 using Mobamon.Pokemon.Player;
 using Mobamon.Database;
 using Mobamon.Database.Enums;
@@ -107,18 +108,18 @@ namespace Mobamon.UI
                 if(tr.parent != SceneHelper.GetContainer(Container.Pokemons).transform)
 					continue;
 
-				PokemonController controller = (PokemonController)tr.gameObject.GetComponent(typeof(PokemonController));
-				if(controller == null)
+                EntityManager em = tr.GetComponent<EntityManager>();
+				if(em == null)
 					continue;
 
 				// We get the right health bar texture.
-				if(controller.team == 1)
+				if(em.team == 1)
 					healthBarTexture = healthBar1Texture;
-				else if(controller.team == 2)
+				else if(em.team == 2)
 					healthBarTexture = healthBar2Texture;
 
 				// We get the right health pattern texture.
-				float HPpercentage = controller.currentHP / controller.maxHP;
+                float HPpercentage = em.currentHP / em.maxHP;
 				if(HPpercentage > 0.5)
 					healthPatternTexture = healthPatternHighTexture;
 				else if(HPpercentage > 0.2)
@@ -133,10 +134,10 @@ namespace Mobamon.UI
 
 				// We display the amount of HP.
 				Rect rectHealthPattern = new Rect();
-				int displayOffset = 3 + (24 * (controller.team % 2));
+                int displayOffset = 3 + (24 * (em.team % 2));
 				rectHealthPattern.x = rectHealthBar.x + displayOffset;
 				rectHealthPattern.y = rectHealthBar.y + 3;
-				rectHealthPattern.width = healthPatternMaxWidth * controller.currentHP / controller.maxHP;
+                rectHealthPattern.width = healthPatternMaxWidth * em.currentHP / em.maxHP;
 				rectHealthPattern.height = healthPatternTexture.height;
 				GUI.DrawTexture(rectHealthPattern, healthPatternTexture);
 			}

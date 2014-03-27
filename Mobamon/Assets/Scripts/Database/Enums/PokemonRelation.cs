@@ -26,7 +26,12 @@ namespace Mobamon.Database.Enums
 		/// <summary>
 		/// The pokemons are enemies
 		/// </summary>
-		Enemy = 1 << 2
+		Enemy = 1 << 2,
+        
+        /// <summary>
+        /// The pokemons are neutral
+        /// </summary>
+        Neutral = 1 << 3
 	}
 }
 
