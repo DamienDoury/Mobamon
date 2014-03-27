@@ -29,13 +29,17 @@ namespace Mobamon.UI.Menus
 
         protected void Start()
         {
-            this.Step = MainMenuStep.Main;
+            this.Step = MainMenuStep.Server;
         }
 
         protected void OnGUI()
         {
             switch (this.Step)
             {
+				case MainMenuStep.Server:
+					this.DrawServer();
+					break;
+
                 case MainMenuStep.Exit:
                     this.DrawExitMenu();
                     break;
@@ -144,6 +148,28 @@ namespace Mobamon.UI.Menus
             GUILayout.EndArea();
         }
 
+		private void DrawServer()
+		{
+            GUI.skin = this.guiSkin;
+            GUIStyle style = new GUIStyle();
+            style.fontSize = 30;
+            style.normal.textColor = Color.white;
+			
+			// Draws the background image
+			GUI.DrawTexture(new Rect(0f, 0f, Screen.width, Screen.height), this.backgroundTexture);
+			
+			// Draws the choices
+			GUILayout.BeginArea(new Rect(100f, Screen.height * 0.3f, Screen.width - 200f, Screen.height * 0.6f));
+			
+			GUILayout.BeginVertical();
+            GUILayout.Label(LanguageManager.Language ["MainMenu_Labels_PlayType"], style);
+			this.CreateButton(LanguageManager.Language["MainMenu_Buttons_Client"], OnClientButtonClicked);
+			this.CreateButton(LanguageManager.Language["MainMenu_Buttons_Server"], OnServerButtonClicked);
+			GUILayout.EndVertical();
+			
+			GUILayout.EndArea();
+		}
+
         /// <summary>
         /// Draws the button with the given text and checks if it's currently clicked
         /// </summary>
@@ -241,6 +267,18 @@ namespace Mobamon.UI.Menus
             NetworkManager.ChosenPokemonId = id;
             Application.LoadLevel("Test");
         }
+
+		private void OnClientButtonClicked()
+		{
+			NetworkManager.IsServer = false;
+			this.Step = MainMenuStep.Play;
+		}
+
+		private void OnServerButtonClicked()
+		{
+			NetworkManager.IsServer = true;
+			Application.LoadLevel("Test");
+		}
 
         #endregion
     }

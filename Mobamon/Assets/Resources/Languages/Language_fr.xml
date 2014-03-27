@@ -8,6 +8,11 @@
 			<Exit>Quitter</Exit>
 			<Confirm>Oui</Confirm>
 			<Cancel>Non</Cancel>
+			<Server>Serveur</Server>
+			<Client>Client</Client>
 		</Buttons>
+		<Labels>
+			<PlayType>Démarrer Mobamon en tant que</PlayType>
+		</Labels>
 	</MainMenu>
 </Mobamon>
