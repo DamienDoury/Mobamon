@@ -76,6 +76,9 @@
      <Compile Include="Assets\Scripts\Database\SceneHelper.cs" />
      <Compile Include="Assets\Scripts\GameManager\PlayerRegistrar.cs" />
      <Compile Include="Assets\Scripts\GameManager\TheReaper.cs" />
+     <Compile Include="Assets\Scripts\Evolution\Evolution.cs" />
+     <Compile Include="Assets\Scripts\Evolution\EvolutionLevelCondition.cs" />
+     <Compile Include="Assets\Scripts\Evolution\IEvolutionCondition.cs" />
      <Compile Include="Assets\Scripts\Inventory\Case.cs" />
      <Compile Include="Assets\Scripts\Inventory\CaseType.cs" />
      <Compile Include="Assets\Scripts\Inventory\IItemBehavior.cs" />
