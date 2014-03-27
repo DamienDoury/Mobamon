@@ -8,6 +8,8 @@ using Mobamon.Database;
 using Mobamon.Database.Enums;
 using Mobamon.Database.Classes;
 using Mobamon.Moves;
+using Mobamon.Pokemon.Helpers;
+using Mobamon.GameManager;
 
 namespace Mobamon.Pokemon.Player
 {
@@ -318,76 +320,80 @@ namespace Mobamon.Pokemon.Player
 		[RPC]
 		private void ValidateControl(int input, Vector3 pos, NetworkViewID viewID, int moveIndex)
 		{
-			if(Network.isServer)
-			{
-				if(input == (int)InputType.LeftClick)
-				{
-					if(selectedMove == null && moveIndex == -1)
-					{
-						// The character has to move at least half of its width. 
-						//if((theChosenHit.point - transform.position).magnitude >= nav.radius) 
-						{
-							SetDestination(pos);
-						}
-					}
-					else
-					{
-						// If a move is selected, but not launched :
-						//if(!selectedMove.IsLaunched())
-						if(selectedMove == null && moveIndex != -1)
-						{
-							SelectMove(moveIndex);
+			if (Network.isServer)
+            {
+                int team1Count = TeamHelper.GetPlayersCountInTeam(1);
+                int team2Count = TeamHelper.GetPlayersCountInTeam(2);
 
-							GameObject targetPokemon = new GameObject();
-							PokemonRelation relation = PokemonRelation.ERROR;
+                if (team1Count >= MatchManager.NumberOfPlayersRequiredInTeam && team2Count >= MatchManager.NumberOfPlayersRequiredInTeam)
+                {
 
-							if(viewID != NetworkViewID.unassigned)
-							{
-								targetPokemon = NetworkView.Find(viewID).gameObject;
-								relation = entityManager.GetRelation(targetPokemon);
-							}
-							
-							MoveTargetKind targetKind = selectedMove.info.TargetKind;
-							bool attackLaunched = false;
+                    if (input == (int)InputType.LeftClick)
+                    {
+                        if (selectedMove == null && moveIndex == -1)
+                        {
+                            // The character has to move at least half of its width. 
+                            //if((theChosenHit.point - transform.position).magnitude >= nav.radius) 
+                            {
+                                SetDestination(pos);
+                            }
+                        } else
+                        {
+                            // If a move is selected, but not launched :
+                            //if(!selectedMove.IsLaunched())
+                            if (selectedMove == null && moveIndex != -1)
+                            {
+                                SelectMove(moveIndex);
 
-							if(targetKind == MoveTargetKind.Area)
-							{
-								SetAttackState(NetworkViewID.unassigned, pos);
-								attackLaunched = true;
-							}
-							else if(targetKind == MoveTargetKind.Single && relation != PokemonRelation.ERROR) // If the target type is not an area, then it's a single target spell. Therefore he needs a target.
-							{
-								bool isSelfOnly = ((int)PokemonRelation.Self ^ (int)selectedMove.info.AllowedTargets) == 0;
+                                GameObject targetPokemon = new GameObject();
+                                PokemonRelation relation = PokemonRelation.ERROR;
 
-								if(isSelfOnly)
-								{
-									SetAttackState(viewID, pos);
-									attackLaunched = true;
-								}
-								else
-								{
-									if(((int)selectedMove.info.AllowedTargets & (int)relation) != 0)
-									{
-										SphereCollider targetCollider = (SphereCollider)targetPokemon.collider;
+                                if (viewID != NetworkViewID.unassigned)
+                                {
+                                    targetPokemon = NetworkView.Find(viewID).gameObject;
+                                    relation = entityManager.GetRelation(targetPokemon);
+                                }
+    							
+                                MoveTargetKind targetKind = selectedMove.info.TargetKind;
+                                bool attackLaunched = false;
 
-										if(Vector3.Magnitude(targetPokemon.transform.position - transform.position) <= selectedMove.info.Range / 100f + nav.radius + targetCollider.radius)
-										{
-											SetAttackState(viewID, pos);
-											attackLaunched = true;
-										}
-									}
-								}
-							}
+                                if (targetKind == MoveTargetKind.Area)
+                                {
+                                    SetAttackState(NetworkViewID.unassigned, pos);
+                                    attackLaunched = true;
+                                } else if (targetKind == MoveTargetKind.Single && relation != PokemonRelation.ERROR) // If the target type is not an area, then it's a single target spell. Therefore he needs a target.
+                                {
+                                    bool isSelfOnly = ((int)PokemonRelation.Self ^ (int)selectedMove.info.AllowedTargets) == 0;
 
-							if(!attackLaunched)
-							{
-								// If the player failed to click a right target for his attack, then we unselect it.
-								selectedMove = null;
-							}
-						}
-					}
-				}
-			}
+                                    if (isSelfOnly)
+                                    {
+                                        SetAttackState(viewID, pos);
+                                        attackLaunched = true;
+                                    } else
+                                    {
+                                        if (((int)selectedMove.info.AllowedTargets & (int)relation) != 0)
+                                        {
+                                            SphereCollider targetCollider = (SphereCollider)targetPokemon.collider;
+
+                                            if (Vector3.Magnitude(targetPokemon.transform.position - transform.position) <= selectedMove.info.Range / 100f + nav.radius + targetCollider.radius)
+                                            {
+                                                SetAttackState(viewID, pos);
+                                                attackLaunched = true;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                if (!attackLaunched)
+                                {
+                                    // If the player failed to click a right target for his attack, then we unselect it.
+                                    selectedMove = null;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 		}
 		
 		[RPC]

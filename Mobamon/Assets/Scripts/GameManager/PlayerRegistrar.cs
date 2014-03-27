@@ -18,8 +18,8 @@ namespace Mobamon.GameManager
         /// <summary>
         /// The key represents the NetworkViewID and the value is the GameObject reference on this instance of the game.
         /// </summary>
-        private Dictionary<NetworkViewID, GameObject> list = new Dictionary<NetworkViewID, GameObject>();
-        public Dictionary<NetworkViewID, GameObject> List
+        private Dictionary<NetworkViewID, PlayerEntry> list = new Dictionary<NetworkViewID, PlayerEntry>();
+        public Dictionary<NetworkViewID, PlayerEntry> List
         { 
             get 
             {

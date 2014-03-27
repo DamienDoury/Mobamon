@@ -268,7 +268,7 @@ namespace Mobamon.Networking
                         }
                     }
 
-                    PlayerRegistrar.Instance.List.Add(viewId, gameObject);
+                    PlayerRegistrar.Instance.List.Add(viewId, new PlayerEntry() { GameObject = gameObject, Team = teamId });
                 }
             }
         }
