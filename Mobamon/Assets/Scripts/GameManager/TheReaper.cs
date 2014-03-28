@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using System.Linq;
+using System.Collections.Generic;
 using Mobamon.GameManager;
 using Mobamon.Pokemon;
 using Mobamon.Pokemon.Player;
@@ -19,6 +21,7 @@ namespace Mobamon.GameManager
     public class TheReaper : MonoBehaviour
     {
         public static TheReaper instance { get; private set; }
+        private Dictionary<NetworkViewID, float> respawnQueue = new Dictionary<NetworkViewID, float>();
 
     	protected void Start ()
         {
@@ -27,7 +30,21 @@ namespace Mobamon.GameManager
 
     	protected void Update ()
         {
+            if(Network.isServer)
+            {
+                foreach (var truc in respawnQueue.ToDictionary(k => k.Key, v => v.Value))
+                {
+                    NetworkViewID viewID = truc.Key;
+                    float remainingTime = truc.Value - Time.deltaTime;
+                    respawnQueue[viewID] = remainingTime;
 
+                    if(remainingTime <= 0f)
+                    {
+                        networkView.RPC("Respawn", RPCMode.AllBuffered, viewID);
+                        respawnQueue.Remove(viewID);
+                    }
+                }
+            }
     	}
 
         /// <summary>
@@ -41,16 +58,16 @@ namespace Mobamon.GameManager
             if(Network.isServer)
             {
                 GameObject container = em.transform.parent.gameObject;
-
-                networkView.RPC("Kill", RPCMode.AllBuffered, em.networkView.viewID);
+                NetworkViewID viewID = em.networkView.viewID;
+                networkView.RPC("Kill", RPCMode.AllBuffered, viewID);
 
                 if(container == SceneHelper.GetContainer(Container.Pokemons))
                 {
-                    MakeRespawn(em, 3f);
+                    respawnQueue.Add(viewID, 3f);
                 }
                 else if(container == SceneHelper.GetContainer(Container.Wild))
                 {
-                    MakeRespawn(em, 1.5f);
+                    //respawnQueue.Add(viewID, 1.5f);
                 }
             }
         }
@@ -68,25 +85,10 @@ namespace Mobamon.GameManager
             }
             else
             {
-                Destroy(obj);
+                //obj.SetActive(false);
+                Destroy(obj); // A robot or a wild monster should be dead for good and not respawn; a new instance should be made instead.
             }
-        }
-
-        private void MakeRespawn(EntityManager em, float delay) //IEnumerator
-        {
-            if(Network.isServer)
-            {
-                //delay;
-
-                GameObject container = em.transform.parent.gameObject;
-                
-                if(container == SceneHelper.GetContainer(Container.Pokemons)
-                   || container == SceneHelper.GetContainer(Container.Wild))
-                {
-                    networkView.RPC("Respawn", RPCMode.AllBuffered, em.networkView.viewID);
-                }
-            }
-        }      
+        }          
 
         [RPC]
         private void Respawn(NetworkViewID viewID)
@@ -97,6 +99,9 @@ namespace Mobamon.GameManager
 
             if(container == SceneHelper.GetContainer(Container.Pokemons))
             {
+                // Once the entity is ready, we make it appear.
+                obj.SetActive(true);
+
                 PokemonController controller = obj.GetComponent<PokemonController>();
 
                 if(em == null)
@@ -105,21 +110,18 @@ namespace Mobamon.GameManager
                 // Visual setters
                 obj.transform.position = em.team % 2 == 0 ? GameInfo.redTeamSpawn : GameInfo.blueTeamSpawn;
                 obj.transform.rotation = Quaternion.identity;
-                controller.nav.ResetPath();
-                controller.ResetMovingRestrictions();
+                /*controller.nav.ResetPath();
+                controller.ResetMovingRestrictions();*/
                 
                 // Logical setters
                 em.currentHP = em.maxHP;
                 /*controller.selectedMove = null;
                 em.ResetBlinking();*/
-
-                // Once the entity is ready, we make it appear.
-                obj.SetActive(true);
             }
             else if(container == SceneHelper.GetContainer(Container.Wild))
             {
-                em.currentHP = em.maxHP;
                 obj.SetActive(true);
+                em.currentHP = em.maxHP;
             }
         }
     }

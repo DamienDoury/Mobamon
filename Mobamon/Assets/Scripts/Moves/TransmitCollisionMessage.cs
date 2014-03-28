@@ -62,7 +62,7 @@ public class TransmitCollisionMessage : MonoBehaviour
             if(victim == manager.caster.GameObject)
                 return;
 
-            if(victim.transform.root != entitiesContainer.transform)
+            if(victim.transform.parent.parent.gameObject != SceneHelper.GetContainer(Container.Entities))
                 return;
 
             if(!manager.hitTargetList.Contains(victim))

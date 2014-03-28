@@ -4,6 +4,7 @@ using Mobamon.Pokemon;
 using Mobamon.Pokemon.Player;
 using System.Collections.Generic;
 using Mobamon.Pokemon.Classes;
+using Mobamon.GameManager;
 using Mobamon.Database;
 using Mobamon.Database.Enums;
 
@@ -36,8 +37,10 @@ namespace Mobamon.UI
             Vector2 pos = new Vector2(0, 0);
             Texture texture = new Texture();
 
-            foreach (Transform tr in transformList)
+            foreach (var playerPokemon in PlayerRegistrar.Instance.List)
             {
+                Transform tr = playerPokemon.Value.transform;
+
                 if (tr.parent != SceneHelper.GetContainer(Container.Pokemons).transform)
                     continue;
                 
@@ -69,9 +72,12 @@ namespace Mobamon.UI
                 
                 Rect rectHealthBar = new Rect(pos.x, pos.y, texture.width, healthPatternEmptyTexture.height);
                 GUI.DrawTexture(rectHealthBar, healthPatternEmptyTexture);
-                
-                Rect rectHealthPattern = new Rect(pos.x, pos.y, texture.width * em.currentHP / em.maxHP, healthPatternTexture.height);
-                GUI.DrawTexture(rectHealthPattern, healthPatternTexture);
+
+                if(tr.gameObject.activeSelf && tr.GetComponentInChildren<SkinnedMeshRenderer>().enabled)
+                {
+                    Rect rectHealthPattern = new Rect(pos.x, pos.y, texture.width * em.currentHP / em.maxHP, healthPatternTexture.height);
+                    GUI.DrawTexture(rectHealthPattern, healthPatternTexture);
+                }
 
                 Rect rectPortrait = new Rect(pos.x, pos.y + healthPatternEmptyTexture.height, texture.width, texture.height);
                 GUI.DrawTexture(rectPortrait, texture);

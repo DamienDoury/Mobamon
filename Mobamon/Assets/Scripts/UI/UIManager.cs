@@ -108,6 +108,9 @@ namespace Mobamon.UI
                 if(tr.parent != SceneHelper.GetContainer(Container.Pokemons).transform)
 					continue;
 
+                if(!tr.GetComponentInChildren<SkinnedMeshRenderer>().enabled)
+                    continue;
+
                 EntityManager em = tr.GetComponent<EntityManager>();
 				if(em == null)
 					continue;
@@ -140,6 +143,10 @@ namespace Mobamon.UI
                 rectHealthPattern.width = healthPatternMaxWidth * em.currentHP / em.maxHP;
 				rectHealthPattern.height = healthPatternTexture.height;
 				GUI.DrawTexture(rectHealthPattern, healthPatternTexture);
+
+                // We display the name (device name) of the player.
+                rectHealthBar.y -= 20f;
+                GUI.Label(rectHealthBar, SystemInfo.deviceName);
 			}
 		}
 

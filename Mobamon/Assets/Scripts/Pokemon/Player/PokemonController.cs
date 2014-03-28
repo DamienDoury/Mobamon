@@ -87,13 +87,12 @@ namespace Mobamon.Pokemon.Player
             this.gameObject.transform.parent = SceneHelper.GetContainer(Container.Pokemons).transform;
 
             Celshading.instance.ApplyShadingMode();
+            ShareFogVision(); // This shouldn't be within this script.
 		}
 		
 		public void Update()
 		{
-            RandomizeMoveSet();
-			//RegenHP();
-			//BlinkAfterDamage();
+            //RandomizeMoveSet();
 			
 			if (isMine)
 			{
@@ -314,7 +313,42 @@ namespace Mobamon.Pokemon.Player
 		#endregion
 		
 		#region Private methods
-		
+        private void ShareFogVision()
+        {
+            GameObject playerPokemon = GameObject.FindWithTag("CameraTarget");
+            
+            if(playerPokemon == null)
+            {
+                Debug.LogError("Error: Pokemon not registered.");
+            }
+            else
+            {
+                int myTeam = playerPokemon.GetComponent<EntityManager>().team;
+                
+                foreach(EntityManager em in SceneHelper.GetContainer(Container.Entities).GetComponentsInChildren<EntityManager>())
+                {
+                    GameObject entity = em.gameObject;
+
+                    if(em.team == myTeam)
+                    {
+                        if(entity.GetComponent<FOWRevealer>() == null)
+                        {
+                            FOWRevealer fow = entity.AddComponent<FOWRevealer>();
+                            fow.range = new Vector2(0.5f, 20f);
+                            fow.lineOfSightCheck = FOWSystem.LOSChecks.EveryUpdate;
+                        }
+                    }
+                    else
+                    {
+                        if(entity.GetComponent<FOWRenderers>() == null)
+                        {
+                            entity.AddComponent<FOWRenderers>();
+                        }
+                    }
+                }
+            }
+        }
+
 		[RPC]
 		private void ValidateControl(int input, Vector3 pos, NetworkViewID viewID, int moveIndex)
 		{
