@@ -39,7 +39,7 @@ namespace Mobamon.UI
 
             foreach (var playerPokemon in PlayerRegistrar.Instance.List)
             {
-                Transform tr = playerPokemon.Value.transform;
+                Transform tr = playerPokemon.Value.GameObject.transform;
 
                 if (tr.parent != SceneHelper.GetContainer(Container.Pokemons).transform)
                     continue;

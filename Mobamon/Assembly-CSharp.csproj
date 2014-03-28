@@ -77,6 +77,10 @@
      <Compile Include="Assets\Scripts\Evolution\Evolution.cs" />
      <Compile Include="Assets\Scripts\Evolution\EvolutionLevelCondition.cs" />
      <Compile Include="Assets\Scripts\Evolution\IEvolutionCondition.cs" />
+     <Compile Include="Assets\Scripts\GameManager\Enums\MatchResultState.cs" />
+     <Compile Include="Assets\Scripts\GameManager\Enums\MatchState.cs" />
+     <Compile Include="Assets\Scripts\GameManager\MatchManager.cs" />
+     <Compile Include="Assets\Scripts\GameManager\PlayerEntry.cs" />
      <Compile Include="Assets\Scripts\GameManager\PlayerRegistrar.cs" />
      <Compile Include="Assets\Scripts\GameManager\TheReaper.cs" />
      <Compile Include="Assets\Scripts\Inventory\Case.cs" />
@@ -93,6 +97,7 @@
      <Compile Include="Assets\Scripts\Plugin\InvokeWithParameters.cs" />
      <Compile Include="Assets\Scripts\Pokemon\Classes\SelectedMove.cs" />
      <Compile Include="Assets\Scripts\Pokemon\EntityManager.cs" />
+     <Compile Include="Assets\Scripts\Pokemon\Helpers\TeamHelper.cs" />
      <Compile Include="Assets\Scripts\Pokemon\Player\Death.cs" />
      <Compile Include="Assets\Scripts\Pokemon\Player\PokemonController.cs" />
      <Compile Include="Assets\Scripts\Shop\Shop.cs" />

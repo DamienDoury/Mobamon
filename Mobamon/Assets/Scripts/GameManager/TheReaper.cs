@@ -58,12 +58,18 @@ namespace Mobamon.GameManager
             if(Network.isServer)
             {
                 GameObject container = em.transform.parent.gameObject;
-                NetworkViewID viewID = em.networkView.viewID;
-                networkView.RPC("Kill", RPCMode.AllBuffered, viewID);
+                MatchManager matchManager = GetComponent<MatchManager>();
+
+                if (matchManager != null)
+                {
+                    matchManager.AddKill(em.team);
+                }
+
+                networkView.RPC("Kill", RPCMode.AllBuffered, em.networkView.viewID);
 
                 if(container == SceneHelper.GetContainer(Container.Pokemons))
                 {
-                    respawnQueue.Add(viewID, 3f);
+                    respawnQueue.Add(em.networkView.viewID, 3f);
                 }
                 else if(container == SceneHelper.GetContainer(Container.Wild))
                 {
@@ -93,7 +99,7 @@ namespace Mobamon.GameManager
         [RPC]
         private void Respawn(NetworkViewID viewID)
         {
-            GameObject obj = PlayerRegistrar.Instance.List[viewID];
+            GameObject obj = PlayerRegistrar.Instance.List[viewID].GameObject;
             GameObject container = obj.transform.parent.gameObject;
             EntityManager em = obj.GetComponent<EntityManager>();
 

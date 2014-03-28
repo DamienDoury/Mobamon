@@ -8,12 +8,15 @@ using Mobamon.GameManager;
 using Mobamon.Database;
 using Mobamon.Database.Enums;
 using System.Linq;
+using System.IO;
+using System.Text.RegularExpressions;
 
 namespace Mobamon.Networking
 {
 	public class NetworkManager : MonoBehaviour
 	{
         public static int ChosenPokemonId = -1;
+		public static bool IsServer = false;
 
 		private const string typeName = "MobamonDev";
 		private const string gameName = "RoomName";
@@ -40,7 +43,7 @@ namespace Mobamon.Networking
 		{
 			pkmn = SceneHelper.GetContainer(Container.Pokemons);
 
-			if(Application.platform == RuntimePlatform.LinuxPlayer) // If this is Lucas' server, then we launch the server. Otherwise, we launch a client (that may become a server later).
+			if(IsServer || Application.platform == RuntimePlatform.LinuxPlayer) // If this is Lucas' server, then we launch the server. Otherwise, we launch a client (that may become a server later).
 				StartServer();
 			else
 				JoinServer();
@@ -78,29 +81,20 @@ namespace Mobamon.Networking
 
 		void OnFailedToConnect(NetworkConnectionError error)
 		{
-			if(Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
+			if (error != NetworkConnectionError.NoError)
 			{
-				StartServer();
-			}
-			else
-			{
-				notConnected = true;
-
-				if(error != NetworkConnectionError.NoError && !Network.isServer)
-				{
-					if(error == NetworkConnectionError.TooManyConnectedPlayers)
+				if (!Network.isServer) 
+                {
+                    notConnected = true;
+					if (error == NetworkConnectionError.TooManyConnectedPlayers)
 						connectionErrorMessage = "Too many players connected on our server. Please try again later.";
-					else if(error == NetworkConnectionError.ConnectionFailed && Application.isWebPlayer)
+					else if (error == NetworkConnectionError.ConnectionFailed && Application.isWebPlayer)
 						connectionErrorMessage = "Apparently, our server is down. Please come back later.";
-					else if(error == NetworkConnectionError.ConnectionFailed)
-						connectionErrorMessage = "Connection failed. Please check your internet connection. Our server might also be down.";
-				}
-				else
-				{
-					connectionErrorMessage = "Unknown connection error...";
-				}
-
-				OnGUI();
+					else if (error == NetworkConnectionError.ConnectionFailed)
+                        connectionErrorMessage = "Connection failed. Please check your internet connection. Our server might also be down.";
+                    
+                    OnGUI ();
+				} 
 			}
 		}
 
@@ -118,7 +112,19 @@ namespace Mobamon.Networking
 				}
 				else
 				{
-					Network.InitializeServer(12, serverPort, true);//!Network.HavePublicAddress());
+                    string ip = null;
+                    int port = -1;
+                    string errorMessage = null;
+                    
+                    if (this.ReadConfiguration(out ip, out port, out errorMessage))
+                    {
+                        Network.InitializeServer(6, port, true);//!Network.HavePublicAddress());
+                    }
+                    else
+                    {
+                        Debug.LogError(errorMessage);
+                        connectionErrorMessage = errorMessage;
+                    }
 				}
 
 				GameObject.Instantiate(Resources.Load("Camera/ServerCamera"));
@@ -126,7 +132,7 @@ namespace Mobamon.Networking
 		}
 
 		void JoinServer()
-		{
+		{	
 			if(Application.isWebPlayer && Application.absoluteURL.Contains("encyclopedex.com"))
 			{
 				if(Application.absoluteURL.Contains("/mobamon/"))
@@ -136,7 +142,21 @@ namespace Mobamon.Networking
 			}
 			else
 			{
-				Network.Connect(serverIp, serverPort);
+                string ip = null;
+                int port = -1;
+                string errorMessage = null;
+               
+                if (this.ReadConfiguration(out ip, out port, out errorMessage))
+                {
+                    Network.Connect(ip, port);
+                }
+                else
+                {
+                    Debug.LogError(errorMessage);
+                    connectionErrorMessage = errorMessage;
+                }
+
+				OnGUI();
 			}
 		}
 
@@ -248,8 +268,51 @@ namespace Mobamon.Networking
                         }
                     }
 
-                    PlayerRegistrar.Instance.List.Add(viewId, gameObject);
+                    PlayerRegistrar.Instance.List.Add(viewId, new PlayerEntry() { GameObject = gameObject, Team = teamId });
                 }
+            }
+        }
+
+        private bool ReadConfiguration(out string ip, out int port, out string errorMessage)
+        {
+            ip = null;
+            port = -1;
+            errorMessage = null;
+
+            try
+            {
+
+                if (File.Exists ("Configuration.txt"))
+                {
+                    Regex regex = new Regex (@"(?<ip>\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}):(?<port>\d{1,5})");
+                    string ipAddress = File.ReadAllText ("Configuration.txt");
+                    Match match = regex.Match(ipAddress);
+                    
+                    if (match.Success)
+                    {
+                        ip = match.Groups["ip"].Value;
+                        port = int.Parse(match.Groups["port"].Value);
+                        return true;
+                    }
+                    else
+                    {
+                        Debug.LogError("The IP address configured in the Configuration.txt is not valid");
+                        errorMessage = "The IP address configured in the Configuration.txt is not valid";
+                    }
+                }
+                else
+                {
+                    Debug.LogError("No 'Configuration.txt' file found");
+                    errorMessage = "No 'Configuration.txt' file found";
+                }
+
+                return false;
+            }
+            catch(Exception ex)
+            {
+                Debug.LogException(ex);
+                errorMessage = "An exception occurred";
+                return false;
             }
         }
     }

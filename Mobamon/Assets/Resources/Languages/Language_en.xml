@@ -8,6 +8,19 @@
 			<Exit>Exit</Exit>
 			<Confirm>Yes</Confirm>
 			<Cancel>No</Cancel>
+			<Server>Server</Server>
+			<Client>Client</Client>
 		</Buttons>
+		<Labels>
+			<PlayType>Start Mobamon as a</PlayType>
+		</Labels>
 	</MainMenu>
+	<GameManager>
+		<MatchManager>
+			<WaitingPlayers>Waiting for players...</WaitingPlayers>
+			<Draw>Draw !</Draw>
+			<Victory_Team1>Team 1 has won !</Victory_Team1>
+			<Victory_Team2>Team 2 has won !</Victory_Team2>
+		</MatchManager>
+	</GameManager>
 </Mobamon>

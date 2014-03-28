@@ -8,6 +8,19 @@
 			<Exit>Quitter</Exit>
 			<Confirm>Oui</Confirm>
 			<Cancel>Non</Cancel>
+			<Server>Serveur</Server>
+			<Client>Client</Client>
 		</Buttons>
+		<Labels>
+			<PlayType>Démarrer Mobamon en tant que</PlayType>
+		</Labels>
 	</MainMenu>
+	<GameManager>
+		<MatchManager>
+			<WaitingPlayers>Attente des joueurs...</WaitingPlayers>
+			<Draw>Egalité !</Draw>
+			<Victory_Team1>L'équipe 1 a gagné !</Victory_Team1>
+			<Victory_Team2>L'équipe 2 a gagné !</Victory_Team2>
+		</MatchManager>
+	</GameManager>
 </Mobamon>
