@@ -1,7 +1,8 @@
 Mobamon
 ============
 
-*My most ambitious video game projet so far! Try it out at http://encyclopedex.com/mobamon*
+*3D multiplayer online realtime game.*
+*Try it out at http://encyclopedex.com/mobamon*
 
 *Started December 2013*
 
