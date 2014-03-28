@@ -2,6 +2,7 @@
 using System.Collections;
 using Mobamon.GameManager;
 using Mobamon.Moves;
+using Mobamon.Database;
 using Mobamon.Database.Enums;
 
 namespace Mobamon.Pokemon
@@ -21,7 +22,20 @@ namespace Mobamon.Pokemon
     {
         #region Public fields
         public int team { get; set; }
-        public float maxHP { get; set; }
+		public Stats stats { get; set; }
+
+        public float maxHP		
+		{
+			get
+			{
+				return stats.hp;
+			}
+
+			set
+			{
+				stats.hp = value;
+			}
+		}
         public float currentHP { get; set; }
         public float regenRate { get; set; } // in % of max health/sec.
         #endregion

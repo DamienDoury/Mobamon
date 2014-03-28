@@ -84,7 +84,7 @@ GameObject:
   - 4: {fileID: 18406723}
   - 114: {fileID: 18406722}
   - 154: {fileID: 18406721}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -470,6 +470,38 @@ Prefab:
     - target: {fileID: 400014, guid: 126ba7eaa5710a144933cb85065c4709, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 126ba7eaa5710a144933cb85065c4709, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 126ba7eaa5710a144933cb85065c4709, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 126ba7eaa5710a144933cb85065c4709, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 126ba7eaa5710a144933cb85065c4709, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 126ba7eaa5710a144933cb85065c4709, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 126ba7eaa5710a144933cb85065c4709, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 126ba7eaa5710a144933cb85065c4709, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 126ba7eaa5710a144933cb85065c4709, type: 2}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 126ba7eaa5710a144933cb85065c4709, type: 2}
