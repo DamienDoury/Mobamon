@@ -171,7 +171,7 @@ namespace Mobamon.Pokemon.Player
 				{
 					Ray ray = myCam.ScreenPointToRay(Input.mousePosition);
 					
-					if(Physics.Raycast(ray, out hit) && hit.transform.root == SceneHelper.GetContainer(Container.Entities))
+					if(Physics.Raycast(ray, out hit) && hit.transform.root.gameObject == SceneHelper.GetContainer(Container.Entities))
 					{
 						hoverEntity = hit.transform.gameObject;
 

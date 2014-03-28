@@ -10,7 +10,7 @@ namespace Mobamon.GameManager
     public class MatchManager : MonoBehaviour
     {
         // Constants
-        public static readonly float MaxTime = 60.0f;
+        public static readonly float MaxTime = 600000.0f;
         public static readonly int NumberOfPlayersRequiredInTeam = 1;
 
         // Server
@@ -51,6 +51,7 @@ namespace Mobamon.GameManager
 
                     // Otherwise increases the timer
                     _timeElapsed += Time.deltaTime;
+					_networkView.RPC("SetTimer", RPCMode.OthersBuffered, _timeElapsed);
 
                     // If the time allotted for the game is elapsed, ended the match
                     if (_timeElapsed > MaxTime)
@@ -153,6 +154,12 @@ namespace Mobamon.GameManager
             // Updates the clients' MatchState
             _networkView.RPC("SetKills", RPCMode.OthersBuffered, _registeredKills[1], _registeredKills[2]);
         }
+
+		[RPC]
+		private void SetTimer(float timer)
+		{
+			_timeElapsed = timer;
+		}
 
         [RPC]
         private void SetMatchState(int matchState)
