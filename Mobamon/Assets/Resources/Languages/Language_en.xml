@@ -19,8 +19,8 @@
 		<MatchManager>
 			<WaitingPlayers>Waiting for players...</WaitingPlayers>
 			<Draw>Draw !</Draw>
-			<Victory_Team1>Team 1 has won !</Victory_Team1>
-			<Victory_Team2>Team 2 has won !</Victory_Team2>
+			<VictoryTeam1>Team 1 has won !</VictoryTeam1>
+			<VictoryTeam2>Team 2 has won !</VictoryTeam2>
 		</MatchManager>
 	</GameManager>
 </Mobamon>

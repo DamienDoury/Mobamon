@@ -356,10 +356,9 @@ namespace Mobamon.Pokemon.Player
 		{
 			if (Network.isServer)
             {
-                int team1Count = TeamHelper.GetPlayersCountInTeam(1);
-                int team2Count = TeamHelper.GetPlayersCountInTeam(2);
+                MatchManager matchManager = GameObject.Find("GameManager").GetComponent<MatchManager>();
 
-                if (team1Count >= MatchManager.NumberOfPlayersRequiredInTeam && team2Count >= MatchManager.NumberOfPlayersRequiredInTeam)
+                if (matchManager._state == Mobamon.GameManager.Enums.MatchState.Running)
                 {
 
                     if (input == (int)InputType.LeftClick)

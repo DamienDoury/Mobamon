@@ -18,7 +18,7 @@ namespace Mobamon.GameManager
         private NetworkView _networkView;
 
         // Both
-        private MatchState _state = MatchState.WaitingForPlayers;
+        public MatchState _state = MatchState.WaitingForPlayers;
         private MatchResultState _resultState = MatchResultState.Draw;
         private Dictionary<int, int> _registeredKills = new Dictionary<int, int>();
 
@@ -139,6 +139,8 @@ namespace Mobamon.GameManager
                         message = LanguageManager.Language ["GameManager_MatchManager_VictoryTeam2"];
                         break;
                 }
+
+                message += string.Format(" Team 1 : {0} - Team 2 : {1}", _registeredKills[1], _registeredKills[2]);
 
                 GUI.Label(position, message);
             }

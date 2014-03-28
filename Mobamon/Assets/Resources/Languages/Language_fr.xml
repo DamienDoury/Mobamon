@@ -19,8 +19,8 @@
 		<MatchManager>
 			<WaitingPlayers>Attente des joueurs...</WaitingPlayers>
 			<Draw>Egalité !</Draw>
-			<Victory_Team1>L'équipe 1 a gagné !</Victory_Team1>
-			<Victory_Team2>L'équipe 2 a gagné !</Victory_Team2>
+			<VictoryTeam1>L'équipe 1 a gagné !</VictoryTeam1>
+			<VictoryTeam2>L'équipe 2 a gagné !</VictoryTeam2>
 		</MatchManager>
 	</GameManager>
 </Mobamon>
