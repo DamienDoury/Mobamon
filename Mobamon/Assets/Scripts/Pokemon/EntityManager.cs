@@ -33,7 +33,7 @@ namespace Mobamon.Pokemon
 
 			set
 			{
-				stats.hp = value;
+				stats.hp = (int)value;
 			}
 		}
         public float currentHP { get; set; }
