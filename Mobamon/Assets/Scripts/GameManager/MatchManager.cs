@@ -10,8 +10,8 @@ namespace Mobamon.GameManager
     public class MatchManager : MonoBehaviour
     {
         // Constants
-        public static readonly float MaxTime = 600000.0f;
-        public static readonly int NumberOfPlayersRequiredInTeam = 1;
+        public static readonly float MaxTime = 600.0f;
+        public static readonly int NumberOfPlayersRequiredInTeam = 2;
 
         // Server
         private float _timeElapsed = 0.0f;

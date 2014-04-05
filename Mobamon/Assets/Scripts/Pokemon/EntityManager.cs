@@ -52,6 +52,7 @@ namespace Mobamon.Pokemon
         protected void Awake ()
         {
             team = 0;
+			stats = new Stats ();
         }
         
         protected void Start ()

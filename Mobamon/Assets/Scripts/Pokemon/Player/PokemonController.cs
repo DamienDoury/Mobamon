@@ -75,11 +75,29 @@ namespace Mobamon.Pokemon.Player
 			laserSource = transform.Find("Armature/" + laserSourcePath);
 			
 			hoverEntity = null;
-			
-			moveSet.Add("Flamethrower");
-			moveSet.Add("Frost Breath");
-			moveSet.Add("Mud Sport");
-			moveSet.Add("Poison Sting");
+
+			int i = pokedex_id % 3;
+
+			switch (i) {
+			case 0 :
+				moveSet.Add("Surf");
+				moveSet.Add("Bubble");
+				moveSet.Add("Waterfall");
+				moveSet.Add("Icicle Crash");
+				break;
+			case 1:
+				moveSet.Add("Flamethrower");
+				moveSet.Add("Poison Gas");
+				moveSet.Add("Poison Sting");
+				moveSet.Add("Venoshock");
+				break;
+			case 2:
+				moveSet.Add("Gust");
+				moveSet.Add("Hurricane");
+				moveSet.Add("Thunder Shock");
+				moveSet.Add("Razor Leaf");
+				break;
+			}
 			
 			selectedMove = null;
 			
