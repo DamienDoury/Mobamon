@@ -11,13 +11,14 @@ namespace Mobamon.GameManager
     {
         // Constants
         public static readonly float MaxTime = 600.0f;
-        public static readonly int NumberOfPlayersRequiredInTeam = 2;
+        public static readonly int NumberOfPlayersRequiredInTeam = 1;
 
         // Server
         private float _timeElapsed = 0.0f;
         private NetworkView _networkView;
 
         // Both
+		public bool BypassWaiting = true; // Skips the wait for other players to join in.
         public MatchState _state = MatchState.WaitingForPlayers;
         private MatchResultState _resultState = MatchResultState.Draw;
         private Dictionary<int, int> _registeredKills = new Dictionary<int, int>();
@@ -40,7 +41,7 @@ namespace Mobamon.GameManager
                 int team2Count = TeamHelper.GetPlayersCountInTeam(2);
 
                 // Checks if there is missing players
-                if (team1Count < NumberOfPlayersRequiredInTeam || team2Count < NumberOfPlayersRequiredInTeam)
+				if ((team1Count < NumberOfPlayersRequiredInTeam || team2Count < NumberOfPlayersRequiredInTeam) && !BypassWaiting)
                 {
                     // If so, set the state to Waiting for players
                     _state = MatchState.WaitingForPlayers;
@@ -90,6 +91,12 @@ namespace Mobamon.GameManager
 
         protected void OnGUI()
         {
+			if(LanguageManager.Language == null)
+			{
+				LanguageManager.Load();
+				return;
+			}
+
             if (_state == MatchState.WaitingForPlayers)
             {
                 // Waiting for players
