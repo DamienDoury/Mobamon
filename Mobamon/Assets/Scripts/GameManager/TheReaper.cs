@@ -116,13 +116,12 @@ namespace Mobamon.GameManager
                 // Visual setters
                 obj.transform.position = em.team % 2 == 0 ? GameInfo.redTeamSpawn : GameInfo.blueTeamSpawn;
                 obj.transform.rotation = Quaternion.identity;
-                /*controller.nav.ResetPath();
-                controller.ResetMovingRestrictions();*/
+                controller.nav.ResetPath();
+                controller.ResetMovingRestrictions();
                 
                 // Logical setters
-                em.currentHP = em.maxHP;
-                /*controller.selectedMove = null;
-                em.ResetBlinking();*/
+                controller.selectedMove = null;
+				em.Respawn();
             }
             else if(container == SceneHelper.GetContainer(Container.Wild))
             {

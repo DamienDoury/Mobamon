@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using Mobamon.GameManager;
 using Mobamon.Moves;
 using Mobamon.Database;
@@ -46,6 +47,7 @@ namespace Mobamon.Pokemon
         private float blinkMaxDuration = 0.5f;
         private int numberOfBlinks = 1;
         private Color originalColor = new Color(0.8f, 0.8f, 0.8f, 1f);
+		private List<DamageInfo> damageHistory = new List<DamageInfo>();
         #endregion 
 
         #region Protected methods
@@ -71,9 +73,10 @@ namespace Mobamon.Pokemon
 
         #region Public methods
         [RPC]
-        public void SetDamage(float dmg)
+        public void SetDamage(float dmg, EntityManager caster)
         {
             float newLife = Mathf.Max(0, currentHP - dmg);
+			damageHistory.Add(new DamageInfo(dmg, caster));
             this.gameObject.networkView.RPC("SetLife", RPCMode.All, newLife);
         }
 
@@ -116,6 +119,13 @@ namespace Mobamon.Pokemon
             foreach(Material mat in matList)
                 mat.color = originalColor;
         }
+
+		public void Respawn() // Is called by Respawn() from TheReaper
+		{
+			currentHP = maxHP;
+			ResetBlinking();
+			damageHistory.RemoveAll Clear();
+		}
         #endregion
 
         #region Private methods

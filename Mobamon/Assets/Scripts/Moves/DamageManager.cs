@@ -65,11 +65,11 @@ namespace Mobamon.Moves
                     {
                         if(moveInfo.EffectType == MoveEffectType.OnHit)
                         {
-                            target.EntityManager.SetDamage(moveInfo.Damage);
+                            target.EntityManager.SetDamage(moveInfo.Damage, caster.EntityManager);
                         }
                         else if(moveInfo.EffectType == MoveEffectType.PerSecond)
                         {
-                            target.EntityManager.SetDamage(moveInfo.Damage);
+                            target.EntityManager.SetDamage(moveInfo.Damage, caster.EntityManager);
                         }
                     }
                 }
@@ -147,11 +147,11 @@ namespace Mobamon.Moves
                         
                         if(moveInfo.EffectType == MoveEffectType.OnHit)
                         {
-                            victimManager.SetDamage(moveInfo.Damage);
+                            victimManager.SetDamage(moveInfo.Damage, caster.EntityManager);
                         }
                         else if(moveInfo.EffectType == MoveEffectType.PerSecond)
                         {
-                            victimManager.SetDamage(moveInfo.Damage);
+							victimManager.SetDamage(moveInfo.Damage, caster.EntityManager);
                         }
                     }
                 }
