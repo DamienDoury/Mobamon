@@ -124,7 +124,15 @@ namespace Mobamon.Pokemon
 		{
 			currentHP = maxHP;
 			ResetBlinking();
-			damageHistory.RemoveAll Clear();
+			damageHistory.Clear();
+		}
+
+		public void GrantKill()
+		{
+			stats.xp += 100;
+
+			if(stats.xp >= 100 * stats.lvl)
+				stats.lvl++;
 		}
         #endregion
 
@@ -152,8 +160,37 @@ namespace Mobamon.Pokemon
 
         private void Die()
         {
+			// We look for the Enemy who made the more damage and grant him the kill.
+			EntityManager killer = null;
+			float killerDamage = 0;
+
+			Dictionary<EntityManager, float> accomplices = new Dictionary<EntityManager, float>();
+			foreach(DamageInfo damageSource in damageHistory)
+			{
+				EntityManager caster = damageSource.caster;
+				float amount = damageSource.amount;
+
+				if(caster.team != this.team && caster.team != 0) // If this damage comes from an opponent...
+				{
+					if(accomplices.ContainsKey(caster) == false)
+					{
+						accomplices.Add(caster, amount);
+					}
+					else
+					{
+						accomplices[caster] += amount;
+					}
+
+					if(accomplices[caster] > killerDamage)
+					{
+						killerDamage = accomplices[caster];
+						killer = caster;
+					}
+				}
+			}
+
             if(Network.isServer)
-                TheReaper.instance.NoticeDeath(this);
+                TheReaper.instance.NoticeDeath(this, killer);
 
             /*Invoke("Respawn", 3f);
             gameObject.SetActive(false);*/

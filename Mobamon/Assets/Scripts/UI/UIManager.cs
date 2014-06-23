@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Mobamon.Pokemon;
 using Mobamon.Pokemon.Player;
 using Mobamon.Database;
@@ -72,10 +73,12 @@ namespace Mobamon.UI
 				getCamera();
 				return;
 			}
-
-			DisplayHealthBars();
-			DisplayPing();
-			DisplayFPS();
+			else
+			{
+				DisplayHealthBars();
+				DisplayPing();
+				DisplayFPS();
+			}
 		}
 
 		private void getCamera()
@@ -99,12 +102,29 @@ namespace Mobamon.UI
 
 		private void DisplayHealthBars()
 		{
-            Component[] transformList = SceneHelper.GetContainer(Container.Pokemons).GetComponentsInChildren(typeof(Transform));
+			Transform pokemonArray = SceneHelper.GetContainer(Container.Pokemons).transform;
+			SortedList<int, Transform> pokemonSortedList = new SortedList<int, Transform>();
 
-			foreach(Component comp in transformList)
+			/*
+			 * We sort the Pokemons according to their distance to the eye so the life bar of the closest Pokemon appears
+			 * in the foreground and overrides the ones of the farther Pokemons.
+			 * The security offset is just here in case we find 2 Pokemons at the exact same distance. 
+			 * In that case, it would add twice the same key in the SortedList and we don't want that.
+			 */
+
+			int securityOffset = 0;
+			foreach(Transform tr in pokemonArray)
+			{
+				int dist = (int)(-1000f * Vector3.Distance(tr.position, cam.transform.position)) - ++securityOffset;
+				pokemonSortedList.Add(dist, tr);
+			}
+
+			IList<Transform> pkmnList = pokemonSortedList.Values;
+
+			int i = 0;
+			foreach(Transform tr in pkmnList)
 			{
 				// Securities.
-				Transform tr = comp.transform;
                 if(tr.parent != SceneHelper.GetContainer(Container.Pokemons).transform)
 					continue;
 
@@ -114,6 +134,9 @@ namespace Mobamon.UI
                 EntityManager em = tr.GetComponent<EntityManager>();
 				if(em == null)
 					continue;
+
+				// Z index management.
+				GUI.depth = ++i;
 
 				// We get the right health bar texture.
 				if(em.team == 1)
@@ -147,6 +170,11 @@ namespace Mobamon.UI
                 // We display the name (device name) of the player.
                 rectHealthBar.y -= 20f;
                 GUI.Label(rectHealthBar, SystemInfo.deviceName);
+
+				// We display the level of the Pokemon.
+				rectHealthBar.x += 114 - 108 * (em.team % 2);
+				rectHealthBar.y += 23;
+				GUI.Label(rectHealthBar, em.stats.lvl.ToString());
 			}
 		}
 

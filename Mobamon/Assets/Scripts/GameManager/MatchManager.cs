@@ -55,7 +55,7 @@ namespace Mobamon.GameManager
 					_networkView.RPC("SetTimer", RPCMode.OthersBuffered, _timeElapsed);
 
                     // If the time allotted for the game is elapsed, ended the match
-                    if (_timeElapsed > MaxTime)
+                    if (_timeElapsed > MaxTime && false) // enless matches, edited by Damien
                     {
                         _state = MatchState.Ended;
 

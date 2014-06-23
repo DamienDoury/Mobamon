@@ -53,7 +53,7 @@ namespace Mobamon.GameManager
         /// We should also get the list of the entities that killed this one.
         /// </summary>
         /// <param name="em">EntityManager.</param>
-        public void NoticeDeath(EntityManager em)
+        public void NoticeDeath(EntityManager em, EntityManager killer)
         {
             if(Network.isServer)
             {
@@ -65,7 +65,7 @@ namespace Mobamon.GameManager
                     matchManager.AddKill(em.team);
                 }
 
-                networkView.RPC("Kill", RPCMode.AllBuffered, em.networkView.viewID);
+                networkView.RPC("Kill", RPCMode.AllBuffered, em.networkView.viewID, (killer == null ? NetworkViewID.unassigned : killer.networkView.viewID));
 
                 if(container == SceneHelper.GetContainer(Container.Pokemons))
                 {
@@ -79,20 +79,26 @@ namespace Mobamon.GameManager
         }
 
         [RPC]
-        private void Kill(NetworkViewID viewID)
+		private void Kill(NetworkViewID victimViewID, NetworkViewID killerViewID)
         {
-            GameObject obj = NetworkView.Find(viewID).gameObject;
-            GameObject container = obj.transform.parent.gameObject;
+			GameObject victim = NetworkView.Find(victimViewID).gameObject;
+            GameObject container = victim.transform.parent.gameObject;
+
+			if(killerViewID != NetworkViewID.unassigned)
+			{
+				EntityManager killer = NetworkView.Find(killerViewID).gameObject.GetComponent<EntityManager>();
+				killer.GrantKill();
+			}
 
             if(container == SceneHelper.GetContainer(Container.Pokemons)
                || container == SceneHelper.GetContainer(Container.Wild))
             {
-                obj.SetActive(false);
+                victim.SetActive(false);
             }
             else
             {
                 //obj.SetActive(false);
-                Destroy(obj); // A robot or a wild monster should be dead for good and not respawn; a new instance should be made instead.
+				Destroy(victim); // A robot or a wild monster should be dead for good and not respawn; a new instance should be made instead.
             }
         }          
 
