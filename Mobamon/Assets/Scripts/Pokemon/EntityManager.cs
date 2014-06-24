@@ -25,16 +25,11 @@ namespace Mobamon.Pokemon
         public int team { get; set; }
 		public Stats stats { get; set; }
 
-        public float maxHP		
+        public int maxHP		
 		{
 			get
 			{
-				return stats.hp;
-			}
-
-			set
-			{
-				stats.hp = (int)value;
+				return stats.currentStats[(int)StatsList.hp];
 			}
 		}
         public float currentHP { get; set; }
@@ -60,7 +55,6 @@ namespace Mobamon.Pokemon
         protected void Start ()
         {           
             regenRate = 0.05f;
-            maxHP = 300f;
             currentHP = maxHP;
     	}
     	
@@ -129,10 +123,84 @@ namespace Mobamon.Pokemon
 
 		public void GrantKill()
 		{
-			stats.xp += 100;
+			GainXP(10000);
+		}
 
-			if(stats.xp >= 100 * stats.lvl)
+		public void GainXP(int amount)
+		{			
+			stats.xp += amount;
+
+			int newLevel = 0;
+
+			LevelingRate rate = LevelingRate.Fast;
+
+			switch(rate)
+			{
+				case LevelingRate.Erratic:
+					// TODO: implement the actual formula.
+					newLevel = (int)Mathf.Pow(stats.xp * 5f / 4f, 1f / 3f);
+					break;
+
+				case LevelingRate.Fast:
+					newLevel = (int)Mathf.Pow(stats.xp * 5f / 4f, 1f / 3f);
+					break;
+
+				case LevelingRate.MediumFast:
+					newLevel = (int)Mathf.Pow(stats.xp, 1f / 3f);
+					break;
+
+				case LevelingRate.MediumSlow:
+					// TODO: implement the actual formula.
+					newLevel = (int)Mathf.Pow(stats.xp, 1f / 3f);
+					break;
+
+				case LevelingRate.Slow:
+					newLevel = (int)Mathf.Pow(stats.xp * 4f / 5f, 1f / 3f);
+					break;
+
+				case LevelingRate.Fluctuating:
+					// TODO: implement the actual formula.
+					newLevel = (int)Mathf.Pow(stats.xp * 5 / 4, 1/3);
+					break;
+
+				default:
+					Debug.LogError("Unknown leveling rate.");
+					break;
+			}
+
+			if(stats.lvl < newLevel)
+				LevelUp(newLevel);
+		}
+
+		public void LevelUp(int destLevel)
+		{
+			while (stats.lvl < destLevel)
+			{
+				// learn new moves to the moves stack, gain EVs to spend, evolution opportunity in the evolution stack
 				stats.lvl++;
+			}
+
+			RecalculateStats();
+		}
+
+		public void RecalculateStats()
+		{
+			// Formulas from http://bulbapedia.bulbagarden.net/wiki/Stats
+
+			int hpBefore = stats.baseStats[(int)StatsList.hp];
+
+			int i = (int)StatsList.hp;
+			stats.currentStats[i] = (int) ( ( (stats.baseStats[i] << 1) + stats.IV[i] + (stats.EV[i] >> 2) + 100) * stats.lvl / 100f + 10 );
+
+			for(i = 1; i < (int)StatsList.COUNT; i++)
+			{
+				// TODO: take the Nature into account.
+				float nature = 1f;
+				stats.currentStats[i] = (int) ( ( ( (stats.baseStats[i] << 1) + stats.IV[i] + (stats.EV[i] >> 2) ) * stats.lvl / 100f + 5) * nature );
+			}
+
+			int hpDifference = stats.baseStats[(int)StatsList.hp] - hpBefore;
+			currentHP += hpDifference; // When leveling up, you regen a little chunk of life.
 		}
         #endregion
 

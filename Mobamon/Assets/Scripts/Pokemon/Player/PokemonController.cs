@@ -60,8 +60,13 @@ namespace Mobamon.Pokemon.Player
 
             if (int.TryParse(name.Split('-') [0], out pokedex_id))
             {
-                Debug.Log("The GameObject's name doesn't contain the Pokedex ID");
+                Debug.LogError("The GameObject's name doesn't contain the Pokedex ID");
             }
+
+			for(int statID = 0; statID < (int)StatsList.COUNT; statID++) // Assignment of the base stats.
+			{
+				entityManager.stats.baseStats[statID] = Pokedex.pokemons[pokedex_id].Statistics.baseStats[statID];
+			}
 
 			anim = GetComponent<Animator>();
 			nav = GetComponent<NavMeshAgent>();

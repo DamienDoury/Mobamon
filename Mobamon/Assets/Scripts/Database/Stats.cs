@@ -1,4 +1,6 @@
-﻿namespace Mobamon.Database
+﻿using Mobamon.Database.Enums;
+
+namespace Mobamon.Database
 {
 	public class Stats
 	{
@@ -23,13 +25,11 @@
 		/// </summary>
 		/// <value>The evasion.</value>
 		public float evasion { get; set; }
-		
-		public int hp { get; set; }
-		public int attack { get; set; }
-		public int defense { get; set; }
-		public int specialAttack { get; set; }
-		public int specialDefense { get; set; }
-		public int speed { get; set; }
+
+		public int[] IV = new int[(int)StatsList.COUNT];
+		public int[] EV = new int[(int)StatsList.COUNT];
+		public int[] baseStats = new int[(int)StatsList.COUNT];
+		public int[] currentStats = new int[(int)StatsList.COUNT];
 
 		public Stats()
 		{
@@ -40,12 +40,13 @@
 			precision = 1f;
 			evasion = 1f;
 
-			hp = 10;
-			attack = 5;
-			defense = 5;
-			specialAttack = 5;
-			specialDefense = 5;
-			speed = 5;
+			for(int statID = 0; statID < (int)StatsList.COUNT; statID++)
+			{
+				IV[statID] = 0;
+				EV[statID] = 0;
+				baseStats[statID] = 5; // The minimum for a stat is 5, except for Shedinja's HP that goes down to 1.
+				currentStats[statID] = 5;
+			}
 		}
 	}
 }

@@ -8,8 +8,8 @@ namespace Mobamon.Database
 {
 	public static class Pokedex
 	{
-        public static Dictionary<int, PokemonInfo> pokemons = new Dictionary<int, PokemonInfo>()
-        {
+		public static Dictionary<int, PokemonInfo> pokemons = new Dictionary<int, PokemonInfo>()
+		{
 			{
 				1,
 				new PokemonInfo()
@@ -18,12 +18,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Bulbasaur",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 49,
-						defense = 49,
-						specialAttack = 65,
-						specialDefense = 65,
-						speed = 45
+						baseStats = new int[]{45, 49, 49, 65, 65, 45}
 					}
 				}
 			},
@@ -35,12 +30,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Ivysaur",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 62,
-						defense = 63,
-						specialAttack = 80,
-						specialDefense = 80,
-						speed = 60
+						baseStats = new int[]{60, 62, 63, 80, 80, 60}
 					}
 				}
 			},
@@ -52,12 +42,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Venusaur",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 82,
-						defense = 83,
-						specialAttack = 100,
-						specialDefense = 100,
-						speed = 80
+						baseStats = new int[]{80, 82, 83, 100, 100, 80}
 					}
 				}
 			},
@@ -69,12 +54,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Charmander",
 					Statistics = new Stats()
 					{
-						hp = 39,
-						attack = 52,
-						defense = 43,
-						specialAttack = 60,
-						specialDefense = 50,
-						speed = 65
+						baseStats = new int[]{39, 52, 43, 60, 50, 65}
 					}
 				}
 			},
@@ -86,12 +66,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Charmeleon",
 					Statistics = new Stats()
 					{
-						hp = 58,
-						attack = 64,
-						defense = 58,
-						specialAttack = 80,
-						specialDefense = 65,
-						speed = 80
+						baseStats = new int[]{58, 64, 58, 80, 65, 80}
 					}
 				}
 			},
@@ -103,12 +78,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Charizard",
 					Statistics = new Stats()
 					{
-						hp = 78,
-						attack = 84,
-						defense = 78,
-						specialAttack = 109,
-						specialDefense = 85,
-						speed = 100
+						baseStats = new int[]{78, 84, 78, 109, 85, 100}
 					}
 				}
 			},
@@ -120,12 +90,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Squirtle",
 					Statistics = new Stats()
 					{
-						hp = 44,
-						attack = 48,
-						defense = 65,
-						specialAttack = 50,
-						specialDefense = 64,
-						speed = 43
+						baseStats = new int[]{44, 48, 65, 50, 64, 43}
 					}
 				}
 			},
@@ -137,12 +102,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Wartortle",
 					Statistics = new Stats()
 					{
-						hp = 59,
-						attack = 63,
-						defense = 80,
-						specialAttack = 65,
-						specialDefense = 80,
-						speed = 58
+						baseStats = new int[]{59, 63, 80, 65, 80, 58}
 					}
 				}
 			},
@@ -154,12 +114,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Blastoise",
 					Statistics = new Stats()
 					{
-						hp = 79,
-						attack = 83,
-						defense = 100,
-						specialAttack = 85,
-						specialDefense = 105,
-						speed = 78
+						baseStats = new int[]{79, 83, 100, 85, 105, 78}
 					}
 				}
 			},
@@ -171,12 +126,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Caterpie",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 30,
-						defense = 35,
-						specialAttack = 20,
-						specialDefense = 20,
-						speed = 45
+						baseStats = new int[]{45, 30, 35, 20, 20, 45}
 					}
 				}
 			},
@@ -188,12 +138,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Metapod",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 20,
-						defense = 55,
-						specialAttack = 25,
-						specialDefense = 25,
-						speed = 30
+						baseStats = new int[]{50, 20, 55, 25, 25, 30}
 					}
 				}
 			},
@@ -205,12 +150,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Butterfree",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 45,
-						defense = 50,
-						specialAttack = 80,
-						specialDefense = 80,
-						speed = 70
+						baseStats = new int[]{60, 45, 50, 80, 80, 70}
 					}
 				}
 			},
@@ -222,12 +162,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Weedle",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 35,
-						defense = 30,
-						specialAttack = 20,
-						specialDefense = 20,
-						speed = 50
+						baseStats = new int[]{40, 35, 30, 20, 20, 50}
 					}
 				}
 			},
@@ -239,12 +174,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Kakuna",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 25,
-						defense = 50,
-						specialAttack = 25,
-						specialDefense = 25,
-						speed = 35
+						baseStats = new int[]{45, 25, 50, 25, 25, 35}
 					}
 				}
 			},
@@ -256,12 +186,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Beedrill",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 80,
-						defense = 40,
-						specialAttack = 45,
-						specialDefense = 80,
-						speed = 75
+						baseStats = new int[]{65, 80, 40, 45, 80, 75}
 					}
 				}
 			},
@@ -273,12 +198,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Pidgey",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 45,
-						defense = 40,
-						specialAttack = 35,
-						specialDefense = 35,
-						speed = 56
+						baseStats = new int[]{40, 45, 40, 35, 35, 56}
 					}
 				}
 			},
@@ -290,12 +210,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Pidgeotto",
 					Statistics = new Stats()
 					{
-						hp = 63,
-						attack = 60,
-						defense = 55,
-						specialAttack = 50,
-						specialDefense = 50,
-						speed = 71
+						baseStats = new int[]{63, 60, 55, 50, 50, 71}
 					}
 				}
 			},
@@ -307,12 +222,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Pidgeot",
 					Statistics = new Stats()
 					{
-						hp = 83,
-						attack = 80,
-						defense = 75,
-						specialAttack = 70,
-						specialDefense = 70,
-						speed = 91
+						baseStats = new int[]{83, 80, 75, 70, 70, 91}
 					}
 				}
 			},
@@ -324,12 +234,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Rattata",
 					Statistics = new Stats()
 					{
-						hp = 30,
-						attack = 56,
-						defense = 35,
-						specialAttack = 25,
-						specialDefense = 35,
-						speed = 72
+						baseStats = new int[]{30, 56, 35, 25, 35, 72}
 					}
 				}
 			},
@@ -341,12 +246,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Raticate",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 81,
-						defense = 60,
-						specialAttack = 50,
-						specialDefense = 70,
-						speed = 97
+						baseStats = new int[]{55, 81, 60, 50, 70, 97}
 					}
 				}
 			},
@@ -358,12 +258,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Spearow",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 60,
-						defense = 30,
-						specialAttack = 31,
-						specialDefense = 31,
-						speed = 70
+						baseStats = new int[]{40, 60, 30, 31, 31, 70}
 					}
 				}
 			},
@@ -375,12 +270,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Fearow",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 90,
-						defense = 65,
-						specialAttack = 61,
-						specialDefense = 61,
-						speed = 100
+						baseStats = new int[]{65, 90, 65, 61, 61, 100}
 					}
 				}
 			},
@@ -392,12 +282,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Ekans",
 					Statistics = new Stats()
 					{
-						hp = 35,
-						attack = 60,
-						defense = 44,
-						specialAttack = 40,
-						specialDefense = 54,
-						speed = 55
+						baseStats = new int[]{35, 60, 44, 40, 54, 55}
 					}
 				}
 			},
@@ -409,12 +294,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Arbok",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 85,
-						defense = 69,
-						specialAttack = 65,
-						specialDefense = 79,
-						speed = 80
+						baseStats = new int[]{60, 85, 69, 65, 79, 80}
 					}
 				}
 			},
@@ -426,12 +306,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Pikachu",
 					Statistics = new Stats()
 					{
-						hp = 35,
-						attack = 55,
-						defense = 30,
-						specialAttack = 50,
-						specialDefense = 40,
-						speed = 90
+						baseStats = new int[]{35, 55, 30, 50, 40, 90}
 					}
 				}
 			},
@@ -443,12 +318,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Raichu",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 90,
-						defense = 55,
-						specialAttack = 90,
-						specialDefense = 80,
-						speed = 100
+						baseStats = new int[]{60, 90, 55, 90, 80, 100}
 					}
 				}
 			},
@@ -460,12 +330,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Sandshrew",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 75,
-						defense = 85,
-						specialAttack = 20,
-						specialDefense = 30,
-						speed = 40
+						baseStats = new int[]{50, 75, 85, 20, 30, 40}
 					}
 				}
 			},
@@ -477,12 +342,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Sandslash",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 100,
-						defense = 110,
-						specialAttack = 45,
-						specialDefense = 55,
-						speed = 65
+						baseStats = new int[]{75, 100, 110, 45, 55, 65}
 					}
 				}
 			},
@@ -494,12 +354,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Nidoran♀",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 47,
-						defense = 52,
-						specialAttack = 40,
-						specialDefense = 40,
-						speed = 41
+						baseStats = new int[]{55, 47, 52, 40, 40, 41}
 					}
 				}
 			},
@@ -511,12 +366,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Nidorina",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 62,
-						defense = 67,
-						specialAttack = 55,
-						specialDefense = 55,
-						speed = 56
+						baseStats = new int[]{70, 62, 67, 55, 55, 56}
 					}
 				}
 			},
@@ -528,12 +378,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Nidoqueen",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 82,
-						defense = 87,
-						specialAttack = 75,
-						specialDefense = 85,
-						speed = 76
+						baseStats = new int[]{90, 82, 87, 75, 85, 76}
 					}
 				}
 			},
@@ -545,12 +390,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Nidoran♂",
 					Statistics = new Stats()
 					{
-						hp = 46,
-						attack = 57,
-						defense = 40,
-						specialAttack = 40,
-						specialDefense = 40,
-						speed = 50
+						baseStats = new int[]{46, 57, 40, 40, 40, 50}
 					}
 				}
 			},
@@ -562,12 +402,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Nidorino",
 					Statistics = new Stats()
 					{
-						hp = 61,
-						attack = 72,
-						defense = 57,
-						specialAttack = 55,
-						specialDefense = 55,
-						speed = 65
+						baseStats = new int[]{61, 72, 57, 55, 55, 65}
 					}
 				}
 			},
@@ -579,12 +414,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Nidoking",
 					Statistics = new Stats()
 					{
-						hp = 81,
-						attack = 92,
-						defense = 77,
-						specialAttack = 85,
-						specialDefense = 75,
-						speed = 85
+						baseStats = new int[]{81, 92, 77, 85, 75, 85}
 					}
 				}
 			},
@@ -596,12 +426,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Clefairy",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 45,
-						defense = 48,
-						specialAttack = 60,
-						specialDefense = 65,
-						speed = 35
+						baseStats = new int[]{70, 45, 48, 60, 65, 35}
 					}
 				}
 			},
@@ -613,12 +438,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Clefable",
 					Statistics = new Stats()
 					{
-						hp = 95,
-						attack = 70,
-						defense = 73,
-						specialAttack = 85,
-						specialDefense = 90,
-						speed = 60
+						baseStats = new int[]{95, 70, 73, 85, 90, 60}
 					}
 				}
 			},
@@ -630,12 +450,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Vulpix",
 					Statistics = new Stats()
 					{
-						hp = 38,
-						attack = 41,
-						defense = 40,
-						specialAttack = 50,
-						specialDefense = 65,
-						speed = 65
+						baseStats = new int[]{38, 41, 40, 50, 65, 65}
 					}
 				}
 			},
@@ -647,12 +462,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Ninetales",
 					Statistics = new Stats()
 					{
-						hp = 73,
-						attack = 76,
-						defense = 75,
-						specialAttack = 81,
-						specialDefense = 100,
-						speed = 100
+						baseStats = new int[]{73, 76, 75, 81, 100, 100}
 					}
 				}
 			},
@@ -664,12 +474,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Jigglypuff",
 					Statistics = new Stats()
 					{
-						hp = 115,
-						attack = 45,
-						defense = 20,
-						specialAttack = 45,
-						specialDefense = 25,
-						speed = 20
+						baseStats = new int[]{115, 45, 20, 45, 25, 20}
 					}
 				}
 			},
@@ -681,12 +486,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Wigglytuff",
 					Statistics = new Stats()
 					{
-						hp = 140,
-						attack = 70,
-						defense = 45,
-						specialAttack = 75,
-						specialDefense = 50,
-						speed = 45
+						baseStats = new int[]{140, 70, 45, 75, 50, 45}
 					}
 				}
 			},
@@ -698,12 +498,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Zubat",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 45,
-						defense = 35,
-						specialAttack = 30,
-						specialDefense = 40,
-						speed = 55
+						baseStats = new int[]{40, 45, 35, 30, 40, 55}
 					}
 				}
 			},
@@ -715,12 +510,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Golbat",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 80,
-						defense = 70,
-						specialAttack = 65,
-						specialDefense = 75,
-						speed = 90
+						baseStats = new int[]{75, 80, 70, 65, 75, 90}
 					}
 				}
 			},
@@ -732,12 +522,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Oddish",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 50,
-						defense = 55,
-						specialAttack = 75,
-						specialDefense = 65,
-						speed = 30
+						baseStats = new int[]{45, 50, 55, 75, 65, 30}
 					}
 				}
 			},
@@ -749,12 +534,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Gloom",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 65,
-						defense = 70,
-						specialAttack = 85,
-						specialDefense = 75,
-						speed = 40
+						baseStats = new int[]{60, 65, 70, 85, 75, 40}
 					}
 				}
 			},
@@ -766,12 +546,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Vileplume",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 80,
-						defense = 85,
-						specialAttack = 100,
-						specialDefense = 90,
-						speed = 50
+						baseStats = new int[]{75, 80, 85, 100, 90, 50}
 					}
 				}
 			},
@@ -783,12 +558,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Paras",
 					Statistics = new Stats()
 					{
-						hp = 35,
-						attack = 70,
-						defense = 55,
-						specialAttack = 45,
-						specialDefense = 55,
-						speed = 25
+						baseStats = new int[]{35, 70, 55, 45, 55, 25}
 					}
 				}
 			},
@@ -800,12 +570,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Parasect",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 95,
-						defense = 80,
-						specialAttack = 60,
-						specialDefense = 80,
-						speed = 30
+						baseStats = new int[]{60, 95, 80, 60, 80, 30}
 					}
 				}
 			},
@@ -817,12 +582,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Venonat",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 55,
-						defense = 50,
-						specialAttack = 40,
-						specialDefense = 55,
-						speed = 45
+						baseStats = new int[]{60, 55, 50, 40, 55, 45}
 					}
 				}
 			},
@@ -834,12 +594,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Venomoth",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 65,
-						defense = 60,
-						specialAttack = 90,
-						specialDefense = 75,
-						speed = 90
+						baseStats = new int[]{70, 65, 60, 90, 75, 90}
 					}
 				}
 			},
@@ -851,12 +606,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Diglett",
 					Statistics = new Stats()
 					{
-						hp = 10,
-						attack = 55,
-						defense = 25,
-						specialAttack = 35,
-						specialDefense = 45,
-						speed = 95
+						baseStats = new int[]{10, 55, 25, 35, 45, 95}
 					}
 				}
 			},
@@ -868,12 +618,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Dugtrio",
 					Statistics = new Stats()
 					{
-						hp = 35,
-						attack = 80,
-						defense = 50,
-						specialAttack = 50,
-						specialDefense = 70,
-						speed = 120
+						baseStats = new int[]{35, 80, 50, 50, 70, 120}
 					}
 				}
 			},
@@ -885,12 +630,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Meowth",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 45,
-						defense = 35,
-						specialAttack = 40,
-						specialDefense = 40,
-						speed = 90
+						baseStats = new int[]{40, 45, 35, 40, 40, 90}
 					}
 				}
 			},
@@ -902,12 +642,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Persian",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 70,
-						defense = 60,
-						specialAttack = 65,
-						specialDefense = 65,
-						speed = 115
+						baseStats = new int[]{65, 70, 60, 65, 65, 115}
 					}
 				}
 			},
@@ -919,12 +654,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Psyduck",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 52,
-						defense = 48,
-						specialAttack = 65,
-						specialDefense = 50,
-						speed = 55
+						baseStats = new int[]{50, 52, 48, 65, 50, 55}
 					}
 				}
 			},
@@ -936,12 +666,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Golduck",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 82,
-						defense = 78,
-						specialAttack = 95,
-						specialDefense = 80,
-						speed = 85
+						baseStats = new int[]{80, 82, 78, 95, 80, 85}
 					}
 				}
 			},
@@ -953,12 +678,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Mankey",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 80,
-						defense = 35,
-						specialAttack = 35,
-						specialDefense = 45,
-						speed = 70
+						baseStats = new int[]{40, 80, 35, 35, 45, 70}
 					}
 				}
 			},
@@ -970,12 +690,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Primeape",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 105,
-						defense = 60,
-						specialAttack = 60,
-						specialDefense = 70,
-						speed = 95
+						baseStats = new int[]{65, 105, 60, 60, 70, 95}
 					}
 				}
 			},
@@ -987,12 +702,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Growlithe",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 70,
-						defense = 45,
-						specialAttack = 70,
-						specialDefense = 50,
-						speed = 60
+						baseStats = new int[]{55, 70, 45, 70, 50, 60}
 					}
 				}
 			},
@@ -1004,12 +714,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Arcanine",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 110,
-						defense = 80,
-						specialAttack = 100,
-						specialDefense = 80,
-						speed = 95
+						baseStats = new int[]{90, 110, 80, 100, 80, 95}
 					}
 				}
 			},
@@ -1021,12 +726,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Poliwag",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 50,
-						defense = 40,
-						specialAttack = 40,
-						specialDefense = 40,
-						speed = 90
+						baseStats = new int[]{40, 50, 40, 40, 40, 90}
 					}
 				}
 			},
@@ -1038,12 +738,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Poliwhirl",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 65,
-						defense = 65,
-						specialAttack = 50,
-						specialDefense = 50,
-						speed = 90
+						baseStats = new int[]{65, 65, 65, 50, 50, 90}
 					}
 				}
 			},
@@ -1055,12 +750,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Poliwrath",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 85,
-						defense = 95,
-						specialAttack = 70,
-						specialDefense = 90,
-						speed = 70
+						baseStats = new int[]{90, 85, 95, 70, 90, 70}
 					}
 				}
 			},
@@ -1072,12 +762,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Abra",
 					Statistics = new Stats()
 					{
-						hp = 25,
-						attack = 20,
-						defense = 15,
-						specialAttack = 105,
-						specialDefense = 55,
-						speed = 90
+						baseStats = new int[]{25, 20, 15, 105, 55, 90}
 					}
 				}
 			},
@@ -1089,12 +774,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Kadabra",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 35,
-						defense = 30,
-						specialAttack = 120,
-						specialDefense = 70,
-						speed = 105
+						baseStats = new int[]{40, 35, 30, 120, 70, 105}
 					}
 				}
 			},
@@ -1106,12 +786,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Alakazam",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 50,
-						defense = 45,
-						specialAttack = 135,
-						specialDefense = 85,
-						speed = 120
+						baseStats = new int[]{55, 50, 45, 135, 85, 120}
 					}
 				}
 			},
@@ -1123,12 +798,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Machop",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 80,
-						defense = 50,
-						specialAttack = 35,
-						specialDefense = 35,
-						speed = 35
+						baseStats = new int[]{70, 80, 50, 35, 35, 35}
 					}
 				}
 			},
@@ -1140,12 +810,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Machoke",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 100,
-						defense = 70,
-						specialAttack = 50,
-						specialDefense = 60,
-						speed = 45
+						baseStats = new int[]{80, 100, 70, 50, 60, 45}
 					}
 				}
 			},
@@ -1157,12 +822,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Machamp",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 130,
-						defense = 80,
-						specialAttack = 65,
-						specialDefense = 85,
-						speed = 55
+						baseStats = new int[]{90, 130, 80, 65, 85, 55}
 					}
 				}
 			},
@@ -1174,12 +834,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Bellsprout",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 75,
-						defense = 35,
-						specialAttack = 70,
-						specialDefense = 30,
-						speed = 40
+						baseStats = new int[]{50, 75, 35, 70, 30, 40}
 					}
 				}
 			},
@@ -1191,12 +846,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Weepinbell",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 90,
-						defense = 50,
-						specialAttack = 85,
-						specialDefense = 45,
-						speed = 55
+						baseStats = new int[]{65, 90, 50, 85, 45, 55}
 					}
 				}
 			},
@@ -1208,12 +858,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Victreebel",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 105,
-						defense = 65,
-						specialAttack = 100,
-						specialDefense = 60,
-						speed = 70
+						baseStats = new int[]{80, 105, 65, 100, 60, 70}
 					}
 				}
 			},
@@ -1225,12 +870,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Tentacool",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 40,
-						defense = 35,
-						specialAttack = 50,
-						specialDefense = 100,
-						speed = 70
+						baseStats = new int[]{40, 40, 35, 50, 100, 70}
 					}
 				}
 			},
@@ -1242,12 +882,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Tentacruel",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 70,
-						defense = 65,
-						specialAttack = 80,
-						specialDefense = 120,
-						speed = 100
+						baseStats = new int[]{80, 70, 65, 80, 120, 100}
 					}
 				}
 			},
@@ -1259,12 +894,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Geodude",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 80,
-						defense = 100,
-						specialAttack = 30,
-						specialDefense = 30,
-						speed = 20
+						baseStats = new int[]{40, 80, 100, 30, 30, 20}
 					}
 				}
 			},
@@ -1276,12 +906,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Graveler",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 95,
-						defense = 115,
-						specialAttack = 45,
-						specialDefense = 45,
-						speed = 35
+						baseStats = new int[]{55, 95, 115, 45, 45, 35}
 					}
 				}
 			},
@@ -1293,12 +918,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Golem",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 110,
-						defense = 130,
-						specialAttack = 55,
-						specialDefense = 65,
-						speed = 45
+						baseStats = new int[]{80, 110, 130, 55, 65, 45}
 					}
 				}
 			},
@@ -1310,12 +930,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Ponyta",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 85,
-						defense = 55,
-						specialAttack = 65,
-						specialDefense = 65,
-						speed = 90
+						baseStats = new int[]{50, 85, 55, 65, 65, 90}
 					}
 				}
 			},
@@ -1327,12 +942,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Rapidash",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 100,
-						defense = 70,
-						specialAttack = 80,
-						specialDefense = 80,
-						speed = 105
+						baseStats = new int[]{65, 100, 70, 80, 80, 105}
 					}
 				}
 			},
@@ -1344,12 +954,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Slowpoke",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 65,
-						defense = 65,
-						specialAttack = 40,
-						specialDefense = 40,
-						speed = 15
+						baseStats = new int[]{90, 65, 65, 40, 40, 15}
 					}
 				}
 			},
@@ -1361,12 +966,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Slowbro",
 					Statistics = new Stats()
 					{
-						hp = 95,
-						attack = 75,
-						defense = 110,
-						specialAttack = 100,
-						specialDefense = 80,
-						speed = 30
+						baseStats = new int[]{95, 75, 110, 100, 80, 30}
 					}
 				}
 			},
@@ -1378,12 +978,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Magnemite",
 					Statistics = new Stats()
 					{
-						hp = 25,
-						attack = 35,
-						defense = 70,
-						specialAttack = 95,
-						specialDefense = 55,
-						speed = 45
+						baseStats = new int[]{25, 35, 70, 95, 55, 45}
 					}
 				}
 			},
@@ -1395,12 +990,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Magneton",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 60,
-						defense = 95,
-						specialAttack = 120,
-						specialDefense = 70,
-						speed = 70
+						baseStats = new int[]{50, 60, 95, 120, 70, 70}
 					}
 				}
 			},
@@ -1412,12 +1002,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Farfetch'd",
 					Statistics = new Stats()
 					{
-						hp = 52,
-						attack = 65,
-						defense = 55,
-						specialAttack = 58,
-						specialDefense = 62,
-						speed = 60
+						baseStats = new int[]{52, 65, 55, 58, 62, 60}
 					}
 				}
 			},
@@ -1429,12 +1014,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Doduo",
 					Statistics = new Stats()
 					{
-						hp = 35,
-						attack = 85,
-						defense = 45,
-						specialAttack = 35,
-						specialDefense = 35,
-						speed = 75
+						baseStats = new int[]{35, 85, 45, 35, 35, 75}
 					}
 				}
 			},
@@ -1446,12 +1026,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Dodrio",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 110,
-						defense = 70,
-						specialAttack = 60,
-						specialDefense = 60,
-						speed = 100
+						baseStats = new int[]{60, 110, 70, 60, 60, 100}
 					}
 				}
 			},
@@ -1463,12 +1038,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Seel",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 45,
-						defense = 55,
-						specialAttack = 45,
-						specialDefense = 70,
-						speed = 45
+						baseStats = new int[]{65, 45, 55, 45, 70, 45}
 					}
 				}
 			},
@@ -1480,12 +1050,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Dewgong",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 70,
-						defense = 80,
-						specialAttack = 70,
-						specialDefense = 95,
-						speed = 70
+						baseStats = new int[]{90, 70, 80, 70, 95, 70}
 					}
 				}
 			},
@@ -1497,12 +1062,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Grimer",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 80,
-						defense = 50,
-						specialAttack = 40,
-						specialDefense = 50,
-						speed = 25
+						baseStats = new int[]{80, 80, 50, 40, 50, 25}
 					}
 				}
 			},
@@ -1514,12 +1074,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Muk",
 					Statistics = new Stats()
 					{
-						hp = 105,
-						attack = 105,
-						defense = 75,
-						specialAttack = 65,
-						specialDefense = 100,
-						speed = 50
+						baseStats = new int[]{105, 105, 75, 65, 100, 50}
 					}
 				}
 			},
@@ -1531,12 +1086,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Shellder",
 					Statistics = new Stats()
 					{
-						hp = 30,
-						attack = 65,
-						defense = 100,
-						specialAttack = 45,
-						specialDefense = 25,
-						speed = 40
+						baseStats = new int[]{30, 65, 100, 45, 25, 40}
 					}
 				}
 			},
@@ -1548,12 +1098,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Cloyster",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 95,
-						defense = 180,
-						specialAttack = 85,
-						specialDefense = 45,
-						speed = 70
+						baseStats = new int[]{50, 95, 180, 85, 45, 70}
 					}
 				}
 			},
@@ -1565,12 +1110,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Gastly",
 					Statistics = new Stats()
 					{
-						hp = 30,
-						attack = 35,
-						defense = 30,
-						specialAttack = 100,
-						specialDefense = 35,
-						speed = 80
+						baseStats = new int[]{30, 35, 30, 100, 35, 80}
 					}
 				}
 			},
@@ -1582,12 +1122,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Haunter",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 50,
-						defense = 45,
-						specialAttack = 115,
-						specialDefense = 55,
-						speed = 95
+						baseStats = new int[]{45, 50, 45, 115, 55, 95}
 					}
 				}
 			},
@@ -1599,12 +1134,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Gengar",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 65,
-						defense = 60,
-						specialAttack = 130,
-						specialDefense = 75,
-						speed = 110
+						baseStats = new int[]{60, 65, 60, 130, 75, 110}
 					}
 				}
 			},
@@ -1616,12 +1146,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Onix",
 					Statistics = new Stats()
 					{
-						hp = 35,
-						attack = 45,
-						defense = 160,
-						specialAttack = 30,
-						specialDefense = 45,
-						speed = 70
+						baseStats = new int[]{35, 45, 160, 30, 45, 70}
 					}
 				}
 			},
@@ -1633,12 +1158,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Drowzee",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 48,
-						defense = 45,
-						specialAttack = 43,
-						specialDefense = 90,
-						speed = 42
+						baseStats = new int[]{60, 48, 45, 43, 90, 42}
 					}
 				}
 			},
@@ -1650,12 +1170,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Hypno",
 					Statistics = new Stats()
 					{
-						hp = 85,
-						attack = 73,
-						defense = 70,
-						specialAttack = 73,
-						specialDefense = 115,
-						speed = 67
+						baseStats = new int[]{85, 73, 70, 73, 115, 67}
 					}
 				}
 			},
@@ -1667,12 +1182,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Krabby",
 					Statistics = new Stats()
 					{
-						hp = 30,
-						attack = 105,
-						defense = 90,
-						specialAttack = 25,
-						specialDefense = 25,
-						speed = 50
+						baseStats = new int[]{30, 105, 90, 25, 25, 50}
 					}
 				}
 			},
@@ -1684,12 +1194,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Kingler",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 130,
-						defense = 115,
-						specialAttack = 50,
-						specialDefense = 50,
-						speed = 75
+						baseStats = new int[]{55, 130, 115, 50, 50, 75}
 					}
 				}
 			},
@@ -1701,12 +1206,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Voltorb",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 30,
-						defense = 50,
-						specialAttack = 55,
-						specialDefense = 55,
-						speed = 100
+						baseStats = new int[]{40, 30, 50, 55, 55, 100}
 					}
 				}
 			},
@@ -1718,12 +1218,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Electrode",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 50,
-						defense = 70,
-						specialAttack = 80,
-						specialDefense = 80,
-						speed = 140
+						baseStats = new int[]{60, 50, 70, 80, 80, 140}
 					}
 				}
 			},
@@ -1735,12 +1230,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Exeggcute",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 40,
-						defense = 80,
-						specialAttack = 60,
-						specialDefense = 45,
-						speed = 40
+						baseStats = new int[]{60, 40, 80, 60, 45, 40}
 					}
 				}
 			},
@@ -1752,12 +1242,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Exeggutor",
 					Statistics = new Stats()
 					{
-						hp = 95,
-						attack = 95,
-						defense = 85,
-						specialAttack = 125,
-						specialDefense = 65,
-						speed = 55
+						baseStats = new int[]{95, 95, 85, 125, 65, 55}
 					}
 				}
 			},
@@ -1769,12 +1254,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Cubone",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 50,
-						defense = 95,
-						specialAttack = 40,
-						specialDefense = 50,
-						speed = 35
+						baseStats = new int[]{50, 50, 95, 40, 50, 35}
 					}
 				}
 			},
@@ -1786,12 +1266,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Marowak",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 80,
-						defense = 110,
-						specialAttack = 50,
-						specialDefense = 80,
-						speed = 45
+						baseStats = new int[]{60, 80, 110, 50, 80, 45}
 					}
 				}
 			},
@@ -1803,12 +1278,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Hitmonlee",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 120,
-						defense = 53,
-						specialAttack = 35,
-						specialDefense = 110,
-						speed = 87
+						baseStats = new int[]{50, 120, 53, 35, 110, 87}
 					}
 				}
 			},
@@ -1820,12 +1290,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Hitmonchan",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 105,
-						defense = 79,
-						specialAttack = 35,
-						specialDefense = 110,
-						speed = 76
+						baseStats = new int[]{50, 105, 79, 35, 110, 76}
 					}
 				}
 			},
@@ -1837,12 +1302,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Lickitung",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 55,
-						defense = 75,
-						specialAttack = 60,
-						specialDefense = 75,
-						speed = 30
+						baseStats = new int[]{90, 55, 75, 60, 75, 30}
 					}
 				}
 			},
@@ -1854,12 +1314,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Koffing",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 65,
-						defense = 95,
-						specialAttack = 60,
-						specialDefense = 45,
-						speed = 35
+						baseStats = new int[]{40, 65, 95, 60, 45, 35}
 					}
 				}
 			},
@@ -1871,12 +1326,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Weezing",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 90,
-						defense = 120,
-						specialAttack = 85,
-						specialDefense = 70,
-						speed = 60
+						baseStats = new int[]{65, 90, 120, 85, 70, 60}
 					}
 				}
 			},
@@ -1888,12 +1338,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Rhyhorn",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 85,
-						defense = 95,
-						specialAttack = 30,
-						specialDefense = 30,
-						speed = 25
+						baseStats = new int[]{80, 85, 95, 30, 30, 25}
 					}
 				}
 			},
@@ -1905,12 +1350,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Rhydon",
 					Statistics = new Stats()
 					{
-						hp = 105,
-						attack = 130,
-						defense = 120,
-						specialAttack = 45,
-						specialDefense = 45,
-						speed = 40
+						baseStats = new int[]{105, 130, 120, 45, 45, 40}
 					}
 				}
 			},
@@ -1922,12 +1362,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Chansey",
 					Statistics = new Stats()
 					{
-						hp = 250,
-						attack = 5,
-						defense = 5,
-						specialAttack = 35,
-						specialDefense = 105,
-						speed = 50
+						baseStats = new int[]{250, 5, 5, 35, 105, 50}
 					}
 				}
 			},
@@ -1939,12 +1374,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Tangela",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 55,
-						defense = 115,
-						specialAttack = 100,
-						specialDefense = 40,
-						speed = 60
+						baseStats = new int[]{65, 55, 115, 100, 40, 60}
 					}
 				}
 			},
@@ -1956,12 +1386,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Kangaskhan",
 					Statistics = new Stats()
 					{
-						hp = 105,
-						attack = 95,
-						defense = 80,
-						specialAttack = 40,
-						specialDefense = 80,
-						speed = 90
+						baseStats = new int[]{105, 95, 80, 40, 80, 90}
 					}
 				}
 			},
@@ -1973,12 +1398,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Horsea",
 					Statistics = new Stats()
 					{
-						hp = 30,
-						attack = 40,
-						defense = 70,
-						specialAttack = 70,
-						specialDefense = 25,
-						speed = 60
+						baseStats = new int[]{30, 40, 70, 70, 25, 60}
 					}
 				}
 			},
@@ -1990,12 +1410,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Seadra",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 65,
-						defense = 95,
-						specialAttack = 95,
-						specialDefense = 45,
-						speed = 85
+						baseStats = new int[]{55, 65, 95, 95, 45, 85}
 					}
 				}
 			},
@@ -2007,12 +1422,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Goldeen",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 67,
-						defense = 60,
-						specialAttack = 35,
-						specialDefense = 50,
-						speed = 63
+						baseStats = new int[]{45, 67, 60, 35, 50, 63}
 					}
 				}
 			},
@@ -2024,12 +1434,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Seaking",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 92,
-						defense = 65,
-						specialAttack = 65,
-						specialDefense = 80,
-						speed = 68
+						baseStats = new int[]{80, 92, 65, 65, 80, 68}
 					}
 				}
 			},
@@ -2041,12 +1446,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Staryu",
 					Statistics = new Stats()
 					{
-						hp = 30,
-						attack = 45,
-						defense = 55,
-						specialAttack = 70,
-						specialDefense = 55,
-						speed = 85
+						baseStats = new int[]{30, 45, 55, 70, 55, 85}
 					}
 				}
 			},
@@ -2058,12 +1458,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Starmie",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 75,
-						defense = 85,
-						specialAttack = 100,
-						specialDefense = 85,
-						speed = 115
+						baseStats = new int[]{60, 75, 85, 100, 85, 115}
 					}
 				}
 			},
@@ -2075,12 +1470,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Mr. Mime",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 45,
-						defense = 65,
-						specialAttack = 100,
-						specialDefense = 120,
-						speed = 90
+						baseStats = new int[]{40, 45, 65, 100, 120, 90}
 					}
 				}
 			},
@@ -2092,12 +1482,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Scyther",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 110,
-						defense = 80,
-						specialAttack = 55,
-						specialDefense = 80,
-						speed = 105
+						baseStats = new int[]{70, 110, 80, 55, 80, 105}
 					}
 				}
 			},
@@ -2109,12 +1494,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Jynx",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 50,
-						defense = 35,
-						specialAttack = 115,
-						specialDefense = 95,
-						speed = 95
+						baseStats = new int[]{65, 50, 35, 115, 95, 95}
 					}
 				}
 			},
@@ -2126,12 +1506,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Electabuzz",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 83,
-						defense = 57,
-						specialAttack = 95,
-						specialDefense = 85,
-						speed = 105
+						baseStats = new int[]{65, 83, 57, 95, 85, 105}
 					}
 				}
 			},
@@ -2143,12 +1518,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Magmar",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 95,
-						defense = 57,
-						specialAttack = 100,
-						specialDefense = 85,
-						speed = 93
+						baseStats = new int[]{65, 95, 57, 100, 85, 93}
 					}
 				}
 			},
@@ -2160,12 +1530,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Pinsir",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 125,
-						defense = 100,
-						specialAttack = 55,
-						specialDefense = 70,
-						speed = 85
+						baseStats = new int[]{65, 125, 100, 55, 70, 85}
 					}
 				}
 			},
@@ -2177,12 +1542,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Tauros",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 100,
-						defense = 95,
-						specialAttack = 40,
-						specialDefense = 70,
-						speed = 110
+						baseStats = new int[]{75, 100, 95, 40, 70, 110}
 					}
 				}
 			},
@@ -2194,12 +1554,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Magikarp",
 					Statistics = new Stats()
 					{
-						hp = 20,
-						attack = 10,
-						defense = 55,
-						specialAttack = 15,
-						specialDefense = 20,
-						speed = 80
+						baseStats = new int[]{20, 10, 55, 15, 20, 80}
 					}
 				}
 			},
@@ -2211,12 +1566,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Gyarados",
 					Statistics = new Stats()
 					{
-						hp = 95,
-						attack = 125,
-						defense = 79,
-						specialAttack = 60,
-						specialDefense = 100,
-						speed = 81
+						baseStats = new int[]{95, 125, 79, 60, 100, 81}
 					}
 				}
 			},
@@ -2228,12 +1578,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Lapras",
 					Statistics = new Stats()
 					{
-						hp = 130,
-						attack = 85,
-						defense = 80,
-						specialAttack = 85,
-						specialDefense = 95,
-						speed = 60
+						baseStats = new int[]{130, 85, 80, 85, 95, 60}
 					}
 				}
 			},
@@ -2245,12 +1590,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Ditto",
 					Statistics = new Stats()
 					{
-						hp = 48,
-						attack = 48,
-						defense = 48,
-						specialAttack = 48,
-						specialDefense = 48,
-						speed = 48
+						baseStats = new int[]{48, 48, 48, 48, 48, 48}
 					}
 				}
 			},
@@ -2262,12 +1602,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Eevee",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 55,
-						defense = 50,
-						specialAttack = 45,
-						specialDefense = 65,
-						speed = 55
+						baseStats = new int[]{55, 55, 50, 45, 65, 55}
 					}
 				}
 			},
@@ -2279,12 +1614,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Vaporeon",
 					Statistics = new Stats()
 					{
-						hp = 130,
-						attack = 65,
-						defense = 60,
-						specialAttack = 110,
-						specialDefense = 95,
-						speed = 65
+						baseStats = new int[]{130, 65, 60, 110, 95, 65}
 					}
 				}
 			},
@@ -2296,12 +1626,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Jolteon",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 65,
-						defense = 60,
-						specialAttack = 110,
-						specialDefense = 95,
-						speed = 130
+						baseStats = new int[]{65, 65, 60, 110, 95, 130}
 					}
 				}
 			},
@@ -2313,12 +1638,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Flareon",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 130,
-						defense = 60,
-						specialAttack = 95,
-						specialDefense = 110,
-						speed = 65
+						baseStats = new int[]{65, 130, 60, 95, 110, 65}
 					}
 				}
 			},
@@ -2330,12 +1650,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Porygon",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 60,
-						defense = 70,
-						specialAttack = 85,
-						specialDefense = 75,
-						speed = 40
+						baseStats = new int[]{65, 60, 70, 85, 75, 40}
 					}
 				}
 			},
@@ -2347,12 +1662,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Omanyte",
 					Statistics = new Stats()
 					{
-						hp = 35,
-						attack = 40,
-						defense = 100,
-						specialAttack = 90,
-						specialDefense = 55,
-						speed = 35
+						baseStats = new int[]{35, 40, 100, 90, 55, 35}
 					}
 				}
 			},
@@ -2364,12 +1674,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Omastar",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 60,
-						defense = 125,
-						specialAttack = 115,
-						specialDefense = 70,
-						speed = 55
+						baseStats = new int[]{70, 60, 125, 115, 70, 55}
 					}
 				}
 			},
@@ -2381,12 +1686,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Kabuto",
 					Statistics = new Stats()
 					{
-						hp = 30,
-						attack = 80,
-						defense = 90,
-						specialAttack = 55,
-						specialDefense = 45,
-						speed = 55
+						baseStats = new int[]{30, 80, 90, 55, 45, 55}
 					}
 				}
 			},
@@ -2398,12 +1698,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Kabutops",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 115,
-						defense = 105,
-						specialAttack = 65,
-						specialDefense = 70,
-						speed = 80
+						baseStats = new int[]{60, 115, 105, 65, 70, 80}
 					}
 				}
 			},
@@ -2415,12 +1710,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Aerodactyl",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 105,
-						defense = 65,
-						specialAttack = 60,
-						specialDefense = 75,
-						speed = 130
+						baseStats = new int[]{80, 105, 65, 60, 75, 130}
 					}
 				}
 			},
@@ -2432,12 +1722,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Snorlax",
 					Statistics = new Stats()
 					{
-						hp = 160,
-						attack = 110,
-						defense = 65,
-						specialAttack = 65,
-						specialDefense = 110,
-						speed = 30
+						baseStats = new int[]{160, 110, 65, 65, 110, 30}
 					}
 				}
 			},
@@ -2449,12 +1734,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Articuno",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 85,
-						defense = 100,
-						specialAttack = 95,
-						specialDefense = 125,
-						speed = 85
+						baseStats = new int[]{90, 85, 100, 95, 125, 85}
 					}
 				}
 			},
@@ -2466,12 +1746,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Zapdos",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 90,
-						defense = 85,
-						specialAttack = 125,
-						specialDefense = 90,
-						speed = 100
+						baseStats = new int[]{90, 90, 85, 125, 90, 100}
 					}
 				}
 			},
@@ -2483,12 +1758,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Moltres",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 100,
-						defense = 90,
-						specialAttack = 125,
-						specialDefense = 85,
-						speed = 90
+						baseStats = new int[]{90, 100, 90, 125, 85, 90}
 					}
 				}
 			},
@@ -2500,12 +1770,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Dratini",
 					Statistics = new Stats()
 					{
-						hp = 41,
-						attack = 64,
-						defense = 45,
-						specialAttack = 50,
-						specialDefense = 50,
-						speed = 50
+						baseStats = new int[]{41, 64, 45, 50, 50, 50}
 					}
 				}
 			},
@@ -2517,12 +1782,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Dragonair",
 					Statistics = new Stats()
 					{
-						hp = 61,
-						attack = 84,
-						defense = 65,
-						specialAttack = 70,
-						specialDefense = 70,
-						speed = 70
+						baseStats = new int[]{61, 84, 65, 70, 70, 70}
 					}
 				}
 			},
@@ -2534,12 +1794,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Dragonite",
 					Statistics = new Stats()
 					{
-						hp = 91,
-						attack = 134,
-						defense = 95,
-						specialAttack = 100,
-						specialDefense = 100,
-						speed = 80
+						baseStats = new int[]{91, 134, 95, 100, 100, 80}
 					}
 				}
 			},
@@ -2551,12 +1806,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Mewtwo",
 					Statistics = new Stats()
 					{
-						hp = 106,
-						attack = 110,
-						defense = 90,
-						specialAttack = 154,
-						specialDefense = 90,
-						speed = 130
+						baseStats = new int[]{106, 110, 90, 154, 90, 130}
 					}
 				}
 			},
@@ -2568,12 +1818,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Mew",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 100,
-						defense = 100,
-						specialAttack = 100,
-						specialDefense = 100,
-						speed = 100
+						baseStats = new int[]{100, 100, 100, 100, 100, 100}
 					}
 				}
 			},
@@ -2585,12 +1830,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Chikorita",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 49,
-						defense = 65,
-						specialAttack = 49,
-						specialDefense = 65,
-						speed = 45
+						baseStats = new int[]{45, 49, 65, 49, 65, 45}
 					}
 				}
 			},
@@ -2602,12 +1842,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Bayleef",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 62,
-						defense = 80,
-						specialAttack = 63,
-						specialDefense = 80,
-						speed = 60
+						baseStats = new int[]{60, 62, 80, 63, 80, 60}
 					}
 				}
 			},
@@ -2619,12 +1854,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Meganium",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 82,
-						defense = 100,
-						specialAttack = 83,
-						specialDefense = 100,
-						speed = 80
+						baseStats = new int[]{80, 82, 100, 83, 100, 80}
 					}
 				}
 			},
@@ -2636,12 +1866,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Cyndaquil",
 					Statistics = new Stats()
 					{
-						hp = 39,
-						attack = 52,
-						defense = 43,
-						specialAttack = 60,
-						specialDefense = 50,
-						speed = 65
+						baseStats = new int[]{39, 52, 43, 60, 50, 65}
 					}
 				}
 			},
@@ -2653,12 +1878,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Quilava",
 					Statistics = new Stats()
 					{
-						hp = 58,
-						attack = 64,
-						defense = 58,
-						specialAttack = 80,
-						specialDefense = 65,
-						speed = 80
+						baseStats = new int[]{58, 64, 58, 80, 65, 80}
 					}
 				}
 			},
@@ -2670,12 +1890,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Typhlosion",
 					Statistics = new Stats()
 					{
-						hp = 78,
-						attack = 84,
-						defense = 78,
-						specialAttack = 109,
-						specialDefense = 85,
-						speed = 100
+						baseStats = new int[]{78, 84, 78, 109, 85, 100}
 					}
 				}
 			},
@@ -2687,12 +1902,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Totodile",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 65,
-						defense = 64,
-						specialAttack = 44,
-						specialDefense = 48,
-						speed = 43
+						baseStats = new int[]{50, 65, 64, 44, 48, 43}
 					}
 				}
 			},
@@ -2704,12 +1914,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Croconaw",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 80,
-						defense = 80,
-						specialAttack = 59,
-						specialDefense = 63,
-						speed = 58
+						baseStats = new int[]{65, 80, 80, 59, 63, 58}
 					}
 				}
 			},
@@ -2721,12 +1926,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Feraligatr",
 					Statistics = new Stats()
 					{
-						hp = 85,
-						attack = 105,
-						defense = 100,
-						specialAttack = 79,
-						specialDefense = 83,
-						speed = 78
+						baseStats = new int[]{85, 105, 100, 79, 83, 78}
 					}
 				}
 			},
@@ -2738,12 +1938,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Sentret",
 					Statistics = new Stats()
 					{
-						hp = 35,
-						attack = 46,
-						defense = 34,
-						specialAttack = 35,
-						specialDefense = 45,
-						speed = 20
+						baseStats = new int[]{35, 46, 34, 35, 45, 20}
 					}
 				}
 			},
@@ -2755,12 +1950,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Furret",
 					Statistics = new Stats()
 					{
-						hp = 85,
-						attack = 76,
-						defense = 64,
-						specialAttack = 45,
-						specialDefense = 55,
-						speed = 90
+						baseStats = new int[]{85, 76, 64, 45, 55, 90}
 					}
 				}
 			},
@@ -2772,12 +1962,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Hoothoot",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 30,
-						defense = 30,
-						specialAttack = 36,
-						specialDefense = 56,
-						speed = 50
+						baseStats = new int[]{60, 30, 30, 36, 56, 50}
 					}
 				}
 			},
@@ -2789,12 +1974,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Noctowl",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 50,
-						defense = 50,
-						specialAttack = 76,
-						specialDefense = 96,
-						speed = 70
+						baseStats = new int[]{100, 50, 50, 76, 96, 70}
 					}
 				}
 			},
@@ -2806,12 +1986,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Ledyba",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 20,
-						defense = 30,
-						specialAttack = 40,
-						specialDefense = 80,
-						speed = 55
+						baseStats = new int[]{40, 20, 30, 40, 80, 55}
 					}
 				}
 			},
@@ -2823,12 +1998,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Ledian",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 35,
-						defense = 50,
-						specialAttack = 55,
-						specialDefense = 110,
-						speed = 85
+						baseStats = new int[]{55, 35, 50, 55, 110, 85}
 					}
 				}
 			},
@@ -2840,12 +2010,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Spinarak",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 60,
-						defense = 40,
-						specialAttack = 40,
-						specialDefense = 40,
-						speed = 30
+						baseStats = new int[]{40, 60, 40, 40, 40, 30}
 					}
 				}
 			},
@@ -2857,12 +2022,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Ariados",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 90,
-						defense = 70,
-						specialAttack = 60,
-						specialDefense = 60,
-						speed = 40
+						baseStats = new int[]{70, 90, 70, 60, 60, 40}
 					}
 				}
 			},
@@ -2874,12 +2034,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Crobat",
 					Statistics = new Stats()
 					{
-						hp = 85,
-						attack = 90,
-						defense = 80,
-						specialAttack = 70,
-						specialDefense = 80,
-						speed = 130
+						baseStats = new int[]{85, 90, 80, 70, 80, 130}
 					}
 				}
 			},
@@ -2891,12 +2046,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Chinchou",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 38,
-						defense = 38,
-						specialAttack = 56,
-						specialDefense = 56,
-						speed = 67
+						baseStats = new int[]{75, 38, 38, 56, 56, 67}
 					}
 				}
 			},
@@ -2908,12 +2058,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Lanturn",
 					Statistics = new Stats()
 					{
-						hp = 125,
-						attack = 58,
-						defense = 58,
-						specialAttack = 76,
-						specialDefense = 76,
-						speed = 67
+						baseStats = new int[]{125, 58, 58, 76, 76, 67}
 					}
 				}
 			},
@@ -2925,12 +2070,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Pichu",
 					Statistics = new Stats()
 					{
-						hp = 20,
-						attack = 40,
-						defense = 15,
-						specialAttack = 35,
-						specialDefense = 35,
-						speed = 60
+						baseStats = new int[]{20, 40, 15, 35, 35, 60}
 					}
 				}
 			},
@@ -2942,12 +2082,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Cleffa",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 25,
-						defense = 28,
-						specialAttack = 45,
-						specialDefense = 55,
-						speed = 15
+						baseStats = new int[]{50, 25, 28, 45, 55, 15}
 					}
 				}
 			},
@@ -2959,12 +2094,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Igglybuff",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 30,
-						defense = 15,
-						specialAttack = 40,
-						specialDefense = 20,
-						speed = 15
+						baseStats = new int[]{90, 30, 15, 40, 20, 15}
 					}
 				}
 			},
@@ -2976,12 +2106,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Togepi",
 					Statistics = new Stats()
 					{
-						hp = 35,
-						attack = 20,
-						defense = 65,
-						specialAttack = 40,
-						specialDefense = 65,
-						speed = 20
+						baseStats = new int[]{35, 20, 65, 40, 65, 20}
 					}
 				}
 			},
@@ -2993,12 +2118,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Togetic",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 40,
-						defense = 85,
-						specialAttack = 80,
-						specialDefense = 105,
-						speed = 40
+						baseStats = new int[]{55, 40, 85, 80, 105, 40}
 					}
 				}
 			},
@@ -3010,12 +2130,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Natu",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 50,
-						defense = 45,
-						specialAttack = 70,
-						specialDefense = 45,
-						speed = 70
+						baseStats = new int[]{40, 50, 45, 70, 45, 70}
 					}
 				}
 			},
@@ -3027,12 +2142,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Xatu",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 75,
-						defense = 70,
-						specialAttack = 95,
-						specialDefense = 70,
-						speed = 95
+						baseStats = new int[]{65, 75, 70, 95, 70, 95}
 					}
 				}
 			},
@@ -3044,12 +2154,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Mareep",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 40,
-						defense = 40,
-						specialAttack = 65,
-						specialDefense = 45,
-						speed = 35
+						baseStats = new int[]{55, 40, 40, 65, 45, 35}
 					}
 				}
 			},
@@ -3061,12 +2166,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Flaaffy",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 55,
-						defense = 55,
-						specialAttack = 80,
-						specialDefense = 60,
-						speed = 45
+						baseStats = new int[]{70, 55, 55, 80, 60, 45}
 					}
 				}
 			},
@@ -3078,12 +2178,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Ampharos",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 75,
-						defense = 75,
-						specialAttack = 115,
-						specialDefense = 90,
-						speed = 55
+						baseStats = new int[]{90, 75, 75, 115, 90, 55}
 					}
 				}
 			},
@@ -3095,12 +2190,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Bellossom",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 80,
-						defense = 85,
-						specialAttack = 90,
-						specialDefense = 100,
-						speed = 50
+						baseStats = new int[]{75, 80, 85, 90, 100, 50}
 					}
 				}
 			},
@@ -3112,12 +2202,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Marill",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 20,
-						defense = 50,
-						specialAttack = 20,
-						specialDefense = 50,
-						speed = 40
+						baseStats = new int[]{70, 20, 50, 20, 50, 40}
 					}
 				}
 			},
@@ -3129,12 +2214,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Azumarill",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 50,
-						defense = 80,
-						specialAttack = 50,
-						specialDefense = 80,
-						speed = 50
+						baseStats = new int[]{100, 50, 80, 50, 80, 50}
 					}
 				}
 			},
@@ -3146,12 +2226,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Sudowoodo",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 100,
-						defense = 115,
-						specialAttack = 30,
-						specialDefense = 65,
-						speed = 30
+						baseStats = new int[]{70, 100, 115, 30, 65, 30}
 					}
 				}
 			},
@@ -3163,12 +2238,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Politoed",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 75,
-						defense = 75,
-						specialAttack = 90,
-						specialDefense = 100,
-						speed = 70
+						baseStats = new int[]{90, 75, 75, 90, 100, 70}
 					}
 				}
 			},
@@ -3180,12 +2250,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Hoppip",
 					Statistics = new Stats()
 					{
-						hp = 35,
-						attack = 35,
-						defense = 40,
-						specialAttack = 35,
-						specialDefense = 55,
-						speed = 50
+						baseStats = new int[]{35, 35, 40, 35, 55, 50}
 					}
 				}
 			},
@@ -3197,12 +2262,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Skiploom",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 45,
-						defense = 50,
-						specialAttack = 45,
-						specialDefense = 65,
-						speed = 80
+						baseStats = new int[]{55, 45, 50, 45, 65, 80}
 					}
 				}
 			},
@@ -3214,12 +2274,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Jumpluff",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 55,
-						defense = 70,
-						specialAttack = 55,
-						specialDefense = 85,
-						speed = 110
+						baseStats = new int[]{75, 55, 70, 55, 85, 110}
 					}
 				}
 			},
@@ -3231,12 +2286,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Aipom",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 70,
-						defense = 55,
-						specialAttack = 40,
-						specialDefense = 55,
-						speed = 85
+						baseStats = new int[]{55, 70, 55, 40, 55, 85}
 					}
 				}
 			},
@@ -3248,12 +2298,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Sunkern",
 					Statistics = new Stats()
 					{
-						hp = 30,
-						attack = 30,
-						defense = 30,
-						specialAttack = 30,
-						specialDefense = 30,
-						speed = 30
+						baseStats = new int[]{30, 30, 30, 30, 30, 30}
 					}
 				}
 			},
@@ -3265,12 +2310,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Sunflora",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 75,
-						defense = 55,
-						specialAttack = 105,
-						specialDefense = 85,
-						speed = 30
+						baseStats = new int[]{75, 75, 55, 105, 85, 30}
 					}
 				}
 			},
@@ -3282,12 +2322,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Yanma",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 65,
-						defense = 45,
-						specialAttack = 75,
-						specialDefense = 45,
-						speed = 95
+						baseStats = new int[]{65, 65, 45, 75, 45, 95}
 					}
 				}
 			},
@@ -3299,12 +2334,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Wooper",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 45,
-						defense = 45,
-						specialAttack = 25,
-						specialDefense = 25,
-						speed = 15
+						baseStats = new int[]{55, 45, 45, 25, 25, 15}
 					}
 				}
 			},
@@ -3316,12 +2346,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Quagsire",
 					Statistics = new Stats()
 					{
-						hp = 95,
-						attack = 85,
-						defense = 85,
-						specialAttack = 65,
-						specialDefense = 65,
-						speed = 35
+						baseStats = new int[]{95, 85, 85, 65, 65, 35}
 					}
 				}
 			},
@@ -3333,12 +2358,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Espeon",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 65,
-						defense = 60,
-						specialAttack = 130,
-						specialDefense = 95,
-						speed = 110
+						baseStats = new int[]{65, 65, 60, 130, 95, 110}
 					}
 				}
 			},
@@ -3350,12 +2370,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Umbreon",
 					Statistics = new Stats()
 					{
-						hp = 95,
-						attack = 65,
-						defense = 110,
-						specialAttack = 60,
-						specialDefense = 130,
-						speed = 65
+						baseStats = new int[]{95, 65, 110, 60, 130, 65}
 					}
 				}
 			},
@@ -3367,12 +2382,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Murkrow",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 85,
-						defense = 42,
-						specialAttack = 85,
-						specialDefense = 42,
-						speed = 91
+						baseStats = new int[]{60, 85, 42, 85, 42, 91}
 					}
 				}
 			},
@@ -3384,12 +2394,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Slowking",
 					Statistics = new Stats()
 					{
-						hp = 95,
-						attack = 75,
-						defense = 80,
-						specialAttack = 100,
-						specialDefense = 110,
-						speed = 30
+						baseStats = new int[]{95, 75, 80, 100, 110, 30}
 					}
 				}
 			},
@@ -3401,12 +2406,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Misdreavus",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 60,
-						defense = 60,
-						specialAttack = 85,
-						specialDefense = 85,
-						speed = 85
+						baseStats = new int[]{60, 60, 60, 85, 85, 85}
 					}
 				}
 			},
@@ -3418,12 +2418,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Unown",
 					Statistics = new Stats()
 					{
-						hp = 48,
-						attack = 72,
-						defense = 48,
-						specialAttack = 72,
-						specialDefense = 48,
-						speed = 48
+						baseStats = new int[]{48, 72, 48, 72, 48, 48}
 					}
 				}
 			},
@@ -3435,12 +2430,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Wobbuffet",
 					Statistics = new Stats()
 					{
-						hp = 190,
-						attack = 33,
-						defense = 58,
-						specialAttack = 33,
-						specialDefense = 58,
-						speed = 33
+						baseStats = new int[]{190, 33, 58, 33, 58, 33}
 					}
 				}
 			},
@@ -3452,12 +2442,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Girafarig",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 80,
-						defense = 65,
-						specialAttack = 90,
-						specialDefense = 65,
-						speed = 85
+						baseStats = new int[]{70, 80, 65, 90, 65, 85}
 					}
 				}
 			},
@@ -3469,12 +2454,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Pineco",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 65,
-						defense = 90,
-						specialAttack = 35,
-						specialDefense = 35,
-						speed = 15
+						baseStats = new int[]{50, 65, 90, 35, 35, 15}
 					}
 				}
 			},
@@ -3486,12 +2466,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Forretress",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 90,
-						defense = 140,
-						specialAttack = 60,
-						specialDefense = 60,
-						speed = 40
+						baseStats = new int[]{75, 90, 140, 60, 60, 40}
 					}
 				}
 			},
@@ -3503,12 +2478,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Dunsparce",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 70,
-						defense = 70,
-						specialAttack = 65,
-						specialDefense = 65,
-						speed = 45
+						baseStats = new int[]{100, 70, 70, 65, 65, 45}
 					}
 				}
 			},
@@ -3520,12 +2490,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Gligar",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 75,
-						defense = 105,
-						specialAttack = 35,
-						specialDefense = 65,
-						speed = 85
+						baseStats = new int[]{65, 75, 105, 35, 65, 85}
 					}
 				}
 			},
@@ -3537,12 +2502,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Steelix",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 85,
-						defense = 200,
-						specialAttack = 55,
-						specialDefense = 65,
-						speed = 30
+						baseStats = new int[]{75, 85, 200, 55, 65, 30}
 					}
 				}
 			},
@@ -3554,12 +2514,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Snubbull",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 80,
-						defense = 50,
-						specialAttack = 40,
-						specialDefense = 40,
-						speed = 30
+						baseStats = new int[]{60, 80, 50, 40, 40, 30}
 					}
 				}
 			},
@@ -3571,12 +2526,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Granbull",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 120,
-						defense = 75,
-						specialAttack = 60,
-						specialDefense = 60,
-						speed = 45
+						baseStats = new int[]{90, 120, 75, 60, 60, 45}
 					}
 				}
 			},
@@ -3588,12 +2538,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Qwilfish",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 95,
-						defense = 75,
-						specialAttack = 55,
-						specialDefense = 55,
-						speed = 85
+						baseStats = new int[]{65, 95, 75, 55, 55, 85}
 					}
 				}
 			},
@@ -3605,12 +2550,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Scizor",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 130,
-						defense = 100,
-						specialAttack = 55,
-						specialDefense = 80,
-						speed = 65
+						baseStats = new int[]{70, 130, 100, 55, 80, 65}
 					}
 				}
 			},
@@ -3622,12 +2562,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Shuckle",
 					Statistics = new Stats()
 					{
-						hp = 20,
-						attack = 10,
-						defense = 230,
-						specialAttack = 10,
-						specialDefense = 230,
-						speed = 5
+						baseStats = new int[]{20, 10, 230, 10, 230, 5}
 					}
 				}
 			},
@@ -3639,12 +2574,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Heracross",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 125,
-						defense = 75,
-						specialAttack = 40,
-						specialDefense = 95,
-						speed = 85
+						baseStats = new int[]{80, 125, 75, 40, 95, 85}
 					}
 				}
 			},
@@ -3656,12 +2586,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Sneasel",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 95,
-						defense = 55,
-						specialAttack = 35,
-						specialDefense = 75,
-						speed = 115
+						baseStats = new int[]{55, 95, 55, 35, 75, 115}
 					}
 				}
 			},
@@ -3673,12 +2598,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Teddiursa",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 80,
-						defense = 50,
-						specialAttack = 50,
-						specialDefense = 50,
-						speed = 40
+						baseStats = new int[]{60, 80, 50, 50, 50, 40}
 					}
 				}
 			},
@@ -3690,12 +2610,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Ursaring",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 130,
-						defense = 75,
-						specialAttack = 75,
-						specialDefense = 75,
-						speed = 55
+						baseStats = new int[]{90, 130, 75, 75, 75, 55}
 					}
 				}
 			},
@@ -3707,12 +2622,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Slugma",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 40,
-						defense = 40,
-						specialAttack = 70,
-						specialDefense = 40,
-						speed = 20
+						baseStats = new int[]{40, 40, 40, 70, 40, 20}
 					}
 				}
 			},
@@ -3724,12 +2634,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Magcargo",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 50,
-						defense = 120,
-						specialAttack = 80,
-						specialDefense = 80,
-						speed = 30
+						baseStats = new int[]{50, 50, 120, 80, 80, 30}
 					}
 				}
 			},
@@ -3741,12 +2646,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Swinub",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 50,
-						defense = 40,
-						specialAttack = 30,
-						specialDefense = 30,
-						speed = 50
+						baseStats = new int[]{50, 50, 40, 30, 30, 50}
 					}
 				}
 			},
@@ -3758,12 +2658,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Piloswine",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 100,
-						defense = 80,
-						specialAttack = 60,
-						specialDefense = 60,
-						speed = 50
+						baseStats = new int[]{100, 100, 80, 60, 60, 50}
 					}
 				}
 			},
@@ -3775,12 +2670,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Corsola",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 55,
-						defense = 85,
-						specialAttack = 65,
-						specialDefense = 85,
-						speed = 35
+						baseStats = new int[]{55, 55, 85, 65, 85, 35}
 					}
 				}
 			},
@@ -3792,12 +2682,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Remoraid",
 					Statistics = new Stats()
 					{
-						hp = 35,
-						attack = 65,
-						defense = 35,
-						specialAttack = 65,
-						specialDefense = 35,
-						speed = 65
+						baseStats = new int[]{35, 65, 35, 65, 35, 65}
 					}
 				}
 			},
@@ -3809,12 +2694,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Octillery",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 105,
-						defense = 75,
-						specialAttack = 105,
-						specialDefense = 75,
-						speed = 45
+						baseStats = new int[]{75, 105, 75, 105, 75, 45}
 					}
 				}
 			},
@@ -3826,12 +2706,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Delibird",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 55,
-						defense = 45,
-						specialAttack = 65,
-						specialDefense = 45,
-						speed = 75
+						baseStats = new int[]{45, 55, 45, 65, 45, 75}
 					}
 				}
 			},
@@ -3843,12 +2718,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Mantine",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 40,
-						defense = 70,
-						specialAttack = 80,
-						specialDefense = 140,
-						speed = 70
+						baseStats = new int[]{65, 40, 70, 80, 140, 70}
 					}
 				}
 			},
@@ -3860,12 +2730,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Skarmory",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 80,
-						defense = 140,
-						specialAttack = 40,
-						specialDefense = 70,
-						speed = 70
+						baseStats = new int[]{65, 80, 140, 40, 70, 70}
 					}
 				}
 			},
@@ -3877,12 +2742,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Houndour",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 60,
-						defense = 30,
-						specialAttack = 80,
-						specialDefense = 50,
-						speed = 65
+						baseStats = new int[]{45, 60, 30, 80, 50, 65}
 					}
 				}
 			},
@@ -3894,12 +2754,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Houndoom",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 90,
-						defense = 50,
-						specialAttack = 110,
-						specialDefense = 80,
-						speed = 95
+						baseStats = new int[]{75, 90, 50, 110, 80, 95}
 					}
 				}
 			},
@@ -3911,12 +2766,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Kingdra",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 95,
-						defense = 95,
-						specialAttack = 95,
-						specialDefense = 95,
-						speed = 85
+						baseStats = new int[]{75, 95, 95, 95, 95, 85}
 					}
 				}
 			},
@@ -3928,12 +2778,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Phanpy",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 60,
-						defense = 60,
-						specialAttack = 40,
-						specialDefense = 40,
-						speed = 40
+						baseStats = new int[]{90, 60, 60, 40, 40, 40}
 					}
 				}
 			},
@@ -3945,12 +2790,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Donphan",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 120,
-						defense = 120,
-						specialAttack = 60,
-						specialDefense = 60,
-						speed = 50
+						baseStats = new int[]{90, 120, 120, 60, 60, 50}
 					}
 				}
 			},
@@ -3962,12 +2802,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Porygon2",
 					Statistics = new Stats()
 					{
-						hp = 85,
-						attack = 80,
-						defense = 90,
-						specialAttack = 105,
-						specialDefense = 95,
-						speed = 60
+						baseStats = new int[]{85, 80, 90, 105, 95, 60}
 					}
 				}
 			},
@@ -3979,12 +2814,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Stantler",
 					Statistics = new Stats()
 					{
-						hp = 73,
-						attack = 95,
-						defense = 62,
-						specialAttack = 85,
-						specialDefense = 65,
-						speed = 85
+						baseStats = new int[]{73, 95, 62, 85, 65, 85}
 					}
 				}
 			},
@@ -3996,12 +2826,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Smeargle",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 20,
-						defense = 35,
-						specialAttack = 20,
-						specialDefense = 45,
-						speed = 75
+						baseStats = new int[]{55, 20, 35, 20, 45, 75}
 					}
 				}
 			},
@@ -4013,12 +2838,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Tyrogue",
 					Statistics = new Stats()
 					{
-						hp = 35,
-						attack = 35,
-						defense = 35,
-						specialAttack = 35,
-						specialDefense = 35,
-						speed = 35
+						baseStats = new int[]{35, 35, 35, 35, 35, 35}
 					}
 				}
 			},
@@ -4030,12 +2850,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Hitmontop",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 95,
-						defense = 95,
-						specialAttack = 35,
-						specialDefense = 110,
-						speed = 70
+						baseStats = new int[]{50, 95, 95, 35, 110, 70}
 					}
 				}
 			},
@@ -4047,12 +2862,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Smoochum",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 30,
-						defense = 15,
-						specialAttack = 85,
-						specialDefense = 65,
-						speed = 65
+						baseStats = new int[]{45, 30, 15, 85, 65, 65}
 					}
 				}
 			},
@@ -4064,12 +2874,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Elekid",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 63,
-						defense = 37,
-						specialAttack = 65,
-						specialDefense = 55,
-						speed = 95
+						baseStats = new int[]{45, 63, 37, 65, 55, 95}
 					}
 				}
 			},
@@ -4081,12 +2886,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Magby",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 75,
-						defense = 37,
-						specialAttack = 70,
-						specialDefense = 55,
-						speed = 83
+						baseStats = new int[]{45, 75, 37, 70, 55, 83}
 					}
 				}
 			},
@@ -4098,12 +2898,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Miltank",
 					Statistics = new Stats()
 					{
-						hp = 95,
-						attack = 80,
-						defense = 105,
-						specialAttack = 40,
-						specialDefense = 70,
-						speed = 100
+						baseStats = new int[]{95, 80, 105, 40, 70, 100}
 					}
 				}
 			},
@@ -4115,12 +2910,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Blissey",
 					Statistics = new Stats()
 					{
-						hp = 255,
-						attack = 10,
-						defense = 10,
-						specialAttack = 75,
-						specialDefense = 135,
-						speed = 55
+						baseStats = new int[]{255, 10, 10, 75, 135, 55}
 					}
 				}
 			},
@@ -4132,12 +2922,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Raikou",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 85,
-						defense = 75,
-						specialAttack = 115,
-						specialDefense = 100,
-						speed = 115
+						baseStats = new int[]{90, 85, 75, 115, 100, 115}
 					}
 				}
 			},
@@ -4149,12 +2934,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Entei",
 					Statistics = new Stats()
 					{
-						hp = 115,
-						attack = 115,
-						defense = 85,
-						specialAttack = 90,
-						specialDefense = 75,
-						speed = 100
+						baseStats = new int[]{115, 115, 85, 90, 75, 100}
 					}
 				}
 			},
@@ -4166,12 +2946,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Suicune",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 75,
-						defense = 115,
-						specialAttack = 90,
-						specialDefense = 115,
-						speed = 85
+						baseStats = new int[]{100, 75, 115, 90, 115, 85}
 					}
 				}
 			},
@@ -4183,12 +2958,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Larvitar",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 64,
-						defense = 50,
-						specialAttack = 45,
-						specialDefense = 50,
-						speed = 41
+						baseStats = new int[]{50, 64, 50, 45, 50, 41}
 					}
 				}
 			},
@@ -4200,12 +2970,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Pupitar",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 84,
-						defense = 70,
-						specialAttack = 65,
-						specialDefense = 70,
-						speed = 51
+						baseStats = new int[]{70, 84, 70, 65, 70, 51}
 					}
 				}
 			},
@@ -4217,12 +2982,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Tyranitar",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 134,
-						defense = 110,
-						specialAttack = 95,
-						specialDefense = 100,
-						speed = 61
+						baseStats = new int[]{100, 134, 110, 95, 100, 61}
 					}
 				}
 			},
@@ -4234,12 +2994,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Lugia",
 					Statistics = new Stats()
 					{
-						hp = 106,
-						attack = 90,
-						defense = 130,
-						specialAttack = 90,
-						specialDefense = 154,
-						speed = 110
+						baseStats = new int[]{106, 90, 130, 90, 154, 110}
 					}
 				}
 			},
@@ -4251,12 +3006,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Ho-oh",
 					Statistics = new Stats()
 					{
-						hp = 106,
-						attack = 130,
-						defense = 90,
-						specialAttack = 110,
-						specialDefense = 154,
-						speed = 90
+						baseStats = new int[]{106, 130, 90, 110, 154, 90}
 					}
 				}
 			},
@@ -4268,12 +3018,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Celebi",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 100,
-						defense = 100,
-						specialAttack = 100,
-						specialDefense = 100,
-						speed = 100
+						baseStats = new int[]{100, 100, 100, 100, 100, 100}
 					}
 				}
 			},
@@ -4285,12 +3030,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Treecko",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 45,
-						defense = 35,
-						specialAttack = 65,
-						specialDefense = 55,
-						speed = 70
+						baseStats = new int[]{40, 45, 35, 65, 55, 70}
 					}
 				}
 			},
@@ -4302,12 +3042,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Grovyle",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 65,
-						defense = 45,
-						specialAttack = 85,
-						specialDefense = 65,
-						speed = 95
+						baseStats = new int[]{50, 65, 45, 85, 65, 95}
 					}
 				}
 			},
@@ -4319,12 +3054,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Sceptile",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 85,
-						defense = 65,
-						specialAttack = 105,
-						specialDefense = 85,
-						speed = 120
+						baseStats = new int[]{70, 85, 65, 105, 85, 120}
 					}
 				}
 			},
@@ -4336,12 +3066,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Torchic",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 60,
-						defense = 40,
-						specialAttack = 70,
-						specialDefense = 50,
-						speed = 45
+						baseStats = new int[]{45, 60, 40, 70, 50, 45}
 					}
 				}
 			},
@@ -4353,12 +3078,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Combusken",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 85,
-						defense = 60,
-						specialAttack = 85,
-						specialDefense = 60,
-						speed = 55
+						baseStats = new int[]{60, 85, 60, 85, 60, 55}
 					}
 				}
 			},
@@ -4370,12 +3090,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Blaziken",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 120,
-						defense = 70,
-						specialAttack = 110,
-						specialDefense = 70,
-						speed = 80
+						baseStats = new int[]{80, 120, 70, 110, 70, 80}
 					}
 				}
 			},
@@ -4387,12 +3102,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Mudkip",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 70,
-						defense = 50,
-						specialAttack = 50,
-						specialDefense = 50,
-						speed = 40
+						baseStats = new int[]{50, 70, 50, 50, 50, 40}
 					}
 				}
 			},
@@ -4404,12 +3114,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Marshtomp",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 85,
-						defense = 70,
-						specialAttack = 60,
-						specialDefense = 70,
-						speed = 50
+						baseStats = new int[]{70, 85, 70, 60, 70, 50}
 					}
 				}
 			},
@@ -4421,12 +3126,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Swampert",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 110,
-						defense = 90,
-						specialAttack = 85,
-						specialDefense = 90,
-						speed = 60
+						baseStats = new int[]{100, 110, 90, 85, 90, 60}
 					}
 				}
 			},
@@ -4438,12 +3138,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Poochyena",
 					Statistics = new Stats()
 					{
-						hp = 35,
-						attack = 55,
-						defense = 35,
-						specialAttack = 30,
-						specialDefense = 30,
-						speed = 35
+						baseStats = new int[]{35, 55, 35, 30, 30, 35}
 					}
 				}
 			},
@@ -4455,12 +3150,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Mightyena",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 90,
-						defense = 70,
-						specialAttack = 60,
-						specialDefense = 60,
-						speed = 70
+						baseStats = new int[]{70, 90, 70, 60, 60, 70}
 					}
 				}
 			},
@@ -4472,12 +3162,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Zigzagoon",
 					Statistics = new Stats()
 					{
-						hp = 38,
-						attack = 30,
-						defense = 41,
-						specialAttack = 30,
-						specialDefense = 41,
-						speed = 60
+						baseStats = new int[]{38, 30, 41, 30, 41, 60}
 					}
 				}
 			},
@@ -4489,12 +3174,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Linoone",
 					Statistics = new Stats()
 					{
-						hp = 78,
-						attack = 70,
-						defense = 61,
-						specialAttack = 50,
-						specialDefense = 61,
-						speed = 100
+						baseStats = new int[]{78, 70, 61, 50, 61, 100}
 					}
 				}
 			},
@@ -4506,12 +3186,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Wurmple",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 45,
-						defense = 35,
-						specialAttack = 20,
-						specialDefense = 30,
-						speed = 20
+						baseStats = new int[]{45, 45, 35, 20, 30, 20}
 					}
 				}
 			},
@@ -4523,12 +3198,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Silcoon",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 35,
-						defense = 55,
-						specialAttack = 25,
-						specialDefense = 25,
-						speed = 15
+						baseStats = new int[]{50, 35, 55, 25, 25, 15}
 					}
 				}
 			},
@@ -4540,12 +3210,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Beautifly",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 70,
-						defense = 50,
-						specialAttack = 90,
-						specialDefense = 50,
-						speed = 65
+						baseStats = new int[]{60, 70, 50, 90, 50, 65}
 					}
 				}
 			},
@@ -4557,12 +3222,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Cascoon",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 35,
-						defense = 55,
-						specialAttack = 25,
-						specialDefense = 25,
-						speed = 15
+						baseStats = new int[]{50, 35, 55, 25, 25, 15}
 					}
 				}
 			},
@@ -4574,12 +3234,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Dustox",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 50,
-						defense = 70,
-						specialAttack = 50,
-						specialDefense = 90,
-						speed = 65
+						baseStats = new int[]{60, 50, 70, 50, 90, 65}
 					}
 				}
 			},
@@ -4591,12 +3246,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Lotad",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 30,
-						defense = 30,
-						specialAttack = 40,
-						specialDefense = 50,
-						speed = 30
+						baseStats = new int[]{40, 30, 30, 40, 50, 30}
 					}
 				}
 			},
@@ -4608,12 +3258,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Lombre",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 50,
-						defense = 50,
-						specialAttack = 60,
-						specialDefense = 70,
-						speed = 50
+						baseStats = new int[]{60, 50, 50, 60, 70, 50}
 					}
 				}
 			},
@@ -4625,12 +3270,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Ludicolo",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 70,
-						defense = 70,
-						specialAttack = 90,
-						specialDefense = 100,
-						speed = 70
+						baseStats = new int[]{80, 70, 70, 90, 100, 70}
 					}
 				}
 			},
@@ -4642,12 +3282,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Seedot",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 40,
-						defense = 50,
-						specialAttack = 30,
-						specialDefense = 30,
-						speed = 30
+						baseStats = new int[]{40, 40, 50, 30, 30, 30}
 					}
 				}
 			},
@@ -4659,12 +3294,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Nuzleaf",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 70,
-						defense = 40,
-						specialAttack = 60,
-						specialDefense = 40,
-						speed = 60
+						baseStats = new int[]{70, 70, 40, 60, 40, 60}
 					}
 				}
 			},
@@ -4676,12 +3306,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Shiftry",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 100,
-						defense = 60,
-						specialAttack = 90,
-						specialDefense = 60,
-						speed = 80
+						baseStats = new int[]{90, 100, 60, 90, 60, 80}
 					}
 				}
 			},
@@ -4693,12 +3318,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Taillow",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 55,
-						defense = 30,
-						specialAttack = 30,
-						specialDefense = 30,
-						speed = 85
+						baseStats = new int[]{40, 55, 30, 30, 30, 85}
 					}
 				}
 			},
@@ -4710,12 +3330,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Swellow",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 85,
-						defense = 60,
-						specialAttack = 50,
-						specialDefense = 50,
-						speed = 125
+						baseStats = new int[]{60, 85, 60, 50, 50, 125}
 					}
 				}
 			},
@@ -4727,12 +3342,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Wingull",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 30,
-						defense = 30,
-						specialAttack = 55,
-						specialDefense = 30,
-						speed = 85
+						baseStats = new int[]{40, 30, 30, 55, 30, 85}
 					}
 				}
 			},
@@ -4744,12 +3354,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Pelipper",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 50,
-						defense = 100,
-						specialAttack = 85,
-						specialDefense = 70,
-						speed = 65
+						baseStats = new int[]{60, 50, 100, 85, 70, 65}
 					}
 				}
 			},
@@ -4761,12 +3366,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Ralts",
 					Statistics = new Stats()
 					{
-						hp = 28,
-						attack = 25,
-						defense = 25,
-						specialAttack = 45,
-						specialDefense = 35,
-						speed = 40
+						baseStats = new int[]{28, 25, 25, 45, 35, 40}
 					}
 				}
 			},
@@ -4778,12 +3378,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Kirlia",
 					Statistics = new Stats()
 					{
-						hp = 38,
-						attack = 35,
-						defense = 35,
-						specialAttack = 65,
-						specialDefense = 55,
-						speed = 50
+						baseStats = new int[]{38, 35, 35, 65, 55, 50}
 					}
 				}
 			},
@@ -4795,12 +3390,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Gardevoir",
 					Statistics = new Stats()
 					{
-						hp = 68,
-						attack = 65,
-						defense = 65,
-						specialAttack = 125,
-						specialDefense = 115,
-						speed = 80
+						baseStats = new int[]{68, 65, 65, 125, 115, 80}
 					}
 				}
 			},
@@ -4812,12 +3402,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Surskit",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 30,
-						defense = 32,
-						specialAttack = 50,
-						specialDefense = 52,
-						speed = 65
+						baseStats = new int[]{40, 30, 32, 50, 52, 65}
 					}
 				}
 			},
@@ -4829,12 +3414,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Masquerain",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 60,
-						defense = 62,
-						specialAttack = 80,
-						specialDefense = 82,
-						speed = 60
+						baseStats = new int[]{70, 60, 62, 80, 82, 60}
 					}
 				}
 			},
@@ -4846,12 +3426,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Shroomish",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 40,
-						defense = 60,
-						specialAttack = 40,
-						specialDefense = 60,
-						speed = 35
+						baseStats = new int[]{60, 40, 60, 40, 60, 35}
 					}
 				}
 			},
@@ -4863,12 +3438,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Breloom",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 130,
-						defense = 80,
-						specialAttack = 60,
-						specialDefense = 60,
-						speed = 70
+						baseStats = new int[]{60, 130, 80, 60, 60, 70}
 					}
 				}
 			},
@@ -4880,12 +3450,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Slakoth",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 60,
-						defense = 60,
-						specialAttack = 35,
-						specialDefense = 35,
-						speed = 30
+						baseStats = new int[]{60, 60, 60, 35, 35, 30}
 					}
 				}
 			},
@@ -4897,12 +3462,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Vigoroth",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 80,
-						defense = 80,
-						specialAttack = 55,
-						specialDefense = 55,
-						speed = 90
+						baseStats = new int[]{80, 80, 80, 55, 55, 90}
 					}
 				}
 			},
@@ -4914,12 +3474,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Slaking",
 					Statistics = new Stats()
 					{
-						hp = 150,
-						attack = 160,
-						defense = 100,
-						specialAttack = 95,
-						specialDefense = 65,
-						speed = 100
+						baseStats = new int[]{150, 160, 100, 95, 65, 100}
 					}
 				}
 			},
@@ -4931,12 +3486,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Nincada",
 					Statistics = new Stats()
 					{
-						hp = 31,
-						attack = 45,
-						defense = 90,
-						specialAttack = 30,
-						specialDefense = 30,
-						speed = 40
+						baseStats = new int[]{31, 45, 90, 30, 30, 40}
 					}
 				}
 			},
@@ -4948,12 +3498,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Ninjask",
 					Statistics = new Stats()
 					{
-						hp = 61,
-						attack = 90,
-						defense = 45,
-						specialAttack = 50,
-						specialDefense = 50,
-						speed = 160
+						baseStats = new int[]{61, 90, 45, 50, 50, 160}
 					}
 				}
 			},
@@ -4965,12 +3510,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Shedinja",
 					Statistics = new Stats()
 					{
-						hp = 1,
-						attack = 90,
-						defense = 45,
-						specialAttack = 30,
-						specialDefense = 30,
-						speed = 40
+						baseStats = new int[]{1, 90, 45, 30, 30, 40}
 					}
 				}
 			},
@@ -4982,12 +3522,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Whismur",
 					Statistics = new Stats()
 					{
-						hp = 64,
-						attack = 51,
-						defense = 23,
-						specialAttack = 51,
-						specialDefense = 23,
-						speed = 28
+						baseStats = new int[]{64, 51, 23, 51, 23, 28}
 					}
 				}
 			},
@@ -4999,12 +3534,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Loudred",
 					Statistics = new Stats()
 					{
-						hp = 84,
-						attack = 71,
-						defense = 43,
-						specialAttack = 71,
-						specialDefense = 43,
-						speed = 48
+						baseStats = new int[]{84, 71, 43, 71, 43, 48}
 					}
 				}
 			},
@@ -5016,12 +3546,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Exploud",
 					Statistics = new Stats()
 					{
-						hp = 104,
-						attack = 91,
-						defense = 63,
-						specialAttack = 91,
-						specialDefense = 63,
-						speed = 68
+						baseStats = new int[]{104, 91, 63, 91, 63, 68}
 					}
 				}
 			},
@@ -5033,12 +3558,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Makuhita",
 					Statistics = new Stats()
 					{
-						hp = 72,
-						attack = 60,
-						defense = 30,
-						specialAttack = 20,
-						specialDefense = 30,
-						speed = 25
+						baseStats = new int[]{72, 60, 30, 20, 30, 25}
 					}
 				}
 			},
@@ -5050,12 +3570,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Hariyama",
 					Statistics = new Stats()
 					{
-						hp = 144,
-						attack = 120,
-						defense = 60,
-						specialAttack = 40,
-						specialDefense = 60,
-						speed = 50
+						baseStats = new int[]{144, 120, 60, 40, 60, 50}
 					}
 				}
 			},
@@ -5067,12 +3582,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Azurill",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 20,
-						defense = 40,
-						specialAttack = 20,
-						specialDefense = 40,
-						speed = 20
+						baseStats = new int[]{50, 20, 40, 20, 40, 20}
 					}
 				}
 			},
@@ -5084,12 +3594,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Nosepass",
 					Statistics = new Stats()
 					{
-						hp = 30,
-						attack = 45,
-						defense = 135,
-						specialAttack = 45,
-						specialDefense = 90,
-						speed = 30
+						baseStats = new int[]{30, 45, 135, 45, 90, 30}
 					}
 				}
 			},
@@ -5101,12 +3606,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Skitty",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 45,
-						defense = 45,
-						specialAttack = 35,
-						specialDefense = 35,
-						speed = 50
+						baseStats = new int[]{50, 45, 45, 35, 35, 50}
 					}
 				}
 			},
@@ -5118,12 +3618,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Delcatty",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 65,
-						defense = 65,
-						specialAttack = 55,
-						specialDefense = 55,
-						speed = 70
+						baseStats = new int[]{70, 65, 65, 55, 55, 70}
 					}
 				}
 			},
@@ -5135,12 +3630,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Sableye",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 75,
-						defense = 75,
-						specialAttack = 65,
-						specialDefense = 65,
-						speed = 50
+						baseStats = new int[]{50, 75, 75, 65, 65, 50}
 					}
 				}
 			},
@@ -5152,12 +3642,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Mawile",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 85,
-						defense = 85,
-						specialAttack = 55,
-						specialDefense = 55,
-						speed = 50
+						baseStats = new int[]{50, 85, 85, 55, 55, 50}
 					}
 				}
 			},
@@ -5169,12 +3654,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Aron",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 70,
-						defense = 100,
-						specialAttack = 40,
-						specialDefense = 40,
-						speed = 30
+						baseStats = new int[]{50, 70, 100, 40, 40, 30}
 					}
 				}
 			},
@@ -5186,12 +3666,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Lairon",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 90,
-						defense = 140,
-						specialAttack = 50,
-						specialDefense = 50,
-						speed = 40
+						baseStats = new int[]{60, 90, 140, 50, 50, 40}
 					}
 				}
 			},
@@ -5203,12 +3678,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Aggron",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 110,
-						defense = 180,
-						specialAttack = 60,
-						specialDefense = 60,
-						speed = 50
+						baseStats = new int[]{70, 110, 180, 60, 60, 50}
 					}
 				}
 			},
@@ -5220,12 +3690,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Meditite",
 					Statistics = new Stats()
 					{
-						hp = 30,
-						attack = 40,
-						defense = 55,
-						specialAttack = 40,
-						specialDefense = 55,
-						speed = 60
+						baseStats = new int[]{30, 40, 55, 40, 55, 60}
 					}
 				}
 			},
@@ -5237,12 +3702,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Medicham",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 60,
-						defense = 75,
-						specialAttack = 60,
-						specialDefense = 75,
-						speed = 80
+						baseStats = new int[]{60, 60, 75, 60, 75, 80}
 					}
 				}
 			},
@@ -5254,12 +3714,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Electrike",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 45,
-						defense = 40,
-						specialAttack = 65,
-						specialDefense = 40,
-						speed = 65
+						baseStats = new int[]{40, 45, 40, 65, 40, 65}
 					}
 				}
 			},
@@ -5271,12 +3726,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Manectric",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 75,
-						defense = 60,
-						specialAttack = 105,
-						specialDefense = 60,
-						speed = 105
+						baseStats = new int[]{70, 75, 60, 105, 60, 105}
 					}
 				}
 			},
@@ -5288,12 +3738,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Plusle",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 50,
-						defense = 40,
-						specialAttack = 85,
-						specialDefense = 75,
-						speed = 95
+						baseStats = new int[]{60, 50, 40, 85, 75, 95}
 					}
 				}
 			},
@@ -5305,12 +3750,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Minun",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 40,
-						defense = 50,
-						specialAttack = 75,
-						specialDefense = 85,
-						speed = 95
+						baseStats = new int[]{60, 40, 50, 75, 85, 95}
 					}
 				}
 			},
@@ -5322,12 +3762,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Volbeat",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 73,
-						defense = 55,
-						specialAttack = 47,
-						specialDefense = 75,
-						speed = 85
+						baseStats = new int[]{65, 73, 55, 47, 75, 85}
 					}
 				}
 			},
@@ -5339,12 +3774,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Illumise",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 47,
-						defense = 55,
-						specialAttack = 73,
-						specialDefense = 75,
-						speed = 85
+						baseStats = new int[]{65, 47, 55, 73, 75, 85}
 					}
 				}
 			},
@@ -5356,12 +3786,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Roselia",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 60,
-						defense = 45,
-						specialAttack = 100,
-						specialDefense = 80,
-						speed = 65
+						baseStats = new int[]{50, 60, 45, 100, 80, 65}
 					}
 				}
 			},
@@ -5373,12 +3798,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Gulpin",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 43,
-						defense = 53,
-						specialAttack = 43,
-						specialDefense = 53,
-						speed = 40
+						baseStats = new int[]{70, 43, 53, 43, 53, 40}
 					}
 				}
 			},
@@ -5390,12 +3810,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Swalot",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 73,
-						defense = 83,
-						specialAttack = 73,
-						specialDefense = 83,
-						speed = 55
+						baseStats = new int[]{100, 73, 83, 73, 83, 55}
 					}
 				}
 			},
@@ -5407,12 +3822,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Carvanha",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 90,
-						defense = 20,
-						specialAttack = 65,
-						specialDefense = 20,
-						speed = 65
+						baseStats = new int[]{45, 90, 20, 65, 20, 65}
 					}
 				}
 			},
@@ -5424,12 +3834,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Sharpedo",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 120,
-						defense = 40,
-						specialAttack = 95,
-						specialDefense = 40,
-						speed = 95
+						baseStats = new int[]{70, 120, 40, 95, 40, 95}
 					}
 				}
 			},
@@ -5441,12 +3846,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Wailmer",
 					Statistics = new Stats()
 					{
-						hp = 130,
-						attack = 70,
-						defense = 35,
-						specialAttack = 70,
-						specialDefense = 35,
-						speed = 60
+						baseStats = new int[]{130, 70, 35, 70, 35, 60}
 					}
 				}
 			},
@@ -5458,12 +3858,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Wailord",
 					Statistics = new Stats()
 					{
-						hp = 170,
-						attack = 90,
-						defense = 45,
-						specialAttack = 90,
-						specialDefense = 45,
-						speed = 60
+						baseStats = new int[]{170, 90, 45, 90, 45, 60}
 					}
 				}
 			},
@@ -5475,12 +3870,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Numel",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 60,
-						defense = 40,
-						specialAttack = 65,
-						specialDefense = 45,
-						speed = 35
+						baseStats = new int[]{60, 60, 40, 65, 45, 35}
 					}
 				}
 			},
@@ -5492,12 +3882,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Camerupt",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 100,
-						defense = 70,
-						specialAttack = 105,
-						specialDefense = 75,
-						speed = 40
+						baseStats = new int[]{70, 100, 70, 105, 75, 40}
 					}
 				}
 			},
@@ -5509,12 +3894,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Torkoal",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 85,
-						defense = 140,
-						specialAttack = 85,
-						specialDefense = 70,
-						speed = 20
+						baseStats = new int[]{70, 85, 140, 85, 70, 20}
 					}
 				}
 			},
@@ -5526,12 +3906,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Spoink",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 25,
-						defense = 35,
-						specialAttack = 70,
-						specialDefense = 80,
-						speed = 60
+						baseStats = new int[]{60, 25, 35, 70, 80, 60}
 					}
 				}
 			},
@@ -5543,12 +3918,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Grumpig",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 45,
-						defense = 65,
-						specialAttack = 90,
-						specialDefense = 110,
-						speed = 80
+						baseStats = new int[]{80, 45, 65, 90, 110, 80}
 					}
 				}
 			},
@@ -5560,12 +3930,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Spinda",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 60,
-						defense = 60,
-						specialAttack = 60,
-						specialDefense = 60,
-						speed = 60
+						baseStats = new int[]{60, 60, 60, 60, 60, 60}
 					}
 				}
 			},
@@ -5577,12 +3942,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Trapinch",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 100,
-						defense = 45,
-						specialAttack = 45,
-						specialDefense = 45,
-						speed = 10
+						baseStats = new int[]{45, 100, 45, 45, 45, 10}
 					}
 				}
 			},
@@ -5594,12 +3954,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Vibrava",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 70,
-						defense = 50,
-						specialAttack = 50,
-						specialDefense = 50,
-						speed = 70
+						baseStats = new int[]{50, 70, 50, 50, 50, 70}
 					}
 				}
 			},
@@ -5611,12 +3966,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Flygon",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 100,
-						defense = 80,
-						specialAttack = 80,
-						specialDefense = 80,
-						speed = 100
+						baseStats = new int[]{80, 100, 80, 80, 80, 100}
 					}
 				}
 			},
@@ -5628,12 +3978,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Cacnea",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 85,
-						defense = 40,
-						specialAttack = 85,
-						specialDefense = 40,
-						speed = 35
+						baseStats = new int[]{50, 85, 40, 85, 40, 35}
 					}
 				}
 			},
@@ -5645,12 +3990,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Cacturne",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 115,
-						defense = 60,
-						specialAttack = 115,
-						specialDefense = 60,
-						speed = 55
+						baseStats = new int[]{70, 115, 60, 115, 60, 55}
 					}
 				}
 			},
@@ -5662,12 +4002,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Swablu",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 40,
-						defense = 60,
-						specialAttack = 40,
-						specialDefense = 75,
-						speed = 50
+						baseStats = new int[]{45, 40, 60, 40, 75, 50}
 					}
 				}
 			},
@@ -5679,12 +4014,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Altaria",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 70,
-						defense = 90,
-						specialAttack = 70,
-						specialDefense = 105,
-						speed = 80
+						baseStats = new int[]{75, 70, 90, 70, 105, 80}
 					}
 				}
 			},
@@ -5696,12 +4026,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Zangoose",
 					Statistics = new Stats()
 					{
-						hp = 73,
-						attack = 115,
-						defense = 60,
-						specialAttack = 60,
-						specialDefense = 60,
-						speed = 90
+						baseStats = new int[]{73, 115, 60, 60, 60, 90}
 					}
 				}
 			},
@@ -5713,12 +4038,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Seviper",
 					Statistics = new Stats()
 					{
-						hp = 73,
-						attack = 100,
-						defense = 60,
-						specialAttack = 100,
-						specialDefense = 60,
-						speed = 65
+						baseStats = new int[]{73, 100, 60, 100, 60, 65}
 					}
 				}
 			},
@@ -5730,12 +4050,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Lunatone",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 55,
-						defense = 65,
-						specialAttack = 95,
-						specialDefense = 85,
-						speed = 70
+						baseStats = new int[]{70, 55, 65, 95, 85, 70}
 					}
 				}
 			},
@@ -5747,12 +4062,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Solrock",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 95,
-						defense = 85,
-						specialAttack = 55,
-						specialDefense = 65,
-						speed = 70
+						baseStats = new int[]{70, 95, 85, 55, 65, 70}
 					}
 				}
 			},
@@ -5764,12 +4074,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Barboach",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 48,
-						defense = 43,
-						specialAttack = 46,
-						specialDefense = 41,
-						speed = 60
+						baseStats = new int[]{50, 48, 43, 46, 41, 60}
 					}
 				}
 			},
@@ -5781,12 +4086,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Whiscash",
 					Statistics = new Stats()
 					{
-						hp = 110,
-						attack = 78,
-						defense = 73,
-						specialAttack = 76,
-						specialDefense = 71,
-						speed = 60
+						baseStats = new int[]{110, 78, 73, 76, 71, 60}
 					}
 				}
 			},
@@ -5798,12 +4098,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Corphish",
 					Statistics = new Stats()
 					{
-						hp = 43,
-						attack = 80,
-						defense = 65,
-						specialAttack = 50,
-						specialDefense = 35,
-						speed = 35
+						baseStats = new int[]{43, 80, 65, 50, 35, 35}
 					}
 				}
 			},
@@ -5815,12 +4110,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Crawdaunt",
 					Statistics = new Stats()
 					{
-						hp = 63,
-						attack = 120,
-						defense = 85,
-						specialAttack = 90,
-						specialDefense = 55,
-						speed = 55
+						baseStats = new int[]{63, 120, 85, 90, 55, 55}
 					}
 				}
 			},
@@ -5832,12 +4122,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Baltoy",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 40,
-						defense = 55,
-						specialAttack = 40,
-						specialDefense = 70,
-						speed = 55
+						baseStats = new int[]{40, 40, 55, 40, 70, 55}
 					}
 				}
 			},
@@ -5849,12 +4134,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Claydol",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 70,
-						defense = 105,
-						specialAttack = 70,
-						specialDefense = 120,
-						speed = 75
+						baseStats = new int[]{60, 70, 105, 70, 120, 75}
 					}
 				}
 			},
@@ -5866,12 +4146,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Lileep",
 					Statistics = new Stats()
 					{
-						hp = 66,
-						attack = 41,
-						defense = 77,
-						specialAttack = 61,
-						specialDefense = 87,
-						speed = 23
+						baseStats = new int[]{66, 41, 77, 61, 87, 23}
 					}
 				}
 			},
@@ -5883,12 +4158,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Cradily",
 					Statistics = new Stats()
 					{
-						hp = 86,
-						attack = 81,
-						defense = 97,
-						specialAttack = 81,
-						specialDefense = 107,
-						speed = 43
+						baseStats = new int[]{86, 81, 97, 81, 107, 43}
 					}
 				}
 			},
@@ -5900,12 +4170,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Anorith",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 95,
-						defense = 50,
-						specialAttack = 40,
-						specialDefense = 50,
-						speed = 75
+						baseStats = new int[]{45, 95, 50, 40, 50, 75}
 					}
 				}
 			},
@@ -5917,12 +4182,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Armaldo",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 125,
-						defense = 100,
-						specialAttack = 70,
-						specialDefense = 80,
-						speed = 45
+						baseStats = new int[]{75, 125, 100, 70, 80, 45}
 					}
 				}
 			},
@@ -5934,12 +4194,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Feebas",
 					Statistics = new Stats()
 					{
-						hp = 20,
-						attack = 15,
-						defense = 20,
-						specialAttack = 10,
-						specialDefense = 55,
-						speed = 80
+						baseStats = new int[]{20, 15, 20, 10, 55, 80}
 					}
 				}
 			},
@@ -5951,12 +4206,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Milotic",
 					Statistics = new Stats()
 					{
-						hp = 95,
-						attack = 60,
-						defense = 79,
-						specialAttack = 100,
-						specialDefense = 125,
-						speed = 81
+						baseStats = new int[]{95, 60, 79, 100, 125, 81}
 					}
 				}
 			},
@@ -5968,12 +4218,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Castform",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 70,
-						defense = 70,
-						specialAttack = 70,
-						specialDefense = 70,
-						speed = 70
+						baseStats = new int[]{70, 70, 70, 70, 70, 70}
 					}
 				}
 			},
@@ -5985,12 +4230,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Kecleon",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 90,
-						defense = 70,
-						specialAttack = 60,
-						specialDefense = 120,
-						speed = 40
+						baseStats = new int[]{60, 90, 70, 60, 120, 40}
 					}
 				}
 			},
@@ -6002,12 +4242,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Shuppet",
 					Statistics = new Stats()
 					{
-						hp = 44,
-						attack = 75,
-						defense = 35,
-						specialAttack = 63,
-						specialDefense = 33,
-						speed = 45
+						baseStats = new int[]{44, 75, 35, 63, 33, 45}
 					}
 				}
 			},
@@ -6019,12 +4254,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Banette",
 					Statistics = new Stats()
 					{
-						hp = 64,
-						attack = 115,
-						defense = 65,
-						specialAttack = 83,
-						specialDefense = 63,
-						speed = 65
+						baseStats = new int[]{64, 115, 65, 83, 63, 65}
 					}
 				}
 			},
@@ -6036,12 +4266,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Duskull",
 					Statistics = new Stats()
 					{
-						hp = 20,
-						attack = 40,
-						defense = 90,
-						specialAttack = 30,
-						specialDefense = 90,
-						speed = 25
+						baseStats = new int[]{20, 40, 90, 30, 90, 25}
 					}
 				}
 			},
@@ -6053,12 +4278,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Dusclops",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 70,
-						defense = 130,
-						specialAttack = 60,
-						specialDefense = 130,
-						speed = 25
+						baseStats = new int[]{40, 70, 130, 60, 130, 25}
 					}
 				}
 			},
@@ -6070,12 +4290,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Tropius",
 					Statistics = new Stats()
 					{
-						hp = 99,
-						attack = 68,
-						defense = 83,
-						specialAttack = 72,
-						specialDefense = 87,
-						speed = 51
+						baseStats = new int[]{99, 68, 83, 72, 87, 51}
 					}
 				}
 			},
@@ -6087,12 +4302,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Chimecho",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 50,
-						defense = 70,
-						specialAttack = 95,
-						specialDefense = 80,
-						speed = 65
+						baseStats = new int[]{65, 50, 70, 95, 80, 65}
 					}
 				}
 			},
@@ -6104,12 +4314,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Absol",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 130,
-						defense = 60,
-						specialAttack = 75,
-						specialDefense = 60,
-						speed = 75
+						baseStats = new int[]{65, 130, 60, 75, 60, 75}
 					}
 				}
 			},
@@ -6121,12 +4326,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Wynaut",
 					Statistics = new Stats()
 					{
-						hp = 95,
-						attack = 23,
-						defense = 48,
-						specialAttack = 23,
-						specialDefense = 48,
-						speed = 23
+						baseStats = new int[]{95, 23, 48, 23, 48, 23}
 					}
 				}
 			},
@@ -6138,12 +4338,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Snorunt",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 50,
-						defense = 50,
-						specialAttack = 50,
-						specialDefense = 50,
-						speed = 50
+						baseStats = new int[]{50, 50, 50, 50, 50, 50}
 					}
 				}
 			},
@@ -6155,12 +4350,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Glalie",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 80,
-						defense = 80,
-						specialAttack = 80,
-						specialDefense = 80,
-						speed = 80
+						baseStats = new int[]{80, 80, 80, 80, 80, 80}
 					}
 				}
 			},
@@ -6172,12 +4362,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Spheal",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 40,
-						defense = 50,
-						specialAttack = 55,
-						specialDefense = 50,
-						speed = 25
+						baseStats = new int[]{70, 40, 50, 55, 50, 25}
 					}
 				}
 			},
@@ -6189,12 +4374,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Sealeo",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 60,
-						defense = 70,
-						specialAttack = 75,
-						specialDefense = 70,
-						speed = 45
+						baseStats = new int[]{90, 60, 70, 75, 70, 45}
 					}
 				}
 			},
@@ -6206,12 +4386,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Walrein",
 					Statistics = new Stats()
 					{
-						hp = 110,
-						attack = 80,
-						defense = 90,
-						specialAttack = 95,
-						specialDefense = 90,
-						speed = 65
+						baseStats = new int[]{110, 80, 90, 95, 90, 65}
 					}
 				}
 			},
@@ -6223,12 +4398,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Clamperl",
 					Statistics = new Stats()
 					{
-						hp = 35,
-						attack = 64,
-						defense = 85,
-						specialAttack = 74,
-						specialDefense = 55,
-						speed = 32
+						baseStats = new int[]{35, 64, 85, 74, 55, 32}
 					}
 				}
 			},
@@ -6240,12 +4410,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Huntail",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 104,
-						defense = 105,
-						specialAttack = 94,
-						specialDefense = 75,
-						speed = 52
+						baseStats = new int[]{55, 104, 105, 94, 75, 52}
 					}
 				}
 			},
@@ -6257,12 +4422,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Gorebyss",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 84,
-						defense = 105,
-						specialAttack = 114,
-						specialDefense = 75,
-						speed = 52
+						baseStats = new int[]{55, 84, 105, 114, 75, 52}
 					}
 				}
 			},
@@ -6274,12 +4434,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Relicanth",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 90,
-						defense = 130,
-						specialAttack = 45,
-						specialDefense = 65,
-						speed = 55
+						baseStats = new int[]{100, 90, 130, 45, 65, 55}
 					}
 				}
 			},
@@ -6291,12 +4446,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Luvdisc",
 					Statistics = new Stats()
 					{
-						hp = 43,
-						attack = 30,
-						defense = 55,
-						specialAttack = 40,
-						specialDefense = 65,
-						speed = 97
+						baseStats = new int[]{43, 30, 55, 40, 65, 97}
 					}
 				}
 			},
@@ -6308,12 +4458,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Bagon",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 75,
-						defense = 60,
-						specialAttack = 40,
-						specialDefense = 30,
-						speed = 50
+						baseStats = new int[]{45, 75, 60, 40, 30, 50}
 					}
 				}
 			},
@@ -6325,12 +4470,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Shelgon",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 95,
-						defense = 100,
-						specialAttack = 60,
-						specialDefense = 50,
-						speed = 50
+						baseStats = new int[]{65, 95, 100, 60, 50, 50}
 					}
 				}
 			},
@@ -6342,12 +4482,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Salamence",
 					Statistics = new Stats()
 					{
-						hp = 95,
-						attack = 135,
-						defense = 80,
-						specialAttack = 110,
-						specialDefense = 80,
-						speed = 100
+						baseStats = new int[]{95, 135, 80, 110, 80, 100}
 					}
 				}
 			},
@@ -6359,12 +4494,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Beldum",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 55,
-						defense = 80,
-						specialAttack = 35,
-						specialDefense = 60,
-						speed = 30
+						baseStats = new int[]{40, 55, 80, 35, 60, 30}
 					}
 				}
 			},
@@ -6376,12 +4506,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Metang",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 75,
-						defense = 100,
-						specialAttack = 55,
-						specialDefense = 80,
-						speed = 50
+						baseStats = new int[]{60, 75, 100, 55, 80, 50}
 					}
 				}
 			},
@@ -6393,12 +4518,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Metagross",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 135,
-						defense = 130,
-						specialAttack = 95,
-						specialDefense = 90,
-						speed = 70
+						baseStats = new int[]{80, 135, 130, 95, 90, 70}
 					}
 				}
 			},
@@ -6410,12 +4530,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Regirock",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 100,
-						defense = 200,
-						specialAttack = 50,
-						specialDefense = 100,
-						speed = 50
+						baseStats = new int[]{80, 100, 200, 50, 100, 50}
 					}
 				}
 			},
@@ -6427,12 +4542,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Regice",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 50,
-						defense = 100,
-						specialAttack = 100,
-						specialDefense = 200,
-						speed = 50
+						baseStats = new int[]{80, 50, 100, 100, 200, 50}
 					}
 				}
 			},
@@ -6444,12 +4554,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Registeel",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 75,
-						defense = 150,
-						specialAttack = 75,
-						specialDefense = 150,
-						speed = 50
+						baseStats = new int[]{80, 75, 150, 75, 150, 50}
 					}
 				}
 			},
@@ -6461,12 +4566,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Latias",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 80,
-						defense = 90,
-						specialAttack = 110,
-						specialDefense = 130,
-						speed = 110
+						baseStats = new int[]{80, 80, 90, 110, 130, 110}
 					}
 				}
 			},
@@ -6478,12 +4578,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Latios",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 90,
-						defense = 80,
-						specialAttack = 130,
-						specialDefense = 110,
-						speed = 110
+						baseStats = new int[]{80, 90, 80, 130, 110, 110}
 					}
 				}
 			},
@@ -6495,12 +4590,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Kyogre",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 100,
-						defense = 90,
-						specialAttack = 150,
-						specialDefense = 140,
-						speed = 90
+						baseStats = new int[]{100, 100, 90, 150, 140, 90}
 					}
 				}
 			},
@@ -6512,12 +4602,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Groudon",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 150,
-						defense = 140,
-						specialAttack = 100,
-						specialDefense = 90,
-						speed = 90
+						baseStats = new int[]{100, 150, 140, 100, 90, 90}
 					}
 				}
 			},
@@ -6529,12 +4614,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Rayquaza",
 					Statistics = new Stats()
 					{
-						hp = 105,
-						attack = 150,
-						defense = 90,
-						specialAttack = 150,
-						specialDefense = 90,
-						speed = 95
+						baseStats = new int[]{105, 150, 90, 150, 90, 95}
 					}
 				}
 			},
@@ -6546,12 +4626,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Jirachi",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 100,
-						defense = 100,
-						specialAttack = 100,
-						specialDefense = 100,
-						speed = 100
+						baseStats = new int[]{100, 100, 100, 100, 100, 100}
 					}
 				}
 			},
@@ -6563,12 +4638,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Deoxys",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 150,
-						defense = 50,
-						specialAttack = 150,
-						specialDefense = 50,
-						speed = 150
+						baseStats = new int[]{50, 150, 50, 150, 50, 150}
 					}
 				}
 			},
@@ -6580,12 +4650,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Turtwig",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 68,
-						defense = 64,
-						specialAttack = 45,
-						specialDefense = 55,
-						speed = 31
+						baseStats = new int[]{55, 68, 64, 45, 55, 31}
 					}
 				}
 			},
@@ -6597,12 +4662,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Grotle",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 89,
-						defense = 85,
-						specialAttack = 55,
-						specialDefense = 65,
-						speed = 36
+						baseStats = new int[]{75, 89, 85, 55, 65, 36}
 					}
 				}
 			},
@@ -6614,12 +4674,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Torterra",
 					Statistics = new Stats()
 					{
-						hp = 95,
-						attack = 109,
-						defense = 105,
-						specialAttack = 75,
-						specialDefense = 85,
-						speed = 56
+						baseStats = new int[]{95, 109, 105, 75, 85, 56}
 					}
 				}
 			},
@@ -6631,12 +4686,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Chimchar",
 					Statistics = new Stats()
 					{
-						hp = 44,
-						attack = 58,
-						defense = 44,
-						specialAttack = 58,
-						specialDefense = 44,
-						speed = 61
+						baseStats = new int[]{44, 58, 44, 58, 44, 61}
 					}
 				}
 			},
@@ -6648,12 +4698,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Monferno",
 					Statistics = new Stats()
 					{
-						hp = 64,
-						attack = 78,
-						defense = 52,
-						specialAttack = 78,
-						specialDefense = 52,
-						speed = 81
+						baseStats = new int[]{64, 78, 52, 78, 52, 81}
 					}
 				}
 			},
@@ -6665,12 +4710,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Infernape",
 					Statistics = new Stats()
 					{
-						hp = 76,
-						attack = 104,
-						defense = 71,
-						specialAttack = 104,
-						specialDefense = 71,
-						speed = 108
+						baseStats = new int[]{76, 104, 71, 104, 71, 108}
 					}
 				}
 			},
@@ -6682,12 +4722,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Piplup",
 					Statistics = new Stats()
 					{
-						hp = 53,
-						attack = 51,
-						defense = 53,
-						specialAttack = 61,
-						specialDefense = 56,
-						speed = 40
+						baseStats = new int[]{53, 51, 53, 61, 56, 40}
 					}
 				}
 			},
@@ -6699,12 +4734,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Prinplup",
 					Statistics = new Stats()
 					{
-						hp = 64,
-						attack = 66,
-						defense = 68,
-						specialAttack = 81,
-						specialDefense = 76,
-						speed = 50
+						baseStats = new int[]{64, 66, 68, 81, 76, 50}
 					}
 				}
 			},
@@ -6716,12 +4746,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Empoleon",
 					Statistics = new Stats()
 					{
-						hp = 84,
-						attack = 86,
-						defense = 88,
-						specialAttack = 111,
-						specialDefense = 101,
-						speed = 60
+						baseStats = new int[]{84, 86, 88, 111, 101, 60}
 					}
 				}
 			},
@@ -6733,12 +4758,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Starly",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 55,
-						defense = 30,
-						specialAttack = 30,
-						specialDefense = 30,
-						speed = 60
+						baseStats = new int[]{40, 55, 30, 30, 30, 60}
 					}
 				}
 			},
@@ -6750,12 +4770,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Staravia",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 75,
-						defense = 50,
-						specialAttack = 40,
-						specialDefense = 40,
-						speed = 80
+						baseStats = new int[]{55, 75, 50, 40, 40, 80}
 					}
 				}
 			},
@@ -6767,12 +4782,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Staraptor",
 					Statistics = new Stats()
 					{
-						hp = 85,
-						attack = 120,
-						defense = 70,
-						specialAttack = 50,
-						specialDefense = 50,
-						speed = 100
+						baseStats = new int[]{85, 120, 70, 50, 50, 100}
 					}
 				}
 			},
@@ -6784,12 +4794,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Bidoof",
 					Statistics = new Stats()
 					{
-						hp = 59,
-						attack = 45,
-						defense = 40,
-						specialAttack = 35,
-						specialDefense = 40,
-						speed = 31
+						baseStats = new int[]{59, 45, 40, 35, 40, 31}
 					}
 				}
 			},
@@ -6801,12 +4806,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Bibarel",
 					Statistics = new Stats()
 					{
-						hp = 79,
-						attack = 85,
-						defense = 60,
-						specialAttack = 55,
-						specialDefense = 60,
-						speed = 71
+						baseStats = new int[]{79, 85, 60, 55, 60, 71}
 					}
 				}
 			},
@@ -6818,12 +4818,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Kricketot",
 					Statistics = new Stats()
 					{
-						hp = 37,
-						attack = 25,
-						defense = 41,
-						specialAttack = 25,
-						specialDefense = 41,
-						speed = 25
+						baseStats = new int[]{37, 25, 41, 25, 41, 25}
 					}
 				}
 			},
@@ -6835,12 +4830,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Kricketune",
 					Statistics = new Stats()
 					{
-						hp = 77,
-						attack = 85,
-						defense = 51,
-						specialAttack = 55,
-						specialDefense = 51,
-						speed = 65
+						baseStats = new int[]{77, 85, 51, 55, 51, 65}
 					}
 				}
 			},
@@ -6852,12 +4842,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Shinx",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 65,
-						defense = 34,
-						specialAttack = 40,
-						specialDefense = 34,
-						speed = 45
+						baseStats = new int[]{45, 65, 34, 40, 34, 45}
 					}
 				}
 			},
@@ -6869,12 +4854,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Luxio",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 85,
-						defense = 49,
-						specialAttack = 60,
-						specialDefense = 49,
-						speed = 60
+						baseStats = new int[]{60, 85, 49, 60, 49, 60}
 					}
 				}
 			},
@@ -6886,12 +4866,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Luxray",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 120,
-						defense = 79,
-						specialAttack = 95,
-						specialDefense = 79,
-						speed = 70
+						baseStats = new int[]{80, 120, 79, 95, 79, 70}
 					}
 				}
 			},
@@ -6903,12 +4878,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Budew",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 30,
-						defense = 35,
-						specialAttack = 50,
-						specialDefense = 70,
-						speed = 55
+						baseStats = new int[]{40, 30, 35, 50, 70, 55}
 					}
 				}
 			},
@@ -6920,12 +4890,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Roserade",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 70,
-						defense = 55,
-						specialAttack = 125,
-						specialDefense = 105,
-						speed = 90
+						baseStats = new int[]{60, 70, 55, 125, 105, 90}
 					}
 				}
 			},
@@ -6937,12 +4902,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Cranidos",
 					Statistics = new Stats()
 					{
-						hp = 67,
-						attack = 125,
-						defense = 40,
-						specialAttack = 30,
-						specialDefense = 30,
-						speed = 58
+						baseStats = new int[]{67, 125, 40, 30, 30, 58}
 					}
 				}
 			},
@@ -6954,12 +4914,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Rampardos",
 					Statistics = new Stats()
 					{
-						hp = 97,
-						attack = 165,
-						defense = 60,
-						specialAttack = 65,
-						specialDefense = 50,
-						speed = 58
+						baseStats = new int[]{97, 165, 60, 65, 50, 58}
 					}
 				}
 			},
@@ -6971,12 +4926,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Shieldon",
 					Statistics = new Stats()
 					{
-						hp = 30,
-						attack = 42,
-						defense = 118,
-						specialAttack = 42,
-						specialDefense = 88,
-						speed = 30
+						baseStats = new int[]{30, 42, 118, 42, 88, 30}
 					}
 				}
 			},
@@ -6988,12 +4938,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Bastiodon",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 52,
-						defense = 168,
-						specialAttack = 47,
-						specialDefense = 138,
-						speed = 30
+						baseStats = new int[]{60, 52, 168, 47, 138, 30}
 					}
 				}
 			},
@@ -7005,12 +4950,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Burmy",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 29,
-						defense = 45,
-						specialAttack = 29,
-						specialDefense = 45,
-						speed = 36
+						baseStats = new int[]{40, 29, 45, 29, 45, 36}
 					}
 				}
 			},
@@ -7022,12 +4962,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Wormadam",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 59,
-						defense = 85,
-						specialAttack = 79,
-						specialDefense = 105,
-						speed = 36
+						baseStats = new int[]{60, 59, 85, 79, 105, 36}
 					}
 				}
 			},
@@ -7039,12 +4974,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Mothim",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 94,
-						defense = 50,
-						specialAttack = 94,
-						specialDefense = 50,
-						speed = 66
+						baseStats = new int[]{70, 94, 50, 94, 50, 66}
 					}
 				}
 			},
@@ -7056,12 +4986,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Combee",
 					Statistics = new Stats()
 					{
-						hp = 30,
-						attack = 30,
-						defense = 42,
-						specialAttack = 30,
-						specialDefense = 42,
-						speed = 70
+						baseStats = new int[]{30, 30, 42, 30, 42, 70}
 					}
 				}
 			},
@@ -7073,12 +4998,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Vespiquen",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 80,
-						defense = 102,
-						specialAttack = 80,
-						specialDefense = 102,
-						speed = 40
+						baseStats = new int[]{70, 80, 102, 80, 102, 40}
 					}
 				}
 			},
@@ -7090,12 +5010,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Pachirisu",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 45,
-						defense = 70,
-						specialAttack = 45,
-						specialDefense = 90,
-						speed = 95
+						baseStats = new int[]{60, 45, 70, 45, 90, 95}
 					}
 				}
 			},
@@ -7107,12 +5022,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Buizel",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 65,
-						defense = 35,
-						specialAttack = 60,
-						specialDefense = 30,
-						speed = 85
+						baseStats = new int[]{55, 65, 35, 60, 30, 85}
 					}
 				}
 			},
@@ -7124,12 +5034,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Floatzel",
 					Statistics = new Stats()
 					{
-						hp = 85,
-						attack = 105,
-						defense = 55,
-						specialAttack = 85,
-						specialDefense = 50,
-						speed = 115
+						baseStats = new int[]{85, 105, 55, 85, 50, 115}
 					}
 				}
 			},
@@ -7141,12 +5046,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Cherubi",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 35,
-						defense = 45,
-						specialAttack = 62,
-						specialDefense = 53,
-						speed = 35
+						baseStats = new int[]{45, 35, 45, 62, 53, 35}
 					}
 				}
 			},
@@ -7158,12 +5058,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Cherrim",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 60,
-						defense = 70,
-						specialAttack = 87,
-						specialDefense = 78,
-						speed = 85
+						baseStats = new int[]{70, 60, 70, 87, 78, 85}
 					}
 				}
 			},
@@ -7175,12 +5070,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Shellos",
 					Statistics = new Stats()
 					{
-						hp = 76,
-						attack = 48,
-						defense = 48,
-						specialAttack = 57,
-						specialDefense = 62,
-						speed = 34
+						baseStats = new int[]{76, 48, 48, 57, 62, 34}
 					}
 				}
 			},
@@ -7192,12 +5082,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Gastrodon",
 					Statistics = new Stats()
 					{
-						hp = 111,
-						attack = 83,
-						defense = 68,
-						specialAttack = 92,
-						specialDefense = 82,
-						speed = 39
+						baseStats = new int[]{111, 83, 68, 92, 82, 39}
 					}
 				}
 			},
@@ -7209,12 +5094,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Ambipom",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 100,
-						defense = 66,
-						specialAttack = 60,
-						specialDefense = 66,
-						speed = 115
+						baseStats = new int[]{75, 100, 66, 60, 66, 115}
 					}
 				}
 			},
@@ -7226,12 +5106,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Drifloon",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 50,
-						defense = 34,
-						specialAttack = 60,
-						specialDefense = 44,
-						speed = 70
+						baseStats = new int[]{90, 50, 34, 60, 44, 70}
 					}
 				}
 			},
@@ -7243,12 +5118,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Drifblim",
 					Statistics = new Stats()
 					{
-						hp = 150,
-						attack = 80,
-						defense = 44,
-						specialAttack = 90,
-						specialDefense = 54,
-						speed = 80
+						baseStats = new int[]{150, 80, 44, 90, 54, 80}
 					}
 				}
 			},
@@ -7260,12 +5130,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Buneary",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 66,
-						defense = 44,
-						specialAttack = 44,
-						specialDefense = 56,
-						speed = 85
+						baseStats = new int[]{55, 66, 44, 44, 56, 85}
 					}
 				}
 			},
@@ -7277,12 +5142,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Lopunny",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 76,
-						defense = 84,
-						specialAttack = 54,
-						specialDefense = 96,
-						speed = 105
+						baseStats = new int[]{65, 76, 84, 54, 96, 105}
 					}
 				}
 			},
@@ -7294,12 +5154,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Mismagius",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 60,
-						defense = 60,
-						specialAttack = 105,
-						specialDefense = 105,
-						speed = 105
+						baseStats = new int[]{60, 60, 60, 105, 105, 105}
 					}
 				}
 			},
@@ -7311,12 +5166,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Honchkrow",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 125,
-						defense = 52,
-						specialAttack = 105,
-						specialDefense = 52,
-						speed = 71
+						baseStats = new int[]{100, 125, 52, 105, 52, 71}
 					}
 				}
 			},
@@ -7328,12 +5178,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Glameow",
 					Statistics = new Stats()
 					{
-						hp = 49,
-						attack = 55,
-						defense = 42,
-						specialAttack = 42,
-						specialDefense = 37,
-						speed = 85
+						baseStats = new int[]{49, 55, 42, 42, 37, 85}
 					}
 				}
 			},
@@ -7345,12 +5190,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Purugly",
 					Statistics = new Stats()
 					{
-						hp = 71,
-						attack = 82,
-						defense = 64,
-						specialAttack = 64,
-						specialDefense = 59,
-						speed = 112
+						baseStats = new int[]{71, 82, 64, 64, 59, 112}
 					}
 				}
 			},
@@ -7362,12 +5202,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Chingling",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 30,
-						defense = 50,
-						specialAttack = 65,
-						specialDefense = 50,
-						speed = 45
+						baseStats = new int[]{45, 30, 50, 65, 50, 45}
 					}
 				}
 			},
@@ -7379,12 +5214,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Stunky",
 					Statistics = new Stats()
 					{
-						hp = 63,
-						attack = 63,
-						defense = 47,
-						specialAttack = 41,
-						specialDefense = 41,
-						speed = 74
+						baseStats = new int[]{63, 63, 47, 41, 41, 74}
 					}
 				}
 			},
@@ -7396,12 +5226,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Skuntank",
 					Statistics = new Stats()
 					{
-						hp = 103,
-						attack = 93,
-						defense = 67,
-						specialAttack = 71,
-						specialDefense = 61,
-						speed = 84
+						baseStats = new int[]{103, 93, 67, 71, 61, 84}
 					}
 				}
 			},
@@ -7413,12 +5238,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Bronzor",
 					Statistics = new Stats()
 					{
-						hp = 57,
-						attack = 24,
-						defense = 86,
-						specialAttack = 24,
-						specialDefense = 86,
-						speed = 23
+						baseStats = new int[]{57, 24, 86, 24, 86, 23}
 					}
 				}
 			},
@@ -7430,12 +5250,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Bronzong",
 					Statistics = new Stats()
 					{
-						hp = 67,
-						attack = 89,
-						defense = 116,
-						specialAttack = 79,
-						specialDefense = 116,
-						speed = 33
+						baseStats = new int[]{67, 89, 116, 79, 116, 33}
 					}
 				}
 			},
@@ -7447,12 +5262,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Bonsly",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 80,
-						defense = 95,
-						specialAttack = 10,
-						specialDefense = 45,
-						speed = 10
+						baseStats = new int[]{50, 80, 95, 10, 45, 10}
 					}
 				}
 			},
@@ -7464,12 +5274,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Mime Jr.",
 					Statistics = new Stats()
 					{
-						hp = 20,
-						attack = 25,
-						defense = 45,
-						specialAttack = 70,
-						specialDefense = 90,
-						speed = 60
+						baseStats = new int[]{20, 25, 45, 70, 90, 60}
 					}
 				}
 			},
@@ -7481,12 +5286,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Happiny",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 5,
-						defense = 5,
-						specialAttack = 15,
-						specialDefense = 65,
-						speed = 30
+						baseStats = new int[]{100, 5, 5, 15, 65, 30}
 					}
 				}
 			},
@@ -7498,12 +5298,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Chatot",
 					Statistics = new Stats()
 					{
-						hp = 76,
-						attack = 65,
-						defense = 45,
-						specialAttack = 92,
-						specialDefense = 42,
-						speed = 91
+						baseStats = new int[]{76, 65, 45, 92, 42, 91}
 					}
 				}
 			},
@@ -7515,12 +5310,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Spiritomb",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 92,
-						defense = 108,
-						specialAttack = 92,
-						specialDefense = 108,
-						speed = 35
+						baseStats = new int[]{50, 92, 108, 92, 108, 35}
 					}
 				}
 			},
@@ -7532,12 +5322,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Gible",
 					Statistics = new Stats()
 					{
-						hp = 58,
-						attack = 70,
-						defense = 45,
-						specialAttack = 40,
-						specialDefense = 45,
-						speed = 42
+						baseStats = new int[]{58, 70, 45, 40, 45, 42}
 					}
 				}
 			},
@@ -7549,12 +5334,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Gabite",
 					Statistics = new Stats()
 					{
-						hp = 68,
-						attack = 90,
-						defense = 65,
-						specialAttack = 50,
-						specialDefense = 55,
-						speed = 82
+						baseStats = new int[]{68, 90, 65, 50, 55, 82}
 					}
 				}
 			},
@@ -7566,12 +5346,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Garchomp",
 					Statistics = new Stats()
 					{
-						hp = 108,
-						attack = 130,
-						defense = 95,
-						specialAttack = 80,
-						specialDefense = 85,
-						speed = 102
+						baseStats = new int[]{108, 130, 95, 80, 85, 102}
 					}
 				}
 			},
@@ -7583,12 +5358,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Munchlax",
 					Statistics = new Stats()
 					{
-						hp = 135,
-						attack = 85,
-						defense = 40,
-						specialAttack = 40,
-						specialDefense = 85,
-						speed = 5
+						baseStats = new int[]{135, 85, 40, 40, 85, 5}
 					}
 				}
 			},
@@ -7600,12 +5370,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Riolu",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 70,
-						defense = 40,
-						specialAttack = 35,
-						specialDefense = 40,
-						speed = 60
+						baseStats = new int[]{40, 70, 40, 35, 40, 60}
 					}
 				}
 			},
@@ -7617,12 +5382,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Lucario",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 110,
-						defense = 70,
-						specialAttack = 115,
-						specialDefense = 70,
-						speed = 90
+						baseStats = new int[]{70, 110, 70, 115, 70, 90}
 					}
 				}
 			},
@@ -7634,12 +5394,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Hippopotas",
 					Statistics = new Stats()
 					{
-						hp = 68,
-						attack = 72,
-						defense = 78,
-						specialAttack = 38,
-						specialDefense = 42,
-						speed = 32
+						baseStats = new int[]{68, 72, 78, 38, 42, 32}
 					}
 				}
 			},
@@ -7651,12 +5406,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Hippowdon",
 					Statistics = new Stats()
 					{
-						hp = 108,
-						attack = 112,
-						defense = 118,
-						specialAttack = 68,
-						specialDefense = 72,
-						speed = 47
+						baseStats = new int[]{108, 112, 118, 68, 72, 47}
 					}
 				}
 			},
@@ -7668,12 +5418,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Skorupi",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 50,
-						defense = 90,
-						specialAttack = 30,
-						specialDefense = 55,
-						speed = 65
+						baseStats = new int[]{40, 50, 90, 30, 55, 65}
 					}
 				}
 			},
@@ -7685,12 +5430,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Drapion",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 90,
-						defense = 110,
-						specialAttack = 60,
-						specialDefense = 75,
-						speed = 95
+						baseStats = new int[]{70, 90, 110, 60, 75, 95}
 					}
 				}
 			},
@@ -7702,12 +5442,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Croagunk",
 					Statistics = new Stats()
 					{
-						hp = 48,
-						attack = 61,
-						defense = 40,
-						specialAttack = 61,
-						specialDefense = 40,
-						speed = 50
+						baseStats = new int[]{48, 61, 40, 61, 40, 50}
 					}
 				}
 			},
@@ -7719,12 +5454,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Toxicroak",
 					Statistics = new Stats()
 					{
-						hp = 83,
-						attack = 106,
-						defense = 65,
-						specialAttack = 86,
-						specialDefense = 65,
-						speed = 85
+						baseStats = new int[]{83, 106, 65, 86, 65, 85}
 					}
 				}
 			},
@@ -7736,12 +5466,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Carnivine",
 					Statistics = new Stats()
 					{
-						hp = 74,
-						attack = 100,
-						defense = 72,
-						specialAttack = 90,
-						specialDefense = 72,
-						speed = 46
+						baseStats = new int[]{74, 100, 72, 90, 72, 46}
 					}
 				}
 			},
@@ -7753,12 +5478,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Finneon",
 					Statistics = new Stats()
 					{
-						hp = 49,
-						attack = 49,
-						defense = 56,
-						specialAttack = 49,
-						specialDefense = 61,
-						speed = 66
+						baseStats = new int[]{49, 49, 56, 49, 61, 66}
 					}
 				}
 			},
@@ -7770,12 +5490,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Lumineon",
 					Statistics = new Stats()
 					{
-						hp = 69,
-						attack = 69,
-						defense = 76,
-						specialAttack = 69,
-						specialDefense = 86,
-						speed = 91
+						baseStats = new int[]{69, 69, 76, 69, 86, 91}
 					}
 				}
 			},
@@ -7787,12 +5502,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Mantyke",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 20,
-						defense = 50,
-						specialAttack = 60,
-						specialDefense = 120,
-						speed = 50
+						baseStats = new int[]{45, 20, 50, 60, 120, 50}
 					}
 				}
 			},
@@ -7804,12 +5514,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Snover",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 62,
-						defense = 50,
-						specialAttack = 62,
-						specialDefense = 60,
-						speed = 40
+						baseStats = new int[]{60, 62, 50, 62, 60, 40}
 					}
 				}
 			},
@@ -7821,12 +5526,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Abomasnow",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 92,
-						defense = 75,
-						specialAttack = 92,
-						specialDefense = 85,
-						speed = 60
+						baseStats = new int[]{90, 92, 75, 92, 85, 60}
 					}
 				}
 			},
@@ -7838,12 +5538,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Weavile",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 120,
-						defense = 65,
-						specialAttack = 45,
-						specialDefense = 85,
-						speed = 125
+						baseStats = new int[]{70, 120, 65, 45, 85, 125}
 					}
 				}
 			},
@@ -7855,12 +5550,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Magnezone",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 70,
-						defense = 115,
-						specialAttack = 130,
-						specialDefense = 90,
-						speed = 60
+						baseStats = new int[]{70, 70, 115, 130, 90, 60}
 					}
 				}
 			},
@@ -7872,12 +5562,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Lickilicky",
 					Statistics = new Stats()
 					{
-						hp = 110,
-						attack = 85,
-						defense = 95,
-						specialAttack = 80,
-						specialDefense = 95,
-						speed = 50
+						baseStats = new int[]{110, 85, 95, 80, 95, 50}
 					}
 				}
 			},
@@ -7889,12 +5574,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Rhyperior",
 					Statistics = new Stats()
 					{
-						hp = 115,
-						attack = 140,
-						defense = 130,
-						specialAttack = 55,
-						specialDefense = 55,
-						speed = 40
+						baseStats = new int[]{115, 140, 130, 55, 55, 40}
 					}
 				}
 			},
@@ -7906,12 +5586,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Tangrowth",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 100,
-						defense = 125,
-						specialAttack = 110,
-						specialDefense = 50,
-						speed = 50
+						baseStats = new int[]{100, 100, 125, 110, 50, 50}
 					}
 				}
 			},
@@ -7923,12 +5598,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Electivire",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 123,
-						defense = 67,
-						specialAttack = 95,
-						specialDefense = 85,
-						speed = 95
+						baseStats = new int[]{75, 123, 67, 95, 85, 95}
 					}
 				}
 			},
@@ -7940,12 +5610,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Magmortar",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 95,
-						defense = 67,
-						specialAttack = 125,
-						specialDefense = 95,
-						speed = 83
+						baseStats = new int[]{75, 95, 67, 125, 95, 83}
 					}
 				}
 			},
@@ -7957,12 +5622,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Togekiss",
 					Statistics = new Stats()
 					{
-						hp = 85,
-						attack = 50,
-						defense = 95,
-						specialAttack = 120,
-						specialDefense = 115,
-						speed = 80
+						baseStats = new int[]{85, 50, 95, 120, 115, 80}
 					}
 				}
 			},
@@ -7974,12 +5634,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Yanmega",
 					Statistics = new Stats()
 					{
-						hp = 86,
-						attack = 76,
-						defense = 86,
-						specialAttack = 116,
-						specialDefense = 56,
-						speed = 95
+						baseStats = new int[]{86, 76, 86, 116, 56, 95}
 					}
 				}
 			},
@@ -7991,12 +5646,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Leafeon",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 110,
-						defense = 130,
-						specialAttack = 60,
-						specialDefense = 65,
-						speed = 95
+						baseStats = new int[]{65, 110, 130, 60, 65, 95}
 					}
 				}
 			},
@@ -8008,12 +5658,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Glaceon",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 60,
-						defense = 110,
-						specialAttack = 130,
-						specialDefense = 95,
-						speed = 65
+						baseStats = new int[]{65, 60, 110, 130, 95, 65}
 					}
 				}
 			},
@@ -8025,12 +5670,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Gliscor",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 95,
-						defense = 125,
-						specialAttack = 45,
-						specialDefense = 75,
-						speed = 95
+						baseStats = new int[]{75, 95, 125, 45, 75, 95}
 					}
 				}
 			},
@@ -8042,12 +5682,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Mamoswine",
 					Statistics = new Stats()
 					{
-						hp = 110,
-						attack = 130,
-						defense = 80,
-						specialAttack = 70,
-						specialDefense = 60,
-						speed = 80
+						baseStats = new int[]{110, 130, 80, 70, 60, 80}
 					}
 				}
 			},
@@ -8059,12 +5694,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Porygon-Z",
 					Statistics = new Stats()
 					{
-						hp = 85,
-						attack = 80,
-						defense = 70,
-						specialAttack = 135,
-						specialDefense = 75,
-						speed = 90
+						baseStats = new int[]{85, 80, 70, 135, 75, 90}
 					}
 				}
 			},
@@ -8076,12 +5706,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Gallade",
 					Statistics = new Stats()
 					{
-						hp = 68,
-						attack = 125,
-						defense = 65,
-						specialAttack = 65,
-						specialDefense = 115,
-						speed = 80
+						baseStats = new int[]{68, 125, 65, 65, 115, 80}
 					}
 				}
 			},
@@ -8093,12 +5718,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Probopass",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 55,
-						defense = 145,
-						specialAttack = 75,
-						specialDefense = 150,
-						speed = 40
+						baseStats = new int[]{60, 55, 145, 75, 150, 40}
 					}
 				}
 			},
@@ -8110,12 +5730,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Dusknoir",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 100,
-						defense = 135,
-						specialAttack = 65,
-						specialDefense = 135,
-						speed = 45
+						baseStats = new int[]{45, 100, 135, 65, 135, 45}
 					}
 				}
 			},
@@ -8127,12 +5742,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Froslass",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 80,
-						defense = 70,
-						specialAttack = 80,
-						specialDefense = 70,
-						speed = 110
+						baseStats = new int[]{70, 80, 70, 80, 70, 110}
 					}
 				}
 			},
@@ -8144,12 +5754,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Rotom",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 50,
-						defense = 77,
-						specialAttack = 95,
-						specialDefense = 77,
-						speed = 91
+						baseStats = new int[]{50, 50, 77, 95, 77, 91}
 					}
 				}
 			},
@@ -8161,12 +5766,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Uxie",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 75,
-						defense = 130,
-						specialAttack = 75,
-						specialDefense = 130,
-						speed = 95
+						baseStats = new int[]{75, 75, 130, 75, 130, 95}
 					}
 				}
 			},
@@ -8178,12 +5778,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Mesprit",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 105,
-						defense = 105,
-						specialAttack = 105,
-						specialDefense = 105,
-						speed = 80
+						baseStats = new int[]{80, 105, 105, 105, 105, 80}
 					}
 				}
 			},
@@ -8195,12 +5790,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Azelf",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 125,
-						defense = 70,
-						specialAttack = 125,
-						specialDefense = 70,
-						speed = 115
+						baseStats = new int[]{75, 125, 70, 125, 70, 115}
 					}
 				}
 			},
@@ -8212,12 +5802,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Dialga",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 120,
-						defense = 120,
-						specialAttack = 150,
-						specialDefense = 100,
-						speed = 90
+						baseStats = new int[]{100, 120, 120, 150, 100, 90}
 					}
 				}
 			},
@@ -8229,12 +5814,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Palkia",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 120,
-						defense = 100,
-						specialAttack = 150,
-						specialDefense = 120,
-						speed = 100
+						baseStats = new int[]{90, 120, 100, 150, 120, 100}
 					}
 				}
 			},
@@ -8246,12 +5826,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Heatran",
 					Statistics = new Stats()
 					{
-						hp = 91,
-						attack = 90,
-						defense = 106,
-						specialAttack = 130,
-						specialDefense = 106,
-						speed = 77
+						baseStats = new int[]{91, 90, 106, 130, 106, 77}
 					}
 				}
 			},
@@ -8263,12 +5838,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Regigigas",
 					Statistics = new Stats()
 					{
-						hp = 110,
-						attack = 160,
-						defense = 110,
-						specialAttack = 80,
-						specialDefense = 110,
-						speed = 100
+						baseStats = new int[]{110, 160, 110, 80, 110, 100}
 					}
 				}
 			},
@@ -8280,12 +5850,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Giratina",
 					Statistics = new Stats()
 					{
-						hp = 150,
-						attack = 100,
-						defense = 120,
-						specialAttack = 100,
-						specialDefense = 120,
-						speed = 90
+						baseStats = new int[]{150, 100, 120, 100, 120, 90}
 					}
 				}
 			},
@@ -8297,12 +5862,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Cresselia",
 					Statistics = new Stats()
 					{
-						hp = 120,
-						attack = 70,
-						defense = 120,
-						specialAttack = 75,
-						specialDefense = 130,
-						speed = 85
+						baseStats = new int[]{120, 70, 120, 75, 130, 85}
 					}
 				}
 			},
@@ -8314,12 +5874,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Phione",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 80,
-						defense = 80,
-						specialAttack = 80,
-						specialDefense = 80,
-						speed = 80
+						baseStats = new int[]{80, 80, 80, 80, 80, 80}
 					}
 				}
 			},
@@ -8331,12 +5886,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Manaphy",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 100,
-						defense = 100,
-						specialAttack = 100,
-						specialDefense = 100,
-						speed = 100
+						baseStats = new int[]{100, 100, 100, 100, 100, 100}
 					}
 				}
 			},
@@ -8348,12 +5898,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Darkrai",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 90,
-						defense = 90,
-						specialAttack = 135,
-						specialDefense = 90,
-						speed = 125
+						baseStats = new int[]{70, 90, 90, 135, 90, 125}
 					}
 				}
 			},
@@ -8365,12 +5910,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Shaymin",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 100,
-						defense = 100,
-						specialAttack = 100,
-						specialDefense = 100,
-						speed = 100
+						baseStats = new int[]{100, 100, 100, 100, 100, 100}
 					}
 				}
 			},
@@ -8382,12 +5922,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Arceus",
 					Statistics = new Stats()
 					{
-						hp = 120,
-						attack = 120,
-						defense = 120,
-						specialAttack = 120,
-						specialDefense = 120,
-						speed = 120
+						baseStats = new int[]{120, 120, 120, 120, 120, 120}
 					}
 				}
 			},
@@ -8399,12 +5934,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Victini",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 100,
-						defense = 100,
-						specialAttack = 100,
-						specialDefense = 100,
-						speed = 100
+						baseStats = new int[]{100, 100, 100, 100, 100, 100}
 					}
 				}
 			},
@@ -8416,12 +5946,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Snivy",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 45,
-						defense = 55,
-						specialAttack = 45,
-						specialDefense = 55,
-						speed = 63
+						baseStats = new int[]{45, 45, 55, 45, 55, 63}
 					}
 				}
 			},
@@ -8433,12 +5958,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Servine",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 60,
-						defense = 75,
-						specialAttack = 60,
-						specialDefense = 75,
-						speed = 83
+						baseStats = new int[]{60, 60, 75, 60, 75, 83}
 					}
 				}
 			},
@@ -8450,12 +5970,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Serperior",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 75,
-						defense = 95,
-						specialAttack = 75,
-						specialDefense = 95,
-						speed = 113
+						baseStats = new int[]{75, 75, 95, 75, 95, 113}
 					}
 				}
 			},
@@ -8467,12 +5982,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Tepig",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 63,
-						defense = 45,
-						specialAttack = 45,
-						specialDefense = 45,
-						speed = 45
+						baseStats = new int[]{65, 63, 45, 45, 45, 45}
 					}
 				}
 			},
@@ -8484,12 +5994,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Pignite",
 					Statistics = new Stats()
 					{
-						hp = 90,
-						attack = 93,
-						defense = 55,
-						specialAttack = 70,
-						specialDefense = 55,
-						speed = 55
+						baseStats = new int[]{90, 93, 55, 70, 55, 55}
 					}
 				}
 			},
@@ -8501,12 +6006,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Emboar",
 					Statistics = new Stats()
 					{
-						hp = 110,
-						attack = 123,
-						defense = 65,
-						specialAttack = 100,
-						specialDefense = 65,
-						speed = 65
+						baseStats = new int[]{110, 123, 65, 100, 65, 65}
 					}
 				}
 			},
@@ -8518,12 +6018,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Oshawott",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 55,
-						defense = 45,
-						specialAttack = 63,
-						specialDefense = 45,
-						speed = 45
+						baseStats = new int[]{55, 55, 45, 63, 45, 45}
 					}
 				}
 			},
@@ -8535,12 +6030,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Dewott",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 75,
-						defense = 60,
-						specialAttack = 83,
-						specialDefense = 60,
-						speed = 60
+						baseStats = new int[]{75, 75, 60, 83, 60, 60}
 					}
 				}
 			},
@@ -8552,12 +6042,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Samurott",
 					Statistics = new Stats()
 					{
-						hp = 95,
-						attack = 100,
-						defense = 85,
-						specialAttack = 108,
-						specialDefense = 70,
-						speed = 70
+						baseStats = new int[]{95, 100, 85, 108, 70, 70}
 					}
 				}
 			},
@@ -8569,12 +6054,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Patrat",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 55,
-						defense = 39,
-						specialAttack = 35,
-						specialDefense = 39,
-						speed = 42
+						baseStats = new int[]{45, 55, 39, 35, 39, 42}
 					}
 				}
 			},
@@ -8586,12 +6066,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Watchog",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 85,
-						defense = 69,
-						specialAttack = 60,
-						specialDefense = 69,
-						speed = 77
+						baseStats = new int[]{60, 85, 69, 60, 69, 77}
 					}
 				}
 			},
@@ -8603,12 +6078,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Lillipup",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 60,
-						defense = 45,
-						specialAttack = 25,
-						specialDefense = 45,
-						speed = 55
+						baseStats = new int[]{45, 60, 45, 25, 45, 55}
 					}
 				}
 			},
@@ -8620,12 +6090,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Herdier",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 80,
-						defense = 65,
-						specialAttack = 35,
-						specialDefense = 65,
-						speed = 60
+						baseStats = new int[]{65, 80, 65, 35, 65, 60}
 					}
 				}
 			},
@@ -8637,12 +6102,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Stoutland",
 					Statistics = new Stats()
 					{
-						hp = 85,
-						attack = 100,
-						defense = 90,
-						specialAttack = 45,
-						specialDefense = 90,
-						speed = 80
+						baseStats = new int[]{85, 100, 90, 45, 90, 80}
 					}
 				}
 			},
@@ -8654,12 +6114,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Purrloin",
 					Statistics = new Stats()
 					{
-						hp = 41,
-						attack = 50,
-						defense = 37,
-						specialAttack = 50,
-						specialDefense = 37,
-						speed = 66
+						baseStats = new int[]{41, 50, 37, 50, 37, 66}
 					}
 				}
 			},
@@ -8671,12 +6126,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Liepard",
 					Statistics = new Stats()
 					{
-						hp = 64,
-						attack = 88,
-						defense = 50,
-						specialAttack = 88,
-						specialDefense = 50,
-						speed = 106
+						baseStats = new int[]{64, 88, 50, 88, 50, 106}
 					}
 				}
 			},
@@ -8688,12 +6138,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Pansage",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 53,
-						defense = 48,
-						specialAttack = 53,
-						specialDefense = 48,
-						speed = 64
+						baseStats = new int[]{50, 53, 48, 53, 48, 64}
 					}
 				}
 			},
@@ -8705,12 +6150,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Simisage",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 98,
-						defense = 63,
-						specialAttack = 98,
-						specialDefense = 63,
-						speed = 101
+						baseStats = new int[]{75, 98, 63, 98, 63, 101}
 					}
 				}
 			},
@@ -8722,12 +6162,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Pansear",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 53,
-						defense = 48,
-						specialAttack = 53,
-						specialDefense = 48,
-						speed = 64
+						baseStats = new int[]{50, 53, 48, 53, 48, 64}
 					}
 				}
 			},
@@ -8739,12 +6174,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Simisear",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 98,
-						defense = 63,
-						specialAttack = 98,
-						specialDefense = 63,
-						speed = 101
+						baseStats = new int[]{75, 98, 63, 98, 63, 101}
 					}
 				}
 			},
@@ -8756,12 +6186,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Panpour",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 53,
-						defense = 48,
-						specialAttack = 53,
-						specialDefense = 48,
-						speed = 64
+						baseStats = new int[]{50, 53, 48, 53, 48, 64}
 					}
 				}
 			},
@@ -8773,12 +6198,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Simipour",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 98,
-						defense = 63,
-						specialAttack = 98,
-						specialDefense = 63,
-						speed = 101
+						baseStats = new int[]{75, 98, 63, 98, 63, 101}
 					}
 				}
 			},
@@ -8790,12 +6210,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Munna",
 					Statistics = new Stats()
 					{
-						hp = 76,
-						attack = 25,
-						defense = 45,
-						specialAttack = 67,
-						specialDefense = 55,
-						speed = 24
+						baseStats = new int[]{76, 25, 45, 67, 55, 24}
 					}
 				}
 			},
@@ -8807,12 +6222,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Musharna",
 					Statistics = new Stats()
 					{
-						hp = 116,
-						attack = 55,
-						defense = 85,
-						specialAttack = 107,
-						specialDefense = 95,
-						speed = 29
+						baseStats = new int[]{116, 55, 85, 107, 95, 29}
 					}
 				}
 			},
@@ -8824,12 +6234,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Pidove",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 55,
-						defense = 50,
-						specialAttack = 36,
-						specialDefense = 30,
-						speed = 43
+						baseStats = new int[]{50, 55, 50, 36, 30, 43}
 					}
 				}
 			},
@@ -8841,12 +6246,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Tranquill",
 					Statistics = new Stats()
 					{
-						hp = 62,
-						attack = 77,
-						defense = 62,
-						specialAttack = 50,
-						specialDefense = 42,
-						speed = 65
+						baseStats = new int[]{62, 77, 62, 50, 42, 65}
 					}
 				}
 			},
@@ -8858,12 +6258,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Unfezant",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 105,
-						defense = 80,
-						specialAttack = 65,
-						specialDefense = 55,
-						speed = 93
+						baseStats = new int[]{80, 105, 80, 65, 55, 93}
 					}
 				}
 			},
@@ -8875,12 +6270,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Blitzle",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 60,
-						defense = 32,
-						specialAttack = 50,
-						specialDefense = 32,
-						speed = 76
+						baseStats = new int[]{45, 60, 32, 50, 32, 76}
 					}
 				}
 			},
@@ -8892,12 +6282,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Zebstrika",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 100,
-						defense = 63,
-						specialAttack = 80,
-						specialDefense = 63,
-						speed = 116
+						baseStats = new int[]{75, 100, 63, 80, 63, 116}
 					}
 				}
 			},
@@ -8909,12 +6294,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Roggenrola",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 75,
-						defense = 85,
-						specialAttack = 25,
-						specialDefense = 25,
-						speed = 15
+						baseStats = new int[]{55, 75, 85, 25, 25, 15}
 					}
 				}
 			},
@@ -8926,12 +6306,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Boldore",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 105,
-						defense = 105,
-						specialAttack = 50,
-						specialDefense = 40,
-						speed = 20
+						baseStats = new int[]{70, 105, 105, 50, 40, 20}
 					}
 				}
 			},
@@ -8943,12 +6318,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Gigalith",
 					Statistics = new Stats()
 					{
-						hp = 85,
-						attack = 135,
-						defense = 130,
-						specialAttack = 60,
-						specialDefense = 70,
-						speed = 25
+						baseStats = new int[]{85, 135, 130, 60, 70, 25}
 					}
 				}
 			},
@@ -8960,12 +6330,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Woobat",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 45,
-						defense = 43,
-						specialAttack = 55,
-						specialDefense = 43,
-						speed = 72
+						baseStats = new int[]{55, 45, 43, 55, 43, 72}
 					}
 				}
 			},
@@ -8977,12 +6342,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Swoobat",
 					Statistics = new Stats()
 					{
-						hp = 67,
-						attack = 57,
-						defense = 55,
-						specialAttack = 77,
-						specialDefense = 55,
-						speed = 114
+						baseStats = new int[]{67, 57, 55, 77, 55, 114}
 					}
 				}
 			},
@@ -8994,12 +6354,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Drilbur",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 85,
-						defense = 40,
-						specialAttack = 30,
-						specialDefense = 45,
-						speed = 68
+						baseStats = new int[]{60, 85, 40, 30, 45, 68}
 					}
 				}
 			},
@@ -9011,12 +6366,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Excadrill",
 					Statistics = new Stats()
 					{
-						hp = 110,
-						attack = 135,
-						defense = 60,
-						specialAttack = 50,
-						specialDefense = 65,
-						speed = 88
+						baseStats = new int[]{110, 135, 60, 50, 65, 88}
 					}
 				}
 			},
@@ -9028,12 +6378,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Audino",
 					Statistics = new Stats()
 					{
-						hp = 103,
-						attack = 60,
-						defense = 86,
-						specialAttack = 60,
-						specialDefense = 86,
-						speed = 50
+						baseStats = new int[]{103, 60, 86, 60, 86, 50}
 					}
 				}
 			},
@@ -9045,12 +6390,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Timburr",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 80,
-						defense = 55,
-						specialAttack = 25,
-						specialDefense = 35,
-						speed = 35
+						baseStats = new int[]{75, 80, 55, 25, 35, 35}
 					}
 				}
 			},
@@ -9062,12 +6402,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Gurdurr",
 					Statistics = new Stats()
 					{
-						hp = 85,
-						attack = 105,
-						defense = 85,
-						specialAttack = 40,
-						specialDefense = 50,
-						speed = 40
+						baseStats = new int[]{85, 105, 85, 40, 50, 40}
 					}
 				}
 			},
@@ -9079,12 +6414,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Conkeldurr",
 					Statistics = new Stats()
 					{
-						hp = 105,
-						attack = 140,
-						defense = 95,
-						specialAttack = 55,
-						specialDefense = 65,
-						speed = 45
+						baseStats = new int[]{105, 140, 95, 55, 65, 45}
 					}
 				}
 			},
@@ -9096,12 +6426,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Tympole",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 50,
-						defense = 40,
-						specialAttack = 50,
-						specialDefense = 40,
-						speed = 64
+						baseStats = new int[]{50, 50, 40, 50, 40, 64}
 					}
 				}
 			},
@@ -9113,12 +6438,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Palpitoad",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 65,
-						defense = 55,
-						specialAttack = 65,
-						specialDefense = 55,
-						speed = 69
+						baseStats = new int[]{75, 65, 55, 65, 55, 69}
 					}
 				}
 			},
@@ -9130,12 +6450,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Seismitoad",
 					Statistics = new Stats()
 					{
-						hp = 105,
-						attack = 85,
-						defense = 75,
-						specialAttack = 85,
-						specialDefense = 75,
-						speed = 74
+						baseStats = new int[]{105, 85, 75, 85, 75, 74}
 					}
 				}
 			},
@@ -9147,12 +6462,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Throh",
 					Statistics = new Stats()
 					{
-						hp = 120,
-						attack = 100,
-						defense = 85,
-						specialAttack = 30,
-						specialDefense = 85,
-						speed = 45
+						baseStats = new int[]{120, 100, 85, 30, 85, 45}
 					}
 				}
 			},
@@ -9164,12 +6474,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Sawk",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 125,
-						defense = 75,
-						specialAttack = 30,
-						specialDefense = 75,
-						speed = 85
+						baseStats = new int[]{75, 125, 75, 30, 75, 85}
 					}
 				}
 			},
@@ -9181,12 +6486,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Sewaddle",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 53,
-						defense = 70,
-						specialAttack = 40,
-						specialDefense = 60,
-						speed = 42
+						baseStats = new int[]{45, 53, 70, 40, 60, 42}
 					}
 				}
 			},
@@ -9198,12 +6498,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Swadloon",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 63,
-						defense = 90,
-						specialAttack = 50,
-						specialDefense = 80,
-						speed = 42
+						baseStats = new int[]{55, 63, 90, 50, 80, 42}
 					}
 				}
 			},
@@ -9215,12 +6510,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Leavanny",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 103,
-						defense = 80,
-						specialAttack = 70,
-						specialDefense = 70,
-						speed = 92
+						baseStats = new int[]{75, 103, 80, 70, 70, 92}
 					}
 				}
 			},
@@ -9232,12 +6522,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Venipede",
 					Statistics = new Stats()
 					{
-						hp = 30,
-						attack = 45,
-						defense = 59,
-						specialAttack = 30,
-						specialDefense = 39,
-						speed = 57
+						baseStats = new int[]{30, 45, 59, 30, 39, 57}
 					}
 				}
 			},
@@ -9249,12 +6534,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Whirlipede",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 55,
-						defense = 99,
-						specialAttack = 40,
-						specialDefense = 79,
-						speed = 47
+						baseStats = new int[]{40, 55, 99, 40, 79, 47}
 					}
 				}
 			},
@@ -9266,12 +6546,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Scolipede",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 90,
-						defense = 89,
-						specialAttack = 55,
-						specialDefense = 69,
-						speed = 112
+						baseStats = new int[]{60, 90, 89, 55, 69, 112}
 					}
 				}
 			},
@@ -9283,12 +6558,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Cottonee",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 27,
-						defense = 60,
-						specialAttack = 37,
-						specialDefense = 50,
-						speed = 66
+						baseStats = new int[]{40, 27, 60, 37, 50, 66}
 					}
 				}
 			},
@@ -9300,12 +6570,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Whimsicott",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 67,
-						defense = 85,
-						specialAttack = 77,
-						specialDefense = 75,
-						speed = 116
+						baseStats = new int[]{60, 67, 85, 77, 75, 116}
 					}
 				}
 			},
@@ -9317,12 +6582,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Petilil",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 35,
-						defense = 50,
-						specialAttack = 70,
-						specialDefense = 50,
-						speed = 30
+						baseStats = new int[]{45, 35, 50, 70, 50, 30}
 					}
 				}
 			},
@@ -9334,12 +6594,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Lilligant",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 60,
-						defense = 75,
-						specialAttack = 110,
-						specialDefense = 75,
-						speed = 90
+						baseStats = new int[]{70, 60, 75, 110, 75, 90}
 					}
 				}
 			},
@@ -9351,12 +6606,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Basculin",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 92,
-						defense = 65,
-						specialAttack = 80,
-						specialDefense = 55,
-						speed = 98
+						baseStats = new int[]{70, 92, 65, 80, 55, 98}
 					}
 				}
 			},
@@ -9368,12 +6618,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Sandile",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 72,
-						defense = 35,
-						specialAttack = 35,
-						specialDefense = 35,
-						speed = 65
+						baseStats = new int[]{50, 72, 35, 35, 35, 65}
 					}
 				}
 			},
@@ -9385,12 +6630,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Krokorok",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 82,
-						defense = 45,
-						specialAttack = 45,
-						specialDefense = 45,
-						speed = 74
+						baseStats = new int[]{60, 82, 45, 45, 45, 74}
 					}
 				}
 			},
@@ -9402,12 +6642,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Krookodile",
 					Statistics = new Stats()
 					{
-						hp = 95,
-						attack = 117,
-						defense = 70,
-						specialAttack = 65,
-						specialDefense = 70,
-						speed = 92
+						baseStats = new int[]{95, 117, 70, 65, 70, 92}
 					}
 				}
 			},
@@ -9419,12 +6654,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Darumaka",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 90,
-						defense = 45,
-						specialAttack = 15,
-						specialDefense = 45,
-						speed = 50
+						baseStats = new int[]{70, 90, 45, 15, 45, 50}
 					}
 				}
 			},
@@ -9436,12 +6666,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Darmanitan",
 					Statistics = new Stats()
 					{
-						hp = 105,
-						attack = 140,
-						defense = 55,
-						specialAttack = 30,
-						specialDefense = 55,
-						speed = 95
+						baseStats = new int[]{105, 140, 55, 30, 55, 95}
 					}
 				}
 			},
@@ -9453,12 +6678,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Maractus",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 86,
-						defense = 67,
-						specialAttack = 106,
-						specialDefense = 67,
-						speed = 60
+						baseStats = new int[]{75, 86, 67, 106, 67, 60}
 					}
 				}
 			},
@@ -9470,12 +6690,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Dwebble",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 65,
-						defense = 85,
-						specialAttack = 35,
-						specialDefense = 35,
-						speed = 55
+						baseStats = new int[]{50, 65, 85, 35, 35, 55}
 					}
 				}
 			},
@@ -9487,12 +6702,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Crustle",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 95,
-						defense = 125,
-						specialAttack = 65,
-						specialDefense = 75,
-						speed = 45
+						baseStats = new int[]{70, 95, 125, 65, 75, 45}
 					}
 				}
 			},
@@ -9504,12 +6714,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Scraggy",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 75,
-						defense = 70,
-						specialAttack = 35,
-						specialDefense = 70,
-						speed = 48
+						baseStats = new int[]{50, 75, 70, 35, 70, 48}
 					}
 				}
 			},
@@ -9521,12 +6726,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Scrafty",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 90,
-						defense = 115,
-						specialAttack = 45,
-						specialDefense = 115,
-						speed = 58
+						baseStats = new int[]{65, 90, 115, 45, 115, 58}
 					}
 				}
 			},
@@ -9538,12 +6738,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Sigilyph",
 					Statistics = new Stats()
 					{
-						hp = 72,
-						attack = 58,
-						defense = 80,
-						specialAttack = 103,
-						specialDefense = 80,
-						speed = 97
+						baseStats = new int[]{72, 58, 80, 103, 80, 97}
 					}
 				}
 			},
@@ -9555,12 +6750,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Yamask",
 					Statistics = new Stats()
 					{
-						hp = 38,
-						attack = 30,
-						defense = 85,
-						specialAttack = 55,
-						specialDefense = 65,
-						speed = 30
+						baseStats = new int[]{38, 30, 85, 55, 65, 30}
 					}
 				}
 			},
@@ -9572,12 +6762,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Cofagrigus",
 					Statistics = new Stats()
 					{
-						hp = 58,
-						attack = 50,
-						defense = 145,
-						specialAttack = 95,
-						specialDefense = 105,
-						speed = 30
+						baseStats = new int[]{58, 50, 145, 95, 105, 30}
 					}
 				}
 			},
@@ -9589,12 +6774,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Tirtouga",
 					Statistics = new Stats()
 					{
-						hp = 54,
-						attack = 78,
-						defense = 103,
-						specialAttack = 53,
-						specialDefense = 45,
-						speed = 22
+						baseStats = new int[]{54, 78, 103, 53, 45, 22}
 					}
 				}
 			},
@@ -9606,12 +6786,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Carracosta",
 					Statistics = new Stats()
 					{
-						hp = 74,
-						attack = 108,
-						defense = 133,
-						specialAttack = 83,
-						specialDefense = 65,
-						speed = 32
+						baseStats = new int[]{74, 108, 133, 83, 65, 32}
 					}
 				}
 			},
@@ -9623,12 +6798,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Archen",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 112,
-						defense = 45,
-						specialAttack = 74,
-						specialDefense = 45,
-						speed = 70
+						baseStats = new int[]{55, 112, 45, 74, 45, 70}
 					}
 				}
 			},
@@ -9640,12 +6810,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Archeops",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 140,
-						defense = 65,
-						specialAttack = 112,
-						specialDefense = 65,
-						speed = 110
+						baseStats = new int[]{75, 140, 65, 112, 65, 110}
 					}
 				}
 			},
@@ -9657,12 +6822,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Trubbish",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 50,
-						defense = 62,
-						specialAttack = 40,
-						specialDefense = 62,
-						speed = 65
+						baseStats = new int[]{50, 50, 62, 40, 62, 65}
 					}
 				}
 			},
@@ -9674,12 +6834,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Garbodor",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 95,
-						defense = 82,
-						specialAttack = 60,
-						specialDefense = 82,
-						speed = 75
+						baseStats = new int[]{80, 95, 82, 60, 82, 75}
 					}
 				}
 			},
@@ -9691,12 +6846,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Zorua",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 65,
-						defense = 40,
-						specialAttack = 80,
-						specialDefense = 40,
-						speed = 65
+						baseStats = new int[]{40, 65, 40, 80, 40, 65}
 					}
 				}
 			},
@@ -9708,12 +6858,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Zoroark",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 105,
-						defense = 60,
-						specialAttack = 120,
-						specialDefense = 60,
-						speed = 105
+						baseStats = new int[]{60, 105, 60, 120, 60, 105}
 					}
 				}
 			},
@@ -9725,12 +6870,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Minccino",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 50,
-						defense = 40,
-						specialAttack = 40,
-						specialDefense = 40,
-						speed = 75
+						baseStats = new int[]{55, 50, 40, 40, 40, 75}
 					}
 				}
 			},
@@ -9742,12 +6882,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Cinccino",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 95,
-						defense = 60,
-						specialAttack = 65,
-						specialDefense = 60,
-						speed = 115
+						baseStats = new int[]{75, 95, 60, 65, 60, 115}
 					}
 				}
 			},
@@ -9759,12 +6894,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Gothita",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 30,
-						defense = 50,
-						specialAttack = 55,
-						specialDefense = 65,
-						speed = 45
+						baseStats = new int[]{45, 30, 50, 55, 65, 45}
 					}
 				}
 			},
@@ -9776,12 +6906,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Gothorita",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 45,
-						defense = 70,
-						specialAttack = 75,
-						specialDefense = 85,
-						speed = 55
+						baseStats = new int[]{60, 45, 70, 75, 85, 55}
 					}
 				}
 			},
@@ -9793,12 +6918,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Gothitelle",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 55,
-						defense = 95,
-						specialAttack = 95,
-						specialDefense = 110,
-						speed = 65
+						baseStats = new int[]{70, 55, 95, 95, 110, 65}
 					}
 				}
 			},
@@ -9810,12 +6930,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Solosis",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 30,
-						defense = 40,
-						specialAttack = 105,
-						specialDefense = 50,
-						speed = 20
+						baseStats = new int[]{45, 30, 40, 105, 50, 20}
 					}
 				}
 			},
@@ -9827,12 +6942,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Duosion",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 40,
-						defense = 50,
-						specialAttack = 125,
-						specialDefense = 60,
-						speed = 30
+						baseStats = new int[]{65, 40, 50, 125, 60, 30}
 					}
 				}
 			},
@@ -9844,12 +6954,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Reuniclus",
 					Statistics = new Stats()
 					{
-						hp = 110,
-						attack = 65,
-						defense = 75,
-						specialAttack = 125,
-						specialDefense = 85,
-						speed = 30
+						baseStats = new int[]{110, 65, 75, 125, 85, 30}
 					}
 				}
 			},
@@ -9861,12 +6966,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Ducklett",
 					Statistics = new Stats()
 					{
-						hp = 62,
-						attack = 44,
-						defense = 50,
-						specialAttack = 44,
-						specialDefense = 50,
-						speed = 55
+						baseStats = new int[]{62, 44, 50, 44, 50, 55}
 					}
 				}
 			},
@@ -9878,12 +6978,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Swanna",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 87,
-						defense = 63,
-						specialAttack = 87,
-						specialDefense = 63,
-						speed = 98
+						baseStats = new int[]{75, 87, 63, 87, 63, 98}
 					}
 				}
 			},
@@ -9895,12 +6990,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Vanillite",
 					Statistics = new Stats()
 					{
-						hp = 36,
-						attack = 50,
-						defense = 50,
-						specialAttack = 65,
-						specialDefense = 60,
-						speed = 44
+						baseStats = new int[]{36, 50, 50, 65, 60, 44}
 					}
 				}
 			},
@@ -9912,12 +7002,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Vanillish",
 					Statistics = new Stats()
 					{
-						hp = 51,
-						attack = 65,
-						defense = 65,
-						specialAttack = 80,
-						specialDefense = 75,
-						speed = 59
+						baseStats = new int[]{51, 65, 65, 80, 75, 59}
 					}
 				}
 			},
@@ -9929,12 +7014,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Vanilluxe",
 					Statistics = new Stats()
 					{
-						hp = 71,
-						attack = 95,
-						defense = 85,
-						specialAttack = 110,
-						specialDefense = 95,
-						speed = 79
+						baseStats = new int[]{71, 95, 85, 110, 95, 79}
 					}
 				}
 			},
@@ -9946,12 +7026,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Deerling",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 60,
-						defense = 50,
-						specialAttack = 40,
-						specialDefense = 50,
-						speed = 75
+						baseStats = new int[]{60, 60, 50, 40, 50, 75}
 					}
 				}
 			},
@@ -9963,12 +7038,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Sawsbuck",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 100,
-						defense = 70,
-						specialAttack = 60,
-						specialDefense = 70,
-						speed = 95
+						baseStats = new int[]{80, 100, 70, 60, 70, 95}
 					}
 				}
 			},
@@ -9980,12 +7050,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Emolga",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 75,
-						defense = 60,
-						specialAttack = 75,
-						specialDefense = 60,
-						speed = 103
+						baseStats = new int[]{55, 75, 60, 75, 60, 103}
 					}
 				}
 			},
@@ -9997,12 +7062,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Karrablast",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 75,
-						defense = 45,
-						specialAttack = 40,
-						specialDefense = 45,
-						speed = 60
+						baseStats = new int[]{50, 75, 45, 40, 45, 60}
 					}
 				}
 			},
@@ -10014,12 +7074,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Escavalier",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 135,
-						defense = 105,
-						specialAttack = 60,
-						specialDefense = 105,
-						speed = 20
+						baseStats = new int[]{70, 135, 105, 60, 105, 20}
 					}
 				}
 			},
@@ -10031,12 +7086,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Foongus",
 					Statistics = new Stats()
 					{
-						hp = 69,
-						attack = 55,
-						defense = 45,
-						specialAttack = 55,
-						specialDefense = 55,
-						speed = 15
+						baseStats = new int[]{69, 55, 45, 55, 55, 15}
 					}
 				}
 			},
@@ -10048,12 +7098,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Amoonguss",
 					Statistics = new Stats()
 					{
-						hp = 114,
-						attack = 85,
-						defense = 70,
-						specialAttack = 85,
-						specialDefense = 80,
-						speed = 30
+						baseStats = new int[]{114, 85, 70, 85, 80, 30}
 					}
 				}
 			},
@@ -10065,12 +7110,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Frillish",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 40,
-						defense = 50,
-						specialAttack = 65,
-						specialDefense = 85,
-						speed = 40
+						baseStats = new int[]{55, 40, 50, 65, 85, 40}
 					}
 				}
 			},
@@ -10082,12 +7122,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Jellicent",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 60,
-						defense = 70,
-						specialAttack = 85,
-						specialDefense = 105,
-						speed = 60
+						baseStats = new int[]{100, 60, 70, 85, 105, 60}
 					}
 				}
 			},
@@ -10099,12 +7134,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Alomomola",
 					Statistics = new Stats()
 					{
-						hp = 165,
-						attack = 75,
-						defense = 80,
-						specialAttack = 40,
-						specialDefense = 45,
-						speed = 65
+						baseStats = new int[]{165, 75, 80, 40, 45, 65}
 					}
 				}
 			},
@@ -10116,12 +7146,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Joltik",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 47,
-						defense = 50,
-						specialAttack = 57,
-						specialDefense = 50,
-						speed = 65
+						baseStats = new int[]{50, 47, 50, 57, 50, 65}
 					}
 				}
 			},
@@ -10133,12 +7158,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Galvantula",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 77,
-						defense = 60,
-						specialAttack = 97,
-						specialDefense = 60,
-						speed = 108
+						baseStats = new int[]{70, 77, 60, 97, 60, 108}
 					}
 				}
 			},
@@ -10150,12 +7170,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Ferroseed",
 					Statistics = new Stats()
 					{
-						hp = 44,
-						attack = 50,
-						defense = 91,
-						specialAttack = 24,
-						specialDefense = 86,
-						speed = 10
+						baseStats = new int[]{44, 50, 91, 24, 86, 10}
 					}
 				}
 			},
@@ -10167,12 +7182,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Ferrothorn",
 					Statistics = new Stats()
 					{
-						hp = 74,
-						attack = 94,
-						defense = 131,
-						specialAttack = 54,
-						specialDefense = 116,
-						speed = 20
+						baseStats = new int[]{74, 94, 131, 54, 116, 20}
 					}
 				}
 			},
@@ -10184,12 +7194,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Klink",
 					Statistics = new Stats()
 					{
-						hp = 40,
-						attack = 55,
-						defense = 70,
-						specialAttack = 45,
-						specialDefense = 60,
-						speed = 30
+						baseStats = new int[]{40, 55, 70, 45, 60, 30}
 					}
 				}
 			},
@@ -10201,12 +7206,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Klang",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 80,
-						defense = 95,
-						specialAttack = 70,
-						specialDefense = 85,
-						speed = 50
+						baseStats = new int[]{60, 80, 95, 70, 85, 50}
 					}
 				}
 			},
@@ -10218,12 +7218,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Klinklang",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 100,
-						defense = 115,
-						specialAttack = 70,
-						specialDefense = 85,
-						speed = 90
+						baseStats = new int[]{60, 100, 115, 70, 85, 90}
 					}
 				}
 			},
@@ -10235,12 +7230,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Tynamo",
 					Statistics = new Stats()
 					{
-						hp = 35,
-						attack = 55,
-						defense = 40,
-						specialAttack = 45,
-						specialDefense = 40,
-						speed = 60
+						baseStats = new int[]{35, 55, 40, 45, 40, 60}
 					}
 				}
 			},
@@ -10252,12 +7242,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Eelektrik",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 85,
-						defense = 70,
-						specialAttack = 75,
-						specialDefense = 70,
-						speed = 40
+						baseStats = new int[]{65, 85, 70, 75, 70, 40}
 					}
 				}
 			},
@@ -10269,12 +7254,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Eelektross",
 					Statistics = new Stats()
 					{
-						hp = 85,
-						attack = 115,
-						defense = 80,
-						specialAttack = 105,
-						specialDefense = 80,
-						speed = 50
+						baseStats = new int[]{85, 115, 80, 105, 80, 50}
 					}
 				}
 			},
@@ -10286,12 +7266,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Elgyem",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 55,
-						defense = 55,
-						specialAttack = 85,
-						specialDefense = 55,
-						speed = 30
+						baseStats = new int[]{55, 55, 55, 85, 55, 30}
 					}
 				}
 			},
@@ -10303,12 +7278,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Beheeyem",
 					Statistics = new Stats()
 					{
-						hp = 75,
-						attack = 75,
-						defense = 75,
-						specialAttack = 125,
-						specialDefense = 95,
-						speed = 40
+						baseStats = new int[]{75, 75, 75, 125, 95, 40}
 					}
 				}
 			},
@@ -10320,12 +7290,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Litwick",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 30,
-						defense = 55,
-						specialAttack = 65,
-						specialDefense = 55,
-						speed = 20
+						baseStats = new int[]{50, 30, 55, 65, 55, 20}
 					}
 				}
 			},
@@ -10337,12 +7302,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Lampent",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 40,
-						defense = 60,
-						specialAttack = 95,
-						specialDefense = 60,
-						speed = 55
+						baseStats = new int[]{60, 40, 60, 95, 60, 55}
 					}
 				}
 			},
@@ -10354,12 +7314,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Chandelure",
 					Statistics = new Stats()
 					{
-						hp = 60,
-						attack = 55,
-						defense = 90,
-						specialAttack = 145,
-						specialDefense = 90,
-						speed = 80
+						baseStats = new int[]{60, 55, 90, 145, 90, 80}
 					}
 				}
 			},
@@ -10371,12 +7326,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Axew",
 					Statistics = new Stats()
 					{
-						hp = 46,
-						attack = 87,
-						defense = 60,
-						specialAttack = 30,
-						specialDefense = 40,
-						speed = 57
+						baseStats = new int[]{46, 87, 60, 30, 40, 57}
 					}
 				}
 			},
@@ -10388,12 +7338,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Fraxure",
 					Statistics = new Stats()
 					{
-						hp = 66,
-						attack = 117,
-						defense = 70,
-						specialAttack = 40,
-						specialDefense = 50,
-						speed = 67
+						baseStats = new int[]{66, 117, 70, 40, 50, 67}
 					}
 				}
 			},
@@ -10405,12 +7350,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Haxorus",
 					Statistics = new Stats()
 					{
-						hp = 76,
-						attack = 147,
-						defense = 90,
-						specialAttack = 60,
-						specialDefense = 70,
-						speed = 97
+						baseStats = new int[]{76, 147, 90, 60, 70, 97}
 					}
 				}
 			},
@@ -10422,12 +7362,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Cubchoo",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 70,
-						defense = 40,
-						specialAttack = 60,
-						specialDefense = 40,
-						speed = 40
+						baseStats = new int[]{55, 70, 40, 60, 40, 40}
 					}
 				}
 			},
@@ -10439,12 +7374,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Beartic",
 					Statistics = new Stats()
 					{
-						hp = 95,
-						attack = 110,
-						defense = 80,
-						specialAttack = 70,
-						specialDefense = 80,
-						speed = 50
+						baseStats = new int[]{95, 110, 80, 70, 80, 50}
 					}
 				}
 			},
@@ -10456,12 +7386,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Cryogonal",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 50,
-						defense = 30,
-						specialAttack = 95,
-						specialDefense = 135,
-						speed = 105
+						baseStats = new int[]{70, 50, 30, 95, 135, 105}
 					}
 				}
 			},
@@ -10473,12 +7398,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Shelmet",
 					Statistics = new Stats()
 					{
-						hp = 50,
-						attack = 40,
-						defense = 85,
-						specialAttack = 40,
-						specialDefense = 65,
-						speed = 25
+						baseStats = new int[]{50, 40, 85, 40, 65, 25}
 					}
 				}
 			},
@@ -10490,12 +7410,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Accelgor",
 					Statistics = new Stats()
 					{
-						hp = 80,
-						attack = 70,
-						defense = 40,
-						specialAttack = 100,
-						specialDefense = 60,
-						speed = 145
+						baseStats = new int[]{80, 70, 40, 100, 60, 145}
 					}
 				}
 			},
@@ -10507,12 +7422,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Stunfisk",
 					Statistics = new Stats()
 					{
-						hp = 109,
-						attack = 66,
-						defense = 84,
-						specialAttack = 81,
-						specialDefense = 99,
-						speed = 32
+						baseStats = new int[]{109, 66, 84, 81, 99, 32}
 					}
 				}
 			},
@@ -10524,12 +7434,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Mienfoo",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 85,
-						defense = 50,
-						specialAttack = 55,
-						specialDefense = 50,
-						speed = 65
+						baseStats = new int[]{45, 85, 50, 55, 50, 65}
 					}
 				}
 			},
@@ -10541,12 +7446,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Mienshao",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 125,
-						defense = 60,
-						specialAttack = 95,
-						specialDefense = 60,
-						speed = 105
+						baseStats = new int[]{65, 125, 60, 95, 60, 105}
 					}
 				}
 			},
@@ -10558,12 +7458,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Druddigon",
 					Statistics = new Stats()
 					{
-						hp = 77,
-						attack = 120,
-						defense = 90,
-						specialAttack = 60,
-						specialDefense = 90,
-						speed = 48
+						baseStats = new int[]{77, 120, 90, 60, 90, 48}
 					}
 				}
 			},
@@ -10575,12 +7470,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Golett",
 					Statistics = new Stats()
 					{
-						hp = 59,
-						attack = 74,
-						defense = 50,
-						specialAttack = 35,
-						specialDefense = 50,
-						speed = 35
+						baseStats = new int[]{59, 74, 50, 35, 50, 35}
 					}
 				}
 			},
@@ -10592,12 +7482,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Golurk",
 					Statistics = new Stats()
 					{
-						hp = 89,
-						attack = 124,
-						defense = 80,
-						specialAttack = 55,
-						specialDefense = 80,
-						speed = 55
+						baseStats = new int[]{89, 124, 80, 55, 80, 55}
 					}
 				}
 			},
@@ -10609,12 +7494,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Pawniard",
 					Statistics = new Stats()
 					{
-						hp = 45,
-						attack = 85,
-						defense = 70,
-						specialAttack = 40,
-						specialDefense = 40,
-						speed = 60
+						baseStats = new int[]{45, 85, 70, 40, 40, 60}
 					}
 				}
 			},
@@ -10626,12 +7506,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Bisharp",
 					Statistics = new Stats()
 					{
-						hp = 65,
-						attack = 125,
-						defense = 100,
-						specialAttack = 60,
-						specialDefense = 70,
-						speed = 70
+						baseStats = new int[]{65, 125, 100, 60, 70, 70}
 					}
 				}
 			},
@@ -10643,12 +7518,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Bouffalant",
 					Statistics = new Stats()
 					{
-						hp = 95,
-						attack = 110,
-						defense = 95,
-						specialAttack = 40,
-						specialDefense = 95,
-						speed = 55
+						baseStats = new int[]{95, 110, 95, 40, 95, 55}
 					}
 				}
 			},
@@ -10660,12 +7530,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Rufflet",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 83,
-						defense = 50,
-						specialAttack = 37,
-						specialDefense = 50,
-						speed = 60
+						baseStats = new int[]{70, 83, 50, 37, 50, 60}
 					}
 				}
 			},
@@ -10677,12 +7542,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Braviary",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 123,
-						defense = 75,
-						specialAttack = 57,
-						specialDefense = 75,
-						speed = 80
+						baseStats = new int[]{100, 123, 75, 57, 75, 80}
 					}
 				}
 			},
@@ -10694,12 +7554,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Vullaby",
 					Statistics = new Stats()
 					{
-						hp = 70,
-						attack = 55,
-						defense = 75,
-						specialAttack = 45,
-						specialDefense = 65,
-						speed = 60
+						baseStats = new int[]{70, 55, 75, 45, 65, 60}
 					}
 				}
 			},
@@ -10711,12 +7566,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Mandibuzz",
 					Statistics = new Stats()
 					{
-						hp = 110,
-						attack = 65,
-						defense = 105,
-						specialAttack = 55,
-						specialDefense = 95,
-						speed = 80
+						baseStats = new int[]{110, 65, 105, 55, 95, 80}
 					}
 				}
 			},
@@ -10728,12 +7578,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Heatmor",
 					Statistics = new Stats()
 					{
-						hp = 85,
-						attack = 97,
-						defense = 66,
-						specialAttack = 105,
-						specialDefense = 66,
-						speed = 65
+						baseStats = new int[]{85, 97, 66, 105, 66, 65}
 					}
 				}
 			},
@@ -10745,12 +7590,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Durant",
 					Statistics = new Stats()
 					{
-						hp = 58,
-						attack = 109,
-						defense = 112,
-						specialAttack = 48,
-						specialDefense = 48,
-						speed = 109
+						baseStats = new int[]{58, 109, 112, 48, 48, 109}
 					}
 				}
 			},
@@ -10762,12 +7602,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Deino",
 					Statistics = new Stats()
 					{
-						hp = 52,
-						attack = 65,
-						defense = 50,
-						specialAttack = 45,
-						specialDefense = 50,
-						speed = 38
+						baseStats = new int[]{52, 65, 50, 45, 50, 38}
 					}
 				}
 			},
@@ -10779,12 +7614,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Zweilous",
 					Statistics = new Stats()
 					{
-						hp = 72,
-						attack = 85,
-						defense = 70,
-						specialAttack = 65,
-						specialDefense = 70,
-						speed = 58
+						baseStats = new int[]{72, 85, 70, 65, 70, 58}
 					}
 				}
 			},
@@ -10796,12 +7626,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Hydreigon",
 					Statistics = new Stats()
 					{
-						hp = 92,
-						attack = 105,
-						defense = 90,
-						specialAttack = 125,
-						specialDefense = 90,
-						speed = 98
+						baseStats = new int[]{92, 105, 90, 125, 90, 98}
 					}
 				}
 			},
@@ -10813,12 +7638,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Larvesta",
 					Statistics = new Stats()
 					{
-						hp = 55,
-						attack = 85,
-						defense = 55,
-						specialAttack = 50,
-						specialDefense = 55,
-						speed = 60
+						baseStats = new int[]{55, 85, 55, 50, 55, 60}
 					}
 				}
 			},
@@ -10830,12 +7650,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Volcarona",
 					Statistics = new Stats()
 					{
-						hp = 85,
-						attack = 60,
-						defense = 65,
-						specialAttack = 135,
-						specialDefense = 105,
-						speed = 100
+						baseStats = new int[]{85, 60, 65, 135, 105, 100}
 					}
 				}
 			},
@@ -10847,12 +7662,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Cobalion",
 					Statistics = new Stats()
 					{
-						hp = 91,
-						attack = 90,
-						defense = 129,
-						specialAttack = 90,
-						specialDefense = 72,
-						speed = 108
+						baseStats = new int[]{91, 90, 129, 90, 72, 108}
 					}
 				}
 			},
@@ -10864,12 +7674,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Terrakion",
 					Statistics = new Stats()
 					{
-						hp = 91,
-						attack = 129,
-						defense = 90,
-						specialAttack = 72,
-						specialDefense = 90,
-						speed = 108
+						baseStats = new int[]{91, 129, 90, 72, 90, 108}
 					}
 				}
 			},
@@ -10881,12 +7686,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Virizion",
 					Statistics = new Stats()
 					{
-						hp = 91,
-						attack = 90,
-						defense = 72,
-						specialAttack = 90,
-						specialDefense = 129,
-						speed = 108
+						baseStats = new int[]{91, 90, 72, 90, 129, 108}
 					}
 				}
 			},
@@ -10898,12 +7698,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Tornadus",
 					Statistics = new Stats()
 					{
-						hp = 79,
-						attack = 115,
-						defense = 70,
-						specialAttack = 125,
-						specialDefense = 80,
-						speed = 111
+						baseStats = new int[]{79, 115, 70, 125, 80, 111}
 					}
 				}
 			},
@@ -10915,12 +7710,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Thundurus",
 					Statistics = new Stats()
 					{
-						hp = 79,
-						attack = 115,
-						defense = 70,
-						specialAttack = 125,
-						specialDefense = 80,
-						speed = 111
+						baseStats = new int[]{79, 115, 70, 125, 80, 111}
 					}
 				}
 			},
@@ -10932,12 +7722,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Reshiram",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 120,
-						defense = 100,
-						specialAttack = 150,
-						specialDefense = 120,
-						speed = 90
+						baseStats = new int[]{100, 120, 100, 150, 120, 90}
 					}
 				}
 			},
@@ -10949,12 +7734,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Zekrom",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 150,
-						defense = 120,
-						specialAttack = 120,
-						specialDefense = 100,
-						speed = 90
+						baseStats = new int[]{100, 150, 120, 120, 100, 90}
 					}
 				}
 			},
@@ -10966,12 +7746,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Landorus",
 					Statistics = new Stats()
 					{
-						hp = 89,
-						attack = 125,
-						defense = 90,
-						specialAttack = 115,
-						specialDefense = 80,
-						speed = 101
+						baseStats = new int[]{89, 125, 90, 115, 80, 101}
 					}
 				}
 			},
@@ -10983,12 +7758,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Kyurem",
 					Statistics = new Stats()
 					{
-						hp = 125,
-						attack = 130,
-						defense = 90,
-						specialAttack = 130,
-						specialDefense = 90,
-						speed = 95
+						baseStats = new int[]{125, 130, 90, 130, 90, 95}
 					}
 				}
 			},
@@ -11000,12 +7770,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Keldeo",
 					Statistics = new Stats()
 					{
-						hp = 91,
-						attack = 72,
-						defense = 90,
-						specialAttack = 129,
-						specialDefense = 90,
-						speed = 108
+						baseStats = new int[]{91, 72, 90, 129, 90, 108}
 					}
 				}
 			},
@@ -11017,12 +7782,7 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Meloetta",
 					Statistics = new Stats()
 					{
-						hp = 100,
-						attack = 77,
-						defense = 77,
-						specialAttack = 128,
-						specialDefense = 128,
-						speed = 90
+						baseStats = new int[]{100, 77, 77, 128, 128, 90}
 					}
 				}
 			},
@@ -11034,16 +7794,11 @@ namespace Mobamon.Database
 					NameKey = "Pokemons_Genesect",
 					Statistics = new Stats()
 					{
-						hp = 71,
-						attack = 120,
-						defense = 95,
-						specialAttack = 120,
-						specialDefense = 95,
-						speed = 99
+						baseStats = new int[]{71, 120, 95, 120, 95, 99}
 					}
 				}
 			}
-
-        };
+			
+		};
 	}
 }
