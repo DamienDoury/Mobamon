@@ -8,6 +8,8 @@ namespace Mobamon.Database
 		
 		public int xp { get; set; }
 
+		public LevelingRate levelingRate { get; set; }
+
 		/// <summary>
 		/// Represents the denominator of the fraction.
 		/// </summary>
@@ -36,6 +38,7 @@ namespace Mobamon.Database
 			lvl = 1;
 
 			xp = 0;
+			levelingRate = LevelingRate.ERROR;
 			criticalChance = 16;
 			precision = 1f;
 			evasion = 1f;

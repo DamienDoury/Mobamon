@@ -48,7 +48,10 @@ namespace Mobamon.Database.Enums
 		/// Piecewise functions
 		/// Fast at low level and slow at high levels
 		/// </summary>
-		Fluctuating
+		Fluctuating,
+
+		COUNT,
+		ERROR
 	}
 }
 

@@ -130,11 +130,9 @@ namespace Mobamon.Pokemon
 		{			
 			stats.xp += amount;
 
-			int newLevel = 0;
+			int newLevel = XPTable.LvlAtXP(stats.xp, stats.levelingRate, stats.lvl);
 
-			LevelingRate rate = LevelingRate.Fast;
-
-			switch(rate)
+			/*switch(stats.levelingRate)
 			{
 				case LevelingRate.Erratic:
 					// TODO: implement the actual formula.
@@ -166,7 +164,7 @@ namespace Mobamon.Pokemon
 				default:
 					Debug.LogError("Unknown leveling rate.");
 					break;
-			}
+			}*/
 
 			if(stats.lvl < newLevel)
 				LevelUp(newLevel);
@@ -187,7 +185,7 @@ namespace Mobamon.Pokemon
 		{
 			// Formulas from http://bulbapedia.bulbagarden.net/wiki/Stats
 
-			int hpBefore = stats.baseStats[(int)StatsList.hp];
+			int hpBefore = stats.currentStats[(int)StatsList.hp];
 
 			int i = (int)StatsList.hp;
 			stats.currentStats[i] = (int) ( ( (stats.baseStats[i] << 1) + stats.IV[i] + (stats.EV[i] >> 2) + 100) * stats.lvl / 100f + 10 );
@@ -199,7 +197,7 @@ namespace Mobamon.Pokemon
 				stats.currentStats[i] = (int) ( ( ( (stats.baseStats[i] << 1) + stats.IV[i] + (stats.EV[i] >> 2) ) * stats.lvl / 100f + 5) * nature );
 			}
 
-			int hpDifference = stats.baseStats[(int)StatsList.hp] - hpBefore;
+			int hpDifference = stats.currentStats[(int)StatsList.hp] - hpBefore;
 			currentHP += hpDifference; // When leveling up, you regen a little chunk of life.
 		}
         #endregion

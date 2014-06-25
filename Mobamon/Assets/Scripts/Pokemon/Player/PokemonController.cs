@@ -29,6 +29,10 @@ namespace Mobamon.Pokemon.Player
 		public Camera myCam = null;
         public List<string> moveSet = new List<string>(4);
         public EntityManager entityManager { get; private set; }
+
+		// TODO: implement this...
+		public List<int> newMovesQueue = new List<int>(); // Queue containing the IDs of the new moves the Pokemon can learn.
+		public List<int> evolutionsList = new List<int>(); // List containing the evolutions available to the Pokemon.
 		#endregion
 		
 		#region Private fields
@@ -67,6 +71,8 @@ namespace Mobamon.Pokemon.Player
 			{
 				entityManager.stats.baseStats[statID] = Pokedex.pokemons[pokedex_id].Statistics.baseStats[statID];
 			}
+
+			entityManager.stats.levelingRate = Pokedex.pokemons[pokedex_id].LevelingSpeed;
 
 			anim = GetComponent<Animator>();
 			nav = GetComponent<NavMeshAgent>();
