@@ -71,7 +71,7 @@ namespace Mobamon.Pokemon
         {
             float newLife = Mathf.Max(0, currentHP - dmg);
 			damageHistory.Add(new DamageInfo(dmg, caster));
-            this.gameObject.networkView.RPC("SetLife", RPCMode.All, newLife);
+            this.gameObject.GetComponent<NetworkView>().RPC("SetLife", RPCMode.All, newLife);
         }
 
         /// <summary>

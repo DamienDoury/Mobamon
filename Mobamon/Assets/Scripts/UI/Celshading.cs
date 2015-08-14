@@ -33,7 +33,7 @@ public class Celshading : MonoBehaviour
 
 		GameObject terrainObj = GameObject.Find("Map");
 		terrain = (Terrain)terrainObj.GetComponent(typeof(Terrain));
-		treeRenderer = terrain.terrainData.treePrototypes[0].prefab.renderer;
+		treeRenderer = terrain.terrainData.treePrototypes[0].prefab.GetComponent<Renderer>();
 
 		shaderNormal = Shader.Find("Diffuse");
 		shaderToon = Shader.Find("Toon/Lighted Outline");
@@ -61,6 +61,8 @@ public class Celshading : MonoBehaviour
 
 	public void ApplyShadingMode()
 	{
+		return;
+
 		// Securities.
 		if(Application.platform == RuntimePlatform.WindowsEditor)
 			return;            	

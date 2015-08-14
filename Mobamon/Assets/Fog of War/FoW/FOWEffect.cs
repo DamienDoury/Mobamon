@@ -40,7 +40,7 @@ public class FOWEffect : MonoBehaviour
 
 	void OnEnable ()
 	{
-		mCam = camera;
+		mCam = GetComponent<Camera>();
 		mCam.depthTextureMode = DepthTextureMode.Depth;
 		if (shader == null) shader = Shader.Find("Image Effects/Fog of War");
 	}

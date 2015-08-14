@@ -166,7 +166,7 @@ namespace Mobamon.Pokemon.Player
             
             // We add a Fog of War revealer.
             FOWRevealer fow = gameObject.AddComponent<FOWRevealer>();
-            fow.range = new Vector2(0.5f, 20f);
+            fow.range = new Vector2(0.5f, 40f);
             fow.lineOfSightCheck = FOWSystem.LOSChecks.EveryUpdate;
         }
 		
@@ -204,7 +204,7 @@ namespace Mobamon.Pokemon.Player
 					{
 						hoverEntity = hit.transform.gameObject;
 
-						SphereCollider targetCollider = (SphereCollider)hoverEntity.collider;
+						SphereCollider targetCollider = (SphereCollider)hoverEntity.GetComponent<Collider>();
 
 						if(selectedMove.info.TargetKind == MoveTargetKind.Single 
 						   && Vector3.Magnitude(hoverEntity.transform.position - transform.position) > selectedMove.info.Range / 100f + nav.radius + targetCollider.radius)
@@ -241,7 +241,7 @@ namespace Mobamon.Pokemon.Player
 							//if((theChosenHit.point - transform.position).magnitude >= nav.radius) 
 							{
 								theChosenHit.point.Set(theChosenHit.point.x, 0, theChosenHit.point.z);
-								networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, theChosenHit.point, NetworkViewID.unassigned, -1);
+								GetComponent<NetworkView>().RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, theChosenHit.point, NetworkViewID.unassigned, -1);
 							}
 						}
 					}
@@ -261,7 +261,7 @@ namespace Mobamon.Pokemon.Player
 							
 							if(targetKind == MoveTargetKind.Area)
 							{
-								networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, hit.point, NetworkViewID.unassigned, moveIndex);
+								GetComponent<NetworkView>().RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, hit.point, NetworkViewID.unassigned, moveIndex);
 								attackLaunched = true;
 							}
 							else if(targetKind == MoveTargetKind.Single && hoverEntity != null) // If the target type is not an area, then it's a single target spell. Therefore he needs a target.
@@ -270,11 +270,11 @@ namespace Mobamon.Pokemon.Player
 
 								if((relation & selectedMove.info.AllowedTargets) != 0)
 								{
-									SphereCollider targetCollider = (SphereCollider)hoverEntity.collider;
+									SphereCollider targetCollider = (SphereCollider)hoverEntity.GetComponent<Collider>();
 									
 									if(Vector3.Magnitude(hoverEntity.transform.position - transform.position) <= selectedMove.info.Range / 100f + nav.radius + targetCollider.radius)
 									{
-										networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, hit.point, hoverEntity.networkView.viewID, moveIndex);
+										GetComponent<NetworkView>().RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, hit.point, hoverEntity.GetComponent<NetworkView>().viewID, moveIndex);
 										attackLaunched = true;
 									}
 								}
@@ -365,7 +365,7 @@ namespace Mobamon.Pokemon.Player
                         if(entity.GetComponent<FOWRevealer>() == null)
                         {
                             FOWRevealer fow = entity.AddComponent<FOWRevealer>();
-                            fow.range = new Vector2(0.5f, 20f);
+                            fow.range = new Vector2(0.5f, 40f);
                             fow.lineOfSightCheck = FOWSystem.LOSChecks.EveryUpdate;
                         }
                     }
@@ -435,7 +435,7 @@ namespace Mobamon.Pokemon.Player
                                     {
                                         if (((int)selectedMove.info.AllowedTargets & (int)relation) != 0)
                                         {
-                                            SphereCollider targetCollider = (SphereCollider)targetPokemon.collider;
+                                            SphereCollider targetCollider = (SphereCollider)targetPokemon.GetComponent<Collider>();
 
                                             if (Vector3.Magnitude(targetPokemon.transform.position - transform.position) <= selectedMove.info.Range / 100f + nav.radius + targetCollider.radius)
                                             {
@@ -463,7 +463,7 @@ namespace Mobamon.Pokemon.Player
 		{
 			if(Network.isServer)
 			{
-				networkView.RPC("SetDestination", RPCMode.Others, pos);
+				GetComponent<NetworkView>().RPC("SetDestination", RPCMode.Others, pos);
 			}
 			
 			if(isMine)
@@ -481,7 +481,7 @@ namespace Mobamon.Pokemon.Player
 		private void SetAttackState(NetworkViewID viewID, Vector3 pos)
 		{
 			if(Network.isServer)
-				networkView.RPC("SetAttackState", RPCMode.Others, viewID, pos);
+				GetComponent<NetworkView>().RPC("SetAttackState", RPCMode.Others, viewID, pos);
 			
 			GameObject targetPokemon = null;
 			
@@ -509,7 +509,7 @@ namespace Mobamon.Pokemon.Player
 			
 			if(isSelfOnly)
 			{
-				networkView.RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, transform.position + transform.forward, gameObject.networkView.viewID, index);
+				GetComponent<NetworkView>().RPC("ValidateControl", RPCMode.Server, (int)InputType.LeftClick, transform.position + transform.forward, gameObject.GetComponent<NetworkView>().viewID, index);
 			}
 		}
 		
@@ -799,7 +799,7 @@ namespace Mobamon.Pokemon.Player
                     availableMoves.RemoveAt(rand);
                 }
 
-                networkView.RPC("SaveMoveSet", RPCMode.AllBuffered, newMoveSet[0], newMoveSet[1], newMoveSet[2], newMoveSet[3]);
+                GetComponent<NetworkView>().RPC("SaveMoveSet", RPCMode.AllBuffered, newMoveSet[0], newMoveSet[1], newMoveSet[2], newMoveSet[3]);
             }
         }
 

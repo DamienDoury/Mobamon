@@ -6,7 +6,7 @@ namespace Mobamon.UI
 	public class CameraMovement : MonoBehaviour
 	{	
         public float minZoomHeight = 3f;
-        public float maxZoomHeight = 50f;
+        public float maxZoomHeight = 60f;
 
 		private Transform cameraTarget;
         private Transform pivot;
@@ -17,7 +17,7 @@ namespace Mobamon.UI
 
 		private float cameraHeight = 10f;
 		private float coeff = 8f;
-		private float maxShifting = 100f;
+		private float maxShifting = 400f;
 		private float zoomSpeed = 800f;
 
         private Quaternion currentPOV;
@@ -26,7 +26,8 @@ namespace Mobamon.UI
         /// <summary>
         /// This is not an actual delay in seconds.
         /// </summary>
-        private float rotationDelay = 0.1f;
+		private float rotationDelay = 0.1f;
+		private float cameraSpeed = 150f;
 
         private bool isCameraLocked = false;
 
@@ -50,7 +51,15 @@ namespace Mobamon.UI
 
             }
 
-            desiredPOV = Quaternion.LookRotation(Vector3.forward + Vector3.right, Vector3.up);
+			if (this.transform.position.z > 200f) // When the map has a size of 400
+			{
+				desiredPOV = Quaternion.LookRotation(Vector3.back, Vector3.up);
+			}
+            else
+			{
+				desiredPOV = Quaternion.LookRotation(Vector3.forward, Vector3.up);
+			}
+
             currentPOV = desiredPOV;
             pivot.localRotation = currentPOV;
 		}
@@ -91,8 +100,7 @@ namespace Mobamon.UI
 			else
 			{
 				Vector3 movementVector = new Vector3(0, 0, 0);
-				float speedFactor = 50f;
-				
+
 				if(Input.mousePosition.x <= 0 || Input.GetKey(KeyCode.LeftArrow))
                     movementVector += -pivot.right;
 				
@@ -106,10 +114,10 @@ namespace Mobamon.UI
                     movementVector += pivot.forward;
 				
 				movementVector.Normalize();
-				targetPos += movementVector * speedFactor * Time.deltaTime;
+				targetPos += movementVector * cameraSpeed * Time.deltaTime;
 
 				// We forbid the camera's target to move out of the map.
-				targetPos = new Vector3(Mathf.Clamp(targetPos.x, 0, maxShifting), 0, Mathf.Clamp(targetPos.z, 0, maxShifting * 0.5f));
+				targetPos = new Vector3(Mathf.Clamp(targetPos.x, 0, maxShifting), 0, Mathf.Clamp(targetPos.z, 0, maxShifting));
 			}
 
 			// 3) We finally set the camera's position and we make it look at its target.
@@ -123,15 +131,15 @@ namespace Mobamon.UI
             // Here we catch the camera's command keys.
             if(Input.GetKeyDown(KeyCode.Keypad1))
             {
-                desiredPOV = Quaternion.LookRotation(Vector3.forward + Vector3.right, Vector3.up);
+                desiredPOV = Quaternion.LookRotation(Vector3.forward, Vector3.up);
             }
             else if(Input.GetKeyDown(KeyCode.Keypad3))
             {
-                desiredPOV = Quaternion.LookRotation(Vector3.forward, Vector3.up);
+				desiredPOV = Quaternion.LookRotation(Vector3.forward + Vector3.left, Vector3.up);
             }
             else if(Input.GetKeyDown(KeyCode.Keypad9))
             {
-                desiredPOV = Quaternion.LookRotation(Vector3.back + Vector3.left, Vector3.up);
+                desiredPOV = Quaternion.LookRotation(Vector3.back, Vector3.up);
             }
             else if(Input.GetKeyDown(KeyCode.Keypad5))
             {

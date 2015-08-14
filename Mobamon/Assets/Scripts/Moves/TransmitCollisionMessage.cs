@@ -86,7 +86,7 @@ public class TransmitCollisionMessage : MonoBehaviour
             {
                 // In Unity 4.3.2, we cannot know if the ParticleSystem sends collision messages.
                 // Thus, we get the safeCollisionEventSize. If it's greater than zero, then the ParticleSystem sends messages.
-                if(collisionParticle.safeCollisionEventSize > 0)
+                if(collisionParticle.GetSafeCollisionEventSize() > 0)
                 {
                     sendsCollisionMessages = true;
                     return;

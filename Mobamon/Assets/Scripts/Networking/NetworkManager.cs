@@ -69,7 +69,7 @@ namespace Mobamon.Networking
 						if(cont.transform.parent.gameObject != pkmn)
 							continue;
 						
-						cont.networkView.RPC("WarpEntity", RPCMode.OthersBuffered, cont.networkView.viewID, cont.transform.position, cont.nav.speed, cont.transform.rotation, cont.nav.destination);
+						cont.GetComponent<NetworkView>().RPC("WarpEntity", RPCMode.OthersBuffered, cont.GetComponent<NetworkView>().viewID, cont.transform.position, cont.nav.speed, cont.transform.rotation, cont.nav.destination);
 					}
 				}
 				else
@@ -194,7 +194,7 @@ namespace Mobamon.Networking
 		{
 			if(Network.isServer)
 			{
-                NetworkViewID viewID = playerPokemons[player.guid].networkView.viewID;
+                NetworkViewID viewID = playerPokemons[player.guid].GetComponent<NetworkView>().viewID;
 
 				Debug.Log("Clean up after player " + player);
 				Network.RemoveRPCs(player);
@@ -203,7 +203,7 @@ namespace Mobamon.Networking
 				//Network.DestroyPlayerObjects(player);
 
                 playerPokemons.Remove(player.guid);
-                networkView.RPC("RemovePlayerData", RPCMode.AllBuffered, viewID);
+                GetComponent<NetworkView>().RPC("RemovePlayerData", RPCMode.AllBuffered, viewID);
 			}
 		}
 
@@ -218,7 +218,7 @@ namespace Mobamon.Networking
             if (!Network.isServer)
             {
                 // When the server has accepted the connection, sends the selected pokemon
-                networkView.RPC("ChoosePokemon", RPCMode.Server, Network.player.guid, (ChosenPokemonId == -1 ? 58 : ChosenPokemonId));
+                GetComponent<NetworkView>().RPC("ChoosePokemon", RPCMode.Server, Network.player.guid, (ChosenPokemonId == -1 ? 58 : ChosenPokemonId));
             }
 		}
 
@@ -235,7 +235,7 @@ namespace Mobamon.Networking
             playerPokemons.Add(playerGuid, instantiatedPokemon);
 
             // Sets the team id and the ownership
-            networkView.RPC("SetPokemonControllerValues", RPCMode.AllBuffered, playerGuid, instantiatedPokemon.networkView.viewID, teamId);
+            GetComponent<NetworkView>().RPC("SetPokemonControllerValues", RPCMode.AllBuffered, playerGuid, instantiatedPokemon.GetComponent<NetworkView>().viewID, teamId);
         }
 
         [RPC]

@@ -40,7 +40,7 @@ namespace Mobamon.GameManager
 
                     if(remainingTime <= 0f)
                     {
-                        networkView.RPC("Respawn", RPCMode.AllBuffered, viewID);
+                        GetComponent<NetworkView>().RPC("Respawn", RPCMode.AllBuffered, viewID);
                         respawnQueue.Remove(viewID);
                     }
                 }
@@ -65,11 +65,11 @@ namespace Mobamon.GameManager
                     matchManager.AddKill(em.team);
                 }
 
-                networkView.RPC("Kill", RPCMode.AllBuffered, em.networkView.viewID, (killer == null ? NetworkViewID.unassigned : killer.networkView.viewID));
+                GetComponent<NetworkView>().RPC("Kill", RPCMode.AllBuffered, em.GetComponent<NetworkView>().viewID, (killer == null ? NetworkViewID.unassigned : killer.GetComponent<NetworkView>().viewID));
 
                 if(container == SceneHelper.GetContainer(Container.Pokemons))
                 {
-                    respawnQueue.Add(em.networkView.viewID, 3f);
+                    respawnQueue.Add(em.GetComponent<NetworkView>().viewID, 3f);
                 }
                 else if(container == SceneHelper.GetContainer(Container.Wild))
                 {
